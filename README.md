@@ -1,6 +1,6 @@
 # Coursework project for CSCE 606
 
-Team: Agilize
+Team: D'SMAK
 
 # Heroku Deployment Instructions:
 1. git clone
