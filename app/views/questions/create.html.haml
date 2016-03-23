@@ -8,17 +8,14 @@
       %a{:href=>'allevent'}
         %i{:class=>"fa fa-align-justify fa-fw"} 
         Event
-
     %li
       %a{:href=>'profile'}
         %i{:class=>"fa fa-user fa-fw"} 
         Profile
-        
     %li
       %a{:href=>'logout'}
         %i{:class=>"fa fa-sign-out fa-fw"} 
         Logout
-
 .container
   .row
     .col-md-2
@@ -48,7 +45,6 @@
                     %option{:value => 5}= "Paragraph Text"
                   .form-group
                   %input{:class => 'btn btn-danger', :type => "button", :onclick => "javascript:delete_question(1)", :value => 'Delete Question'} 
-  
 -#            .panel.panel-success#Q2
 -#              .panel-heading
 -#                %h3.panel-title
@@ -84,7 +80,6 @@
 -#                    %option{:value => 5}= "Paragraph Text"
 -#                  .form-group
 -#                  %input{:class => 'btn btn-danger', :type => "button", :onclick => "javascript:delete_question(3)", :value => 'Delete Question'} 
-  
           %input{:class => 'btn btn-primary', :type => "button", :onclick => "", :id => 'create_q_btn', :value => 'Add Question'} 
           = submit_tag("Create", :class => 'btn btn-success')
     .col-md-2
