@@ -1,4 +1,4 @@
-# Coursework project for CSCE 606
+# Coursework project for CSCE 431
 
 Team: D'SMAK
 
