@@ -4,7 +4,7 @@ Team: D'SMAK
 
 # Heroku Deployment Instructions:
 
-1. git clone @git.github.com:alexrdavis12/GI-EventRegistrationSystem
+1. git clone git@github.com:alexrdavis12/GI-EventRegistrationSystem
 2. bundle install
 3. git push heroku master
 4. heroku run rake db:reset
