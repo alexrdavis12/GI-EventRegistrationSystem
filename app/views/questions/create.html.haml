@@ -35,13 +35,14 @@
               .panel-heading
                 %h3.panel-title
                   Question
+                  %input{:class => 'btn btn-primary', :type => "button", :onclick => "", :id => 'create_q_btn', :value => 'Up'}
               .panel-body
                 .form-group
                   %input{:class => 'form-control', :value=>'', :name=>"Q1[title]", :placeholder => "Title"}
                 .form-group
                   %label Type
                   %select{:class => 'form-control', :name => "Q1[type]", :belong => "1"}
-                    %option{:value => 1}= "Text_test"
+                    %option{:value => 1}= "Text"
                     %option{:value => 2}= "Checkboxes"
                     %option{:value => 3}= "Radio Buttons"
                     %option{:value => 4}= "Dropdown"
