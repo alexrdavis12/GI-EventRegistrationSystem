@@ -207,3 +207,7 @@ $(document).ready(function(){
 function move_q_up(qid) {
 	window.alert(qid);
 }
+
+function move_q_down(qid) {
+	window.alert(-qid);
+}
