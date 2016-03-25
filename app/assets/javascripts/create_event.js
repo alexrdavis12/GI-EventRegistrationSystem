@@ -46,7 +46,7 @@ function add_subquestion(select_qid, option_id) {
 	cnt = $("#Q" + select_qid + "_" + option_id + "_subqcnt").val();
 	$("#Q" + select_qid + "_" + option_id + "_subqcnt").val(++cnt);
 	q_type_str = '<div class="form-group">\
-					  <label>Type <input type="button" value="Click Me" style="float: right;"></label>\
+					  <label>Type </label>\
 					  <select class="form-control" belong="' + select_qid + '_'+ option_id + '_' + cnt +'" name="S' + select_qid + '_' + option_id + '_' + cnt +'[type]">\
                       <option value="1">Text</option>\
                       <option value="2">Checkboxes</option>\
@@ -194,7 +194,7 @@ $(document).ready(function(){
                 	  <div class="form-group"></div>\
                 	  <input class="btn btn-danger" type="Button" onclick="javascript:delete_question(' + current_qid + ');"" value="Delete Question" />\
                 	  </div>';
-		$("#q_form").append("<div class='panel panel-success' id='Q" + current_qid + "'><div class='panel-heading'><h3 class='panel-title'>Question</h3></div><div class='panel-body'><div class='form-group'><input class='form-control' name='Q" + current_qid + "[title]' value=''></div>" + q_type_str+ "</div></div></div>");
+		$("#q_form").append("<div class='panel panel-success' id='Q" + current_qid + "'><div class='panel-heading'><h3 class='panel-title'>Question that was created</h3></div><div class='panel-body'><div class='form-group'><input class='form-control' name='Q" + current_qid + "[title]' value=''></div>" + q_type_str+ "</div></div></div>");
 		hookClickSel();
 	});
 
