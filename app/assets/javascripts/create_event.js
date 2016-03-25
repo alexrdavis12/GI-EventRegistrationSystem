@@ -204,6 +204,7 @@ $(document).ready(function(){
 
 
 $(document).ready(function(){
+	print("inside weird up func");
 	current_qid = parseInt($("#current_qid").val());
 	$('#up_btn').click(function(evt){
 		var parent = $(this).parent().parent();
