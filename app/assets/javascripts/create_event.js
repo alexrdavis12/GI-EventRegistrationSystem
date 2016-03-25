@@ -46,7 +46,7 @@ function add_subquestion(select_qid, option_id) {
 	cnt = $("#Q" + select_qid + "_" + option_id + "_subqcnt").val();
 	$("#Q" + select_qid + "_" + option_id + "_subqcnt").val(++cnt);
 	q_type_str = '<div class="form-group">\
-					  <label>Type</label>\
+					  <label>Type <input type="button" value="Click Me" style="float: right;"></label>\
 					  <select class="form-control" belong="' + select_qid + '_'+ option_id + '_' + cnt +'" name="S' + select_qid + '_' + option_id + '_' + cnt +'[type]">\
                       <option value="1">Text</option>\
                       <option value="2">Checkboxes</option>\
