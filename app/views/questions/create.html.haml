@@ -53,7 +53,7 @@
                     %option{:value => 5}= "Paragraph Text"
                   .form-group
                   %a.btn.btn-danger{:href => "javascript:delete_question(1)"}
-                    %i.fa.fa-trash-o.fa-lg
+                    %i{:class=>"fa.fa-trash-o.fa-lg"}
                     DeleteQuestion
           %input{:class => 'btn btn-primary', :type => "button", :onclick => "", :id => 'create_q_btn', :value => 'Add Question'} 
           = submit_tag("Create", :class => 'btn btn-success')
