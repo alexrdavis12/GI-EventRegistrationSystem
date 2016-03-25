@@ -193,7 +193,6 @@ $(document).ready(function(){
                 	  </select>\
                 	  <div class="form-group"></div>\
                 	  %a.btn.btn-danger{:href => "javascript:delete_question(' + current_qid + ');"" value="Delete Question" />\
-                	  </div>\)"}\
                     	%i.fa.fa-trash-o.fa-lg\
                     	Delete Question';
 		$("#q_form").append("<div class='panel panel-success' id='Q" + current_qid + "'><div class='panel-heading'><h3 class='panel-title'>Question<a class='btn btn-sm' style='float: right; background: none; outline: 0;' href='#'><i class='fa fa-chevron-up fa-lg'></i></a><a class='btn btn-sm' style='float: right; background: none; outline: 0' href='#'><i class='fa fa-chevron-down fa-lg'></i></a></h3></div><div class='panel-body'><div class='form-group'><input class='form-control' name='Q" + current_qid + "[title]' value=''></div>" + q_type_str+ "</div></div></div>");
