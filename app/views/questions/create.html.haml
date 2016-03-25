@@ -49,7 +49,7 @@
                     %option{:value => 4}= "Dropdown"
                     %option{:value => 5}= "Paragraph Text"
                   .form-group
-                  %input{:class => 'btn btn-danger', :type => "button", :onclick => "javascript:delete_question(1)", :value => 'Delete Question'} 
+                  %input{:class => 'fa fa-trash', :type => "button", :onclick => "javascript:delete_question(1)", :value => 'Delete Question'} 
           %input{:class => 'btn btn-primary', :type => "button", :onclick => "", :id => 'create_q_btn', :value => 'Add Question'} 
           = submit_tag("Create", :class => 'btn btn-success')
     .col-md-2
