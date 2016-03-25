@@ -217,12 +217,12 @@ $(document).ready(function(){
 });
 
 function move_up(qid){
-	var parent = $(this).parent().parent();
+	var parent = $(this).parent().parent().parent();
     parent.insertBefore(parent.prev());
 }
 
 function move_down(qid){
-	var parent = $(this).parent();
+	var parent = $(this).parent().parent();
     parent.insertAfter(parent.next());
 }
 /*
