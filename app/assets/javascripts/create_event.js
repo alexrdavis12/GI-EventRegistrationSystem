@@ -194,7 +194,7 @@ $(document).ready(function(){
                 	  <div class="form-group"></div>\
                 	  <input class="btn btn-danger" type="Button" onclick="javascript:delete_question(' + current_qid + ');"" value="Delete Question" />\
                 	  </div>';
-		$("#q_form").append("<div class='panel panel-success' id='Q" + current_qid + "'><div class='panel-heading'><h3 class='panel-title'>Question<a class='btn btn-default' style='background: none; outline: 0;' href='javascript: move_up("+ current_qid +")'><i class='fa fa-chevron-up fa-lg'></i></a><a class='btn btn-default' style='background: none; outline: 0' href='#'><i class='fa fa-chevron-down fa-lg'></i></a></h3></div><div class='panel-body'><div class='form-group'><input class='form-control' name='Q" + current_qid + "[title]' value=''></div>" + q_type_str+ "</div></div></div>");
+		$("#q_form").append("<div class='panel panel-success' id='Q" + current_qid + "'><div class='panel-heading'><h3 class='panel-title'>Question<a class='btn btn-default' style='background: none; outline: 0;' href='javascript: move_up("+ current_qid +")'><i class='fa fa-chevron-up fa-lg'></i></a><a class='btn btn-default' style='background: none; outline: 0' href='javascript: move_down("+ current_qid +")'><i class='fa fa-chevron-down fa-lg'></i></a></h3></div><div class='panel-body'><div class='form-group'><input class='form-control' name='Q" + current_qid + "[title]' value=''></div>" + q_type_str+ "</div></div></div>");
 		hookClickSel();
 	});
 
@@ -218,9 +218,13 @@ $(document).ready(function(){
 
 function move_up(qid){
 	var parent = $(this).parent();
-    parent.insertBefore(parent.prev());
+    parent.insertBefore(parent.prev().prev());
 }
 
+function move_down(qid){
+	var parent = $(this).parent();
+    parent.insertAfter(parent.next());
+}
 /*
 function delete_question(qid) {
 	$("#Q" + qid).remove();
