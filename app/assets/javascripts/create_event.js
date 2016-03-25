@@ -206,7 +206,7 @@ $(document).ready(function(){
 $(document).ready(function(){
 	current_qid = parseInt($("#current_qid").val());
 	$('#up_btn').click(function(evt){
-		var parent = $(this).parent();
+		var parent = $(this).parent().parent();
         parent.insertBefore(parent.prev());
 	});
 	
