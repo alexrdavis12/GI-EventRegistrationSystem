@@ -217,8 +217,8 @@ $(document).ready(function(){
 });
 
 function move_up(qid){
-	var parent = $(this).parent();
-    parent.insertBefore(parent.prev().prev());
+	var parent = $(this).parent().parent();
+    parent.insertBefore(parent.prev());
 }
 
 function move_down(qid){
