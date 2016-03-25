@@ -1,5 +1,5 @@
 #!/bin/bash
-git add app*
+git add *
 git commit --all -m "modify this comment"
 git push
 git push heroku Alex:master
