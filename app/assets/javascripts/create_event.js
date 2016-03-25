@@ -203,5 +203,3 @@ $(document).ready(function(){
 	hookClickSel();
 
 });
-//<input class="btn btn-danger" type="Button" onclick="javascript:delete_question(' + current_qid + ');"" value="Delete Question" />\
-//                	  </div>\
