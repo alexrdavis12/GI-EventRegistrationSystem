@@ -1,6 +1,6 @@
 #!/bin/bash
 git add app* bin* config* db* features* lib* log* public* script* spec* tes* vendor*
-git commit --all -m "modify this comment for your commit"
+git commit --all -m "up/down buttons"
 git push
-git push heroku Alex:master
+git push heroku Marc:master
 heroku open
