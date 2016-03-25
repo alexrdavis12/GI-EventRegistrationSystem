@@ -211,11 +211,7 @@ $(document).ready(function(){
         parent.insertBefore(parent.prev());
         hookClickSel();
 	});
-	
-	
-	//hookClickSel();
-	
-	
+	hookClickSel();
 });
 
 function move_q_up(qid){
