@@ -35,8 +35,8 @@
               .panel-heading
                 %h3.panel-title
                   Question
-                  %input{ :type => "button", :onclick => "", :id => 'up_btn', :value => '/\\ yay it works'}
-                  %input{ :type => "button", :onclick => "", :id => 'down_btn', :value => '\\/'}
+                  %input{:style => "float:right",:type => "button", :onclick => "", :id => 'down_btn', :value => '\\/'}
+                  %input{:style => "float:right", :type => "button", :onclick => "", :id => 'up_btn', :value => '/\\'}
               .panel-body
                 .form-group
                   %input{:class => 'form-control', :value=>'', :name=>"Q1[title]", :placeholder => "Title"}
@@ -47,7 +47,7 @@
                     %option{:value => 2}= "Checkboxes"
                     %option{:value => 3}= "Radio Buttons"
                     %option{:value => 4}= "Dropdown"
-                    %option{:value => 5}= "Paragraph Text"
+                    -# %option{:value => 5}= "Paragraph Text"
                   .form-group
                   %input{:class => 'btn btn-danger', :type => "button", :onclick => "javascript:delete_question(1)", :value => 'Delete Question'} 
           %input{:class => 'btn btn-primary', :type => "button", :onclick => "", :id => 'create_q_btn', :value => 'Add Question'} 
