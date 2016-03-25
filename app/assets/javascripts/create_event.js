@@ -209,6 +209,7 @@ $(document).ready(function(){
 		evt.stopImmediatePropagation();
 		var parent = $(this).parent().parent();
         parent.insertBefore(parent.prev());
+        hookClickSel();
 	});
 	
 	
