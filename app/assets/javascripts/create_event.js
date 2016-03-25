@@ -205,5 +205,5 @@ $(document).ready(function(){
 });
 
 function move_q_up(qid) {
-	$window.alert("#Q" + qid);
+	window.alert("#Q" + qid);
 }
