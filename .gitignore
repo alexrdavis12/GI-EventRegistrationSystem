@@ -16,6 +16,7 @@ keys.pub
 .dat*
 .repl_history
 build/
+deploy.sh
 
 ## Documentation cache and generated files:
 /.yardoc/
