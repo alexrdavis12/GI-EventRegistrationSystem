@@ -52,9 +52,9 @@
                     %option{:value => 4}= "Dropdown"
                     %option{:value => 5}= "Paragraph Text"
                   .form-group
-                  %a.btn.btn-danger{:onclick => "javascript:delete_question(1);"}
+                  %a.btn.btn-danger{:href => "#",:onclick => "javascript:delete_question(1);"}
                     %i.fa.fa-trash-o.fa-lg
-                    DeleteQuestion
+                    Delete Question
                  -# %input{:class => 'btn btn-danger', :type => "button", :onclick => "javascript:delete_question(1)", :value => 'Delete Question'} 
           %input{:class => 'btn btn-primary', :type => "button", :onclick => "", :id => 'create_q_btn', :value => 'Add Question'} 
           = submit_tag("Create", :class => 'btn btn-success')
