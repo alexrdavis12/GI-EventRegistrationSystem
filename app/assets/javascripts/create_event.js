@@ -194,7 +194,7 @@ $(document).ready(function(){
                 	  <div class="form-group"></div>\
                 	  <input class="btn btn-danger" type="Button" onclick="javascript:delete_question(' + current_qid + ');"" value="Delete Question" />\
                 	  </div>';
-		$("#q_form").append("<div class='panel panel-success' id='Q" + current_qid + "'><div class='panel-heading'><h3 class='panel-title'>Question that was created</h3></div><div class='panel-body'><div class='form-group'><input class='form-control' name='Q" + current_qid + "[title]' value=''></div>" + q_type_str+ "</div></div></div>");
+		$("#q_form").append("<div class='panel panel-success' id='Q" + current_qid + "'><div class='panel-heading'><h3 class='panel-title'>Question that was created </h3></div><div class='panel-body'><div class='form-group'><input class='form-control' name='Q" + current_qid + "[title]' value=''></div>" + q_type_str+ "</div></div></div>");
 		hookClickSel();
 	});
 
