@@ -21,7 +21,7 @@ function add_optionsforsub(qid, option_id, subqcnt) {
 	cnt = $("#Q" + qid + "_" + option_id + "_" + subqcnt + "_optcnt").val();
 	$("#Q" + qid + "_" + option_id + "_" + subqcnt + "_optcnt").val(++cnt);
 	$("#Q" + qid + "_" + option_id + "_" + subqcnt + "_insertpos").before("<div class='form-group' id='Q" + qid+ "_" + option_id + "_" + subqcnt + "_" + cnt + "'>\
-										 <input class='form-control' name='S" + qid + "_" + option_id + "_" + subqcnt + "[opt" + cnt + "]' value=''><div class='form-group'></div><input class='btn btn-danger' type='Button' onclick='javascript:delete_optionforsub("+ qid + "," + option_id + "," + subqcnt + "," + cnt + ");' value='Delete Option' />\
+										 <input class='form-control' name='S" + qid + "_" + option_id + "_" + subqcnt + "[opt" + cnt + "]' value=''><div class='form-group'></div><a class='btn btn-danger' href='javascript:delete_optionforsub("+ qid + "," + option_id + "," + subqcnt + "," + cnt + ")'><i class='fa fa-trash-o fa-lg'></i>Delete Option</a>\
 										 </div>\
 										 ");
 }
