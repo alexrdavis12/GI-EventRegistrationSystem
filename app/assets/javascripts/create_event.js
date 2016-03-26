@@ -215,3 +215,6 @@ function move_q_down(qid) {
 
 //TAKEN FROM LINE 81 BEFORE TESTING
 //<input id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_insertpos' type='button' class='btn btn-danger pull-right' onclick='javascript:add_optionsforsub(" + select_qid + "," + option_id + "," + subqcnt + ");' value='Add Option' />\
+
+//TAKEN FROM INSIDE LINE 39 AFTER IT CAUSED ISSUES -- REVERTING TO ORIGINAL LINE 39 FOR NOW
+//<a class='btn btn-success' href='javascript:add_subquestion(" + select_qid + "," + cnt + ")'><i class='fa fa-plus fa-lg'></i> Add Sub-question</a>\
