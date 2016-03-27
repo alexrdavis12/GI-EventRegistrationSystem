@@ -196,7 +196,7 @@ $(document).ready(function(){
   						<i class="fa fa-trash-o fa-lg"></i>\
   						Delete Question\
 					  </a>';
-		$("#q_form").append("<div class='panel panel-success' id='Q" + current_qid + "'><div class='panel-heading'><h3 class='panel-title'>Question<a class='btn btn-sm' style='float: right; background: none; outline: 0;' href='javascript:move_q_up(" + current_qid + ")'><i class='fa fa-chevron-up fa-lg'></i></a><a class='btn btn-sm' style='float: right; background: none; outline: 0' href='javascript:move_q_down(" + current_qid + ")'><i class='fa fa-chevron-down fa-lg'></i></a></h3></div><div class='panel-body'><div class='form-group'><input class='form-control' name='Q" + current_qid + "[title]' value=''></div>" + q_type_str+ "</div></div></div>");
+		$("#q_form").append("<div class='panel panel-success' id='Q" + current_qid + "'><div class='panel-heading'><h3 class='panel-title'>Question<a class='btn btn-sm' id='move_up_btn' style='float: right; background: none; outline: 0;' href='javascript:move_q_up(" + current_qid + ")'><i class='fa fa-chevron-up fa-lg'></i></a><a class='btn btn-sm' style='float: right; background: none; outline: 0' href='javascript:move_q_down(" + current_qid + ")'><i class='fa fa-chevron-down fa-lg'></i></a></h3></div><div class='panel-body'><div class='form-group'><input class='form-control' name='Q" + current_qid + "[title]' value=''></div>" + q_type_str+ "</div></div></div>");
 		hookClickSel();
 	});
 
@@ -206,12 +206,11 @@ $(document).ready(function(){
 
 
 $(document).ready(function(){
-	current_qid = parseInt($("#current_qid").val());
 	$('#move_up_btn').click(function(evt){
 		evt.stopImmediatePropagation();
 		var parent = $(this).parent().parent();
-        parent.insertBefore(parent.prev());
-        hookClickSel();
+        parent.insertBefore(parent);
+		hookClickSel();
 	});
 	hookClickSel();
 });
@@ -231,10 +230,3 @@ function move_q_down(qid){
 function delete_question(qid) {
 	$("#Q" + qid).remove();
 }*/
-
-<<<<<<< HEAD
-function move_q_down(qid) {
-	window.alert(-qid);
-}
-=======
->>>>>>> master
