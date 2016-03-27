@@ -36,7 +36,7 @@ function add_options(qid, displaysub) {
 	cnt = $("#Q" + qid + "_optcnt").val();
 	$("#Q" + qid + "_optcnt").val(++cnt);
 	$("#Q" + qid + "_insertpos").before("<div class='form-group' id='Q" + qid+ "_" + cnt + "'>\
-										 <input class='form-control' name='Q" + qid + "[opt" + cnt + "]' value=''><div class='form-group'></div><div class='btn-group'><a class='btn btn-danger' href='javascript:delete_option("+ qid + "," + cnt + ")'><i class='fa fa-trash-o fa-lg'></i> Delete Option</a><input class='btn btn-success' type='Button' onclick='javascript:add_subquestion(" + select_qid + ", " + cnt + ");' value='Add Sub-question' " + vis + "/>\
+										 <input class='form-control' name='Q" + qid + "[opt" + cnt + "]' value=''><div class='form-group'></div><div class='btn-group'><a class='btn btn-danger' href='javascript:delete_option("+ qid + "," + cnt + ")'><i class='fa fa-trash-o fa-lg'></i> Delete Option</a><a class='btn btn-success' href='javascript:add_subquestion(" + select_qid + "," + cnt + ")'><i class='fa fa-plus fa-lg'></i> Add Sub-question " + vis + "</a>\
 										 <input id='Q" + qid + "_" + cnt + "_subqcnt' type='hidden' value='0'>\
 										 </div></div>\
 										 ");
@@ -196,7 +196,7 @@ $(document).ready(function(){
   						<i class="fa fa-trash-o fa-lg"></i>\
   						Delete Question\
 					  </a>';
-		$("#q_form").append("<div class='panel panel-success' id='Q" + current_qid + "'><div class='panel-heading'><h3 class='panel-title'>Question<a class='btn btn-sm' style='float: right; background: none; outline: 0;' href='javascript:move_q_up(" + current_qid + ")'><i class='fa fa-chevron-up fa-lg'></i></a><a class='btn btn-sm' style='float: right; background: none; outline: 0' href='javascript:move_q_down(" + current_qid + ")'><i class='fa fa-chevron-down fa-lg'></i></a></h3></div><div class='panel-body'><div class='form-group'><input class='form-control' name='Q" + current_qid + "[title]' value=''></div>" + q_type_str+ "</div></div></div>");
+		$("#q_form").append("<div class='panel panel-success' id='Q" + current_qid + "'><div class='panel-heading'><h3 class='panel-title'>Question<a class='btn btn-sm pull-right' style='color: #3071a9; background: none; outline: 0;' href='javascript:move_q_up(" + current_qid + ")'><i class='fa fa-chevron-up fa-lg'></i></a><a class='btn btn-sm pull-right' style='color: #3071a9; background: none; outline: 0' href='javascript:move_q_down(" + current_qid + ")'><i class='fa fa-chevron-down fa-lg'></i></a></h3></div><div class='panel-body'><div class='form-group'><input class='form-control' name='Q" + current_qid + "[title]' value=''></div>" + q_type_str+ "</div></div></div>");
 		hookClickSel();
 	});
 
@@ -217,6 +217,6 @@ function move_q_down(qid) {
 //<input id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_insertpos' type='button' class='btn btn-success pull-right' onclick='javascript:add_optionsforsub(" + select_qid + "," + option_id + "," + subqcnt + ");' value='Add Option' />\
 
 //TAKEN FROM INSIDE LINE 39 AFTER IT CAUSED ISSUES -- REVERTING TO ORIGINAL LINE 39 FOR NOW
-//<a class='btn btn-success' href='javascript:add_subquestion(" + select_qid + "," + cnt + ")'><i class='fa fa-plus fa-lg'></i> Add Sub-question</a>\
+//<a class='btn btn-success' href='javascript:add_subquestion(" + select_qid + "," + cnt + ")'><i class='fa fa-plus fa-lg'></i> Add Sub-question ' + vis'</a>\
 
 //After trigger_option_subquestion, 'add option' button brings up 'Add subquestion' button, but clicking 'Add subquestion' does not actually do anything (the 'delete option' that comes up does delete the option though)
