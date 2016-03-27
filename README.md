@@ -5,7 +5,7 @@ Team: D'SMAK
 # Heroku Deployment Instructions:
 
 1. git clone git@github.com:alexrdavis12/GI-EventRegistrationSystem
-2. bundle install
+2. bundle install (Do this AFTER logining into heroku)
 3. git push heroku master
 4. heroku run rake db:reset
 
@@ -24,19 +24,17 @@ To merge branch into master:
 
 1. be sure everything is commited and pushed to the branch
 2. git checkout master
-3. git status
-4. if not upto date pull
-5. git merge branch name
-6. git push
+3. git pull
+4. git merge branch-name -m "merge message"
+5. git push
 
 To sync branch with master:
 
 1. be sure everything is commited and pushed to the branch
 2. git checkout master
-3. git status
-4. if not upto date pull
-5. git checkout branch
-6. git merge master
-7. git push
+3. git pull
+4. git checkout branch
+5. git merge master -m "merge message"
+6. git push
 
 Have fun!
