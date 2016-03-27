@@ -93,15 +93,15 @@ function trigger_option(dom_obj, select_qid, displaysub) {
 				   <div class='panel-body' id='Q" + select_qid + "_options'>\
 				   <input id='Q" + select_qid + "_optcnt' type='hidden' value='3'>\
 				   <div class='form-group' id='Q" + select_qid + "_1'>\
-				   <input class='form-control' name='Q" + select_qid + "[opt1]' value=''><div class='form-group'></div><div class='btn-group'><a class='btn btn-danger' href='javascript:delete_option(" + select_qid + ", 1)'><i class='fa fa-trash-o fa-lg'></i> Delete Option</a><input class='btn btn-success' type='Button' onclick='javascript:add_subquestion(" + select_qid + ", 1);' value='Add Sub-question' " + vis + " /></div>\
+				   <input class='form-control' name='Q" + select_qid + "[opt1]' value=''><div class='form-group'></div><div class='btn-group'><a class='btn btn-danger' href='javascript:delete_option(" + select_qid + ", 1)'><i class='fa fa-trash-o fa-lg'></i> Delete Option</a><a class='btn btn-success' href='javascript:add_subquestion(" + select_qid + ", 1)'><i class='fa fa-plus fa-lg'></i> Add Sub-question</a></div>\
 				   <input id='Q" + select_qid + "_1_subqcnt' type='hidden' value='0'>\
 				   </div>\
 				   <div class='form-group' id='Q" + select_qid + "_2'>\
-				   <input class='form-control' name='Q" + select_qid + "[opt2]' value=''><div class='form-group'></div><div class='btn-group'><a class='btn btn-danger' href='javascript:delete_option(" + select_qid + ", 2)'><i class='fa fa-trash-o fa-lg'></i> Delete Option</a><input class='btn btn-success' type='Button' onclick='javascript:add_subquestion(" + select_qid + ", 2);' value='Add Sub-question' " + vis + "/></div>\
+				   <input class='form-control' name='Q" + select_qid + "[opt2]' value=''><div class='form-group'></div><div class='btn-group'><a class='btn btn-danger' href='javascript:delete_option(" + select_qid + ", 2)'><i class='fa fa-trash-o fa-lg'></i> Delete Option</a><a class='btn btn-success' href='javascript:add_subquestion(" + select_qid + ", 2)'><i class='fa fa-plus fa-lg'></i> Add Sub-question</a></div>\
    				   <input id='Q" + select_qid + "_2_subqcnt' type='hidden' value='0'>\
 				   </div>\
 				   <div class='form-group' id='Q" + select_qid + "_3'>\
-				   <input class='form-control' name='Q" + select_qid + "[opt3]' value=''><div class='form-group'></div><div class='btn-group'><a class='btn btn-danger' href='javascript:delete_option(" + select_qid + ", 3)'><i class='fa fa-trash-o fa-lg'></i> Delete Option</a><input class='btn btn-success' type='Button' onclick='javascript:add_subquestion(" + select_qid + ", 3);' value='Add Sub-question' " + vis + " /></div>\
+				   <input class='form-control' name='Q" + select_qid + "[opt3]' value=''><div class='form-group'></div><div class='btn-group'><a class='btn btn-danger' href='javascript:delete_option(" + select_qid + ", 3)'><i class='fa fa-trash-o fa-lg'></i> Delete Option</a><a class='btn btn-success' href='javascript:add_subquestion(" + select_qid + ", 3)'><i class='fa fa-plus fa-lg'></i> Add Sub-question</a></div>\
    				   <input id='Q" + select_qid + "_3_subqcnt' type='hidden' value='0'>\
 				   </div>\
 				   <input id='Q" + select_qid + "_insertpos' type='button' class='btn btn-success pull-right' onclick='javascript:add_options(" + select_qid + ", " + displaysub + ");' value='Add Option' />\
@@ -219,6 +219,9 @@ function move_q_down(qid) {
 
 //TAKEN FROM LINE 83 BEFORE TESTING
 //<input id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_insertpos' type='button' class='btn btn-success pull-right' onclick='javascript:add_optionsforsub(" + select_qid + "," + option_id + "," + subqcnt + ");' value='Add Option' />\
+
+//TAKEN FROM LINE 96 BEFORE TESTING
+//<input class='btn btn-success' type='Button' onclick='javascript:add_subquestion(" + select_qid + ", 1);' value='Add Sub-question' " + vis + " />\
 
 //ORIGINAL AND NEW FROM INSIDE LINE 39 TO CHANGE (DIFFERENCE INCLUDES DISABLING ON SELECTION OF 'CHECKBOXES')
 //FROM   <input class='btn btn-success' type='Button' onclick='javascript:add_subquestion(" + select_qid + ", " + cnt + ");' value='Add Sub-question' " + vis + "/>\
