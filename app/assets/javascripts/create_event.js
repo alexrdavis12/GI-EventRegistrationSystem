@@ -207,6 +207,7 @@ $(document).ready(function(){
 
 $(document).ready(function(){
 	$('#move_up_btn').click(function(evt){
+		window.alert("move up clicked");
 		evt.stopImmediatePropagation();
 		var parent = $(this).parent().parent();
 		window.alert("length of parent jQuery obj:"+parent.length());
