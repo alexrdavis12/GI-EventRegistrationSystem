@@ -222,7 +222,7 @@ $(document).ready(function(){
 
 function move_q_up(qid){
 	var current = $('Q'+qid);
-	window.alert("after qid");
+	window.alert(current.length);
 	current.prev().before(current);
 	/*
 		window.alert($(this).p);
