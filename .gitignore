@@ -10,13 +10,11 @@
 /tmp/
 keys
 keys.pub
-
-
+deploy.sh
 ## Specific to RubyMotion:
 .dat*
 .repl_history
 build/
-deploy.sh
 
 ## Documentation cache and generated files:
 /.yardoc/
