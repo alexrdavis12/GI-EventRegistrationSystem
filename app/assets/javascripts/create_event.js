@@ -221,6 +221,7 @@ $(document).ready(function(){
 });
 
 function move_q_up(qid){
+	window.alert("move up");
 	var current = $('.panel panel-success');
 	current.prev().before(current);
 	/*
