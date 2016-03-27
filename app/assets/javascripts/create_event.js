@@ -79,7 +79,7 @@ function trigger_option_subquestion(dom_obj, select_qid, option_id, subqcnt) {
 				   <div class='form-group' id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_3'>\
 				   <input class='form-control' name='S" + select_qid + "_" + option_id + "_" + subqcnt + "[opt3]' value=''><div class='form-group'></div><a class='btn btn-danger' href='javascript:delete_optionforsub("+ select_qid + ", " + option_id + "," + subqcnt + ", 3)'><i class='fa fa-trash-o fa-lg'></i> Delete Option</a>\
 				   </div>\
-				   <input id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_insertpos' type='button' class='btn btn-success pull-right' onclick='javascript:add_optionsforsub(" + select_qid + "," + option_id + "," + subqcnt + ");' value='Add Option' />\
+				   <a class='btn btn-success pull-right' id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_insertpos' href='javascript:add_optionsforsub("+ select_qid + "," + option_id + "," + subqcnt + ")'><i class='fa fa-plus fa-lg'></i> Add Option</a>\
 				   </div></div></div></div>");
 }
 
@@ -215,6 +215,9 @@ function move_q_down(qid) {
 
 
 //TAKEN FROM LINE 81 BEFORE TESTING
+//<input id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_insertpos' type='button' class='btn btn-success pull-right' onclick='javascript:add_optionsforsub(" + select_qid + "," + option_id + "," + subqcnt + ");' value='Add Option' />\
+
+//TAKEN FROM LINE 83 BEFORE TESTING
 //<input id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_insertpos' type='button' class='btn btn-success pull-right' onclick='javascript:add_optionsforsub(" + select_qid + "," + option_id + "," + subqcnt + ");' value='Add Option' />\
 
 //ORIGINAL AND NEW FROM INSIDE LINE 39 TO CHANGE (DIFFERENCE INCLUDES DISABLING ON SELECTION OF 'CHECKBOXES')
