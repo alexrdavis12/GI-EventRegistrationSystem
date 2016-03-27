@@ -209,6 +209,7 @@ $(document).ready(function(){
 	$('#move_up_btn').click(function(evt){
 		evt.stopImmediatePropagation();
 		var parent = $(this).parent().parent();
+		window.alert(parent.length());
         parent.insertBefore(parent);
 		hookClickSel();
 	});
