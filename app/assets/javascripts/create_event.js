@@ -221,8 +221,8 @@ $(document).ready(function(){
 });
 
 function move_q_up(qid){
-	window.alert("move up");
-	var current = $('.panel panel-success');
+	var current = $('Q'+qid);
+	window.alert("after qid");
 	current.prev().before(current);
 	/*
 		window.alert($(this).p);
