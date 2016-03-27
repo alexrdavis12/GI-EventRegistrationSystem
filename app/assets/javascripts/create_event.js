@@ -206,6 +206,8 @@ $(document).ready(function(){
 
 
 $(document).ready(function(){
+	current_qid = parseInt($("#current_qid").val());
+		window.alert("this is the curr qid:" + current_qid);
 	$('#move_up_btn').click(function(evt){
 		window.alert("move up clicked");
 		evt.stopImmediatePropagation();
