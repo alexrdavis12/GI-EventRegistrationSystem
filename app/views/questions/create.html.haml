@@ -56,7 +56,10 @@
                   %a.btn.btn-danger{:href => "javascript:delete_question(1)"}
                     %i.fa.fa-trash-o.fa-lg
                     Delete Question
-          %input{:class => 'btn btn-primary', :type => "button", :onclick => "", :id => 'create_q_btn', :value => 'Add Question'} 
+          %a.btn.btn-primary{:href => "", :id => 'create-q_btn', }
+            %i.fa.fa-plus.fa-lg
+            Add Question
+          //%input{:class => 'btn btn-primary', :type => "button", :onclick => "", :id => 'create_q_btn', :value => 'Add Question'} 
           = submit_tag("Create", :class => 'btn btn-success')
     .col-md-2
   .row
