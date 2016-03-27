@@ -46,7 +46,7 @@ function add_subquestion(select_qid, option_id) {
 	cnt = $("#Q" + select_qid + "_" + option_id + "_subqcnt").val();
 	$("#Q" + select_qid + "_" + option_id + "_subqcnt").val(++cnt);
 	q_type_str = '<div class="form-group">\
-					  <label>Type</label>\
+					  <label>Type </label>\
 					  <select class="form-control" belong="' + select_qid + '_'+ option_id + '_' + cnt +'" name="S' + select_qid + '_' + option_id + '_' + cnt +'[type]">\
                       <option value="1">Text</option>\
                       <option value="2">Checkboxes</option>\
@@ -204,10 +204,37 @@ $(document).ready(function(){
 
 });
 
-function move_q_up(qid) {
-	window.alert(qid);
+
+$(document).ready(function(){
+	current_qid = parseInt($("#current_qid").val());
+	$('#move_up_btn').click(function(evt){
+		evt.stopImmediatePropagation();
+		var parent = $(this).parent().parent();
+        parent.insertBefore(parent.prev());
+        hookClickSel();
+	});
+	hookClickSel();
+});
+
+function move_q_up(qid){
+		window.alert(qid);
+	var parent = $(this).parent().parent().parent();
+    parent.insertBefore(parent.prev());
 }
 
+function move_q_down(qid){
+		window.alert(-qid);
+	var parent = $(this).parent().parent();
+    parent.insertAfter(parent.next());
+}
+/*
+function delete_question(qid) {
+	$("#Q" + qid).remove();
+}*/
+
+<<<<<<< HEAD
 function move_q_down(qid) {
 	window.alert(-qid);
 }
+=======
+>>>>>>> master
