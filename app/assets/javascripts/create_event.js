@@ -209,17 +209,24 @@ $(document).ready(function(){
 	current_qid = parseInt($("#current_qid").val());
 	$('#move_up_btn').click(function(evt){
 		evt.stopImmediatePropagation();
-		var parent = $(this).parent().parent();
-        parent.insertBefore(parent.prev());
+	
+	var current = $('.panel panel-success');
+	current.prev().before(current);
+	
+	/*	var parent = $(this).parent().parent();
+        parent.insertBefore(parent.prev());*/
         hookClickSel();
 	});
 	hookClickSel();
 });
 
 function move_q_up(qid){
-		window.alert($(this).val());
+	var current = $('.panel panel-success');
+	current.prev().before(current);
+	/*
+		window.alert($(this).p);
 	var parent = $(this).parent().parent().parent();
-    parent.insertBefore(parent.prev());
+    parent.insertBefore(parent.prev());*/
 }
 
 function move_q_down(qid){
