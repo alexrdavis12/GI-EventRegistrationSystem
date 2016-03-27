@@ -221,9 +221,16 @@ $(document).ready(function(){
 });
 
 function move_q_up(qid){
-	var current = $('Q'+qid);
-	window.alert(current.length);
-	current.prev().before(current);
+	var current = $('#Q'+qid);
+	if (current.length){
+		
+		//window.alert(current.length);
+		temp = qid-1;
+		current.insertBefore('#Q'+temp);
+		//current.prev().before(current);
+		window.alert(current.length);
+			
+	}
 	/*
 		window.alert($(this).p);
 	var parent = $(this).parent().parent().parent();
