@@ -226,8 +226,8 @@ function move_q_up(qid){
 		
 		//window.alert(current.length);
 		temp = qid-1;
-		current.insertBefore(current);
-		//current.prev().before(current);
+		//current.insertBefore(current);
+		current.prev().before(current);
 		window.alert(current.length);
 			
 	}
