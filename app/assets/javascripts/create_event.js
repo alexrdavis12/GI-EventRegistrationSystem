@@ -217,7 +217,7 @@ $(document).ready(function(){
 });
 
 function move_q_up(qid){
-		window.alert($(this));
+		window.alert($(this).val());
 	var parent = $(this).parent().parent().parent();
     parent.insertBefore(parent.prev());
 }
