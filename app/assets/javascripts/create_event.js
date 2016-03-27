@@ -103,7 +103,7 @@ function trigger_option(dom_obj, select_qid, displaysub) {
 				   <input class='form-control' name='Q" + select_qid + "[opt3]' value=''><div class='form-group'></div><div class='btn-group'><a class='btn btn-danger' href='javascript:delete_option(" + select_qid + ", 3)'><i class='fa fa-trash-o fa-lg'></i> Delete Option</a><input class='btn btn-success' type='Button' onclick='javascript:add_subquestion(" + select_qid + ", 3);' value='Add Sub-question' " + vis + " /></div>\
    				   <input id='Q" + select_qid + "_3_subqcnt' type='hidden' value='0'>\
 				   </div>\
-				   <input id='Q" + select_qid + "_insertpos' type='button' class='btn btn-danger pull-right' onclick='javascript:add_options(" + select_qid + ", " + displaysub + ");' value='Add Option' />\
+				   <input id='Q" + select_qid + "_insertpos' type='button' class='btn btn-success pull-right' onclick='javascript:add_options(" + select_qid + ", " + displaysub + ");' value='Add Option' />\
 				   </div></div></div></div>");
 }
 
