@@ -88,7 +88,7 @@ function add_subquestion(select_qid, option_id) {
     }
     else //A list has not been previously created for this set of subquestions so create one
     {
-    	str = 	"<li id='Q" + select_qid + "_" + option_id+"_list' style='list-style-type:none'>\
+    	str = 	"<li id='Q" + select_qid + "_" + option_id+"_list' style='list-style-type:none'>\git
     				<div class='panel panel-danger' id='QQ" + select_qid + "_" + option_id + "_" + cnt + "'>\
 	    				<div class='panel-heading'>\
 	    					<h3 class='panel-title'>\
