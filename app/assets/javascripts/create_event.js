@@ -151,7 +151,7 @@ function trigger_option(dom_obj, select_qid, displaysub) {
 											 <div class='form-group' id='Q" + select_qid + "_1'>\
 				   							 <input class='form-control' name='Q" + select_qid + "[opt1]' value=''>\
 				   							 	<div class='form-group'></div>\
-				   							 	<div class='btn-group'>\
+				   							 	<div class='btn-group pull-right'>\
 				   							 		<a class='btn btn-danger pull-right' href='javascript:delete_option(" + select_qid + ", 1)'>\
 				   							 			<i class='fa fa-trash-o fa-lg'></i>\
 				   							 			Delete Option\
@@ -166,7 +166,7 @@ function trigger_option(dom_obj, select_qid, displaysub) {
 				   							 <div class='form-group' id='Q" + select_qid + "_2'>\
 				   								<input class='form-control' name='Q" + select_qid + "[opt2]' value=''>\
 				   									<div class='form-group'></div>\
-				   									<div class='btn-group'>\
+				   									<div class='btn-group pull-right'>\
 				   										<a class='btn btn-danger pull-right' href='javascript:delete_option(" + select_qid + ", 2)'>\
 				   											<i class='fa fa-trash-o fa-lg'></i>\
 				   											Delete Option\
@@ -181,7 +181,7 @@ function trigger_option(dom_obj, select_qid, displaysub) {
 										    <div class='form-group' id='Q" + select_qid + "_3'>\
 												<input class='form-control' name='Q" + select_qid + "[opt3]' value=''>\
 													<div class='form-group'></div>\
-													<div class='btn-group'>\
+													<div class='btn-group pull-right'>\
 														<a class='btn btn-danger pull-right' href='javascript:delete_option(" + select_qid + ", 3)'>\
 															<i class='fa fa-trash-o fa-lg'></i>\
 															Delete Option\
