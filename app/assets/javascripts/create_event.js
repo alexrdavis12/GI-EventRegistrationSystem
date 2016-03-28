@@ -61,7 +61,7 @@ function add_subquestion(select_qid, option_id) {
                 	  	Delete Sub-question\
                 	  </a>\
                   </div>';
-    if($("#Q" + select_qid + "_" + option_id+"_list").length == 1)
+    if($("#Q" + select_qid + "_" + option_id+"_list").length == 1)  //A list has been previously created for this set of subquestions so use it
     {
     	 str = 	"<div class='panel panel-danger' id='QQ" + select_qid + "_" + option_id + "_" + cnt + "'>\
     	 			<div class='panel-heading'>\
@@ -86,7 +86,7 @@ function add_subquestion(select_qid, option_id) {
     	 $("#Q" + select_qid + "_" + option_id+"_list").append(str);
     	 hookClickSel();
     }
-    else
+    else //A list has not been previously created for this set of subquestions so create one
     {
     	str = 	"<li id='Q" + select_qid + "_" + option_id+"_list' style='list-style-type:none'>\
     				<div class='panel panel-danger' id='QQ" + select_qid + "_" + option_id + "_" + cnt + "'>\
@@ -321,7 +321,6 @@ $(document).ready(function(){
 });
 
 function move_q_up(qid){
-	window.alert("here q up");
 	var current = $('#Q'+qid);
 	current.prev().before(current);
 }
@@ -332,20 +331,14 @@ function move_q_down(qid){
 }
 
 function move_subq_up(qid,option,count){
-	window.alert("here up");
 	var current = $('#QQ'+qid+'_'+option+'_'+count);
 	current.prev().before(current);
 }
 
 function move_subq_down(qid,option,count){
-	window.alert("here down");
 	var current = $('#QQ'+qid+'_'+option+'_'+count);
 	current.next().after(current);
 }
-/*
-function delete_question(qid) {
-	$("#Q" + qid).remove();
-}*/
 
 
 ///NOTES FOR MARC ----------------------------------------------------------------------------------------------------------------------------------------------
