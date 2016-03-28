@@ -31,13 +31,14 @@
         = form_tag({:action => 'create'}) do
           %div#q_form
             %input{:type=>"hidden", :value=>@eid, :name=>:q_eid}
+          %li{:id=>'q_list', :style=>"list-style-type:none"}
             .panel.panel-success#Q1
               .panel-heading
                 %h3.panel-title
                   Question
-                  %a.btn.btn-sm{:href => "javascript:move_q_up(1)", :style => "float: right; background: none; outline: 0"}
+                  %a.btn.btn-sm.pull-right{:href => "javascript:move_q_up(1)", :style => "color: #3071a9; background: none; outline: 0"}
                     %i.fa.fa-chevron-up.fa-lg
-                  %a.btn.btn-sm{:href => "javascript:move_q_down(1)", :style => "float: right; background: none; outline: 0"}
+                  %a.btn.btn-sm.pull-right{:href => "javascript:move_q_down(1)", :style => "color: #3071a9; background: none; outline: 0"}
                     %i.fa.fa-chevron-down.fa-lg
                   //%input{:style => "float:right",:type => "button", :onclick => "", :id => 'down_btn', :value => '\\/'}
                   //%input{:style => "float:right", :type => "button", :onclick => "", :id => 'up_btn', :value => '/\\'}
@@ -56,7 +57,10 @@
                   %a.btn.btn-danger{:href => "javascript:delete_question(1)"}
                     %i.fa.fa-trash-o.fa-lg
                     Delete Question
-          %input{:class => 'btn btn-primary', :type => "button", :onclick => "", :id => 'create_q_btn', :value => 'Add Question'} 
+          %a.btn.btn-primary{:id => 'create_q_btn', }
+            %i.fa.fa-plus.fa-lg
+            Add Question
+          //%input{:class => 'btn btn-primary', :type => "button", :onclick => "", :id => 'create_q_btn', :value => 'Add Question'} 
           = submit_tag("Create", :class => 'btn btn-success')
     .col-md-2
   .row
