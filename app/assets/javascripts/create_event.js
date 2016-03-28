@@ -1,4 +1,7 @@
 // This handles adding question
+
+
+
 function delete_option(qid, cnt) {
 	$("#Q" + qid + "_" + cnt).remove();
 }
@@ -20,11 +23,12 @@ function delete_subquestion(qid, option_id, subqcnt) {
 function add_optionsforsub(qid, option_id, subqcnt) {
 	cnt = $("#Q" + qid + "_" + option_id + "_" + subqcnt + "_optcnt").val();
 	$("#Q" + qid + "_" + option_id + "_" + subqcnt + "_optcnt").val(++cnt);
-	$("#Q" + qid + "_" + option_id + "_" + subqcnt + "_insertpos").before("<div class='form-inline' width='auto' id='Q" + qid+ "_" + option_id + "_" + subqcnt + "_" + cnt + "'																			>\
-																				<input class='form-control' name='S" + qid + "_" + option_id + "_" + subqcnt + "[opt" + cnt + "]' value=''/>\
+	$("#Q" + qid + "_" + option_id + "_" + subqcnt + "_insertpos").before("<div class='form-inline'  id='Q" + qid+ "_" + option_id + "_" + subqcnt + "_" + cnt + "'																			>\
+																				<input class='form-control' width='auto' min-width='0' name='S" + qid + "_" + option_id + "_" + subqcnt + "[opt" + cnt + "]' value=''/>\
 																				<a class='btn btn-danger pull-right' href='javascript:delete_optionforsub("+ qid + "," + option_id + "," + subqcnt + "," + cnt + ")'>\
 																						<i class='fa fa-trash-o fa-lg'></i>\
 																				</a>\
+																				</input>\
 																		 </div>");
 }
 
