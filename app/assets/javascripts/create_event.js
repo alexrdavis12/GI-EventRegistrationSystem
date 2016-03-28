@@ -60,12 +60,12 @@ function add_subquestion(select_qid, option_id) {
                 	  </div>';
     if($("#Q" + select_qid + "_" + option_id+"_list").length == 1)
     {
-    	 str = 	"<div class='form-group'></div><div class='panel panel-danger' id='QQ" + select_qid + "_" + option_id + "_" + cnt + "'><div class='panel-heading'><h3 class='panel-title'>Sub-question</h3></div><div class='panel-body'><div class='form-group'><input class='form-control' name='S" + select_qid + "_" + option_id + "_" + cnt + "[title]' value=''></div>" + q_type_str + "</div></div></div>";
+    	 str = 	"<div class='form-group'></div><div class='panel panel-danger' id='QQ" + select_qid + "_" + option_id + "_" + cnt + "'><div class='panel-heading'><h3 class='panel-title'>Sub-question<a class='btn btn-sm pull-right' style='color: #3071a9; background: none; outline: 0;' href='javascript:move_subq_up('QQ'" + select_qid + "_" + option_id + "_" + cnt + ")'><i class='fa fa-chevron-up fa-lg'></i></a><a class='btn btn-sm pull-right' style='color: #3071a9; background: none; outline: 0' href='javascript:move_subq_down('QQ'" + select_qid + "_" + option_id + "_" + cnt + ")'><i class='fa fa-chevron-down fa-lg'></i></a></h3></div><div class='panel-body'><div class='form-group'><input class='form-control' name='S" + select_qid + "_" + option_id + "_" + cnt + "[title]' value=''></div>" + q_type_str + "</div></div></div>";
     	 $("#Q" + select_qid + "_" + option_id+"_list").append(str);
     }
     else
     {
-    	str = 	"<li id='Q" + select_qid + "_" + option_id+"_list' style='list-style-type:none'><div class='form-group'></div><div class='panel panel-danger' id='QQ" + select_qid + "_" + option_id + "_" + cnt + "'><div class='panel-heading'><h3 class='panel-title'>Sub-question</h3></div><div class='panel-body'><div class='form-group'><input class='form-control' name='S" + select_qid + "_" + option_id + "_" + cnt + "[title]' value=''></div>" + q_type_str + "</div></div></div></li>";
+    	str = 	"<li id='Q" + select_qid + "_" + option_id+"_list' style='list-style-type:none'><div class='form-group'></div><div class='panel panel-danger' id='QQ" + select_qid + "_" + option_id + "_" + cnt + "'><div class='panel-heading'><h3 class='panel-title'>Sub-question<a class='btn btn-sm pull-right' style='color: #3071a9; background: none; outline: 0;' href='javascript:move_subq_up('QQ'" + select_qid + "_" + option_id + "_" + cnt + ")'><i class='fa fa-chevron-up fa-lg'></i></a><a class='btn btn-sm pull-right' style='color: #3071a9; background: none; outline: 0' href='javascript:move_subq_down('QQ'" + select_qid + "_" + option_id + "_" + cnt + ")'><i class='fa fa-chevron-down fa-lg'></i></a></h3></div><div class='panel-body'><div class='form-group'><input class='form-control' name='S" + select_qid + "_" + option_id + "_" + cnt + "[title]' value=''></div>" + q_type_str + "</div></div></div></li>";
     	$("#Q" + select_qid + "_" + option_id).append(str);	
     }
 	
@@ -222,6 +222,16 @@ function move_q_up(qid){
 
 function move_q_down(qid){
 	var current = $('#Q'+qid);
+	current.next().after(current);
+}
+
+function move_subq_up(subqid){
+	var current = $(subqid);
+	current.prev().before(current);
+}
+
+function move_subq_down(subqid){
+	var current = $(subqid);
 	current.next().after(current);
 }
 /*
