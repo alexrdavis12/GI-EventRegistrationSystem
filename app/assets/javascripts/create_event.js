@@ -147,15 +147,10 @@ function trigger_option_subquestion(dom_obj, select_qid, option_id, subqcnt) {
 				   		<div class='panel-body' id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_options'>\
 				   			<input id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_optcnt' type='hidden' value='1'>\
 				   			<div class='form-group' id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_1'>\
-				   				<div class='col-xs-11'>\
 				   				<input class='form-control' name='S" + select_qid + "_" + option_id + "_" + subqcnt + "[opt1]' value=''>\
-				   				</div>\
-				   				<div class='col-xs-1'>\
 				   					<a class='btn btn-danger pull-right' href='javascript:delete_optionforsub("+ select_qid + ", " + option_id + "," + subqcnt + ", 1)'>\
 				   						<i class='fa fa-trash-o fa-lg'></i></a>\
-				   				</div>\
 				   			</div>\
-				   			<div class='form-group'></div>\
 				   <a class='btn btn-success' id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_insertpos' href='javascript:add_optionsforsub("+ select_qid + "," + option_id + "," + subqcnt + ")'><i class='fa fa-plus fa-lg'></i> Add Option</a>\
 				   </div></div></div></div>");
 }
