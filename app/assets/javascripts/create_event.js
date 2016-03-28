@@ -58,7 +58,7 @@ function add_subquestion(select_qid, option_id) {
                 	  <div class="form-group"></div>\
                 	  <a class="btn btn-danger" href="javascript:delete_subquestion(' + select_qid + ', ' + option_id + ',' + cnt + ')"><i class="fa fa-trash-o fa-lg"></i> Delete Sub-question</a>\
                 	  </div>';
-    if($("#Q" + select_qid + "_" + option_id+"_list").length)
+    if($("#Q" + select_qid + "_" + option_id+"_list").length == 1)
     {
     	 str = 	"<div class='form-group'></div><div class='panel panel-danger' id='QQ" + select_qid + "_" + option_id + "_" + cnt + "'><div class='panel-heading'><h3 class='panel-title'>Sub-question</h3></div><div class='panel-body'><div class='form-group'><input class='form-control' name='S" + select_qid + "_" + option_id + "_" + cnt + "[title]' value=''></div>" + q_type_str + "</div></div></div>";
     	 $("#Q" + select_qid + "_" + option_id+"_list").append(str);
