@@ -24,7 +24,7 @@ function add_optionsforsub(qid, option_id, subqcnt) {
 	cnt = $("#Q" + qid + "_" + option_id + "_" + subqcnt + "_optcnt").val();
 	$("#Q" + qid + "_" + option_id + "_" + subqcnt + "_optcnt").val(++cnt);
 	$("#Q" + qid + "_" + option_id + "_" + subqcnt + "_insertpos").before("<div class='form-horizontal'  id='Q" + qid+ "_" + option_id + "_" + subqcnt + "_" + cnt + "'																			>\
-																				<div class='col-xs-12'>\
+																				<div class='col-xs-11'>\
 																				<input class='form-control'  name='S" + qid + "_" + option_id + "_" + subqcnt + "[opt" + cnt + "]' value=''/>\
 																				</div>\
 																				<div class='col-xs-1'>\
