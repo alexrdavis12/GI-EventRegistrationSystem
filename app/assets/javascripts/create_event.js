@@ -228,7 +228,7 @@ function move_q_down(qid){
 }
 
 function move_subq_up(subqid){
-	window.alert("QQ'"+subqid);
+	window.alert("here");
 	var current = $('#QQ'+subqid);
 	current.prev().before(current);
 }
