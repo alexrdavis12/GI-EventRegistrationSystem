@@ -37,6 +37,10 @@ class EventsController < ApplicationController
       @event = Event.find(id)
     end
     
+    def edit
+      @event = Event.find(id)
+    end
+    
     def allevent
       id = session[:user_id]
       @curlevel = User.find(id).level
