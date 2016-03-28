@@ -249,11 +249,12 @@ $(document).ready(function(){
 		                      <option value="4">Dropdown</option>\
 		                      <option value="5">Paragraph Text</option>\
 	                	  </select>\
-	                	  <div class="form-group"></div>\
+	                	  <div class="form-group">\
 	                	  <a class="btn btn-danger pull-right" href="javascript:delete_question(' + current_qid + ')">\
 	  						<i class="fa fa-trash-o fa-lg"></i>\
 	  						Delete Question\
 						  </a>\
+						  </div>\
 						</div>';
 		$("#q_list").append("<div class='panel panel-success' id='Q" + current_qid + "'>\
 								<div class='panel-heading'>\
