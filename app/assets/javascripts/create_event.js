@@ -109,7 +109,7 @@ function add_subquestion(select_qid, option_id) {
     					</div>\
     				</div>\
     			</li>";
-    	$("#Q" + select_qid + "_" + option_id).append(str);	
+    	$("#Q" + select_qid + "_" + option_id).prev($("#Q" + select_qid + "_" + option_id)).append(str);	
     	hookClickSel();
     }
 	
@@ -143,7 +143,7 @@ function trigger_option(dom_obj, select_qid, displaysub) {
 											 <input id='Q" + select_qid + "_optcnt' type='hidden' value='3'>\
 											 <div class='form-group' id='Q" + select_qid + "_1'>\
 					   							 <input class='form-control' name='Q" + select_qid + "[opt1]' value=''>\
-					   							 	<div class='form-group'></div>\
+					   							 	<div class='form-group'>\
 					   							 		<a class='btn btn-success' href='javascript:add_subquestion(" + select_qid + ", 1)'>\
 					   							 			<i class='fa fa-plus fa-lg'></i>\
 					   							 			Add Sub-question\
@@ -152,6 +152,7 @@ function trigger_option(dom_obj, select_qid, displaysub) {
 					   							 			<i class='fa fa-trash-o fa-lg'></i>\
 					   							 			Delete Option\
 					   							 		</a>\
+					   							 	</div>\
 				   									<input id='Q" + select_qid + "_1_subqcnt' type='hidden' value='0'>\
 											 </div>\
 				   							<a class='btn btn-success' id='Q" + select_qid + "_insertpos' href='javascript:add_options(\
