@@ -289,7 +289,7 @@ $(document).ready(function(){
 		                      <option value="5">Paragraph Text</option>\
 	                	  </select>\
 	                	  <div class="form-group"></div>\
-	                	  <a class="btn btn-danger" href="javascript:delete_question(' + current_qid + ')">\
+	                	  <a class="btn btn-danger pull-right" href="javascript:delete_question(' + current_qid + ')">\
 	  						<i class="fa fa-trash-o fa-lg"></i>\
 	  						Delete Question\
 						  </a>\
