@@ -55,7 +55,7 @@ function add_subquestion(select_qid, option_id) {
 	                      <option value="5">Paragraph Text</option>\
                 	  </select>\
                 	  <div class="form-group"></div>\
-                	  <a class="btn btn-danger" href="javascript:delete_subquestion(' + select_qid + ', ' + option_id + ',' + cnt + ')">\
+                	  <a class="btn btn-danger pull-right" href="javascript:delete_subquestion(' + select_qid + ', ' + option_id + ',' + cnt + ')">\
                 	  	<i class="fa fa-trash-o fa-lg"></i>\
                 	  	Delete Sub-question\
                 	  </a>\
@@ -109,7 +109,7 @@ function add_subquestion(select_qid, option_id) {
     					</div>\
     				</div>\
     			</li>";
-    	$("#Q" + select_qid + "_" + option_id).append(str);	
+    	$("#Q" + select_qid + "_" + option_id).prev.append(str);	
     	hookClickSel();
     }
 	
