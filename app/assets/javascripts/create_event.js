@@ -1,6 +1,11 @@
 // This handles adding question
 
 
+function delete_first_option(qid,cnt){
+	var line =$("#Q" + qid + "_" + cnt);
+	line.next($("#Q" + qid + "_" + cnt)).remove();
+	line.remove();
+}
 
 function delete_option(qid, cnt) {
 	$("#Q" + qid + "_" + cnt).remove();
@@ -174,7 +179,7 @@ function trigger_option(dom_obj, select_qid, displaysub) {
 		   							 			<i class='fa fa-plus fa-lg'></i>\
 		   							 			Add Sub-question\
 		   							 		 </a>\
-		   							 		 <a class='btn btn-danger pull-right' href='javascript:delete_option(" + select_qid + ", 1)'>\
+		   							 		 <a class='btn btn-danger pull-right' href='javascript:delete_first_option(" + select_qid + ", 1)'>\
 		   							 			<i class='fa fa-trash-o fa-lg'></i>\
 		   							 			Delete Option\
 		   							 		 </a>\
