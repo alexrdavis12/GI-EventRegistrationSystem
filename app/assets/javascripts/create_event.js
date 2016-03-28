@@ -96,14 +96,6 @@ function trigger_option(dom_obj, select_qid, displaysub) {
 				   <input class='form-control' name='Q" + select_qid + "[opt1]' value=''><div class='form-group'></div><div class='btn-group'><a class='btn btn-danger' href='javascript:delete_option(" + select_qid + ", 1)'><i class='fa fa-trash-o fa-lg'></i> Delete Option</a><a class='btn btn-success' href='javascript:add_subquestion(" + select_qid + ", 1)'><i class='fa fa-plus fa-lg'></i> Add Sub-question</a></div>\
 				   <input id='Q" + select_qid + "_1_subqcnt' type='hidden' value='0'>\
 				   </div>\
-				   <div class='form-group' id='Q" + select_qid + "_2'>\
-				   <input class='form-control' name='Q" + select_qid + "[opt2]' value=''><div class='form-group'></div><div class='btn-group'><a class='btn btn-danger' href='javascript:delete_option(" + select_qid + ", 2)'><i class='fa fa-trash-o fa-lg'></i> Delete Option</a><a class='btn btn-success' href='javascript:add_subquestion(" + select_qid + ", 2)'><i class='fa fa-plus fa-lg'></i> Add Sub-question</a></div>\
-   				   <input id='Q" + select_qid + "_2_subqcnt' type='hidden' value='0'>\
-				   </div>\
-				   <div class='form-group' id='Q" + select_qid + "_3'>\
-				   <input class='form-control' name='Q" + select_qid + "[opt3]' value=''><div class='form-group'></div><div class='btn-group'><a class='btn btn-danger' href='javascript:delete_option(" + select_qid + ", 3)'><i class='fa fa-trash-o fa-lg'></i> Delete Option</a><a class='btn btn-success' href='javascript:add_subquestion(" + select_qid + ", 3)'><i class='fa fa-plus fa-lg'></i> Add Sub-question</a></div>\
-   				   <input id='Q" + select_qid + "_3_subqcnt' type='hidden' value='0'>\
-				   </div>\
 				   <a class='btn btn-success pull-right' id='Q" + select_qid + "_insertpos' href='javascript:add_options(" + select_qid + "," + displaysub + ")'><i class='fa fa-plus fa-lg'></i> Add Option</a>\
 				   </div></div></div></div>");
 }
