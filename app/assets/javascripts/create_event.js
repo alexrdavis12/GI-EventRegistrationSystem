@@ -120,7 +120,7 @@ function add_subquestion(select_qid, option_id) {
 }
 
 function trigger_option_subquestion(dom_obj, select_qid, option_id, subqcnt) {
-	dom_obj.parent().before("<div id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_optdiv' class='form-group'><div class='panel panel-default'>\
+	dom_obj.before("<div id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_optdiv' class='form-group'><div class='panel panel-default'>\
 				   <div class='panel-heading'>Options</div>\
 				   <div class='panel-body' id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_options'>\
 				   <input id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_optcnt' type='hidden' value='1'>\
@@ -136,7 +136,7 @@ function trigger_option(dom_obj, select_qid, displaysub) {
 		vis = ""
 	else
 		vis = "disabled"
-	dom_obj.parent().before("<div id='Q" + select_qid + "_optdiv' class='form-group'>\
+	dom_obj.before("<div id='Q" + select_qid + "_optdiv' class='form-group'>\
 								<div class='panel panel-default'>\
 									 <div class='panel-heading'>Options</div>\
 										 <div class='panel-body' id='Q" + select_qid + "_options'>\
