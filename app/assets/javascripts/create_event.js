@@ -109,7 +109,7 @@ function add_subquestion(select_qid, option_id) {
     					</div>\
     				</div>\
     			</li>";
-    	$("#Q" + select_qid + "_" + option_id).before(str);	
+    	$("#Q" + select_qid + "_" + option_id).after(str);	
     	hookClickSel();
     }
 	
