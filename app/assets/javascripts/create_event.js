@@ -238,4 +238,3 @@ function delete_question(qid) {
 //TO     <a class='btn btn-success' href='javascript:add_subquestion(" + select_qid + "," + cnt + ")'><i class='fa fa-plus fa-lg'></i> Add Sub-question</a>\
 
 //After trigger_option_subquestion, 'add option' button brings up 'Add subquestion' button, but clicking 'Add subquestion' does not actually do anything (the 'delete option' that comes up does delete the option though)
->>>>>>> master
