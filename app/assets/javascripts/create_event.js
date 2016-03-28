@@ -26,17 +26,6 @@ function add_optionsforsub(qid, option_id, subqcnt) {
 										 ");
 }
 
-function move_subq_up(subqid){
-	window.alert('QQ'+subqid);
-	var current = $('#QQ'+subqid);
-	current.prev().before(current);
-}
-
-function move_subq_down(subqid){
-	var current = $('#QQ'+subqid);
-	current.next().after(current);
-}
-
 function add_options(qid, displaysub) {
 
 	if (displaysub == 1)
@@ -238,7 +227,16 @@ function move_q_down(qid){
 	current.next().after(current);
 }
 
+function move_subq_up(subqid){
+	window.alert("QQ'"+subqid);
+	var current = $('#QQ'+subqid);
+	current.prev().before(current);
+}
 
+function move_subq_down(subqid){
+	var current = $('#QQ'+subqid);
+	current.next().after(current);
+}
 /*
 function delete_question(qid) {
 	$("#Q" + qid).remove();
