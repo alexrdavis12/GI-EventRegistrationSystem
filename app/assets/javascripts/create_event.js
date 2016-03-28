@@ -45,15 +45,10 @@ function add_options(qid, displaysub) {
 	cnt = $("#Q" + qid + "_optcnt").val();
 	$("#Q" + qid + "_optcnt").val(++cnt);
 	$("#Q" + qid + "_insertpos").before("<div class='form-group' id='Q" + qid+ "_" + cnt + "'>\
-											<div class='col-xs-11'>\
 											 	<input class='form-control' name='Q" + qid + "[opt" + cnt + "]' value=''>\
-										 	</div>\
-										 	<div class='col-xs-1'>\
 											 	<a class='btn btn-danger pull-right' href='javascript:delete_option("+ qid + "," + cnt + ")' value='vis'>\
-											 		<i class='fa fa-trash-o fa-lg'></i>\
+											 		<i class='fa fa-trash-o fa-lg'>Delete Option</i>\
 											 	</a>\
-										 	</div>\
-										 	<div class='form-group'></div>\
 										 	<a class='btn btn-success' href='javascript:add_subquestion(" + select_qid + "," + cnt + ")'>\
 										 		<i class='fa fa-plus fa-lg'></i>\
 										 		Add Sub-question\
