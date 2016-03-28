@@ -124,15 +124,9 @@ function trigger_option_subquestion(dom_obj, select_qid, option_id, subqcnt) {
 	dom_obj.parent().after("<div id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_optdiv' class='form-group'><div class='panel panel-default'>\
 				   <div class='panel-heading'>Options</div>\
 				   <div class='panel-body' id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_options'>\
-				   <input id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_optcnt' type='hidden' value='3'>\
+				   <input id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_optcnt' type='hidden' value='1'>\
 				   <div class='form-group' id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_1'>\
 				   <input class='form-control' name='S" + select_qid + "_" + option_id + "_" + subqcnt + "[opt1]' value=''><div class='form-group'></div><a class='btn btn-danger pull-right' href='javascript:delete_optionforsub("+ select_qid + ", " + option_id + "," + subqcnt + ", 1)'><i class='fa fa-trash-o fa-lg'></i> Delete Option</a>\
-				   </div>\
-				   <div class='form-group' id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_2'>\
-				   <input class='form-control' name='S" + select_qid + "_" + option_id + "_" + subqcnt + "[opt2]' value=''><div class='form-group'></div><a class='btn btn-danger pull-right' href='javascript:delete_optionforsub("+ select_qid + ", " + option_id + "," + subqcnt + ", 2)'><i class='fa fa-trash-o fa-lg'></i> Delete Option</a>\
-				   </div>\
-				   <div class='form-group' id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_3'>\
-				   <input class='form-control' name='S" + select_qid + "_" + option_id + "_" + subqcnt + "[opt3]' value=''><div class='form-group'></div><a class='btn btn-danger pull-right' href='javascript:delete_optionforsub("+ select_qid + ", " + option_id + "," + subqcnt + ", 3)'><i class='fa fa-trash-o fa-lg'></i> Delete Option</a>\
 				   </div>\
 				   <a class='btn btn-success' id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_insertpos' href='javascript:add_optionsforsub("+ select_qid + "," + option_id + "," + subqcnt + ")'><i class='fa fa-plus fa-lg'></i> Add Option</a>\
 				   </div></div></div></div>");
@@ -149,50 +143,20 @@ function trigger_option(dom_obj, select_qid, displaysub) {
 										 <div class='panel-body' id='Q" + select_qid + "_options'>\
 											 <input id='Q" + select_qid + "_optcnt' type='hidden' value='3'>\
 											 <div class='form-group' id='Q" + select_qid + "_1'>\
-				   							 <input class='form-control' name='Q" + select_qid + "[opt1]' value=''>\
-				   							 	<div class='form-group'></div>\
-				   							 	<div class='btn-group pull-right'>\
-				   							 		<a class='btn btn-danger pull-right' href='javascript:delete_option(" + select_qid + ", 1)'>\
-				   							 			<i class='fa fa-trash-o fa-lg'></i>\
-				   							 			Delete Option\
-				   							 		</a>\
-				   							 		<a class='btn btn-success' href='javascript:add_subquestion(" + select_qid + ", 1)'>\
-				   							 			<i class='fa fa-plus fa-lg'></i>\
-				   							 			Add Sub-question\
-				   							 		</a>\
-				   							 	</div>\
+					   							 <input class='form-control' name='Q" + select_qid + "[opt1]' value=''>\
+					   							 	<div class='form-group'></div>\
+					   							 	<div class='btn-group pull-right'>\
+					   							 		<a class='btn btn-success' href='javascript:add_subquestion(" + select_qid + ", 1)'>\
+					   							 			<i class='fa fa-plus fa-lg'></i>\
+					   							 			Add Sub-question\
+					   							 		</a>\
+					   							 		<a class='btn btn-danger' href='javascript:delete_option(" + select_qid + ", 1)'>\
+					   							 			<i class='fa fa-trash-o fa-lg'></i>\
+					   							 			Delete Option\
+					   							 		</a>\
+				   							 		</div>\
 				   								<input id='Q" + select_qid + "_1_subqcnt' type='hidden' value='0'>\
 											 </div>\
-				   							 <div class='form-group' id='Q" + select_qid + "_2'>\
-				   								<input class='form-control' name='Q" + select_qid + "[opt2]' value=''>\
-				   									<div class='form-group'></div>\
-				   									<div class='btn-group pull-right'>\
-				   										<a class='btn btn-danger pull-right' href='javascript:delete_option(" + select_qid + ", 2)'>\
-				   											<i class='fa fa-trash-o fa-lg'></i>\
-				   											Delete Option\
-				   										</a>\
-				   										<a class='btn btn-success' href='javascript:add_subquestion(" + select_qid + ", 2)'>\
-				   											<i class='fa fa-plus fa-lg'></i>\
-				   											Add Sub-question\
-				   										</a>\
-				   									</div>\
-   				   									<input id='Q" + select_qid + "_2_subqcnt' type='hidden' value='0'>\
-				   							</div>\
-										    <div class='form-group' id='Q" + select_qid + "_3'>\
-												<input class='form-control' name='Q" + select_qid + "[opt3]' value=''>\
-													<div class='form-group'></div>\
-													<div class='btn-group pull-right'>\
-														<a class='btn btn-danger pull-right' href='javascript:delete_option(" + select_qid + ", 3)'>\
-															<i class='fa fa-trash-o fa-lg'></i>\
-															Delete Option\
-														</a>\
-														<a class='btn btn-success' href='javascript:add_subquestion(" + select_qid + ", 3)'>\
-															<i class='fa fa-plus fa-lg'></i>\
-															Add Sub-question\
-														</a>\
-													</div>\
-   				   									<input id='Q" + select_qid + "_3_subqcnt' type='hidden' value='0'>\
-				   							</div>\
 				   							<a class='btn btn-success' id='Q" + select_qid + "_insertpos' href='javascript:add_options(\
 				   							"+ select_qid + "," + displaysub + ")'>\
 				   								<i class='fa fa-plus fa-lg'></i>\
