@@ -33,7 +33,11 @@ class EventsController < ApplicationController
       eid=params[:eid]
     	@event = Event.find(eid)
     end
-    	
+    
+    def edit
+      @event = Event.find params[:id]
+    end
+    
     def allevent
       id = session[:user_id]
       @curlevel = User.find(id).level
