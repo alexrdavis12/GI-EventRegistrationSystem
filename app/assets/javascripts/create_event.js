@@ -21,7 +21,7 @@ function add_optionsforsub(qid, option_id, subqcnt) {
 	cnt = $("#Q" + qid + "_" + option_id + "_" + subqcnt + "_optcnt").val();
 	$("#Q" + qid + "_" + option_id + "_" + subqcnt + "_optcnt").val(++cnt);
 	$("#Q" + qid + "_" + option_id + "_" + subqcnt + "_insertpos").before("<div class='form-group' id='Q" + qid+ "_" + option_id + "_" + subqcnt + "_" + cnt + "'>\
-										 <input class='form-control' name='S" + qid + "_" + option_id + "_" + subqcnt + "[opt" + cnt + "]' value=''><div class='form-group'></div><a class='btn btn-danger pull-right' href='javascript:delete_optionforsub("+ qid + "," + option_id + "," + subqcnt + "," + cnt + ")'><i class='fa fa-trash-o fa-lg'></i> Delete Option</a>\
+										 <input class='form-control' name='S" + qid + "_" + option_id + "_" + subqcnt + "[opt" + cnt + "]' value=''><a class='btn btn-danger pull-right' href='javascript:delete_optionforsub("+ qid + "," + option_id + "," + subqcnt + "," + cnt + ")'><i class='fa fa-trash-o fa-lg'></i> Delete Option</a>\
 										 </div>\
 										 ");
 }
@@ -36,7 +36,7 @@ function add_options(qid, displaysub) {
 	cnt = $("#Q" + qid + "_optcnt").val();
 	$("#Q" + qid + "_optcnt").val(++cnt);
 	$("#Q" + qid + "_insertpos").before("<div class='form-group' id='Q" + qid+ "_" + cnt + "'>\
-										 <input class='form-control' name='Q" + qid + "[opt" + cnt + "]' value=''><div class='form-group'></div><a class='btn btn-danger pull-right' href='javascript:delete_option("+ qid + "," + cnt + ")' value='vis'><i class='fa fa-trash-o fa-lg'></i> Delete Option</a><a class='btn btn-success' href='javascript:add_subquestion(" + select_qid + "," + cnt + ")'><i class='fa fa-plus fa-lg'></i> Add Sub-question</a></input>\
+										 <input class='form-control' name='Q" + qid + "[opt" + cnt + "]' value=''><a class='btn btn-danger pull-right' href='javascript:delete_option("+ qid + "," + cnt + ")' value='vis'><i class='fa fa-trash-o fa-lg'></i> Delete Option</a><div class='form-group'></div><a class='btn btn-success' href='javascript:add_subquestion(" + select_qid + "," + cnt + ")'><i class='fa fa-plus fa-lg'></i> Add Sub-question</a></input>\
 										 <input id='Q" + qid + "_" + cnt + "_subqcnt' type='hidden' value='0'>\
 										 </div>\
 										 ");
