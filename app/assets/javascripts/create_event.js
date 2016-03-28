@@ -233,7 +233,7 @@ function delete_question(qid) {
 	$("#Q" + qid).remove();
 }*/
 
-
+///NOTES FOR MARC ----------------------------------------------------------------------------------------------------------------------------------------------
 //TAKEN FROM LINE 81 BEFORE TESTING
 //<input id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_insertpos' type='button' class='btn btn-success pull-right' onclick='javascript:add_optionsforsub(" + select_qid + "," + option_id + "," + subqcnt + ");' value='Add Option' />\
 
