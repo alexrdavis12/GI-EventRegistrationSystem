@@ -143,7 +143,7 @@ function trigger_option(dom_obj, select_qid, displaysub) {
 		vis = ""
 	else
 		vis = "disabled"
-	dom_obj.before("<div id='Q" + select_qid + "_optdiv' class='form-group'>\
+	dom_obj.parent().after("<div id='Q" + select_qid + "_optdiv' class='form-group'>\
 								<div class='panel panel-default'>\
 									 <div class='panel-heading'>Options</div>\
 										 <div class='panel-body' id='Q" + select_qid + "_options'>\
@@ -248,6 +248,7 @@ $(document).ready(function(){
 		evt.stopImmediatePropagation();
 		current_qid += 1;
 		q_type_str = '<div class="form-group">\
+						<div class="form-group">\
 						  <label>Type</label>\
 						  <select class="form-control" belong=' + current_qid + ' name="Q' + current_qid + '[type]">\
 		                      <option value="1">Text</option>\
@@ -256,12 +257,13 @@ $(document).ready(function(){
 		                      <option value="4">Dropdown</option>\
 		                      <option value="5">Paragraph Text</option>\
 	                	  </select>\
-	                	  <div class="form-group"></div>\
-	                	  <a class="btn btn-danger pull-right" href="javascript:delete_question(' + current_qid + ')">\
+	                	</div>\
+	                	<div class="form-group"></div>\
+	                	<a class="btn btn-danger pull-right" href="javascript:delete_question(' + current_qid + ')">\
 	  						<i class="fa fa-trash-o fa-lg"></i>\
 	  						Delete Question\
-						  </a>\
-						</div>';
+						</a>\
+					  </div>';
 		$("#q_list").append("<div class='panel panel-success' id='Q" + current_qid + "'>\
 								<div class='panel-heading'>\
 									<h3 class='panel-title'>\
