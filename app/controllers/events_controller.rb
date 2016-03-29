@@ -36,6 +36,31 @@ class EventsController < ApplicationController
     def edit
       eid = params[:eid]
       @event = Event.find(eid)
+      
+      if params[:commit] != nil && params[:commit] == 'Save'
+			    @event.etitle = params[:Title]
+         	@event.elocation = params[:Location]
+         	@event.estart = params[:Start_Date]
+          	@event.eend = params[:End_Date]
+          	@event.edescription = params[:Description]
+          	if @event.valid?
+
+          		if @event.save
+          			session[:eid] = @event.id
+          			flash[:notice] = "Event Edited Successfully!"
+                eid=@event.id
+          			redirect_to "/eventshow?eid=#{eid}"
+          		else
+          			@flash_notice += "DB Error"
+          			render 'save'
+          		end
+
+          	else
+          		@flash_notice += "Create Error"
+          		render 'Save'
+          	end
+          	end
+        end
     end
     
     def allevent
