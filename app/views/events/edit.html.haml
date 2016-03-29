@@ -1,7 +1,8 @@
 %h1 edit existing event form 
 
     
-  =form_tag event_path(@event), :method => :put do
+
+ = form_tag(:action => 'create') do
             .form-group
               %label Event Title
               %input{:class => 'form-control', :value=>'', :name=>"Title"}
