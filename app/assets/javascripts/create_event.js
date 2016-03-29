@@ -48,7 +48,6 @@ function add_options(qid) {
 												 	<i class='fa fa-plus fa-lg'></i>\
 												 	Add Sub-question\
 												 </a>\
-											 </input>\
 											 <input id='Q" + qid + "_" + cnt + "_subqcnt' type='hidden' value='0'>\
 										 </div>\
 										 ");
