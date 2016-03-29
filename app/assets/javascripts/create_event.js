@@ -38,7 +38,6 @@ function add_options(qid) {
 	$("#Q" + qid + "_optcnt").val(++cnt);
 	$("#Q" + qid + "_options_list").append("<div class='form-group' id='Q" + qid+ "_" + cnt + "'>\
 											 <input class='form-control'  name='Q" + qid + "[opt" + cnt + "]' value=''>\
-											 <div class='form-group'></div>\
 											 <a class='btn btn-danger pull-right' id='Q" + qid + "_O"+cnt+"' href='javascript:delete_option("+ qid + "," + cnt + ")' value='vis'>\
 											 	<i class='fa fa-trash-o fa-lg'></i>\
 											 	Delete Option\
@@ -66,7 +65,6 @@ function add_subquestion(select_qid, option_id) {
 	                      <option value="5">Paragraph Text</option>\
                 	  </select>\
                 	</div>\
-                	<div class="form-group"></div>\
                 	  <a class="btn btn-danger pull-right" href="javascript:delete_subquestion(' + select_qid + ', ' + option_id + ',' + cnt + ')">\
                 	  	<i class="fa fa-trash-o fa-lg"></i>\
                 	  	Delete Sub-question\
@@ -172,7 +170,6 @@ function trigger_option(dom_obj, select_qid, displaysub) {
 									 <input id='Q" + select_qid + "_optcnt' type='hidden' value='3'>\
 									 <div class='form-group' id='Q" + select_qid + "_1'>\
 			   							<input class='form-control'  name='Q" + select_qid + "[opt1]' value=''>\
-		   							 	<div class='form-group'></div>\
 		   							 	<a class='btn btn-success'id='Q" + select_qid + "_O1' href='javascript:add_subquestion(" + select_qid + ", 1)'>\
    							 				<i class='fa fa-plus fa-lg'></i>\
    							 				Add Sub-question\
@@ -279,7 +276,6 @@ $(document).ready(function(){
 		                      <option value="5">Paragraph Text</option>\
 	                	  </select>\
 	                	</div>\
-	                	<div class="form-group"></div>\
 	                	<a class="btn btn-danger pull-right" href="javascript:delete_question(' + current_qid + ')">\
 	  						<i class="fa fa-trash-o fa-lg"></i>\
 	  						Delete Question\
