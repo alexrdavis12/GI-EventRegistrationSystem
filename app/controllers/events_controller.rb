@@ -59,8 +59,7 @@ class EventsController < ApplicationController
           		@flash_notice += "Create Error"
           		render 'Save'
           	end
-          	end
-        end
+      end
     end
     
     def allevent
