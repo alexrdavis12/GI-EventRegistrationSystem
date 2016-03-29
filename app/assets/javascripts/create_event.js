@@ -20,7 +20,7 @@ function delete_subquestion(qid, option_id, subqcnt) {
 function add_optionsforsub(qid, option_id, subqcnt) {
 	cnt = $("#Q" + qid + "_" + option_id + "_" + subqcnt + "_optcnt").val();
 	$("#Q" + qid + "_" + option_id + "_" + subqcnt + "_optcnt").val(++cnt);
-	$("#Q" + qid + "_sub_options_list").append("<div class='form-group' id='Q" + qid+ "_" + option_id + "_" + subqcnt + "_" + cnt + "'>\
+	$("#Q" + qid + "_sub_options_list").prepend("<div class='form-group' id='Q" + qid+ "_" + option_id + "_" + subqcnt + "_" + cnt + "'>\
 												     <div class='col-xs-11'>\
 													 	<input class='form-control' name='S" + qid + "_" + option_id + "_" + subqcnt + "[opt" + cnt + "]' value=''>\
 													 </div>\
