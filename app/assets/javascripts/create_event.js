@@ -281,11 +281,11 @@ $(document).ready(function(){
 								<div class='panel-heading'>\
 									<h3 class='panel-title'>\
 										Question\
-										<a class='btn btn-sm pull-right' style='color: #3071a9; background: none; outline: 0;'\
+										<a class='btn btn-sm pull-right' style='color: #500000; background: none; outline: 0;'\
 										href='javascript:move_q_up(" + current_qid + ")'>\
 											<i class='fa fa-chevron-up fa-lg'></i>\
 										</a>\
-										<a class='btn btn-sm pull-right' style='color: #3071a9; background: none; outline: 0'\
+										<a class='btn btn-sm pull-right' style='color: #500000; background: none; outline: 0'\
 										href='javascript:move_q_down(" + current_qid + ")'>\
 											<i class='fa fa-chevron-down fa-lg'></i>\
 										</a>\
