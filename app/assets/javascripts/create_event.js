@@ -65,14 +65,14 @@ function add_subquestion(select_qid, option_id) {
 	                      <option value="5">Paragraph Text</option>\
                 	  </select>\
                 	</div>\
-                	  <a class="btn btn-danger pull-right" href="javascript:delete_subquestion(' + select_qid + ', ' + option_id + ',' + cnt + ')">\
+                	  <a class="btn btn-danger pull-right" href="javascript:delete_subquestion(' + select_qid + ', ' + option_id + ',' + cnt + ')"  style="margin: 15px">\
                 	  	<i class="fa fa-trash-o fa-lg"></i>\
                 	  	Delete Sub-question\
                 	  </a>\
                   </div>';
     if($("#Q" + select_qid + "_" + option_id+"_list").length == 1)  //A list has been previously created for this set of subquestions so use it
     {
-    	 str = 	"<div class='panel panel-danger' id='QQ" + select_qid + "_" + option_id + "_" + cnt + "'>\
+    	 str = 	"<div class='panel panel-danger' id='QQ" + select_qid + "_" + option_id + "_" + cnt + "' style='margin: 15px'>\
     	 			<div class='panel-heading'>\
     	 				<h3 class='panel-title'>\
     	 					Sub-question\
@@ -97,7 +97,7 @@ function add_subquestion(select_qid, option_id) {
     }
     else //A list has not been previously created for this set of subquestions so create one
     {
-    	str = 	"<li id='Q" + select_qid + "_" + option_id+"_list' style='list-style-type:none'>\
+    	str = 	"<li id='Q" + select_qid + "_" + option_id+"_list' style='list-style-type:none'  style='margin: 15px'>\
     				<div class='panel panel-danger' id='QQ" + select_qid + "_" + option_id + "_" + cnt + "'>\
 	    				<div class='panel-heading'>\
 	    					<h3 class='panel-title'>\
@@ -265,7 +265,7 @@ $(document).ready(function(){
 	$('#create_q_btn').click(function(evt){
 		evt.stopImmediatePropagation();
 		current_qid += 1;
-		q_type_str = '<div class="form-group">\
+		q_type_str = '<div class="form-group"  style="margin: 15px">\
 						<div class="form-group">\
 						  <label>Type</label>\
 						  <select class="form-control" belong=' + current_qid + ' name="Q' + current_qid + '[type]">\
