@@ -163,12 +163,12 @@ function trigger_option(dom_obj, select_qid, displaysub) {
 	else
 		vis = "disabled"
 	dom_obj.after("<div id='Q" + select_qid + "_optdiv' class='form-group'>\
-						<div class='panel panel-default'>\
+						<div class='panel panel-default'style='padding-top: 15px'>\
 							 <div class='panel-heading'>Options</div>\
 							 <div class='panel-body' id='Q" + select_qid + "_options'>\
 							 	<li id='Q" + select_qid + "_options_list'>\
 									 <input id='Q" + select_qid + "_optcnt' type='hidden' value='3'>\
-									 <div class='form-group' id='Q" + select_qid + "_1' style='padding-top: 50px'>\
+									 <div class='form-group' id='Q" + select_qid + "_1' style='padding-top: 15px'>\
 			   							<input class='form-control'  name='Q" + select_qid + "[opt1]' value=''>\
 		   							 	<a class='btn btn-success'id='Q" + select_qid + "_O1' href='javascript:add_subquestion(" + select_qid + ", 1)'>\
    							 				<i class='fa fa-plus fa-lg'></i>\
