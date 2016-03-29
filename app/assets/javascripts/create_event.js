@@ -122,7 +122,7 @@ function add_subquestion(select_qid, option_id) {
     					</div>\
     				</div>\
     			</li>";
-    	$("#Q" + select_qid + "_" + option_id).prepend(str);	
+    	$("#Q" + select_qid + "_" + option_id).append(str);	
     	hookClickSel();
     }
 	
@@ -133,7 +133,7 @@ function add_subquestion(select_qid, option_id) {
 }
 
 function trigger_option_subquestion(dom_obj, select_qid, option_id, subqcnt) {
-	dom_obj.parent().after("<div id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_optdiv' class='form-group'><div class='panel panel-default'>\
+	dom_obj.after("<div id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_optdiv' class='form-group'><div class='panel panel-default'>\
 				   <div class='panel-heading'>Options</div>\
 				   <div class='panel-body' id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_options'>\
 				   <input id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_optcnt' type='hidden' value='1'>\
