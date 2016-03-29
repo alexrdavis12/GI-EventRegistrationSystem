@@ -295,7 +295,7 @@ $(document).ready(function(){
 										</a>\
 									</h3>\
 								</div>\
-								<div class='panel-body' style='background-color:#dff0d8'>\
+								<div class='panel-body' style='background-color:#5bc0de'>\
 									<div class='form-group'><input class='form-control' name='Q" + current_qid + "[title]' value=''></div>\
 									" + q_type_str+ "\
 								</div>\
@@ -330,19 +330,19 @@ function move_subq_down(qid,option,count){
 
 ///NOTES FOR MARC ----------------------------------------------------------------------------------------------------------------------------------------------
 //TAKEN FROM LINE 81 BEFORE TESTING
-//<input id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_insertpos' type='button' class='btn btn-info pull-right' onclick='javascript:add_optionsforsub(" + select_qid + "," + option_id + "," + subqcnt + ");' value='Add Option' />\
+//<input id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_insertpos' type='button' class='btn btn-success pull-right' onclick='javascript:add_optionsforsub(" + select_qid + "," + option_id + "," + subqcnt + ");' value='Add Option' />\
 
 //TAKEN FROM LINE 83 BEFORE TESTING
-//<input id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_insertpos' type='button' class='btn btn-info pull-right' onclick='javascript:add_optionsforsub(" + select_qid + "," + option_id + "," + subqcnt + ");' value='Add Option' />\
+//<input id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_insertpos' type='button' class='btn btn-success pull-right' onclick='javascript:add_optionsforsub(" + select_qid + "," + option_id + "," + subqcnt + ");' value='Add Option' />\
 
 //TAKEN FROM LINE 96 BEFORE TESTING
-//<input class='btn btn-info' type='Button' onclick='javascript:add_subquestion(" + select_qid + ", 1);' value='Add Sub-question' " + vis + " />\
+//<input class='btn btn-success' type='Button' onclick='javascript:add_subquestion(" + select_qid + ", 1);' value='Add Sub-question' " + vis + " />\
 
 //TAKEN FROM LINE 107 BEFORE TESTING
-//<input id='Q" + select_qid + "_insertpos' type='button' class='btn btn-info pull-right' onclick='javascript:add_options(" + select_qid + ", " + displaysub + ");' value='Add Option' />\
+//<input id='Q" + select_qid + "_insertpos' type='button' class='btn btn-success pull-right' onclick='javascript:add_options(" + select_qid + ", " + displaysub + ");' value='Add Option' />\
 
 //ORIGINAL AND NEW FROM INSIDE LINE 39 TO CHANGE (DIFFERENCE INCLUDES DISABLING ON SELECTION OF 'CHECKBOXES')
-//FROM   <input class='btn btn-info' type='Button' onclick='javascript:add_subquestion(" + select_qid + ", " + cnt + ");' value='Add Sub-question' " + vis + "/>\
-//TO     <a class='btn btn-info' href='javascript:add_subquestion(" + select_qid + "," + cnt + ")'><i class='fa fa-plus fa-lg'></i> Add Sub-question</a>\
+//FROM   <input class='btn btn-success' type='Button' onclick='javascript:add_subquestion(" + select_qid + ", " + cnt + ");' value='Add Sub-question' " + vis + "/>\
+//TO     <a class='btn btn-success' href='javascript:add_subquestion(" + select_qid + "," + cnt + ")'><i class='fa fa-plus fa-lg'></i> Add Sub-question</a>\
 
 //After trigger_option_subquestion, 'add option' button brings up 'Add subquestion' button, but clicking 'Add subquestion' does not actually do anything (the 'delete option' that comes up does delete the option though)
