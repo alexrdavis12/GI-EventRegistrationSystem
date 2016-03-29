@@ -36,9 +36,9 @@
               .panel-heading
                 %h3.panel-title
                   Question
-                  %a.btn.btn-sm.pull-right{:href => "javascript:move_q_up(1)", :style => "color: #500000; background: none; outline: 0"}
+                  %a.btn.btn-sm.pull-right{:id => "Q1_up", :href => "javascript:move_q_up(1)", :style => "color: #500000; background: none; outline: 0"}
                     %i.fa.fa-chevron-up.fa-lg
-                  %a.btn.btn-sm.pull-right{:href => "javascript:move_q_down(1)", :style => "color: #500000; background: none; outline: 0"}
+                  %a.btn.btn-sm.pull-right{:id => "Q1_down" :href => "javascript:move_q_down(1)", :style => "color: #500000; background: none; outline: 0"}
                     %i.fa.fa-chevron-down.fa-lg
                   //%input{:style => "float:right",:type => "button", :onclick => "", :id => 'down_btn', :value => '\\/'}
                   //%input{:style => "float:right", :type => "button", :onclick => "", :id => 'up_btn', :value => '/\\'}
