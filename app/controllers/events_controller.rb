@@ -36,7 +36,7 @@ class EventsController < ApplicationController
     def edit
       eid = params[:eid]
       @event = Event.find(eid)
-      redirect_to '/events/edit.html.haml'
+      redirect_to '/events/edit'
     end
     
     def allevent
