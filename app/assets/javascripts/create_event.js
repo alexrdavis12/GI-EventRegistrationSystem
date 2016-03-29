@@ -53,6 +53,7 @@ function add_subquestion(select_qid, option_id) {
 	cnt = $("#Q" + select_qid + "_" + option_id + "_subqcnt").val();
 	$("#Q" + select_qid + "_" + option_id + "_subqcnt").val(++cnt);
 	q_type_str = '<div class="form-group">\
+					<div class="form-group">\
 					  <label>Type </label>\
 					  <select class="form-control" belong="' + select_qid + '_'+ option_id + '_' + cnt +'" name="S' + select_qid + '_' + option_id + '_' + cnt +'[type]">\
 	                      <option value="1">Text</option>\
@@ -61,7 +62,8 @@ function add_subquestion(select_qid, option_id) {
 	                      <option value="4">Dropdown</option>\
 	                      <option value="5">Paragraph Text</option>\
                 	  </select>\
-                	  <div class="form-group"></div>\
+                	</div>\
+                	<div class="form-group"></div>\
                 	  <a class="btn btn-danger pull-right" href="javascript:delete_subquestion(' + select_qid + ', ' + option_id + ',' + cnt + ')">\
                 	  	<i class="fa fa-trash-o fa-lg"></i>\
                 	  	Delete Sub-question\
@@ -127,7 +129,7 @@ function add_subquestion(select_qid, option_id) {
 }
 
 function trigger_option_subquestion(dom_obj, select_qid, option_id, subqcnt) {
-	dom_obj.parent().after("<div id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_optdiv' class='form-group'><div class='panel panel-default'>\
+	dom_obj.after("<div id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_optdiv' class='form-group'><div class='panel panel-default'>\
 				   <div class='panel-heading'>Options</div>\
 				   <div class='panel-body' id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_options'>\
 				   <input id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_optcnt' type='hidden' value='1'>\
