@@ -130,11 +130,11 @@ function add_subquestion(select_qid, option_id) {
 }
 
 function trigger_option_subquestion(dom_obj, select_qid, option_id, subqcnt) {
-	dom_obj.after("<div id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_optdiv' class='form-group'  style='margin-bottom: 15px'>\
+	dom_obj.after("<div id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_optdiv' class='form-group'  style='margin-top: 15px'>\
 				   		<div class='panel panel-default'>\
 				   			<div class='panel-heading'>Options</div>\
 				   			<div class='panel-body' id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_options'>\
-				   				<li id='Q" + select_qid + "_sub_options_list'>\
+				   				<li id='Q" + select_qid + "_sub_options_list' style='margin-bottom: 15px'>\
 					   				<input id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_optcnt' type='hidden' value='1'>\
 					   				<div class='form-group' id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_1'>\
 						   				<div class='col-xs-11'>\
@@ -147,7 +147,7 @@ function trigger_option_subquestion(dom_obj, select_qid, option_id, subqcnt) {
 					   					</div>\
 					   				</div>\
 					   			</li>\
-					   			<a class='btn btn-success' id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_insertpos' href='javascript:add_optionsforsub("+ select_qid + "," + option_id + "," + subqcnt + ")'>\
+					   			<a class='btn btn-success' id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_insertpos' href='javascript:add_optionsforsub("+ select_qid + "," + option_id + "," + subqcnt + ")' style='margin-top: 15px'>\
 				   					<i class='fa fa-plus fa-lg'>\
 				   					</i>\
 				   					Add Option\
