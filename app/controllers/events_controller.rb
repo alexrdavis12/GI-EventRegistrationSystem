@@ -44,4 +44,12 @@ class EventsController < ApplicationController
       end
     end
  
+<<<<<<< HEAD
+=======
+    def edit 
+    	
+    end
+
+
+>>>>>>> Alex
 end
