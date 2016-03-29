@@ -86,7 +86,7 @@ function add_subquestion(select_qid, option_id) {
     	 					</a>\
     	 				</h3>\
     	 			</div>\
-    	 			<div class='panel-body'>\
+    	 			<div class='panel-body' color = '#f2dede'>\
     	 				<div class='form-group'><input class='form-control' name='S" + select_qid + "_" + option_id + "_" + cnt + "[title]' value=''>\
     	 				</div>\
     	 				"+ q_type_str +"\
