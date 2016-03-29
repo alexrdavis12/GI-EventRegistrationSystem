@@ -33,9 +33,9 @@ class EventsController < ApplicationController
     	@event = Event.find(eid)
     end
   
-    def edit
+    #def edit
       #@event = Event.find(id)
-    end
+    #end
     
     def allevent
       id = session[:user_id]
