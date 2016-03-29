@@ -143,7 +143,7 @@ function trigger_option(dom_obj, select_qid, displaysub) {
 		vis = ""
 	else
 		vis = "disabled"
-	dom_obj.parent().before("<div id='Q" + select_qid + "_optdiv' class='form-group'>\
+	dom_obj.before("<div id='Q" + select_qid + "_optdiv' class='form-group'>\
 								<div class='panel panel-default'>\
 									 <div class='panel-heading'>Options</div>\
 										 <div class='panel-body' id='Q" + select_qid + "_options'>\
