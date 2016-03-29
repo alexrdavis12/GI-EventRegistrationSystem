@@ -42,7 +42,7 @@ function add_options(qid) {
 											 	<i class='fa fa-trash-o fa-lg'></i>\
 											 	Delete Option\
 											 </a>\
-											 <a class='btn btn-info' href='javascript:add_subquestion(" + select_qid + "," + cnt + ")' style='margin-top: 15px'>\
+											 <a class='btn btn-success' href='javascript:add_subquestion(" + select_qid + "," + cnt + ")' style='margin-top: 15px'>\
 											 	<i class='fa fa-plus fa-lg'></i>\
 											 	Add Sub-question\
 											 </a>\
@@ -133,7 +133,7 @@ function trigger_option_subquestion(dom_obj, select_qid, option_id, subqcnt) {
 	dom_obj.after("<div id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_optdiv' class='form-group'  style='margin-top: 15px'>\
 				   		<div class='panel panel-default'>\
 				   			<div class='panel-heading'>Options</div>\
-				   			<div class='panel-body' id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_options' style='background-color:#fcf8e3'>\
+				   			<div class='panel-body' id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_options' style='background-color:white'>\
 				   				<li id='Q" + select_qid + "_sub_options_list' style='margin-bottom: 15px'>\
 					   				<input id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_optcnt' type='hidden' value='1'>\
 					   				<div class='form-group' id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_1'>\
@@ -147,7 +147,7 @@ function trigger_option_subquestion(dom_obj, select_qid, option_id, subqcnt) {
 					   					</div>\
 					   				</div>\
 					   			</li>\
-					   			<a class='btn btn-info' id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_insertpos' href='javascript:add_optionsforsub("+ select_qid + "," + option_id + "," + subqcnt + ")' style='margin-top: 10px'>\
+					   			<a class='btn btn-success' id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_insertpos' href='javascript:add_optionsforsub("+ select_qid + "," + option_id + "," + subqcnt + ")' style='margin-top: 10px'>\
 				   					<i class='fa fa-plus fa-lg'>\
 				   					</i>\
 				   					Add Option\
@@ -158,19 +158,15 @@ function trigger_option_subquestion(dom_obj, select_qid, option_id, subqcnt) {
 }
 
 function trigger_option(dom_obj, select_qid, displaysub) {
-	if (displaysub == 1)
-		vis = ""
-	else
-		vis = "disabled"
 	dom_obj.after("<div id='Q" + select_qid + "_optdiv' class='form-group' style='margin-top: 15px'>\
 						<div class='panel panel-default'>\
 							 <div class='panel-heading'>Options</div>\
-							 <div class='panel-body' id='Q" + select_qid + "_options' style='background-color:#fcf8e3'>\
+							 <div class='panel-body' id='Q" + select_qid + "_options' style='background-color:white'>\
 							 	<li id='Q" + select_qid + "_options_list'>\
 									 <input id='Q" + select_qid + "_optcnt' type='hidden' value='3'>\
 									 <div class='form-group' id='Q" + select_qid + "_1' >\
 			   							<input class='form-control'  name='Q" + select_qid + "[opt1]' value='' style='margin-bottom: 15px'>\
-		   							 	<a class='btn btn-info'id='Q" + select_qid + "_O1' href='javascript:add_subquestion(" + select_qid + ", 1)'>\
+		   							 	<a class='btn btn-success'id='Q" + select_qid + "_O1' href='javascript:add_subquestion(" + select_qid + ", 1)'>\
    							 				<i class='fa fa-plus fa-lg'></i>\
    							 				Add Sub-question\
 	   							 		</a>\
@@ -181,7 +177,7 @@ function trigger_option(dom_obj, select_qid, displaysub) {
    										<input id='Q" + select_qid + "_1_subqcnt' type='hidden' value='0'>\
 									 </div>\
 								</li>\
-	   							<a class='btn btn-info' id='Q" + select_qid + "_insertpos' href='javascript:add_options("+ select_qid + ")'>\
+	   							<a class='btn btn-success' id='Q" + select_qid + "_insertpos' href='javascript:add_options("+ select_qid + ")'>\
 		   							<i class='fa fa-plus fa-lg'></i>\
 		   							Add Option\
 	   							</a>\
@@ -295,7 +291,7 @@ $(document).ready(function(){
 										</a>\
 									</h3>\
 								</div>\
-								<div class='panel-body' style='background-color:#5bc0de'>\
+								<div class='panel-body' style='background-color:#d9edf7'>\
 									<div class='form-group'><input class='form-control' name='Q" + current_qid + "[title]' value=''></div>\
 									" + q_type_str+ "\
 								</div>\
