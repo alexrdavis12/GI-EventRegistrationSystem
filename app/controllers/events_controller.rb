@@ -43,13 +43,4 @@ class EventsController < ApplicationController
         redirect_to '/admin'
       end
     end
- 
-<<<<<<< HEAD
-=======
-    def edit 
-    	
-    end
-
-
->>>>>>> Alex
 end
