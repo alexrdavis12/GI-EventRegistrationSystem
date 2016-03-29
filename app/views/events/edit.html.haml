@@ -2,26 +2,24 @@
 
     
 
- = form_tag(:action => 'create') do
-            .form-group
-              %label Event Title
-              %input{:class => 'form-control', :value=>'', :name=>"Title"}
+ = form_tag movie_path(@event), method : => :put do
+            
+            = label :event, :title, 'Title'
+            = text_field :event, 'title'
   
-            .form-group
-              %label Event Location
-              %input{:class => 'form-control', :value=>'', :name=>"Location"}
+            = label :event, :event_location, 'Event Location'
+            = text_field :event, :event_location
   
-            .form-group
-              %label Event Description
-              %textarea{:class => 'form-control', :rows => "8", :value=>'', :name=>"Description"}
+            = label :event, :event_description, 'Event Description'
+            = text_field :event, :event_description
   
-            .form-group
-              %label Start Date
-              %input{:type => 'text', :class => 'form-control', :id =>'dp1',:value=>'', :name=>"Start_Date"}
+            = label :event, :start_date, 'Start Date'
+            = text_field :event, :start_date
 
-            .form-group
-              %label End Date
-              %input{:type => 'text', :class => 'form-control', :id =>'dp2',:value=>'', :name=>"End_Date"}
+            = label :event, :event_date, 'End Date'
+            = text_field :event, :event_date
   
-            = submit_tag("Create", :class => 'btn btn-primary')
+  
+  
+            = submit_tag 'Update Event Info'
        
