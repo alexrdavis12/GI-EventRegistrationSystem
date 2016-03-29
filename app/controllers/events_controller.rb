@@ -52,7 +52,7 @@ class EventsController < ApplicationController
           			redirect_to "/eventshow?eid=#{eid}"
           		else
           			@flash_notice += "DB Error"
-          			render 'save'
+          			render 'Save'
           		end
 
           	else
