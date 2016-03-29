@@ -1,3 +1,4 @@
+= javascript_include_tag "date"
 %nav.navbar.navbar-inverse{:role => "navigation"}
   .navbar-header
     %a.navbar-brand{:href => "#"} M.A.G.I
@@ -16,77 +17,44 @@
       %a{:href=>'logout'}
         %i{:class=>"fa fa-sign-out fa-fw"} 
         Logout
+
 .container
+  %div{:class=>"modal fade", :id=>"myModal", :role=>"dialog"}
+    %div{:class=>"modal-dialog"}
+      %div{:class=>"modal-content"}
+        %div{:class=>"modal-header"}
+          %h4{:class=>"modal-title"} Warning!
+        %div{:class=>"modal-body"}
+          %p End Date Should Be After Start Date.
   .row
-    .panel-group
-      %div{:class => "panel panel-primary"}
-        %div{:class => "panel-heading"} 
-          %h1 Event
-        .row
-          .col-md-2
-            %div{:class => "panel-body"}
-              %h5 Event Title
-          .col-md-5
-            %br
-            %input{:class => 'form-control', :name=>:event_name}
-
-        .row
-          .col-md-2
-            %div{:class => "panel-body"}
-              %h5 Event Location
-          .col-md-5
-            %br
-            %input{:class => 'form-control', :name=>:event_location}
-
-        .row
-          .col-md-2
-            %div{:class => "panel-body"}
-              %h5 Event Description
-          .col-md-5
-            %br
-            %textarea{:class => 'form-control', :rows => "8", :name=>:event_description}
-            %br
-
-        .row
-          .col-md-2
-            %div{:class => "panel-body"}
-              %h5 Start Date
-          .col-md-5
-            %br
-            %input{:type => 'text', :class => 'form-control', :id =>'datetimepicker4'}
-          :javascript
-            $(function () {
-              $('#datetimepicker4').datepicker();
-            });
-
-        .row
-          .col-md-2
-            %div{:class => "panel-body"}
-              %h5 Start Date & Time
-          .col-md-4
+    .col-md-2
+    .col-md-8
+      .panel.panel-primary
+        .panel-heading
+          %h3.panel-title Event
+        .panel-body
+          = form_tag(:action => 'create') do
             .form-group
-              %div{:class => 'input-group date'}
-                %br
-                %input{:type => 'text', :class => 'form-control', :id =>'datetimepicker6'}
-          .col-md-2
-            %div{:class => "panel-body"}
-              %h5 End Date & Time
-          .col-md-4
+              %label Event Title
+              %input{:class => 'form-control', :value=>'', :name=>"Title"}
+  
             .form-group
-              %div{:class => 'input-group date'}
-                %br
-                %input{:type => 'text', :class => 'form-control', :id =>'datetimepicker7'}
-          :javascript
-            $(function () {
-              $('#datetimepicker6').datetimepicker();
-              $('#datetimepicker7').datetimepicker({
-                    useCurrent: false 
-              });
-              $("#datetimepicker6").on("dp.change", function (e) {
-                  $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
-              });
-              $("#datetimepicker7").on("dp.change", function (e) {
-                  $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
-              });
-            });
+              %label Event Location
+              %input{:class => 'form-control', :value=>'', :name=>"Location"}
+  
+            .form-group
+              %label Event Description
+              %textarea{:class => 'form-control', :rows => "8", :value=>'', :name=>"Description"}
+  
+            .form-group
+              %label Start Date
+              %input{:type => 'text', :class => 'form-control', :id =>'dp1',:value=>'', :name=>"Start_Date"}
 
+            .form-group
+              %label End Date
+              %input{:type => 'text', :class => 'form-control', :id =>'dp2',:value=>'', :name=>"End_Date"}
+  
+            = submit_tag("Create", :class => 'btn btn-primary')
+       
+  .row
+    %p{:id => "demo"}
