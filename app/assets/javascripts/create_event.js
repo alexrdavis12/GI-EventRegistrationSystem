@@ -102,11 +102,11 @@ function add_subquestion(select_qid, option_id) {
 	    				<div class='panel-heading'>\
 	    					<h3 class='panel-title'>\
 	    						Sub-question\
-	    						<a class='btn btn-sm pull-right' style='color: #3071a9; background: none; outline: 0;'\
+	    						<a class='btn btn-sm pull-right' style='color: #500000; background: none; outline: 0;'\
 	    						href='javascript:move_subq_up(" + select_qid + "," + option_id + "," + cnt + ")'>\
 	    							<i class='fa fa-chevron-up fa-lg'/>\
 	    						</a>\
-	    						<a class='btn btn-sm pull-right' style='color: #3071a9; background: none; outline: 0'\
+	    						<a class='btn btn-sm pull-right' style='color: #500000; background: none; outline: 0'\
 	    						href='javascript:move_subq_down(" + select_qid + "," + option_id + "," + cnt + ")'>\
 	    							<i class='fa fa-chevron-down fa-lg'/>\
 	    						</a>\
