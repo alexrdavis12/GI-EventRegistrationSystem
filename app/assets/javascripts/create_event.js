@@ -26,10 +26,10 @@ function add_optionsforsub(qid, option_id, subqcnt) {
 																			 </div>\
 																			 <div class='form-group'></div>\
 																			 <div class='col-xs-1'>\
-																				 <a class='btn btn-danger pull-right' href='javascript:delete_optionforsub("+ qid + "," + option_id + "," + subqcnt + "," + cnt + ")'>\
+																				 <a class='btn btn-danger pull-right' href='javascript:delete_optionforsub("+ qid + "," + option_id + ","+ subqcnt + "," + cnt + ")'>\
 																				 	<i class='fa fa-trash-o fa-lg'></i>\
 																				 </a>\
-																			 </div>
+																			 </div>\
 																		 </div>");
 }
 
