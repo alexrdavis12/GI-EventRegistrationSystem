@@ -21,10 +21,10 @@ function add_optionsforsub(qid, option_id, subqcnt) {
 	cnt = $("#Q" + qid + "_" + option_id + "_" + subqcnt + "_optcnt").val();
 	$("#Q" + qid + "_" + option_id + "_" + subqcnt + "_optcnt").val(++cnt);
 	$("#Q" + qid + "_sub_options_list").append("<div class='form-group' id='Q" + qid+ "_" + option_id + "_" + subqcnt + "_" + cnt + "' style='margin-bottom: 15px'>\
-												     <div class='col-xs-11'>\
+												     <div class='col-xs-11' style='margin-bottom: 5px'>\
 													 	<input class='form-control' name='S" + qid + "_" + option_id + "_" + subqcnt + "[opt" + cnt + "]' value=''>\
 													 </div>\
-													 <div class='col-xs-1'>\
+													 <div class='col-xs-1' style='margin-bottom: 5px'>\
 														 <a class='btn btn-danger pull-right' id='Q" + qid + "_SO"+cnt+"' href='javascript:delete_optionforsub("+ qid + "," + option_id + ","+ subqcnt + "," + cnt + ")'>\
 														 	<i class='fa fa-trash-o fa-lg'></i>\
 														 </a>\
