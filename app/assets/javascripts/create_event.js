@@ -169,7 +169,7 @@ function trigger_option(dom_obj, select_qid, displaysub) {
 							 	<li id='Q" + select_qid + "_options_list'>\
 									 <input id='Q" + select_qid + "_optcnt' type='hidden' value='3'>\
 									 <div class='form-group' id='Q" + select_qid + "_1' >\
-			   							<input class='form-control'  name='Q" + select_qid + "[opt1]' value='' style='margin-top: 15px'>\
+			   							<input class='form-control'  name='Q" + select_qid + "[opt1]' value='' style='margin-bottom: 15px'>\
 		   							 	<a class='btn btn-success'id='Q" + select_qid + "_O1' href='javascript:add_subquestion(" + select_qid + ", 1)'>\
    							 				<i class='fa fa-plus fa-lg'></i>\
    							 				Add Sub-question\
