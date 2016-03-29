@@ -69,5 +69,4 @@ class EventsController < ApplicationController
         redirect_to '/admin'
       end
     end
- 
 end
