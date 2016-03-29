@@ -22,7 +22,7 @@ function add_optionsforsub(qid, option_id, subqcnt) {
 	$("#Q" + qid + "_" + option_id + "_" + subqcnt + "_optcnt").val(++cnt);
 	$("#Q" + qid + "_sub_options_list").prepend("<div class='form-group' id='Q" + qid+ "_" + option_id + "_" + subqcnt + "_" + cnt + "'>\
 													 <div class='form-group'></div>\
-												     <div class='col-xs-12'>\
+												     <div class='col-xs-11'>\
 													 	<input class='form-control' name='S" + qid + "_" + option_id + "_" + subqcnt + "[opt" + cnt + "]' value=''>\
 													 </div>\
 													 <div class='form-group'></div>\
