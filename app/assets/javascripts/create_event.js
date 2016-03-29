@@ -20,8 +20,7 @@ function delete_subquestion(qid, option_id, subqcnt) {
 function add_optionsforsub(qid, option_id, subqcnt) {
 	cnt = $("#Q" + qid + "_" + option_id + "_" + subqcnt + "_optcnt").val();
 	$("#Q" + qid + "_" + option_id + "_" + subqcnt + "_optcnt").val(++cnt);
-	$("#Q" + qid + "_sub_options_list").prepend("<div class='form-group'></div>\
-												 <div class='form-group' id='Q" + qid+ "_" + option_id + "_" + subqcnt + "_" + cnt + "'>\
+	$("#Q" + qid + "_sub_options_list").prepend("<div class='form-group' id='Q" + qid+ "_" + option_id + "_" + subqcnt + "_" + cnt + "'>\
 													 <div class='form-group'></div>\
 												     <div class='col-xs-11'>\
 													 	<input class='form-control' name='S" + qid + "_" + option_id + "_" + subqcnt + "[opt" + cnt + "]' value=''>\
@@ -32,8 +31,8 @@ function add_optionsforsub(qid, option_id, subqcnt) {
 														 	<i class='fa fa-trash-o fa-lg'></i>\
 														 </a>\
 													 </div>\
-												 </div>\
-												 <div class='form-group'></div>");
+													 <div class='form-group'></div>\
+												 </div>");
 }
 
 function add_options(qid) {
@@ -141,6 +140,7 @@ function trigger_option_subquestion(dom_obj, select_qid, option_id, subqcnt) {
 				   			<div class='panel-heading'>Options</div>\
 				   			<div class='panel-body' id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_options'>\
 				   				<li id='Q" + select_qid + "_sub_options_list'>\
+				   				<div class='form-group'></div>\
 					   				<input id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_optcnt' type='hidden' value='1'>\
 					   				<div class='form-group' id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_1'>\
 						   				<div class='col-xs-11'>\
@@ -153,6 +153,7 @@ function trigger_option_subquestion(dom_obj, select_qid, option_id, subqcnt) {
 						   					</a>\
 					   					</div>\
 					   				</div>\
+					   				<div class='form-group'></div>\
 					   			</li>\
 					   			<div class='form-group'></div>\
 					   			<a class='btn btn-success' id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_insertpos' href='javascript:add_optionsforsub("+ select_qid + "," + option_id + "," + subqcnt + ")'>\
