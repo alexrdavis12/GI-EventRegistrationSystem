@@ -36,13 +36,13 @@ function add_options(qid) {
 	vis = ""
 	cnt = $("#Q" + qid + "_optcnt").val();
 	$("#Q" + qid + "_optcnt").val(++cnt);
-	$("#Q" + qid + "_options_list").append("<div class='form-group' id='Q" + qid+ "_" + cnt + "' style='margin-bottom: 15px'>\
+	$("#Q" + qid + "_options_list").append("<div class='form-group' id='Q" + qid+ "_" + cnt + "' >\
 											 <input class='form-control'  name='Q" + qid + "[opt" + cnt + "]' value=''>\
-											 <a class='btn btn-danger pull-right' id='Q" + qid + "_O"+cnt+"' href='javascript:delete_option("+ qid + "," + cnt + ")' value='vis'>\
+											 <a class='btn btn-danger pull-right' id='Q" + qid + "_O"+cnt+"' href='javascript:delete_option("+ qid + "," + cnt + ")' value='vis' style='margin-top: 15px'>\
 											 	<i class='fa fa-trash-o fa-lg'></i>\
 											 	Delete Option\
 											 </a>\
-											 <a class='btn btn-success' href='javascript:add_subquestion(" + select_qid + "," + cnt + ")'>\
+											 <a class='btn btn-success' href='javascript:add_subquestion(" + select_qid + "," + cnt + ")' style='margin-top: 15px'>\
 											 	<i class='fa fa-plus fa-lg'></i>\
 											 	Add Sub-question\
 											 </a>\
