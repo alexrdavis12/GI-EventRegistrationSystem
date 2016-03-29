@@ -25,17 +25,14 @@ class EventsController < ApplicationController
           		@flash_notice += "Create Error"
           		render 'Create'
           	end
+          	end
         end
-    end
 
     def show
       eid=params[:eid]
     	@event = Event.find(eid)
     end
   
-    #def edit
-      #@event = Event.find(id)
-    #end
     
     def allevent
       id = session[:user_id]
