@@ -44,7 +44,6 @@ class EventsController < ApplicationController
           	@event.eend = params[:End_Date]
           	@event.edescription = params[:Description]
           	if @event.valid?
-
           		if @event.save
           			session[:eid] = @event.id
           			flash[:notice] = "Event Edited Successfully!"
@@ -54,12 +53,11 @@ class EventsController < ApplicationController
           			@flash_notice += "DB Error"
           			render 'Save'
           		end
-
           	else
           		@flash_notice += "Create Error"
           		render 'Save'
           	end
-      end
+        end
     end
     
     def allevent
