@@ -131,9 +131,9 @@ function add_subquestion(select_qid, option_id) {
 
 function trigger_option_subquestion(dom_obj, select_qid, option_id, subqcnt) {
 	dom_obj.after("<div id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_optdiv' class='form-group'  style='margin-top: 15px'>\
-				   		<div class='panel panel-default'>\
+				   		<div class='panel panel-warning'>\
 				   			<div class='panel-heading'>Options</div>\
-				   			<div class='panel-body' id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_options'>\
+				   			<div class='panel-body' id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_options' style='background-color:#fcf8e3'>\
 				   				<li id='Q" + select_qid + "_sub_options_list' style='margin-bottom: 15px'>\
 					   				<input id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_optcnt' type='hidden' value='1'>\
 					   				<div class='form-group' id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_1'>\
@@ -163,9 +163,9 @@ function trigger_option(dom_obj, select_qid, displaysub) {
 	else
 		vis = "disabled"
 	dom_obj.after("<div id='Q" + select_qid + "_optdiv' class='form-group' style='margin-top: 15px'>\
-						<div class='panel panel-default'>\
+						<div class='panel panel-warning'>\
 							 <div class='panel-heading'>Options</div>\
-							 <div class='panel-body' id='Q" + select_qid + "_options'>\
+							 <div class='panel-body' id='Q" + select_qid + "_options' style='background-color:#fcf8e3'>\
 							 	<li id='Q" + select_qid + "_options_list'>\
 									 <input id='Q" + select_qid + "_optcnt' type='hidden' value='3'>\
 									 <div class='form-group' id='Q" + select_qid + "_1' >\
@@ -295,7 +295,7 @@ $(document).ready(function(){
 										</a>\
 									</h3>\
 								</div>\
-								<div class='panel-body'>\
+								<div class='panel-body' style='background-color:#dff0d8'>\
 									<div class='form-group'><input class='form-control' name='Q" + current_qid + "[title]' value=''></div>\
 									" + q_type_str+ "\
 								</div>\
