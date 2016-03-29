@@ -28,6 +28,7 @@ Rails.application.routes.draw do
   get 'datashow'=>'admin#show'
   get 'graphshow'=>'admin#graphshow'
   get 'eventdelete'=>'admin#delete'
+  get 'eventedit' =>'events#edit'
   # post 'answershow' =>'answers#show'
   # get 'create' => 'answers#create'
   # post 'create' => 'answers#create'
