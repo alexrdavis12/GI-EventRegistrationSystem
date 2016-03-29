@@ -130,7 +130,7 @@ function add_subquestion(select_qid, option_id) {
 }
 
 function trigger_option_subquestion(dom_obj, select_qid, option_id, subqcnt) {
-	dom_obj.after("<div id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_optdiv' class='form-group'>\
+	dom_obj.after("<div id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_optdiv' class='form-group'  style='margin: 15px'>\
 				   		<div class='panel panel-default'>\
 				   			<div class='panel-heading'>Options</div>\
 				   			<div class='panel-body' id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_options'>\
