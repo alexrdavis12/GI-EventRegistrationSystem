@@ -137,17 +137,17 @@ function trigger_option_subquestion(dom_obj, select_qid, option_id, subqcnt) {
 				   				<li id='Q" + select_qid + "_sub_options_list' style='margin-bottom: 15px'>\
 					   				<input id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_optcnt' type='hidden' value='1'>\
 					   				<div class='form-group' id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_1'>\
-						   				<div class='col-xs-11'>\
+						   				<div class='col-xs-11' style='margin-bottom: 5px'>\
 						   					<input class='form-control' name='S" + select_qid + "_" + option_id + "_" + subqcnt + "[opt1]' value=''>\
 						   				</div>\
-						   				<div class='col-xs-1'>\
+						   				<div class='col-xs-1' style='margin-bottom: 5px'>\
 						   					<a class='btn btn-danger pull-right' href='javascript:delete_optionforsub("+ select_qid + ", " + option_id + "," + subqcnt + ", 1)'>\
 						   						<i class='fa fa-trash-o fa-lg'></i>\
 						   					</a>\
 					   					</div>\
 					   				</div>\
 					   			</li>\
-					   			<a class='btn btn-success' id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_insertpos' href='javascript:add_optionsforsub("+ select_qid + "," + option_id + "," + subqcnt + ")' style='margin-top: 15px'>\
+					   			<a class='btn btn-success' id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_insertpos' href='javascript:add_optionsforsub("+ select_qid + "," + option_id + "," + subqcnt + ")' style='margin-top: 10px'>\
 				   					<i class='fa fa-plus fa-lg'>\
 				   					</i>\
 				   					Add Option\
