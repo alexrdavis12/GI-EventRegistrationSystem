@@ -35,7 +35,7 @@ class EventsController < ApplicationController
     end
     
     def edit
-      @event = Event.find(eid)
+      @event = Event.id
     end
     
     	
