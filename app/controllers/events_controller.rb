@@ -27,12 +27,12 @@ class EventsController < ApplicationController
           	end
           	end
         end
-
+    
     def show
       eid=params[:eid]
     	@event = Event.find(eid)
     end
-  
+    
     def edit
       eid = params[:eid]
       @event = Event.find(eid)
@@ -45,11 +45,12 @@ class EventsController < ApplicationController
           	@event.eend = params[:End_Date]
           	@event.edescription = params[:Description]
           	if @event.valid?
+          	  
           		if @event.save
           			session[:eid] = @event.id
           			flash[:notice] = "Event Edited Successfully!"
-               eid=@event.id
-          			redirect_to "eventshow?eid=#{e.id}"
+                eid=@event.id
+          			redirect_to "eventsave?eid=#{e.id}"
           		else
           			@flash_notice += "DB Error"
           			render 'Save'
