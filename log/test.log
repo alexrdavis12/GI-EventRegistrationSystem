@@ -4568,3 +4568,675 @@ Processing by QuestionsController#create as HTML
   Rendered questions/create.html.haml within layouts/application (1.2ms)
 Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 01:28:19 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (227.3ms)
+Completed 200 OK in 383ms (Views: 363.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 01:28:20 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 01:28:20 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 01:28:20 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 01:28:20 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 01:28:20 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 01:28:20 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:31:10 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (249.1ms)
+Completed 200 OK in 421ms (Views: 394.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.8ms)[0m  begin transaction
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:31:11 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (7.2ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:31:11 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:31:11 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:31:11 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (3.7ms)
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:31:11 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:31:11 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.7ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:33:01 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (272.8ms)
+Completed 200 OK in 362ms (Views: 342.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:33:02 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:33:02 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:33:02 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:33:02 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:33:02 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:33:02 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:33:53 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (227.9ms)
+Completed 200 OK in 320ms (Views: 304.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:33:53 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:33:53 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:33:53 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:33:53 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:33:53 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:33:53 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:36:42 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (244.7ms)
+Completed 200 OK in 353ms (Views: 329.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (3.1ms)[0m  begin transaction
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:36:42 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:36:42 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:36:42 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:36:42 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:36:42 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:36:42 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:38:27 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (241.2ms)
+Completed 200 OK in 345ms (Views: 329.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:38:27 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.7ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:38:27 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:38:27 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:38:27 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 5ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:38:27 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:38:27 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:39:06 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (226.8ms)
+Completed 200 OK in 330ms (Views: 313.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:39:07 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.7ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:39:07 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:39:07 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:39:07 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:39:07 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:39:07 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:42:06 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (227.9ms)
+Completed 200 OK in 314ms (Views: 297.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:42:07 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.7ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:42:07 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:42:07 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:42:07 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.7ms)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:42:07 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:42:07 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:42:39 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (419.3ms)
+Completed 200 OK in 638ms (Views: 594.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:42:40 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:42:40 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:42:40 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:42:40 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:42:40 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:42:40 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:43:17 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (253.2ms)
+Completed 200 OK in 353ms (Views: 330.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:43:18 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (3.8ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:43:18 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:43:18 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:43:18 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:43:18 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:43:18 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.7ms)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:44:50 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (251.5ms)
+Completed 200 OK in 362ms (Views: 343.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:44:51 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (6.3ms)
+Completed 200 OK in 9ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:44:51 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:44:51 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:44:51 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:44:51 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:44:51 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:49:24 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (274.9ms)
+Completed 200 OK in 414ms (Views: 389.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:49:24 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 4ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:49:24 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:49:24 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:49:24 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:49:24 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:49:24 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:50:03 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (254.1ms)
+Completed 200 OK in 375ms (Views: 354.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:50:03 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (8.6ms)
+Completed 200 OK in 11ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:50:03 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:50:03 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:50:03 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:50:03 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 4ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:50:03 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 4ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:54:22 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (216.7ms)
+Completed 200 OK in 314ms (Views: 298.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:54:23 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:54:23 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.7ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:54:23 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:54:23 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:54:23 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+Started GET "/QuestionCreate?eid=1" for 127.0.0.1 at 2016-03-30 02:54:23 +0000
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m

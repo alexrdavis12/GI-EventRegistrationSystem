@@ -31,6 +31,15 @@ When(/^I click the up arrow on a question$/) do
   #find("div", text:"Q1")
   #expect(page).to has_content('li:last-child', :text=>'Q1')
   
+  
+  #click_button("Q1_up")
+  find_by_id('Q1_down').click
+  
+  #q1index = find_by_id("Q1_down")[:index]
+  #raise "Q1_down index is \"#{q1index}\"...\n"
+  
+  #expect(page).to have
+  
 end
 
 When(/^I click the down arrow on a question$/) do
