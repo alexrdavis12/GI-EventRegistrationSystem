@@ -40,19 +40,19 @@
   
             .form-group
               %label Event Location
-              %input{:class => 'form-control', :value=>'', :name=>"Location"}
+              %input{:class => 'form-control', :value=> @event.elocation, :name=>"Location"}
   
             .form-group
               %label Event Description
-              %textarea{:class => 'form-control', :rows => "8", :value=>'', :name=>"Description"}
+              %textarea{:class => 'form-control', :rows => "8", :value=> @event.edescription, :name=>"Description"}
   
             .form-group
               %label Start Date
-              %input{:type => 'text', :class => 'form-control', :id =>'dp1',:value=>'', :name=>"Start_Date"}
+              %input{:type => 'text', :class => 'form-control', :id =>'dp1',:value=> @event.estart, :name=>"Start_Date"}
 
             .form-group
               %label End Date
-              %input{:type => 'text', :class => 'form-control', :id =>'dp2',:value=>'', :name=>"End_Date"}
+              %input{:type => 'text', :class => 'form-control', :id =>'dp2',:value=> @event.eend, :name=>"End_Date"}
             
             = submit_tag("Save", :class => 'btn btn-primary')
        
