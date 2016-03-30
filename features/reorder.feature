@@ -15,10 +15,12 @@ Scenario: move question up successfully
   When I click the up arrow on a question
   Then I should see it change position with the question above it
   
-Scenario: move question down
+Scenario: move question down successfully
   Given I am on the Questions Page
   And There are more than one question on the page
   When I click the down arrow on a question
   Then I should see it change position with the question below it
+  
+  
   
   
