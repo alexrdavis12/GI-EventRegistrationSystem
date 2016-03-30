@@ -36,6 +36,7 @@ class EventsController < ApplicationController
     def edit
       eid = params[:eid]
       @event = Event.find(eid)
+      @flash_notice = ""
       
       if params[:commit] != nil && params[:commit] == 'Save'
 			    @event.etitle = params[:Title]
