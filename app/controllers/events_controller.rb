@@ -51,11 +51,11 @@ class EventsController < ApplicationController
           			#redirect_to #
           		else
           			@flash_notice += "DB Error"
-          			render 'Save'
+          			#render 'Save'
           		end
           	else
           		@flash_notice += "Create Error"
-          		render 'Save'
+          		#render 'Save'
           	end
             end
       end
