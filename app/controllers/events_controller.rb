@@ -45,17 +45,17 @@ class EventsController < ApplicationController
           	@event.edescription = params[:Description]
           	if @event.valid?
           		if @event.save
-          			#session[:eid] = @event.id
+          			session[:eid] = @event.id
           			flash[:notice] = "Event Edited Successfully!"
                eid=@event.id
-          			#redirect_to #
+          			redirect_to "/eventsave?eid=#{eid}"
           		else
           			@flash_notice += "DB Error"
-          			#render 'Save'
+          			render 'Save'
           		end
           	else
           		@flash_notice += "Create Error"
-          		#render 'Save'
+          		render 'Save'
           	end
             end
       end
