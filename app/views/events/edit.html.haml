@@ -53,8 +53,9 @@
             .form-group
               %label End Date
               %input{:type => 'text', :class => 'form-control', :id =>'dp2',:value=>'', :name=>"End_Date"}
-  
-            = submit_tag("Save", :class => 'btn btn-primary')
+            
+            = submit_tag{:href => # , :class =>'btn btn-primary btn-sm', :role=>'button'} Save
+            //= submit_tag("Save", :class => 'btn btn-primary')
        
   .row
     %p{:id => "demo"}
