@@ -76,11 +76,11 @@ function add_subquestion(select_qid, option_id) {
     	 			<div class='panel-heading'>\
     	 				<h3 class='panel-title'>\
     	 					Sub-question\
-    	 					<a class='btn btn-sm pull-right' style='color: #500000; background: none; outline: 0;'\
+    	 					<a class='btn btn-sm pull-right' id='QQ" + select_qid + "_" + option_id + "_" + cnt + "_up' style='color: #500000; background: none; outline: 0;'\
     	 					href='javascript:move_subq_up("+select_qid + "," + option_id + "," + cnt + ")'>\
     	 						<i class='fa fa-chevron-up fa-lg'/>\
     	 					</a>\
-    	 					<a class='btn btn-sm pull-right' style='color: #500000; background: none; outline: 0'\
+    	 					<a class='btn btn-sm pull-right' id='QQ" + select_qid + "_" + option_id + "_" + cnt + "_down' style='color: #500000; background: none; outline: 0'\
     	 					href='javascript:move_subq_down(" + select_qid + "," + option_id + "," + cnt + ")'>\
     	 						<i class='fa fa-chevron-down fa-lg'></i>\
     	 					</a>\
@@ -102,11 +102,11 @@ function add_subquestion(select_qid, option_id) {
 	    				<div class='panel-heading'>\
 	    					<h3 class='panel-title'>\
 	    						Sub-question\
-	    						<a class='btn btn-sm pull-right' style='color: #500000; background: none; outline: 0;'\
+	    						<a class='btn btn-sm pull-right' id='QQ" + select_qid + "_" + option_id + "_" + cnt + "_up' style='color: #500000; background: none; outline: 0;'\
 	    						href='javascript:move_subq_up(" + select_qid + "," + option_id + "," + cnt + ")'>\
 	    							<i class='fa fa-chevron-up fa-lg'/>\
 	    						</a>\
-	    						<a class='btn btn-sm pull-right' style='color: #500000; background: none; outline: 0'\
+	    						<a class='btn btn-sm pull-right'  id='QQ" + select_qid + "_" + option_id + "_" + cnt + "_down' style='color:#500000; background: none; outline: 0'\
 	    						href='javascript:move_subq_down(" + select_qid + "," + option_id + "," + cnt + ")'>\
 	    							<i class='fa fa-chevron-down fa-lg'/>\
 	    						</a>\
@@ -281,11 +281,11 @@ $(document).ready(function(){
 								<div class='panel-heading'>\
 									<h3 class='panel-title'>\
 										Question\
-										<a class='btn btn-sm pull-right' style='color: #500000; background: none; outline: 0;'\
+										<a class='btn btn-sm pull-right' id='Q"+current_qid+"_up' style='color: #500000; background: none; outline: 0;'\
 										href='javascript:move_q_up(" + current_qid + ")'>\
 											<i class='fa fa-chevron-up fa-lg'></i>\
 										</a>\
-										<a class='btn btn-sm pull-right' style='color: #500000; background: none; outline: 0'\
+										<a class='btn btn-sm pull-right' id='Q"+current_qid+"_down' style='color: #500000; background: none; outline: 0'\
 										href='javascript:move_q_down(" + current_qid + ")'>\
 											<i class='fa fa-chevron-down fa-lg'></i>\
 										</a>\
