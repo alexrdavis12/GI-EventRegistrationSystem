@@ -52,6 +52,7 @@ group :test do
   gem 'cucumber-rails'
   gem 'cucumber-rails-training-wheels'
   gem 'simplecov'
+  gem 'selenium-webdriver'
 end
 
 group :development do
