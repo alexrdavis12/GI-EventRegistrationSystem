@@ -6,7 +6,7 @@ When /^(?:|I )click edit"([^"]*)"$/ do |button|
   click_button(button)
 end
 
-Then (/^I edit  "(.*?)" with "(.*?)"$/) do |field,text|
+Then (/^I should see it change to the event form with previous information "(.*?)" with "(.*?)"$/) do |field,text|
   fill_in(field, with:text)
 end
 
