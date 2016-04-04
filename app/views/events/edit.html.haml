@@ -44,7 +44,7 @@
   
             .form-group
               %label Event Description
-              %textarea{:class => 'form-control', :rows => "8", :value=> @event.edescription, :name=>"Description"}
+              %textarea{:class => 'form-control', :value=> @event.edescription, :name=>"Description"}
   
             .form-group
               %label Start Date
@@ -54,7 +54,7 @@
               %label End Date
               %input{:type => 'text', :class => 'form-control', :id =>'dp2',:value=> @event.eend, :name=>"End_Date"}
             
-            .f.submit "Save", :class => 'btn btn-primary'
+            = submit_tag("Save", :class => 'btn btn-primary')
        
   .row
     %p{:id => "demo"}
