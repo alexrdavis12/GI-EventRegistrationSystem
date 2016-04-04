@@ -50,7 +50,7 @@ class EventsController < ApplicationController
           			session[:eid] = @event.id
           			flash[:notice] = "Event Edited Successfully!"
                 eid=@event.id
-          			redirect_to "/eventsave?eid=#{eid}"
+          			redirect_to "/eventsave?eid=#{eid}" //sdfgdfg
           		else
           			@flash_notice += "DB Error"
           			render 'Save'
