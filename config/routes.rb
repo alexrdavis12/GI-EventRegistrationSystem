@@ -29,7 +29,7 @@ Rails.application.routes.draw do
   get 'graphshow'=>'admin#graphshow'
   get 'eventdelete'=>'admin#delete'
   get 'eventedit' =>'events#edit'
-  get 'save' =>'events#save'
+  get 'eventssave' =>'events#save'
   # post 'answershow' =>'answers#show'
   # get 'create' => 'answers#create'
   # post 'create' => 'answers#create'
