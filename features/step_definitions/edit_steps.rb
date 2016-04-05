@@ -1,13 +1,18 @@
 When(/^I go to the Event Page%/)do
-  visit()
+  visit('EventCreate?eid=1')
 end
 
-Then(/^I should see events%/)do
+Then(/^I should see created Events%/)do
   expect(page).to have_content("Event")
 end
 
 Given /^(?:|I )am on the event page (.+)$/ do |page_name|
   visit path_to(page_name)
+end
+
+And(/^There are more than event on the page$/) do
+  visit('EventCreate?eid=1')
+  page.find("a", text:"Edit").click
 end
 
 When /^(?:|I )click edit"([^"]*)"$/ do |button|
