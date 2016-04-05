@@ -31,7 +31,7 @@ Rails.application.routes.draw do
   get 'eventedit' =>'events#edit'
   post 'eventedit' =>'events#edit'
   get 'eventsave' =>'events#save'
- 
+  post 'eventsave' =>'events#save'
   # post 'answershow' =>'answers#show'
   # get 'create' => 'answers#create'
   # post 'create' => 'answers#create'

@@ -34,6 +34,7 @@ class EventsController < ApplicationController
     end
     
     def save
+       window.alert("entered save def")
       eid=params[:eid]
     	@event = Event.find(eid)
     end
@@ -52,10 +53,11 @@ class EventsController < ApplicationController
           	if @event.valid?
           	  
           		if @event.save
+          		  window.alert("entered save")
           			session[:eid] = @event.id
           			flash[:notice] = "Event Edited Successfully!"
                 eid=@event.id
-          			redirect_to "/eventsave?eid=#{eid}" #sdfgdfg
+          			redirect_to "/eventsave?eid=#{eid}"
           		else
           			@flash_notice += "DB Error"
           			render 'Save'
