@@ -60,11 +60,11 @@ class EventsController < ApplicationController
           		#	redirect_to "/eventsave?eid=#{eid}"
           		else
           			@flash_notice += "DB Error"
-          			render 'Save'
+          			render 'create'
           		end
           	else
           		@flash_notice += "Create Error"
-          		render 'Save'
+          		render 'Create'
           	end
       end
     end
