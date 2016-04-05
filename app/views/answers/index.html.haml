@@ -3,92 +3,93 @@
   .navbar-header
     %a.navbar-brand{:href => "#"} M.A.G.I
 
-%html
-  %head
-    %meta{:charset => "utf-8"}
-      %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
-        %meta{:content => "Adila Faruk", :name => "author"}
-          %title Exporting Data to a CSV File
-          :css
-            body{
-                font-family: sans-serif;
-                font-weight:300;
-                padding-top:30px;
-                color:#666;
-            }
-            .container{
-                text-align:center;  
-            }
-            a{ color:#1C2045; font-weight:350;}
-            table{
-                font-weight:300;
-                margin:0px auto;
-                border: 1px solid #1C2045;
-                padding:5px;
-                color:#666;
-            }
-            th,td{ 
-                border-bottom: 1px solid #dddddd;
-                text-align:center;
-                margin: 10px;
-                padding:0 10px;
-            }
-            hr{ 
-                border:0;
-                border-top: 1px solid #E7C254;
-                margin:20px auto;
-                width:50%;
-            }
-            .button{
-                background-color:#1C2045;
-                color:#E7C254;
-                padding:5px 20px;
-                max-width: 300px;
-                line-height:1.5em;
-                text-align:center;
-                margin:5px auto;
-            }
-            .button a{ color:#E7C254;}
-            .refs{ display:block; margin:auto; text-align:left; max-width:500px; }
-            .refs .label{  font-size:1.4em;}
-            .refs > ul{ margin-top:10px; line-height:1.5em;}
-          %body
-    .container
-      #dvData
-        %table
-          %tr
-            %th Column One
-            %th Column Two
-            %th Column Three
-            %th Column Four
-          %tr
-            %td Row 1 Col 1
-            %td Row 1 Col 2
-            %td Row 1 Col 3
-            %td Row 1 Col 4
-          %tr
-            %td Row 2 Col 1
-            %td Row 2 Col 2
-            %td Row 2 Col 3
-            %td Row 2 Col 4
-          %tr
-            %td Row 3 Col 1
-            %td Row 3 Col 2
-            %td Row 3 Col 3
-            %td Row 3 Col 4
-      %br/
-      .button
-        %a#export{:href => "#", :role => "button"}
-          Click On This Here Link To Export The Table Data into a CSV File
-      %hr/
-      .refs
-        .label References
-        %ul
-          %li
-            %a{:href => "http://stackoverflow.com/questions/16078544/export-to-csv-using-jquery-and-html", :target => "_blank"} Export to CSV using jQuery and HTML (Stack Overflow)
-          %li
-            %a{:href => "http://adilapapaya.wordpress.com/2013/11/15/exporting-data-from-a-web-browser-to-a-csv-file-using-javascript/", :target => "_blank"} adilapapaya.wordpress.com
-      %hr/
+  
+/  = link_to 'csv', "answer.csv.csv?eid=#{eid} "
+
+
+/<!DOCTYPE>
+/%html
+/  %head
+/    %meta{:charset => "utf-8"}
+/      %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
+/        %meta{:content => "Adila Faruk", :name => "author"}
+/          %title Exporting Data to a CSV File
+/          :css
+/            body{
+/                font-family: sans-serif;
+/                font-weight:300;
+/                padding-top:30px;
+/                color:#666;
+/            }
+/            .container{
+/                text-align:center;  
+/            }
+/            a{ color:#1C2045; font-weight:350;}
+/            table{
+/                font-weight:300;
+/                margin:0px auto;
+/                border: 1px solid #1C2045;
+/                padding:5px;
+/                color:#666;
+/            }
+/            th,td{ 
+/                border-bottom: 1px solid #dddddd;
+/                text-align:center;
+/                margin: 10px;
+/                padding:0 10px;
+/            }
+/            hr{ 
+/                border:0;
+/                border-top: 1px solid #E7C254;
+/                margin:20px auto;
+/                width:50%;
+/            }
+/            .button{
+/                background-color:#1C2045;
+/                color:#E7C254;
+/                padding:5px 20px;
+/                max-width: 300px;
+/                line-height:1.5em;
+/                text-align:center;
+/                margin:5px auto;
+/            }
+/            .button a{ color:#E7C254;}
+/            .refs{ display:block; margin:auto; text-align:left; max-width:500px; }
+/            .refs .label{  font-size:1.4em;}
+/            .refs > ul{ margin-top:10px; line-height:1.5em;}
+/          %body
+/    .container
+/      #dvData
+/        %table
+/          %tr
+/            %th Column One
+/            %th Column Two
+/            %th Column Three
+/          %tr
+/            %td Row 1 Col 1
+/            %td Row 1 Col 2
+/            %td Row 1 Col 3
+/          %tr
+/            %td Row 2 Col 1
+/            %td Row 2 Col 2
+/            %td Row 2 Col 3
+/          %tr
+/            %td Row 3 Col 1
+/            %td Row 3 Col 2
+/            %td Row 3 Col 3
+/      %br/
+/      .button
+/        %a#export{:href => "#", :role => "button"}
+/          Click On This Here Link To Export The Table Data into a CSV File
+/      %hr/
+/      .refs
+/        .label References
+/        %ul
+/          %li
+/            %a{:href => "http://stackoverflow.com/questions/16078544/export-to-csv-using-jquery-and-html", :target => "_blank"} Export to CSV using jQuery and HTML (Stack Overflow)
+/          %li
+/            %a{:href => "http://adilapapaya.wordpress.com/2013/11/15/exporting-data-from-a-web-browser-to-a-csv-file-using-javascript/", :target => "_blank"} adilapapaya.wordpress.com
+/      %hr/
     / Scripts -----------------------------------------------------------
     %script{:src => "https://code.jquery.com/jquery-1.11.0.min.js", :type => "text/javascript"}
     / If you want to use jquery 2+: https://code.jquery.com/jquery-2.1.0.min.js
