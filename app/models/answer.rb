@@ -38,9 +38,12 @@ class Answer < ActiveRecord::Base
 		
 	      # output records order by user ID
 	      idlist.each do |uid|
+	      	user_last_name = User.where(:id => uid).select(:lastname).take[:lastname]
+	      	user_first_name = User.where(:id => uid).select(:firstname).take[:firstname]
 	      	user_email = User.where(:id => uid).select(:email).take[:email]
+	      	user_loc = User.where(:id => uid).select(:location).take[:location]
 	      	answer = Answer.where(:uid => uid)
-	      	answerlist = ["#{user_email}"]
+	      	answerlist = ["#{user_last_name}", "#{user_last_name}","#{user_first_name}", "#{user_email}", "#{user_loc}"]
 	      	qindex = 0
 	      	answer.each do |ans|
 	      		if qoptionlist[qindex] != ""
