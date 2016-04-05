@@ -33,6 +33,11 @@ class EventsController < ApplicationController
     	@event = Event.find(eid)
     end
     
+    def save
+      eid=params[:eid]
+    	@event = Event.find(eid)
+    end
+    
     def edit
       eid = params[:eid]
       @event = Event.find(eid)
