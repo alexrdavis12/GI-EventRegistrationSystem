@@ -43,7 +43,8 @@ class Answer < ActiveRecord::Base
 	      	user_email = User.where(:id => uid).select(:email).take[:email]
 	      	user_loc = User.where(:id => uid).select(:location).take[:location]
 	      	answer = Answer.where(:uid => uid)
-	      	answerlist = ["#{user_last_name}", "#{user_last_name}","#{user_first_name}", "#{user_email}", "#{user_loc}"]
+	      	answerlist = ["#{user_first_name}"]
+	      	#answerlist = ["#{user_last_name}", "#{user_last_name}", "#{user_first_name}", "#{user_email}", "#{user_loc}"]
 	      	qindex = 0
 	      	answer.each do |ans|
 	      		if qoptionlist[qindex] != ""
