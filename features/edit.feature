@@ -8,4 +8,4 @@ Scenario: Edit Event Information
   
 Scenario: Edit Event Question
   When I click edit
-  Then I should see it change to edit form
+  Then I should see it change to edit form with question information
