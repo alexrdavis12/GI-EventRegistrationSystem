@@ -10,7 +10,6 @@ class EventsController < ApplicationController
           	@event.eend = params[:End_Date]
           	@event.edescription = params[:Description]
           	if @event.valid?
-
           		if @event.save
           			session[:eid] = @event.id
           			flash[:notice] = "Event Created Successfully!"
@@ -34,7 +33,7 @@ class EventsController < ApplicationController
     end
     
     def save
-       window.alert("entered save def")
+      window.alert("entered save def")
       eid=params[:eid]
     	@event = Event.find(eid)
     end
@@ -56,15 +55,14 @@ class EventsController < ApplicationController
         	  	session[:eid] = @event.id
         	  	flash[:notice] = "Event Edited Successfully!"
               eid=@event.id
-              render 'save'
-        	  	#redirect_to "/eventsave?eid=#{eid}"
+        	  	redirect_to "/eventsave?eid=#{eid}"
         		else
         			@flash_notice += "DB Error"
-        			render 'save'
+        			render :save
         		end
         	else
         		@flash_notice += "Create Error"
-        		render 'save'
+        		render :save
         	end
       end
     end
