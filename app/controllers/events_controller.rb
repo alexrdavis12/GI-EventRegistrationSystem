@@ -20,63 +20,24 @@ class EventsController < ApplicationController
           			render 'create'
           		end
 
-          	else
+            else
           		@flash_notice += "Create Error"
           		render 'Create'
           	end
-          	end
-        end
-    
-    def show
-      eid=params[:eid]
-    	@event = Event.find(eid)
     end
+  end
     
-    def save
-      window.alert("entered save def")
-      eid=params[:eid]
-    	@event = Event.find(eid)
-    end
-    
-    def edit
-      eid = params[:eid]
-      @event = Event.find(eid)
-      @flash_notice = ""
-      
-      if params[:commit] != nil && params[:commit] == 'Save'
-			    @event.etitle = params[:Title]
-         	@event.elocation = params[:Location]
-         	@event.estart = params[:Start_Date]
-        	@event.eend = params[:End_Date]
-        	@event.edescription = params[:Description]
-        	if @event.valid?
-        		if @event.save
-        		  window.alert("entered save")
-        	  	session[:eid] = @event.id
-        	  	flash[:notice] = "Event Edited Successfully!"
-              eid=@event.id
-        	  	redirect_to "/eventsave?eid=#{eid}"
-        		else
-        			@flash_notice += "DB Error"
-        			render "save"
-        		end
-        	else
-        		@flash_notice += "Create Error"
-        		render "save"
-        	end
-      end
-    end
-    
-    def allevent
-      id = session[:user_id]
-      @curlevel = User.find(id).level
-      if(@curlevel != 0)
-      @event = Event.all
-      else
-        redirect_to '/admin'
-      end
-    end
-    
+  def show
+    eid=params[:eid]
+  	@event = Event.find(eid)
+  end
+  
+  def save
+    window.alert("entered save def")
+    eid=params[:eid]
+  	@event = Event.find(eid)
+  end
+  
   def edit
     eid = params[:eid]
     @event = Event.find(eid)
@@ -104,12 +65,17 @@ class EventsController < ApplicationController
       		render "save"
       	end
     end
-    
-    def save
-      window.alert("entered save def")
-      eid=params[:eid]
-    	@event = Event.find(eid)
-    end
-    
   end
+  
+  def allevent
+    id = session[:user_id]
+    @curlevel = User.find(id).level
+    if(@curlevel != 0)
+    @event = Event.all
+    else
+      redirect_to '/admin'
+    end
+  end
+    
+  
 end
