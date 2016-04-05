@@ -166,8 +166,8 @@
                   - cnt+=1
           %label Total 
           %label=@collegeStation+@houston+@austin+@sanAntonio+@dallasOrFortWorth+@otherAreaInTexas+@outOfTexas
-          %a#export{:href => "#", :class => 'btn btn-primary bt-sm', :role => "button"} Download
-          /%a{:href => "answer.csv.csv?eid=#{@eid}", :class =>'btn btn-primary btn-sm', :role=>'button'} Download
+          /%a#export{:href => "#", :class => 'btn btn-primary bt-sm', :role => "button"} Download
+          %a{:href => "answer.csv.csv?eid=#{@eid}", :class =>'btn btn-primary btn-sm', :role=>'button'} Download
 
   .row{:id => "chart", :class => "tab-pane"}
     .col-md-3
