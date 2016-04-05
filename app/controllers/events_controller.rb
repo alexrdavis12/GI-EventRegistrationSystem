@@ -48,24 +48,24 @@ class EventsController < ApplicationController
 			    @event.etitle = params[:Title]
          	@event.elocation = params[:Location]
          	@event.estart = params[:Start_Date]
-          	@event.eend = params[:End_Date]
-          	@event.edescription = params[:Description]
-          	if @event.valid?
-          	  
-          		if @event.save
-          		  window.alert("entered save")
-          		#	session[:eid] = @event.id
-          		#	flash[:notice] = "Event Edited Successfully!"
-               # eid=@event.id
-          		#	redirect_to "/eventsave?eid=#{eid}"
-          		else
-          			@flash_notice += "DB Error"
-          			render 'create'
-          		end
-          	else
-          		@flash_notice += "Create Error"
-          		render 'Create'
-          	end
+        	@event.eend = params[:End_Date]
+        	@event.edescription = params[:Description]
+        	if @event.valid?
+        		if @event.save
+        		  window.alert("entered save")
+        	  	session[:eid] = @event.id
+        	  	flash[:notice] = "Event Edited Successfully!"
+              eid=@event.id
+              render 'save'
+        	  	#redirect_to "/eventsave?eid=#{eid}"
+        		else
+        			@flash_notice += "DB Error"
+        			render 'save'
+        		end
+        	else
+        		@flash_notice += "Create Error"
+        		render 'save'
+        	end
       end
     end
     
