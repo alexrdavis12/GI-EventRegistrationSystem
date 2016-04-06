@@ -33,7 +33,7 @@
         .panel-heading
           %h3.panel-title Event
         .panel-body
-          = form_tag(:action => 'edit') do
+          = form_tag(:action => 'show') do
             .form-group
               %label Event Title
               %input{:class => 'form-control', :value=> @event.etitle, :name=>"Title"}
