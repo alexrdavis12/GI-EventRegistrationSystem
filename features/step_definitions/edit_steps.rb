@@ -27,7 +27,7 @@ When /^(?:|I )click edit question"([^"]*)"$/ do |button|
   click_button(button)
 end
 
-Then (/^I should see it change to the question to be edited "(.*?)" with "(.*?)"$/) do |field,text|
+Then (/^I should see it change to edit form with question information "(.*?)" with "(.*?)"$/) do |field,text|
   fill_in(field, with:text)
 end
 
