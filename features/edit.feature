@@ -6,6 +6,6 @@ Scenario: Edit Event Information
   When I click edit
   Then I should see it change to the event form with previous information 
   
-Scenario: Edit Event Question
+Scenario: Edit Specific Event Question
   When I click edit
   Then I should see it change to edit form with question information
