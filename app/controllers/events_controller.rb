@@ -42,7 +42,12 @@ class EventsController < ApplicationController
     eid = params[:eid]
     @event = Event.find(eid)
     @flash_notice = ""
-    
+    redirect_to "/eventedit?eid=#{eid}"
+  end
+  
+  def update
+    eid = params[:eid]
+    @event = Event.find(eid)
     if params[:commit] != nil && params[:commit] == 'Save'
 		    @event.etitle = params[:Title]
        	@event.elocation = params[:Location]
@@ -51,18 +56,18 @@ class EventsController < ApplicationController
       	@event.edescription = params[:Description]
       	if @event.valid?
       		if @event.save
-      		  window.alert("entered save")
+      		  window.alert("entered update")
       	  	session[:eid] = @event.id
       	  	flash[:notice] = "Event Edited Successfully!"
             eid=@event.id
-      	  	redirect_to "/eventsave?eid=#{eid}"
+      	  	redirect_to "/eventupdate?eid=#{eid}"
       		else
       			@flash_notice += "DB Error"
-      			render "save"
+      			render "edit"
       		end
       	else
-      		@flash_notice += "Create Error"
-      		render "save"
+      		@flash_notice += "Save Error"
+      		render "edit"
       	end
     end
   end
