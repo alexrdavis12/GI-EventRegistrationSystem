@@ -30,7 +30,6 @@ Rails.application.routes.draw do
   get 'eventdelete'=>'admin#delete'
   get 'eventedit' =>'events#edit'
   post 'eventedit' =>'events#edit'
-  # put 'eventedit' =>'events#update'
   get 'eventupdate' =>'events#update'
   post 'eventupdate' =>'events#update'
   put 'eventupdate' =>'events#update'
