@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   resources :users
-  resources :events
   get '/' => 'sessions#login'
   get 'answer.csv' => 'answers#index', :as => :answers
   get 'login'  => 'sessions#login'
@@ -31,7 +30,7 @@ Rails.application.routes.draw do
   get 'eventdelete'=>'admin#delete'
   get 'eventedit' =>'events#edit'
   post 'eventedit' =>'events#edit'
-  put 'eventedit' =>'events#update'
+ # put 'eventedit' =>'events#update'
   get 'eventupdate' =>'events#update'
   post 'eventupdate' =>'events#update'
   put 'eventupdate' =>'events#update'
