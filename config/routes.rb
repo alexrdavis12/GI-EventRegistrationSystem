@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :users
+  resources :events
   get '/' => 'sessions#login'
   get 'answer.csv' => 'answers#index', :as => :answers
   get 'login'  => 'sessions#login'
