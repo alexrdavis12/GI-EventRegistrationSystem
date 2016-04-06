@@ -38,3 +38,5 @@ To sync branch with master:
 6. git push
 
 Have fun!
+
+Local: rails s -p $PORT -b $IP
