@@ -130,4 +130,7 @@ class QuestionsController < ApplicationController
         eid = params[:eid]
         @questions = Question.where(eid: eid )
 	end
+	
+	
+	
 end

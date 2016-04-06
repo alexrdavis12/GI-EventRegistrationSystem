@@ -33,7 +33,6 @@ class EventsController < ApplicationController
   end
   
   def save
-    window.alert("entered save def")
     eid=params[:eid]
   	@event = Event.find(eid)
   end
@@ -55,7 +54,6 @@ class EventsController < ApplicationController
       	@event.edescription = params[:Description]
       	if @event.valid?
       		if @event.save
-      		  window.alert("entered update")
       	  	session[:eid] = @event.id
       	  	flash[:notice] = "Event Edited Successfully!"
             eid=@event.id

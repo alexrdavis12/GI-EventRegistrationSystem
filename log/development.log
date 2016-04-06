@@ -259,3 +259,1022 @@ Cannot render console from 165.91.4.174! Allowed networks: 127.0.0.1, ::1, 127.0
 Processing by SessionsController#login as HTML
   Rendered sessions/login.html.haml within layouts/application (4.7ms)
 Completed 200 OK in 249ms (Views: 248.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.13.240 at 2016-04-06 22:32:21 +0000
+Cannot render console from 165.91.13.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#login as HTML
+  Rendered sessions/login.html.haml within layouts/application (242.4ms)
+Completed 200 OK in 657ms (Views: 637.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.13.240 at 2016-04-06 22:32:22 +0000
+Cannot render console from 165.91.13.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/data.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.13.240 at 2016-04-06 22:32:22 +0000
+Cannot render console from 165.91.13.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for 165.91.13.240 at 2016-04-06 22:32:22 +0000
+Cannot render console from 165.91.13.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-datetimepicker.min.self-788e29abac8dcfbc60d7f7490dd02b623d42c2174b604ebff6e8faa66c5d876e.css?body=1" for 165.91.13.240 at 2016-04-06 22:32:22 +0000
+Cannot render console from 165.91.13.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/answers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.13.240 at 2016-04-06 22:32:22 +0000
+Cannot render console from 165.91.13.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-603f330c29af013305325569c8c75d03d688963abd8cde4fffec17b5ce417bfb.css?body=1" for 165.91.13.240 at 2016-04-06 22:32:22 +0000
+Cannot render console from 165.91.13.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-2fe4f8a61d73606fbcb036b41f380591906a4da65a9eb5ec0a210fe6980b2ca7.css?body=1" for 165.91.13.240 at 2016-04-06 22:32:22 +0000
+Cannot render console from 165.91.13.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.13.240 at 2016-04-06 22:32:22 +0000
+Cannot render console from 165.91.13.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/questions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.13.240 at 2016-04-06 22:32:22 +0000
+Cannot render console from 165.91.13.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.13.240 at 2016-04-06 22:32:22 +0000
+Cannot render console from 165.91.13.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-0a47e2599240f8e31081133ff1040077aca34f655d8d9a5806e05547028d9f2c.css?body=1" for 165.91.13.240 at 2016-04-06 22:32:22 +0000
+Cannot render console from 165.91.13.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.13.240 at 2016-04-06 22:32:22 +0000
+Cannot render console from 165.91.13.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-a889e7abcadb5dbdb0529c0dc69d5a86744647c95c657e19413c888ea981fd29.css?body=1" for 165.91.13.240 at 2016-04-06 22:32:22 +0000
+Cannot render console from 165.91.13.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 165.91.13.240 at 2016-04-06 22:32:23 +0000
+Cannot render console from 165.91.13.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 165.91.13.240 at 2016-04-06 22:32:23 +0000
+Cannot render console from 165.91.13.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 165.91.13.240 at 2016-04-06 22:32:23 +0000
+Cannot render console from 165.91.13.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 165.91.13.240 at 2016-04-06 22:32:23 +0000
+Cannot render console from 165.91.13.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 165.91.13.240 at 2016-04-06 22:32:23 +0000
+Cannot render console from 165.91.13.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 165.91.13.240 at 2016-04-06 22:32:23 +0000
+Cannot render console from 165.91.13.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 165.91.13.240 at 2016-04-06 22:32:23 +0000
+Cannot render console from 165.91.13.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 165.91.13.240 at 2016-04-06 22:32:23 +0000
+Cannot render console from 165.91.13.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 165.91.13.240 at 2016-04-06 22:32:23 +0000
+Cannot render console from 165.91.13.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 165.91.13.240 at 2016-04-06 22:32:23 +0000
+Cannot render console from 165.91.13.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 165.91.13.240 at 2016-04-06 22:32:23 +0000
+Cannot render console from 165.91.13.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 165.91.13.240 at 2016-04-06 22:32:23 +0000
+Cannot render console from 165.91.13.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 165.91.13.240 at 2016-04-06 22:32:23 +0000
+Cannot render console from 165.91.13.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 165.91.13.240 at 2016-04-06 22:32:23 +0000
+Cannot render console from 165.91.13.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 165.91.13.240 at 2016-04-06 22:32:23 +0000
+Cannot render console from 165.91.13.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 165.91.13.240 at 2016-04-06 22:32:23 +0000
+Cannot render console from 165.91.13.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 165.91.13.240 at 2016-04-06 22:32:23 +0000
+Cannot render console from 165.91.13.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/im3-554298bfba1eab7ed16dfc520f300082d3924d01db3b2eeabad3907c8443852c.png" for 165.91.13.240 at 2016-04-06 22:32:23 +0000
+Cannot render console from 165.91.13.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/login_attempt" for 165.91.13.240 at 2016-04-06 22:32:33 +0000
+Cannot render console from 165.91.13.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HRFJGMUqXG/AEMilqbZkBukmddWyJJ1BSpszozciQWw9f2/dNYWaSYg9ZS6yPX2QCb6Vq5/On7dU7tJzPNMkxA==", "email"=>"info@americangimuseum.org", "login_password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "info@americangimuseum.org"]]
+Redirected to https://project-kathryn02.c9users.io/login
+Completed 302 Found in 75ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/login" for 165.91.13.240 at 2016-04-06 22:32:34 +0000
+Cannot render console from 165.91.13.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login as HTML
+  Rendered sessions/login.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 255ms (Views: 254.6ms | ActiveRecord: 0.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'info@americangimuseum.org' LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("email", "lastname", "firstname", "gender", "salt", "encrypted_password", "level", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["email", "info@americangimuseum.org"], ["lastname", "Admin"], ["firstname", "Admin"], ["gender", ""], ["salt", "$2a$10$nG.jvZyUx9gqZWpQJvky8."], ["encrypted_password", "$2a$10$nG.jvZyUx9gqZWpQJvky8.PmABKpM0bHtFUQhD4jk.yKgbzftBRN."], ["level", 0], ["created_at", "2016-04-06 22:34:36.393637"], ["updated_at", "2016-04-06 22:34:36.393637"]]
+  [1m[36m (14.7ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 165.91.13.240 at 2016-04-06 22:35:25 +0000
+Cannot render console from 165.91.13.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#login as HTML
+  Rendered sessions/login.html.haml within layouts/application (347.1ms)
+Completed 200 OK in 710ms (Views: 690.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login_attempt" for 165.91.13.240 at 2016-04-06 22:35:38 +0000
+Cannot render console from 165.91.13.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HWNUySrP4vjMyaTvnG9ftBBsFNgRNFG9/0zM2PjvdXQ9DXIM2mAk3oTkCWSH5EYi8PT0pjzeU0vhOS0I8x4Q3A==", "email"=>"info@americangimuseum.org", "login_password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "info@americangimuseum.org"]]
+Redirected to https://project-kathryn02.c9users.io/admin
+Completed 302 Found in 146ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/admin" for 165.91.13.240 at 2016-04-06 22:35:38 +0000
+Cannot render console from 165.91.13.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"
+  Rendered admin/index.html.haml within layouts/application (13.3ms)
+Completed 200 OK in 316ms (Views: 308.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/fontawesome-webfont-a7c7e4930090e038a280fd61d88f0dc03dad4aeaedbd8c9be3dd9aa4c3b6f8d1.woff" for 165.91.13.240 at 2016-04-06 22:35:39 +0000
+Cannot render console from 165.91.13.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/EventCreate" for 165.91.13.240 at 2016-04-06 22:37:50 +0000
+Cannot render console from 165.91.13.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#create as HTML
+  Rendered events/create.html.haml within layouts/application (129.5ms)
+Completed 200 OK in 438ms (Views: 411.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/date.self-17576b0c7d23a7382cfaecb35f64494b6662c217b664ad4b3f479ff1572a9aa0.js?body=1" for 165.91.13.240 at 2016-04-06 22:37:50 +0000
+Cannot render console from 165.91.13.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/EventCreate" for 165.91.13.240 at 2016-04-06 22:37:58 +0000
+Cannot render console from 165.91.13.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uTTS/An8eG/fUp7XYRZdjC+S+MaYC2PuwX9/YtxqC4OZWvQ5+VO+SZd/M1x6nUQazwoYuLXhYRjfCp6y15tuKw==", "Title"=>"sdsdfs", "Location"=>"", "Description"=>"", "Start_Date"=>"", "End_Date"=>"", "commit"=>"Create"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "events" ("etitle", "elocation", "edescription", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["etitle", "sdsdfs"], ["elocation", ""], ["edescription", ""], ["created_at", "2016-04-06 22:37:58.899506"], ["updated_at", "2016-04-06 22:37:58.899506"]]
+  [1m[36m (18.1ms)[0m  [1mcommit transaction[0m
+Redirected to https://project-kathryn02.c9users.io/eventshow?eid=1
+Completed 302 Found in 147ms (ActiveRecord: 19.1ms)
+
+
+Started GET "/eventshow?eid=1" for 165.91.13.240 at 2016-04-06 22:37:59 +0000
+Cannot render console from 165.91.13.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#show as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[35mEvent Load (0.4ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/show.html.haml within layouts/application (16.7ms)
+Completed 200 OK in 288ms (Views: 285.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/QuestionCreate?eid=1" for 165.91.13.240 at 2016-04-06 22:38:04 +0000
+Cannot render console from 165.91.13.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/create.html.haml within layouts/application (73.0ms)
+Completed 200 OK in 329ms (Views: 327.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/create_event.self-a72aa8672ac733b76d5b35167cfccc8b0e3616ad5a583ba4a572be4333def378.js?body=1" for 165.91.13.240 at 2016-04-06 22:38:04 +0000
+Cannot render console from 165.91.13.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/QuestionCreate" for 165.91.13.240 at 2016-04-06 22:38:08 +0000
+Cannot render console from 165.91.13.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W9lR2GBcN36910UDjPlEEHh3cKMKyqVO5Zad3jJS3GF7t3cdkPPxWPX66IiXcl2GmO+Q3Scgp7j743wOOaO5yQ==", "q_eid"=>"1", "Q1"=>{"title"=>"sdfsf", "type"=>"1"}, "commit"=>"Create"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "questions" ("qid", "eid", "qtitle", "qtype", "qoption", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["qid", 1], ["eid", 1], ["qtitle", "sdfsf"], ["qtype", "1"], ["qoption", ""], ["created_at", "2016-04-06 22:38:08.638828"], ["updated_at", "2016-04-06 22:38:08.638828"]]
+  [1m[36m (11.7ms)[0m  [1mcommit transaction[0m
+Redirected to https://project-kathryn02.c9users.io/questionshow?eid=1
+Completed 302 Found in 35ms (ActiveRecord: 12.8ms)
+
+
+Started GET "/questionshow?eid=1" for 165.91.13.240 at 2016-04-06 22:38:08 +0000
+Cannot render console from 165.91.13.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#show as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."eid" = ?  [["eid", 1]]
+  Rendered questions/show.html.haml within layouts/application (15.5ms)
+Completed 200 OK in 243ms (Views: 241.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/allevent" for 165.91.13.240 at 2016-04-06 22:38:10 +0000
+Cannot render console from 165.91.13.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to https://project-kathryn02.c9users.io/admin
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/admin" for 165.91.13.240 at 2016-04-06 22:38:11 +0000
+Cannot render console from 165.91.13.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered admin/index.html.haml within layouts/application (27.4ms)
+Completed 200 OK in 273ms (Views: 268.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/eventedit?eid=1" for 165.91.13.240 at 2016-04-06 22:38:12 +0000
+Cannot render console from 165.91.13.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#edit as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/edit.html.haml within layouts/application (34.6ms)
+Completed 200 OK in 396ms (Views: 367.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/eventupdate" for 165.91.13.240 at 2016-04-06 22:38:22 +0000
+Cannot render console from 165.91.13.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActionController::RoutingError (No route matches [POST] "/eventupdate"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:31:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (6.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (30.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (333.1ms)
+
+
+Started POST "/eventupdate" for 165.91.13.240 at 2016-04-06 22:40:48 +0000
+Cannot render console from 165.91.13.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lwKhtcjHA6SKYHLUPC4M/0qiz+E0ntPcHJm0Ch7QSe63bIdwOGjFgsJN318npRVpqjovnxl00SoC7FXaFSEsRg==", "Title"=>"sdsdfs", "Location"=>"sdfsdfdf", "Description"=>"", "Start_Date"=>"", "End_Date"=>"", "commit"=>"Save"}
+  [1m[35mEvent Load (0.4ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", nil]]
+Completed 404 Not Found in 52ms (ActiveRecord: 1.0ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=):
+  app/controllers/events_controller.rb:49:in `update'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (16.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (141.5ms)
+
+
+Started GET "/" for 165.91.4.136 at 2016-04-06 22:55:48 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#login as HTML
+  Rendered sessions/login.html.haml within layouts/application (245.5ms)
+Completed 200 OK in 617ms (Views: 593.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.136 at 2016-04-06 22:55:50 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/data.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.136 at 2016-04-06 22:55:50 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-datetimepicker.min.self-788e29abac8dcfbc60d7f7490dd02b623d42c2174b604ebff6e8faa66c5d876e.css?body=1" for 165.91.4.136 at 2016-04-06 22:55:50 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-2fe4f8a61d73606fbcb036b41f380591906a4da65a9eb5ec0a210fe6980b2ca7.css?body=1" for 165.91.4.136 at 2016-04-06 22:55:50 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for 165.91.4.136 at 2016-04-06 22:55:50 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/answers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.136 at 2016-04-06 22:55:50 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.136 at 2016-04-06 22:55:50 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-603f330c29af013305325569c8c75d03d688963abd8cde4fffec17b5ce417bfb.css?body=1" for 165.91.4.136 at 2016-04-06 22:55:50 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/questions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.136 at 2016-04-06 22:55:50 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.136 at 2016-04-06 22:55:50 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-0a47e2599240f8e31081133ff1040077aca34f655d8d9a5806e05547028d9f2c.css?body=1" for 165.91.4.136 at 2016-04-06 22:55:50 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.136 at 2016-04-06 22:55:50 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-a889e7abcadb5dbdb0529c0dc69d5a86744647c95c657e19413c888ea981fd29.css?body=1" for 165.91.4.136 at 2016-04-06 22:55:50 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 165.91.4.136 at 2016-04-06 22:55:50 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 165.91.4.136 at 2016-04-06 22:55:50 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 165.91.4.136 at 2016-04-06 22:55:50 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 165.91.4.136 at 2016-04-06 22:55:50 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 165.91.4.136 at 2016-04-06 22:55:50 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 165.91.4.136 at 2016-04-06 22:55:50 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 165.91.4.136 at 2016-04-06 22:55:50 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 165.91.4.136 at 2016-04-06 22:55:50 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 165.91.4.136 at 2016-04-06 22:55:50 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 165.91.4.136 at 2016-04-06 22:55:50 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 165.91.4.136 at 2016-04-06 22:55:50 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 165.91.4.136 at 2016-04-06 22:55:51 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 165.91.4.136 at 2016-04-06 22:55:51 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 165.91.4.136 at 2016-04-06 22:55:51 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 165.91.4.136 at 2016-04-06 22:55:51 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 165.91.4.136 at 2016-04-06 22:55:51 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 165.91.4.136 at 2016-04-06 22:55:51 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/im3-554298bfba1eab7ed16dfc520f300082d3924d01db3b2eeabad3907c8443852c.png" for 165.91.4.136 at 2016-04-06 22:55:51 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/login_attempt" for 165.91.4.136 at 2016-04-06 22:56:05 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eylaaY9rI1QgEd5ngRJJPD0hBCKFnaYzOj3QbiwIuFkH1+Dl9npepH8O7PjzKTbhUgpXGsXhSxStBjZxge+0rA==", "email"=>"info@americangimuseum.org", "login_password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "info@americangimuseum.org"]]
+Redirected to https://project-kathryn02.c9users.io/admin
+Completed 302 Found in 126ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/admin" for 165.91.4.136 at 2016-04-06 22:56:05 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"
+  Rendered admin/index.html.haml within layouts/application (42.4ms)
+Completed 200 OK in 208ms (Views: 195.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/fontawesome-webfont-a7c7e4930090e038a280fd61d88f0dc03dad4aeaedbd8c9be3dd9aa4c3b6f8d1.woff" for 165.91.4.136 at 2016-04-06 22:56:05 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/eventedit?eid=1" for 165.91.4.136 at 2016-04-06 22:56:09 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#edit as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered events/edit.html.haml within layouts/application (26.1ms)
+Completed 200 OK in 199ms (Views: 196.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/date.self-17576b0c7d23a7382cfaecb35f64494b6662c217b664ad4b3f479ff1572a9aa0.js?body=1" for 165.91.4.136 at 2016-04-06 22:56:09 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/eventupdate" for 165.91.4.136 at 2016-04-06 22:56:12 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zx4O5SHqIpLt6xLm7Nr5VeVRMnvd9wPJwEtxkCLFABMb4LRpWPtfYrL0IHme4YaIinphQ52L7u5XcJePjyIM5g==", "Title"=>"sdsdfs", "Location"=>"", "Description"=>"", "Start_Date"=>"", "End_Date"=>"", "commit"=>"Save"}
+  [1m[35mEvent Load (0.3ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", nil]]
+Completed 404 Not Found in 4ms (ActiveRecord: 0.3ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=):
+  app/controllers/events_controller.rb:49:in `update'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (49.5ms)
+
+
+Started GET "/admin" for 165.91.4.136 at 2016-04-06 22:57:19 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (0.6ms)[0m  SELECT "events".* FROM "events"
+  Rendered admin/index.html.haml within layouts/application (35.2ms)
+Completed 200 OK in 336ms (Views: 327.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/allevent" for 165.91.4.136 at 2016-04-06 22:57:19 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to https://project-kathryn02.c9users.io/admin
+Completed 302 Found in 6ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/admin" for 165.91.4.136 at 2016-04-06 22:57:19 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered admin/index.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 225ms (Views: 222.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/EventCreate" for 165.91.4.136 at 2016-04-06 22:57:21 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#create as HTML
+  Rendered events/create.html.haml within layouts/application (24.6ms)
+Completed 200 OK in 262ms (Views: 261.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/EventCreate" for 165.91.4.136 at 2016-04-06 22:57:23 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GNKXVxmVJDOJtdqP8QOMm0hP2LkyLcsx0ST7ZNikz7ZkLC3bYIRZw9aq6BCDOPNGJ2SLgXJRJhZGHx17dUPDQw==", "Title"=>"", "Location"=>"", "Description"=>"", "Start_Date"=>"", "End_Date"=>"", "commit"=>"Create"}
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "events" ("etitle", "elocation", "edescription", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["etitle", ""], ["elocation", ""], ["edescription", ""], ["created_at", "2016-04-06 22:57:23.653007"], ["updated_at", "2016-04-06 22:57:23.653007"]]
+  [1m[35m (27.4ms)[0m  commit transaction
+Redirected to https://project-kathryn02.c9users.io/eventshow?eid=2
+Completed 302 Found in 67ms (ActiveRecord: 28.5ms)
+
+
+Started GET "/eventshow?eid=2" for 165.91.4.136 at 2016-04-06 22:57:23 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#show as HTML
+  Parameters: {"eid"=>"2"}
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered events/show.html.haml within layouts/application (20.4ms)
+Completed 200 OK in 232ms (Views: 229.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/allevent" for 165.91.4.136 at 2016-04-06 22:57:34 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Redirected to https://project-kathryn02.c9users.io/admin
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/admin" for 165.91.4.136 at 2016-04-06 22:57:35 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"
+  Rendered admin/index.html.haml within layouts/application (2.3ms)
+Completed 200 OK in 178ms (Views: 175.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/eventedit?eid=2" for 165.91.4.136 at 2016-04-06 22:57:36 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#edit as HTML
+  Parameters: {"eid"=>"2"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered events/edit.html.haml within layouts/application (9.4ms)
+Completed 200 OK in 238ms (Views: 235.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/eventupdate" for 165.91.4.136 at 2016-04-06 22:57:40 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HXeOQG5pdxD6YSXwg0fN208MdBL+ZotC6KEkc7ur34VhiTTMF3gK4KV+F2/xfLIGICcnKr4aZmV/msJsFkzTcA==", "Title"=>"", "Location"=>"", "Description"=>"", "Start_Date"=>"", "End_Date"=>"", "commit"=>"Save"}
+  [1m[35mEvent Load (0.3ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", nil]]
+Completed 404 Not Found in 6ms (ActiveRecord: 0.3ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=):
+  app/controllers/events_controller.rb:49:in `update'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (64.4ms)
+
+
+Started POST "/eventupdate" for 165.91.4.136 at 2016-04-06 22:58:40 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w30souiW7iUJpQepKsDIgNubUgcHWyPcLK28J6voX7W/g5YukYeT1Va6NTZY+7ddtLABP0cnzvu7llo4Bg9TQA==", "Title"=>"", "Location"=>"", "Description"=>"", "Start_Date"=>"", "End_Date"=>"", "commit"=>"Save"}
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", nil]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.4ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=):
+  app/controllers/events_controller.rb:49:in `update'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (24.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (116.7ms)
+
+
+Started POST "/eventupdate" for 165.91.4.136 at 2016-04-06 22:59:22 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w30souiW7iUJpQepKsDIgNubUgcHWyPcLK28J6voX7W/g5YukYeT1Va6NTZY+7ddtLABP0cnzvu7llo4Bg9TQA==", "Title"=>"", "Location"=>"", "Description"=>"", "Start_Date"=>"", "End_Date"=>"", "commit"=>"Save"}
+  [1m[35mEvent Load (0.5ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", nil]]
+Completed 404 Not Found in 8ms (ActiveRecord: 0.5ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=):
+  app/controllers/events_controller.rb:49:in `update'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (121.2ms)
+
+
+Started GET "/" for 165.91.4.136 at 2016-04-06 23:00:53 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#login as HTML
+Redirected to https://project-kathryn02.c9users.io/home
+Filter chain halted as :save_login_state rendered or redirected
+Completed 302 Found in 25ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 165.91.4.136 at 2016-04-06 23:00:54 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered sessions/home.html.haml within layouts/application (13.3ms)
+Completed 200 OK in 661ms (Views: 606.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/allevent" for 165.91.4.136 at 2016-04-06 23:00:56 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to https://project-kathryn02.c9users.io/admin
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/admin" for 165.91.4.136 at 2016-04-06 23:00:57 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered admin/index.html.haml within layouts/application (42.4ms)
+Completed 200 OK in 439ms (Views: 428.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/eventedit?eid=2" for 165.91.4.136 at 2016-04-06 23:01:04 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#edit as HTML
+  Parameters: {"eid"=>"2"}
+  [1m[35mEvent Load (0.5ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered events/edit.html.haml within layouts/application (98.1ms)
+Completed 200 OK in 651ms (Views: 513.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/eventupdate" for 165.91.4.136 at 2016-04-06 23:01:05 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PdIY5U26jMkmiXR4qRYOLUgB46pEUqsCD0Rpi6aYIkxBLKJpNKvxOXmWRufbLXHwJyqwkgQuRiWYf4+UC38uuQ==", "Title"=>"", "Location"=>"", "Description"=>"", "Start_Date"=>"", "End_Date"=>"", "commit"=>"Save"}
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 0.0ms)
+
+NameError (undefined local variable or method `window' for #<EventsController:0x0000000c826340>):
+  app/controllers/events_controller.rb:49:in `update'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (100.1ms)
+
+
+Started GET "/" for 165.91.4.136 at 2016-04-06 23:03:47 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#login as HTML
+Redirected to https://project-kathryn02.c9users.io/home
+Filter chain halted as :save_login_state rendered or redirected
+Completed 302 Found in 32ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 165.91.4.136 at 2016-04-06 23:03:48 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered sessions/home.html.haml within layouts/application (18.1ms)
+Completed 200 OK in 734ms (Views: 680.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/allevent" for 165.91.4.136 at 2016-04-06 23:03:53 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to https://project-kathryn02.c9users.io/admin
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/admin" for 165.91.4.136 at 2016-04-06 23:03:53 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered admin/index.html.haml within layouts/application (38.7ms)
+Completed 200 OK in 339ms (Views: 328.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/eventedit?eid=1" for 165.91.4.136 at 2016-04-06 23:03:55 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#edit as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[35mEvent Load (0.4ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/edit.html.haml within layouts/application (82.0ms)
+Completed 200 OK in 374ms (Views: 370.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/eventupdate" for 165.91.4.136 at 2016-04-06 23:03:57 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BkANoRUke365hS0tUBSP+A94Oo+UykcrUYlu1AQQuhN6vrctbDUGjuaaH7IiL/AlYFNpt9S2qgzGsojLqfe25g==", "Title"=>"sdsdfs", "Location"=>"", "Description"=>"", "Start_Date"=>"", "End_Date"=>"", "commit"=>"Save"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", nil]]
+Completed 404 Not Found in 100ms (ActiveRecord: 0.2ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=):
+  app/controllers/events_controller.rb:48:in `update'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (131.3ms)
+
+
+Started POST "/eventupdate" for 165.91.4.136 at 2016-04-06 23:06:20 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BdtYzkCqfETrHEJJdWqO2fRVrPUPEwdnI+1/R/cJbkN5JeJCObsBtLQDcNYHUfEEm37/zU9v6kC01plYWu5itg==", "Title"=>"sdsdfs", "Location"=>"", "Description"=>"", "Start_Date"=>"", "End_Date"=>"", "commit"=>"Save"}
+  [1m[35mEvent Load (0.3ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", nil]]
+Completed 404 Not Found in 10ms (ActiveRecord: 0.3ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=):
+  app/controllers/events_controller.rb:48:in `update'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (143.0ms)
+
+
+Started GET "/" for 165.91.4.136 at 2016-04-06 23:10:04 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#login as HTML
+Redirected to https://project-kathryn02.c9users.io/home
+Filter chain halted as :save_login_state rendered or redirected
+Completed 302 Found in 26ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 165.91.4.136 at 2016-04-06 23:10:05 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered sessions/home.html.haml within layouts/application (13.6ms)
+Completed 200 OK in 968ms (Views: 866.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/allevent" for 165.91.4.136 at 2016-04-06 23:10:08 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to https://project-kathryn02.c9users.io/admin
+Completed 302 Found in 65ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/admin" for 165.91.4.136 at 2016-04-06 23:10:08 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered admin/index.html.haml within layouts/application (31.4ms)
+Completed 200 OK in 347ms (Views: 339.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/eventedit?eid=2" for 165.91.4.136 at 2016-04-06 23:10:10 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#edit as HTML
+  Parameters: {"eid"=>"2"}
+  [1m[35mEvent Load (0.5ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered events/edit.html.haml within layouts/application (73.6ms)
+Completed 200 OK in 611ms (Views: 485.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/eventupdate" for 165.91.4.136 at 2016-04-06 23:10:12 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6sMQcR7x5sOQ+gzNxWOcTUfWHANp8yoY7w8TdhrlL66WPar9Z+CbM8/lPlK3WOOQKP1POymPxz94NPVptwIjWw==", "Title"=>"", "Location"=>"", "Description"=>"", "Start_Date"=>"", "End_Date"=>"", "commit"=>"Save"}
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", nil]]
+Completed 404 Not Found in 4ms (ActiveRecord: 0.3ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=):
+  app/controllers/events_controller.rb:48:in `update'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (123.6ms)
+
+
+Started GET "/" for 165.91.4.136 at 2016-04-06 23:13:53 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (2.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#login as HTML
+Redirected to https://project-kathryn02.c9users.io/home
+Filter chain halted as :save_login_state rendered or redirected
+Completed 302 Found in 60ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 165.91.4.136 at 2016-04-06 23:13:54 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered sessions/home.html.haml within layouts/application (26.5ms)
+Completed 200 OK in 1573ms (Views: 1480.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/allevent" for 165.91.4.136 at 2016-04-06 23:14:07 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to https://project-kathryn02.c9users.io/admin
+Completed 302 Found in 21ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/admin" for 165.91.4.136 at 2016-04-06 23:14:07 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered admin/index.html.haml within layouts/application (33.8ms)
+Completed 200 OK in 493ms (Views: 485.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/eventedit?eid=2" for 165.91.4.136 at 2016-04-06 23:14:09 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#edit as HTML
+  Parameters: {"eid"=>"2"}
+  [1m[35mEvent Load (1.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered events/edit.html.haml within layouts/application (90.0ms)
+Completed 200 OK in 617ms (Views: 611.4ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/eventupdate" for 165.91.4.136 at 2016-04-06 23:14:11 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"S+FZ7jLy1YN3P9XUcWC0VPpLtlEw/d8eznnDVW31q/Y3H+NiS+Oocygg50sDW8uJlWDlaXCBMjlZQiVKwBKnAw==", "Title"=>"", "Location"=>"", "Description"=>"", "Start_Date"=>"", "End_Date"=>"", "commit"=>"Save"}
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.0ms)
+
+NameError (undefined local variable or method `event' for #<EventsController:0x007f189c225658>
+Did you mean?  allevent):
+  app/controllers/events_controller.rb:47:in `update'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (183.2ms)
+
+
+Started GET "/" for 165.91.4.136 at 2016-04-06 23:20:43 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#login as HTML
+Redirected to https://project-kathryn02.c9users.io/home
+Filter chain halted as :save_login_state rendered or redirected
+Completed 302 Found in 31ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 165.91.4.136 at 2016-04-06 23:20:45 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered sessions/home.html.haml within layouts/application (26.1ms)
+Completed 200 OK in 833ms (Views: 728.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/allevent" for 165.91.4.136 at 2016-04-06 23:20:47 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to https://project-kathryn02.c9users.io/admin
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/admin" for 165.91.4.136 at 2016-04-06 23:20:47 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered admin/index.html.haml within layouts/application (39.6ms)
+Completed 200 OK in 312ms (Views: 303.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/eventedit?eid=2" for 165.91.4.136 at 2016-04-06 23:20:49 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#edit as HTML
+  Parameters: {"eid"=>"2"}
+  [1m[35mEvent Load (0.4ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered events/edit.html.haml within layouts/application (78.0ms)
+Completed 200 OK in 448ms (Views: 444.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/eventupdate" for 165.91.4.136 at 2016-04-06 23:20:50 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6Izwlnr32RZfOmYeY4wC8gR7ONLD9WDo0TOcXQ3jsliUckoaA+ak5gAlVIERt30va1Br6oOJjc9GCHpCoAS+rQ==", "Title"=>"", "Location"=>"", "Description"=>"", "Start_Date"=>"", "End_Date"=>"", "commit"=>"Save"}
+Completed 500 Internal Server Error in 154ms (ActiveRecord: 0.0ms)
+
+NameError (undefined local variable or method `event' for #<EventsController:0x0000000ceac070>
+Did you mean?  allevent):
+  app/controllers/events_controller.rb:47:in `update'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (142.1ms)
+
+
+Started GET "/" for 165.91.4.136 at 2016-04-06 23:32:02 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#login as HTML
+Redirected to https://project-kathryn02.c9users.io/home
+Filter chain halted as :save_login_state rendered or redirected
+Completed 302 Found in 37ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 165.91.4.136 at 2016-04-06 23:32:03 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered sessions/home.html.haml within layouts/application (34.4ms)
+Completed 200 OK in 1233ms (Views: 1140.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/allevent" for 165.91.4.136 at 2016-04-06 23:32:06 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to https://project-kathryn02.c9users.io/admin
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/admin" for 165.91.4.136 at 2016-04-06 23:32:06 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered admin/index.html.haml within layouts/application (46.1ms)
+Completed 200 OK in 507ms (Views: 491.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/eventedit?eid=1" for 165.91.4.136 at 2016-04-06 23:32:08 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#edit as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[35mEvent Load (3.9ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/edit.html.haml within layouts/application (111.7ms)
+Completed 200 OK in 823ms (Views: 813.6ms | ActiveRecord: 3.9ms)
+
+
+Started POST "/eventupdate" for 165.91.4.136 at 2016-04-06 23:32:09 +0000
+Cannot render console from 165.91.4.136! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iZSguO/S+a9SE4y8FpFs4Yhh+n8OK9Z+H3CrS5LGw7D1aho0lsOEXw0MviNkqhM850qpR05XO1mIS01UPyHPRQ==", "Title"=>"sdsdfs", "Location"=>"", "Description"=>"", "Start_Date"=>"", "End_Date"=>"", "commit"=>"Save"}
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", nil]]
+Completed 404 Not Found in 9ms (ActiveRecord: 0.5ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=):
+  app/controllers/events_controller.rb:48:in `update'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (30.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (164.8ms)
