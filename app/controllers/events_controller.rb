@@ -42,7 +42,6 @@ class EventsController < ApplicationController
     eid = params[:eid]
     @event = Event.find(eid)
     @flash_notice = ""
-    redirect_to "/eventedit?eid=#{eid}"
   end
   
   def update
