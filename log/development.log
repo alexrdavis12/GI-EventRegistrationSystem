@@ -901,3 +901,587 @@ Processing by AdminController#index as HTML
   [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events"[0m
   Rendered admin/index.html.haml within layouts/application (3.6ms)
 Completed 200 OK in 279ms (Views: 275.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 165.91.4.138 at 2016-04-06 23:54:10 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#login as HTML
+Redirected to https://csce431-project-mdebolt.c9users.io/home
+Filter chain halted as :save_login_state rendered or redirected
+Completed 302 Found in 32ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 165.91.4.138 at 2016-04-06 23:54:11 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered sessions/home.html.haml within layouts/application (11.4ms)
+Completed 200 OK in 555ms (Views: 505.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/allevent" for 165.91.4.138 at 2016-04-06 23:54:13 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to https://csce431-project-mdebolt.c9users.io/admin
+Completed 302 Found in 142ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/admin" for 165.91.4.138 at 2016-04-06 23:54:13 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered admin/index.html.haml within layouts/application (19.9ms)
+Completed 200 OK in 185ms (Views: 180.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/eventdelete?eid=2" for 165.91.4.138 at 2016-04-06 23:54:16 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#delete as HTML
+  Parameters: {"eid"=>"2"}
+  [1m[35mEvent Load (0.4ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "events" WHERE "events"."id" = ?  [["id", 2]]
+  [1m[36m (16.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."eid" = ?  [["eid", 2]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."eid" = ?[0m  [["eid", 2]]
+Redirected to https://csce431-project-mdebolt.c9users.io/admin
+Completed 302 Found in 35ms (ActiveRecord: 18.3ms)
+
+
+Started GET "/admin" for 165.91.4.138 at 2016-04-06 23:54:17 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered admin/index.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 202ms (Views: 198.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/eventdelete?eid=1" for 165.91.4.138 at 2016-04-06 23:54:17 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#delete as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[35mEvent Load (0.3ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "events" WHERE "events"."id" = ?  [["id", 1]]
+  [1m[36m (12.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."eid" = ?  [["eid", 1]]
+  [1m[36mQuestion Load (1.6ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."eid" = ?[0m  [["eid", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "questions" WHERE "questions"."id" = ?[0m  [["id", 1]]
+  [1m[35m (9.3ms)[0m  commit transaction
+Redirected to https://csce431-project-mdebolt.c9users.io/admin
+Completed 302 Found in 58ms (ActiveRecord: 25.1ms)
+
+
+Started GET "/admin" for 165.91.4.138 at 2016-04-06 23:54:17 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"
+  Rendered admin/index.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 240ms (Views: 235.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/EventCreate" for 165.91.4.138 at 2016-04-06 23:54:18 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#create as HTML
+  Rendered events/create.html.haml within layouts/application (25.4ms)
+Completed 200 OK in 191ms (Views: 190.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/EventCreate" for 165.91.4.138 at 2016-04-06 23:54:40 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tOZh4QHt5Znl8jE/EWCffLZlO2V0JPcQNWYBJ8JxLdvmeYbTDpf4rUft+PG5xkHZZ5T8HiUZ6cToSShjhyXp0g==", "Title"=>"test event 1", "Location"=>"test location 1", "Description"=>"test description 1", "Start_Date"=>"2016-04-05", "End_Date"=>"2016-04-06", "commit"=>"Create"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "events" ("etitle", "elocation", "estart", "eend", "edescription", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["etitle", "test event 1"], ["elocation", "test location 1"], ["estart", "2016-04-05"], ["eend", "2016-04-06"], ["edescription", "test description 1"], ["created_at", "2016-04-06 23:54:40.298145"], ["updated_at", "2016-04-06 23:54:40.298145"]]
+  [1m[36m (9.8ms)[0m  [1mcommit transaction[0m
+Redirected to https://csce431-project-mdebolt.c9users.io/eventshow?eid=3
+Completed 302 Found in 27ms (ActiveRecord: 10.4ms)
+
+
+Started GET "/eventshow?eid=3" for 165.91.4.138 at 2016-04-06 23:54:40 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#show as HTML
+  Parameters: {"eid"=>"3"}
+  [1m[35mEvent Load (0.3ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered events/show.html.haml within layouts/application (16.3ms)
+Completed 200 OK in 218ms (Views: 216.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/QuestionCreate?eid=3" for 165.91.4.138 at 2016-04-06 23:54:42 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"3"}
+  Rendered questions/create.html.haml within layouts/application (29.0ms)
+Completed 200 OK in 245ms (Views: 243.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/QuestionCreate" for 165.91.4.138 at 2016-04-06 23:57:26 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"77fd9sz1+Ys40PN0p24xpwDsLHe5HoRbGJQ0UWym0DG9KDrEw4/kv5rPOroPyO8C0R3rDOgjmo/Fux0VKfIUOA==", "q_eid"=>"3", "Q1"=>{"title"=>"Which side are you on?", "type"=>"3", "opt1"=>"North", "opt4"=>"South"}, "Q2"=>{"title"=>"Will you be bringing any vehicles?", "type"=>"3", "opt1"=>"Yes", "opt4"=>"No"}, "commit"=>"Create"}
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "questions" ("qid", "eid", "qtitle", "qtype", "qoption", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["qid", 1], ["eid", 3], ["qtitle", "Which side are you on?"], ["qtype", "3"], ["qoption", "North|South"], ["created_at", "2016-04-06 23:57:26.897010"], ["updated_at", "2016-04-06 23:57:26.897010"]]
+  [1m[36m (14.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "questions" ("qid", "eid", "qtitle", "qtype", "qoption", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["qid", 2], ["eid", 3], ["qtitle", "Will you be bringing any vehicles?"], ["qtype", "3"], ["qoption", "Yes|No"], ["created_at", "2016-04-06 23:57:26.916008"], ["updated_at", "2016-04-06 23:57:26.916008"]]
+  [1m[35m (8.7ms)[0m  commit transaction
+Redirected to https://csce431-project-mdebolt.c9users.io/questionshow?eid=3
+Completed 302 Found in 36ms (ActiveRecord: 25.0ms)
+
+
+Started GET "/questionshow?eid=3" for 165.91.4.138 at 2016-04-06 23:57:27 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#show as HTML
+  Parameters: {"eid"=>"3"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."eid" = ?[0m  [["eid", 3]]
+  Rendered questions/show.html.haml within layouts/application (15.5ms)
+Completed 200 OK in 254ms (Views: 251.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/allevent" for 165.91.4.138 at 2016-04-06 23:57:31 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Redirected to https://csce431-project-mdebolt.c9users.io/admin
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/admin" for 165.91.4.138 at 2016-04-06 23:57:31 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"
+  Rendered admin/index.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 292ms (Views: 290.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/datashow?eid=3" for 165.91.4.138 at 2016-04-06 23:57:37 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#show as HTML
+  Parameters: {"eid"=>"3"}
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT DISTINCT "answers"."uid" FROM "answers" WHERE "answers"."eid" = ?[0m  [["eid", 3]]
+  Rendered admin/show.html.haml within layouts/application (126.9ms)
+Completed 200 OK in 399ms (Views: 394.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/pie.self-6b67d2a4176b50cd13631509b8a061a02d88228e1f41e688faffc5033678511e.js?body=1" for 165.91.4.138 at 2016-04-06 23:57:37 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/allevent" for 165.91.4.138 at 2016-04-06 23:57:40 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Redirected to https://csce431-project-mdebolt.c9users.io/admin
+Completed 302 Found in 108ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/admin" for 165.91.4.138 at 2016-04-06 23:57:40 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  Rendered admin/index.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 154ms (Views: 152.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/EventCreate" for 165.91.4.138 at 2016-04-06 23:57:48 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#create as HTML
+  Rendered events/create.html.haml within layouts/application (6.1ms)
+Completed 200 OK in 255ms (Views: 253.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/EventCreate" for 165.91.4.138 at 2016-04-06 23:58:20 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cTgqOFKAtIRTRcQokRzkyyi9yYN2AZKiSd3h4soIzvMjp80KXfqpsPFaDeY5ujpu+UwO+Cc8jHaU8simj1wK+g==", "Title"=>"test event 2", "Location"=>"test location 2", "Description"=>"test description 2", "Start_Date"=>"2016-04-11", "End_Date"=>"2016-04-12", "commit"=>"Create"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (9.2ms)[0m  INSERT INTO "events" ("etitle", "elocation", "estart", "eend", "edescription", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["etitle", "test event 2"], ["elocation", "test location 2"], ["estart", "2016-04-11"], ["eend", "2016-04-12"], ["edescription", "test description 2"], ["created_at", "2016-04-06 23:58:20.288733"], ["updated_at", "2016-04-06 23:58:20.288733"]]
+  [1m[36m (9.5ms)[0m  [1mcommit transaction[0m
+Redirected to https://csce431-project-mdebolt.c9users.io/eventshow?eid=4
+Completed 302 Found in 29ms (ActiveRecord: 19.0ms)
+
+
+Started GET "/eventshow?eid=4" for 165.91.4.138 at 2016-04-06 23:58:20 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#show as HTML
+  Parameters: {"eid"=>"4"}
+  [1m[35mEvent Load (0.3ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered events/show.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 236ms (Views: 234.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/QuestionCreate?eid=4" for 165.91.4.138 at 2016-04-06 23:58:22 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"4"}
+  Rendered questions/create.html.haml within layouts/application (10.0ms)
+Completed 200 OK in 325ms (Views: 324.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/QuestionCreate" for 165.91.4.138 at 2016-04-06 23:59:49 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2ahy4PHA8cfPmKdyR3Py8qy8E4pPJypen52gwX56nH6LN5XS/rrs822Hbrzv1SxXfU3U8R4aNIpCsomFOy5Ydw==", "q_eid"=>"4", "Q1"=>{"title"=>"Toe-may-toe or toe-mah-toe?", "type"=>"3", "opt1"=>"Toh-may-toe", "opt4"=>"Toh-mah-toe"}, "commit"=>"Create"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "questions" ("qid", "eid", "qtitle", "qtype", "qoption", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["qid", 1], ["eid", 4], ["qtitle", "Toe-may-toe or toe-mah-toe?"], ["qtype", "3"], ["qoption", "Toh-may-toe|Toh-mah-toe"], ["created_at", "2016-04-06 23:59:49.491197"], ["updated_at", "2016-04-06 23:59:49.491197"]]
+  [1m[36m (8.1ms)[0m  [1mcommit transaction[0m
+Redirected to https://csce431-project-mdebolt.c9users.io/questionshow?eid=4
+Completed 302 Found in 22ms (ActiveRecord: 9.1ms)
+
+
+Started GET "/questionshow?eid=4" for 165.91.4.138 at 2016-04-06 23:59:49 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#show as HTML
+  Parameters: {"eid"=>"4"}
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."eid" = ?  [["eid", 4]]
+  Rendered questions/show.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 194ms (Views: 192.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/allevent" for 165.91.4.138 at 2016-04-06 23:59:55 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to https://csce431-project-mdebolt.c9users.io/admin
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/admin" for 165.91.4.138 at 2016-04-06 23:59:55 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered admin/index.html.haml within layouts/application (3.7ms)
+Completed 200 OK in 203ms (Views: 200.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/datashow?eid=3" for 165.91.4.138 at 2016-04-06 23:59:57 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#show as HTML
+  Parameters: {"eid"=>"3"}
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT DISTINCT "answers"."uid" FROM "answers" WHERE "answers"."eid" = ?  [["eid", 3]]
+  Rendered admin/show.html.haml within layouts/application (6.8ms)
+Completed 200 OK in 250ms (Views: 239.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/profile" for 165.91.4.138 at 2016-04-07 00:00:04 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#profile as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered sessions/profile.html.haml within layouts/application (22.0ms)
+Completed 200 OK in 362ms (Views: 246.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/logout" for 165.91.4.138 at 2016-04-07 00:00:06 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#logout as HTML
+Redirected to https://csce431-project-mdebolt.c9users.io/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.4.138 at 2016-04-07 00:00:06 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login as HTML
+  Rendered sessions/login.html.haml within layouts/application (21.9ms)
+Completed 200 OK in 231ms (Views: 230.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 165.91.4.138 at 2016-04-07 00:00:08 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.haml within layouts/application (28.1ms)
+Completed 200 OK in 255ms (Views: 253.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/create" for 165.91.4.138 at 2016-04-07 00:00:47 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2J5rROx+cwbaLSpEvOAA5Tu5t9N5pJmI4OTvBq+5+RuKAYx24wRuMngy44oURt5A6khwqCiZh1w9y8ZC6u09Eg==", "email"=>"markymarc@earthlink.net", "password"=>"[FILTERED]", "pswdconfirm"=>"password", "lastname"=>"DeBolt", "firstname"=>"Marc", "gender"=>"male", "zipcode"=>"77479", "commit"=>"Create"}
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'markymarc@earthlink.net' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'markymarc@earthlink.net' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("email", "lastname", "firstname", "gender", "level", "zipcode", "salt", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["email", "markymarc@earthlink.net"], ["lastname", "DeBolt"], ["firstname", "Marc"], ["gender", "male"], ["level", 1], ["zipcode", "77479"], ["salt", "$2a$10$qSEdsu8IfV.R05SGRRXCpO"], ["encrypted_password", "$2a$10$qSEdsu8IfV.R05SGRRXCpORVuu4csN3lr0MgHxD.O4cRbc73ELbg2"], ["created_at", "2016-04-07 00:00:47.216635"], ["updated_at", "2016-04-07 00:00:47.216635"]]
+  [1m[36m (20.9ms)[0m  [1mcommit transaction[0m
+Redirected to https://csce431-project-mdebolt.c9users.io/allevent
+Completed 302 Found in 155ms (ActiveRecord: 21.7ms)
+
+
+Started GET "/allevent" for 165.91.4.138 at 2016-04-07 00:00:47 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/allevent.html.haml within layouts/application (14.3ms)
+Completed 200 OK in 309ms (Views: 306.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/eventsurvey?eid=3" for 165.91.4.138 at 2016-04-07 00:01:00 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#showquestion as HTML
+  Parameters: {"eid"=>"3"}
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."uid" = ? AND "answers"."eid" = ?  [["uid", 2], ["eid", 3]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."eid" = ?[0m  [["eid", 3]]
+  Rendered answers/showquestion.html.haml within layouts/application (42.1ms)
+Completed 200 OK in 308ms (Views: 206.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/show_question.self-8dd4e96ed457582df05f95c4af0302a7606271a5ae1354f9bfbbf68a6c4324ec.js?body=1" for 165.91.4.138 at 2016-04-07 00:01:00 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/eventsurvey" for 165.91.4.138 at 2016-04-07 00:01:05 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aoipDvto/YlhYVCNEyhV4VKLP+XgD6wNNVHrxPvurgQ4F0489BLgvcN+mUO7jotEg3r4nrEystnofsKAvrpqDQ==", "q_eid"=>"3", "Q1"=>{"answer"=>"2"}, "Q2"=>{"answer"=>"2"}, "commit"=>"Submit"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions"."qtitle" FROM "questions" WHERE "questions"."eid" = ? AND "questions"."qid" = ? LIMIT 1[0m  [["eid", 3], ["qid", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "answers" ("uid", "qid", "qtitle", "eid", "answer", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["uid", 2], ["qid", 1], ["qtitle", "Which side are you on?"], ["eid", 3], ["answer", "2"], ["created_at", "2016-04-07 00:01:05.478761"], ["updated_at", "2016-04-07 00:01:05.478761"]]
+  [1m[35m (15.1ms)[0m  commit transaction
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions"."qtitle" FROM "questions" WHERE "questions"."eid" = ? AND "questions"."qid" = ? LIMIT 1[0m  [["eid", 3], ["qid", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "answers" ("uid", "qid", "qtitle", "eid", "answer", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["uid", 2], ["qid", 2], ["qtitle", "Will you be bringing any vehicles?"], ["eid", 3], ["answer", "2"], ["created_at", "2016-04-07 00:01:05.498383"], ["updated_at", "2016-04-07 00:01:05.498383"]]
+  [1m[35m (7.8ms)[0m  commit transaction
+Redirected to https://csce431-project-mdebolt.c9users.io/answershow
+Completed 302 Found in 38ms (ActiveRecord: 24.5ms)
+
+
+Started GET "/answershow" for 165.91.4.138 at 2016-04-07 00:01:05 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#show as HTML
+  Rendered answers/show.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 149ms (Views: 148.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 165.91.4.138 at 2016-04-07 00:01:08 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#logout as HTML
+Redirected to https://csce431-project-mdebolt.c9users.io/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.4.138 at 2016-04-07 00:01:08 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login as HTML
+  Rendered sessions/login.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 147ms (Views: 146.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 165.91.4.138 at 2016-04-07 00:01:11 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.haml within layouts/application (6.5ms)
+Completed 200 OK in 194ms (Views: 193.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/create" for 165.91.4.138 at 2016-04-07 00:02:14 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jVTuV+ppHtgej8/fkQueLtjuXBhjQnge/GT8JIVvVfHfywll5RMD7LyQBhE5rUCLCR+bYzJ/ZsohS9VgwDuR+A==", "email"=>"steevers@gmail.com", "password"=>"[FILTERED]", "pswdconfirm"=>"password", "lastname"=>"BoJohnson", "firstname"=>"Steevers", "gender"=>"male", "zipcode"=>"77845", "commit"=>"Create"}
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'steevers@gmail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'steevers@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("email", "lastname", "firstname", "gender", "level", "zipcode", "salt", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["email", "steevers@gmail.com"], ["lastname", "BoJohnson"], ["firstname", "Steevers"], ["gender", "male"], ["level", 1], ["zipcode", "77845"], ["salt", "$2a$10$FOBsxzvgxho5NF4fPa95C."], ["encrypted_password", "$2a$10$FOBsxzvgxho5NF4fPa95C.tG96AyyJ7yRCRIqTqeTT16gh3sh1/SW"], ["created_at", "2016-04-07 00:02:14.561863"], ["updated_at", "2016-04-07 00:02:14.561863"]]
+  [1m[36m (17.5ms)[0m  [1mcommit transaction[0m
+Redirected to https://csce431-project-mdebolt.c9users.io/allevent
+Completed 302 Found in 252ms (ActiveRecord: 18.6ms)
+
+
+Started GET "/allevent" for 165.91.4.138 at 2016-04-07 00:02:14 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/allevent.html.haml within layouts/application (11.5ms)
+Completed 200 OK in 230ms (Views: 226.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/eventsurvey?eid=3" for 165.91.4.138 at 2016-04-07 00:02:18 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#showquestion as HTML
+  Parameters: {"eid"=>"3"}
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."uid" = ? AND "answers"."eid" = ?  [["uid", 3], ["eid", 3]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."eid" = ?[0m  [["eid", 3]]
+  Rendered answers/showquestion.html.haml within layouts/application (12.3ms)
+Completed 200 OK in 189ms (Views: 185.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/eventsurvey" for 165.91.4.138 at 2016-04-07 00:02:21 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TEvDb2/OPldjnZA23ITDecwurwW6djAXiG0noa346a0e1CRdYLQjY8GCWfh0Ih3cHd9ofutLLsNVQg7l6KwtpA==", "q_eid"=>"3", "Q1"=>{"answer"=>"1"}, "Q2"=>{"answer"=>"1"}, "commit"=>"Submit"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions"."qtitle" FROM "questions" WHERE "questions"."eid" = ? AND "questions"."qid" = ? LIMIT 1[0m  [["eid", 3], ["qid", 1]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "answers" ("uid", "qid", "qtitle", "eid", "answer", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["uid", 3], ["qid", 1], ["qtitle", "Which side are you on?"], ["eid", 3], ["answer", "1"], ["created_at", "2016-04-07 00:02:22.083541"], ["updated_at", "2016-04-07 00:02:22.083541"]]
+  [1m[35m (8.9ms)[0m  commit transaction
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT  "questions"."qtitle" FROM "questions" WHERE "questions"."eid" = ? AND "questions"."qid" = ? LIMIT 1[0m  [["eid", 3], ["qid", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "answers" ("uid", "qid", "qtitle", "eid", "answer", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["uid", 3], ["qid", 2], ["qtitle", "Will you be bringing any vehicles?"], ["eid", 3], ["answer", "1"], ["created_at", "2016-04-07 00:02:22.102543"], ["updated_at", "2016-04-07 00:02:22.102543"]]
+  [1m[35m (9.5ms)[0m  commit transaction
+Redirected to https://csce431-project-mdebolt.c9users.io/answershow
+Completed 302 Found in 197ms (ActiveRecord: 21.0ms)
+
+
+Started GET "/answershow" for 165.91.4.138 at 2016-04-07 00:02:22 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#show as HTML
+  Rendered answers/show.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 160ms (Views: 158.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 165.91.4.138 at 2016-04-07 00:02:24 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#logout as HTML
+Redirected to https://csce431-project-mdebolt.c9users.io/
+Completed 302 Found in 26ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.4.138 at 2016-04-07 00:02:24 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login as HTML
+  Rendered sessions/login.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 175ms (Views: 174.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 165.91.4.138 at 2016-04-07 00:02:25 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 277ms (Views: 275.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/create" for 165.91.4.138 at 2016-04-07 00:03:59 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7jdfozvV7TP1HBnC4IaXVk2wNVXaj2W8I+Te5Sx2Qya8qLiRNK/wB1cD0AxIIEnznEHyLouye2j+y/ehaSKHLw==", "email"=>"boaty@boatface.com", "password"=>"[FILTERED]", "pswdconfirm"=>"password", "lastname"=>"McBoatface", "firstname"=>"Boaty", "gender"=>"male", "zipcode"=>"75089", "commit"=>"Create"}
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'boaty@boatface.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'boaty@boatface.com' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("email", "lastname", "firstname", "gender", "level", "zipcode", "salt", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["email", "boaty@boatface.com"], ["lastname", "McBoatface"], ["firstname", "Boaty"], ["gender", "male"], ["level", 1], ["zipcode", "75089"], ["salt", "$2a$10$7oKWJTON78/N4jbybqAcHO"], ["encrypted_password", "$2a$10$7oKWJTON78/N4jbybqAcHO8rREs9PHYDbeOvWwiRSvB2GPu6BK5IK"], ["created_at", "2016-04-07 00:03:59.354634"], ["updated_at", "2016-04-07 00:03:59.354634"]]
+  [1m[36m (9.9ms)[0m  [1mcommit transaction[0m
+Redirected to https://csce431-project-mdebolt.c9users.io/allevent
+Completed 302 Found in 218ms (ActiveRecord: 11.0ms)
+
+
+Started GET "/allevent" for 165.91.4.138 at 2016-04-07 00:03:59 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/allevent.html.haml within layouts/application (5.6ms)
+Completed 200 OK in 212ms (Views: 209.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/eventsurvey?eid=3" for 165.91.4.138 at 2016-04-07 00:04:01 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#showquestion as HTML
+  Parameters: {"eid"=>"3"}
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."uid" = ? AND "answers"."eid" = ?  [["uid", 4], ["eid", 3]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."eid" = ?[0m  [["eid", 3]]
+  Rendered answers/showquestion.html.haml within layouts/application (11.6ms)
+Completed 200 OK in 275ms (Views: 272.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/eventsurvey" for 165.91.4.138 at 2016-04-07 00:04:06 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6X/5CRwumfP/TkpnsC+LqZ2g3C6I46HEbEirh0Ba/i674B47E1SEx11Rg6kYiVUMTFEbVdnevxCxZ4LDBQ46Jw==", "q_eid"=>"3", "Q1"=>{"answer"=>"2"}, "Q2"=>{"answer"=>"1"}, "commit"=>"Submit"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions"."qtitle" FROM "questions" WHERE "questions"."eid" = ? AND "questions"."qid" = ? LIMIT 1[0m  [["eid", 3], ["qid", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "answers" ("uid", "qid", "qtitle", "eid", "answer", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["uid", 4], ["qid", 1], ["qtitle", "Which side are you on?"], ["eid", 3], ["answer", "2"], ["created_at", "2016-04-07 00:04:06.076103"], ["updated_at", "2016-04-07 00:04:06.076103"]]
+  [1m[35m (9.3ms)[0m  commit transaction
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions"."qtitle" FROM "questions" WHERE "questions"."eid" = ? AND "questions"."qid" = ? LIMIT 1[0m  [["eid", 3], ["qid", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "answers" ("uid", "qid", "qtitle", "eid", "answer", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["uid", 4], ["qid", 2], ["qtitle", "Will you be bringing any vehicles?"], ["eid", 3], ["answer", "1"], ["created_at", "2016-04-07 00:04:06.088523"], ["updated_at", "2016-04-07 00:04:06.088523"]]
+  [1m[35m (8.7ms)[0m  commit transaction
+Redirected to https://csce431-project-mdebolt.c9users.io/answershow
+Completed 302 Found in 64ms (ActiveRecord: 19.4ms)
+
+
+Started GET "/answershow" for 165.91.4.138 at 2016-04-07 00:04:06 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#show as HTML
+  Rendered answers/show.html.haml within layouts/application (0.1ms)
+Completed 200 OK in 146ms (Views: 145.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 165.91.4.138 at 2016-04-07 00:04:09 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#logout as HTML
+Redirected to https://csce431-project-mdebolt.c9users.io/
+Completed 302 Found in 117ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.4.138 at 2016-04-07 00:04:09 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login as HTML
+  Rendered sessions/login.html.haml within layouts/application (5.8ms)
+Completed 200 OK in 169ms (Views: 167.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login_attempt" for 165.91.4.138 at 2016-04-07 00:04:19 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ki1Jidv7D4Ittkj77J0s/P4yfdkMmAxLlezv1W9ei3l4sq671IESto+pgTVEO/JZL8O6ol2lEp9Iw8aRKgpPcA==", "email"=>"info@americangimuseum.org", "login_password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "info@americangimuseum.org"]]
+Redirected to https://csce431-project-mdebolt.c9users.io/admin
+Completed 302 Found in 184ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/admin" for 165.91.4.138 at 2016-04-07 00:04:19 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered admin/index.html.haml within layouts/application (8.4ms)
+Completed 200 OK in 170ms (Views: 167.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/datashow?eid=3" for 165.91.4.138 at 2016-04-07 00:04:22 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#show as HTML
+  Parameters: {"eid"=>"3"}
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT DISTINCT "answers"."uid" FROM "answers" WHERE "answers"."eid" = ?  [["eid", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users"."email" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users"."firstname" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users"."lastname" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users"."zipcode" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users"."email" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users"."firstname" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users"."lastname" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users"."zipcode" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users"."email" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users"."firstname" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users"."lastname" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users"."zipcode" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered admin/show.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 271ms (Views: 150.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/answer.csv.csv?eid=3" for 165.91.4.138 at 2016-04-07 00:04:37 +0000
+Cannot render console from 165.91.4.138! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#index as CSV
+  Parameters: {"eid"=>"3"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."eid" = ?  [["eid", 3]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT DISTINCT "answers"."uid" FROM "answers" WHERE "answers"."eid" = ?[0m  [["eid", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users"."email" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."eid" = ? AND "answers"."uid" = ?[0m  [["eid", 3], ["uid", 2]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users"."email" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."eid" = ? AND "answers"."uid" = ?[0m  [["eid", 3], ["uid", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users"."email" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."eid" = ? AND "answers"."uid" = ?[0m  [["eid", 3], ["uid", 4]]
+  Rendered text template (0.0ms)
+Sent data  (9.0ms)
+Completed 200 OK in 20ms (Views: 8.9ms | ActiveRecord: 1.5ms)
