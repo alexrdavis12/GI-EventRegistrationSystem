@@ -3037,3 +3037,437 @@ ActionView::Template::Error (undefined method `each' for nil:NilClass):
   Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (12.0ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (162.4ms)
+
+
+Started GET "/" for 165.91.227.221 at 2016-04-07 18:44:45 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#login as HTML
+Redirected to https://project-kathryn02.c9users.io/home
+Filter chain halted as :save_login_state rendered or redirected
+Completed 302 Found in 25ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 165.91.227.221 at 2016-04-07 18:44:46 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered sessions/home.html.haml within layouts/application (18.5ms)
+Completed 200 OK in 1200ms (Views: 1095.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/allevent" for 165.91.227.221 at 2016-04-07 18:44:49 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to https://project-kathryn02.c9users.io/admin
+Completed 302 Found in 9ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/admin" for 165.91.227.221 at 2016-04-07 18:44:49 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered admin/index.html.haml within layouts/application (26.0ms)
+Completed 200 OK in 333ms (Views: 326.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/eventedit?eid=1" for 165.91.227.221 at 2016-04-07 18:44:51 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#edit as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[35mEvent Load (0.5ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/edit.html.haml within layouts/application (69.8ms)
+Completed 200 OK in 546ms (Views: 541.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/eventupdate?eid=1" for 165.91.227.221 at 2016-04-07 18:44:53 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"k3VPBKcArcG3T7r+OXUQ+5q9etW9dLNsNIv4cMjRdyg0SRQq7PQ20A44wvf0ibgVxVmJg3QeW66gQPRWmfVtCA==", "Title"=>"sdsdfs", "Location"=>"dfsf", "Description"=>"", "Start_Date"=>"", "End_Date"=>"", "commit"=>"Save", "eid"=>"1"}
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mcommit transaction[0m
+Redirected to https://project-kathryn02.c9users.io/eventupdate?eid=1
+Completed 302 Found in 26ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/eventupdate?eid=1" for 165.91.227.221 at 2016-04-07 18:44:53 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#update as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[35mEvent Load (0.3ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/update.html.haml within layouts/application (26.8ms)
+Completed 200 OK in 300ms (Views: 298.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/QuestionEdit?eid=1" for 165.91.227.221 at 2016-04-07 18:44:54 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#update as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered questions/update.html.haml within layouts/application (33.1ms)
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 0.8ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    40:                   %th Question Type
+    41:                   %th Question Option
+    42:               %tbody
+    43:                 - @questions.each do |q|
+    44:                   %tr
+    45:                     %td= q.qid
+    46:                     %td= q.qtitle
+  app/views/questions/update.html.haml:43:in `_app_views_questions_update_html_haml__2797854299199452952_69895822635020'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (142.7ms)
+
+
+Started GET "/QuestionEdit?eid=1" for 165.91.227.221 at 2016-04-07 18:44:55 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#update as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered questions/update.html.haml within layouts/application (25.0ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    40:                   %th Question Type
+    41:                   %th Question Option
+    42:               %tbody
+    43:                 - @questions.each do |q|
+    44:                   %tr
+    45:                     %td= q.qid
+    46:                     %td= q.qtitle
+  app/views/questions/update.html.haml:43:in `_app_views_questions_update_html_haml__2797854299199452952_69895804943500'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (24.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (160.4ms)
+
+
+Started GET "/" for 165.91.227.221 at 2016-04-07 18:49:07 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#login as HTML
+Redirected to https://project-kathryn02.c9users.io/home
+Filter chain halted as :save_login_state rendered or redirected
+Completed 302 Found in 43ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 165.91.227.221 at 2016-04-07 18:49:08 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered sessions/home.html.haml within layouts/application (30.7ms)
+Completed 200 OK in 837ms (Views: 740.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/allevent" for 165.91.227.221 at 2016-04-07 18:49:11 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to https://project-kathryn02.c9users.io/admin
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/admin" for 165.91.227.221 at 2016-04-07 18:49:11 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#index as HTML
+  [1m[35mUser Load (1.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered admin/index.html.haml within layouts/application (48.3ms)
+Completed 200 OK in 385ms (Views: 375.4ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/eventedit?eid=1" for 165.91.227.221 at 2016-04-07 18:49:12 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#edit as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[35mEvent Load (0.6ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/edit.html.haml within layouts/application (68.7ms)
+Completed 200 OK in 559ms (Views: 553.6ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/eventupdate?eid=1" for 165.91.227.221 at 2016-04-07 18:49:14 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/PmXDif6Hhk1SDVzSFnX4xHo8WM/wcchQt542bD4YLVbxcwgbA6FCIw/TXqFpX8NTgwCNfarL+PWFXT/4dx6lQ==", "Title"=>"sdsdfs", "Location"=>"dfsf", "Description"=>"", "Start_Date"=>"", "End_Date"=>"", "commit"=>"Save", "eid"=>"1"}
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mcommit transaction[0m
+Redirected to https://project-kathryn02.c9users.io/eventupdate?eid=1
+Completed 302 Found in 34ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/eventupdate?eid=1" for 165.91.227.221 at 2016-04-07 18:49:14 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#update as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[35mEvent Load (0.3ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/update.html.haml within layouts/application (34.1ms)
+Completed 200 OK in 312ms (Views: 307.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/QuestionEdit?eid=1" for 165.91.227.221 at 2016-04-07 18:49:16 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#update as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered questions/update.html.haml within layouts/application (46.9ms)
+Completed 500 Internal Server Error in 86ms (ActiveRecord: 1.5ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    40:                   %th Question Type
+    41:                   %th Question Option
+    42:               %tbody
+    43:                 - @questions.each do |q|
+    44:                   %tr
+    45:                     %td= q.qid
+    46:                     %td= q.qtitle
+  app/views/questions/update.html.haml:43:in `_app_views_questions_update_html_haml__532554810498239119_70234051223480'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (32.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (209.0ms)
+
+
+Started GET "/QuestionEdit?eid=1" for 165.91.227.221 at 2016-04-07 18:49:17 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#update as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered questions/update.html.haml within layouts/application (26.2ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    40:                   %th Question Type
+    41:                   %th Question Option
+    42:               %tbody
+    43:                 - @questions.each do |q|
+    44:                   %tr
+    45:                     %td= q.qid
+    46:                     %td= q.qtitle
+  app/views/questions/update.html.haml:43:in `_app_views_questions_update_html_haml__532554810498239119_98286240'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (188.5ms)
+
+
+Started GET "/" for 165.91.227.221 at 2016-04-07 18:51:52 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#login as HTML
+Redirected to https://project-kathryn02.c9users.io/home
+Filter chain halted as :save_login_state rendered or redirected
+Completed 302 Found in 51ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 165.91.227.221 at 2016-04-07 18:51:54 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered sessions/home.html.haml within layouts/application (16.9ms)
+Completed 200 OK in 933ms (Views: 829.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/allevent" for 165.91.227.221 at 2016-04-07 18:51:57 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to https://project-kathryn02.c9users.io/admin
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/admin" for 165.91.227.221 at 2016-04-07 18:51:57 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered admin/index.html.haml within layouts/application (37.9ms)
+Completed 200 OK in 336ms (Views: 328.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/eventedit?eid=2" for 165.91.227.221 at 2016-04-07 18:51:58 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#edit as HTML
+  Parameters: {"eid"=>"2"}
+  [1m[35mEvent Load (0.5ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered events/edit.html.haml within layouts/application (114.8ms)
+Completed 200 OK in 472ms (Views: 467.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/eventupdate?eid=2" for 165.91.227.221 at 2016-04-07 18:51:59 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qO8Nf7tSdiKBddQ706E5z2CQ22Ym3tiS+FX40bP6O24P01ZR8KbtMzgCrDIeXZEhP3QoMO+0MFBsnvT34t4hTg==", "Title"=>"", "Location"=>"", "Description"=>"", "Start_Date"=>"", "End_Date"=>"", "commit"=>"Save", "eid"=>"2"}
+  [1m[36mEvent Load (4.0ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to https://project-kathryn02.c9users.io/eventupdate?eid=2
+Completed 302 Found in 40ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/eventupdate?eid=2" for 165.91.227.221 at 2016-04-07 18:52:00 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#update as HTML
+  Parameters: {"eid"=>"2"}
+  [1m[35mEvent Load (0.6ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered events/update.html.haml within layouts/application (48.1ms)
+Completed 200 OK in 474ms (Views: 469.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/QuestionEdit?eid=2" for 165.91.227.221 at 2016-04-07 18:52:01 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#update as HTML
+  Parameters: {"eid"=>"2"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 2]]
+Completed 404 Not Found in 10ms (ActiveRecord: 1.0ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Question with 'id'=2):
+  app/controllers/questions_controller.rb:136:in `update'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (307.5ms)
+
+
+Started GET "/QuestionEdit?eid=2" for 165.91.227.221 at 2016-04-07 18:52:02 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#update as HTML
+  Parameters: {"eid"=>"2"}
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 2]]
+Completed 404 Not Found in 4ms (ActiveRecord: 0.3ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Question with 'id'=2):
+  app/controllers/questions_controller.rb:136:in `update'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (239.7ms)
+
+
+Started GET "/" for 165.91.227.221 at 2016-04-07 18:53:39 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#login as HTML
+Redirected to https://project-kathryn02.c9users.io/home
+Filter chain halted as :save_login_state rendered or redirected
+Completed 302 Found in 49ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 165.91.227.221 at 2016-04-07 18:53:40 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered sessions/home.html.haml within layouts/application (16.3ms)
+Completed 200 OK in 852ms (Views: 789.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/allevent" for 165.91.227.221 at 2016-04-07 18:53:43 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to https://project-kathryn02.c9users.io/admin
+Completed 302 Found in 141ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/admin" for 165.91.227.221 at 2016-04-07 18:53:44 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered admin/index.html.haml within layouts/application (35.7ms)
+Completed 200 OK in 432ms (Views: 418.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/eventedit?eid=1" for 165.91.227.221 at 2016-04-07 18:53:46 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#edit as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[35mEvent Load (0.6ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/edit.html.haml within layouts/application (71.6ms)
+Completed 200 OK in 480ms (Views: 476.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/eventupdate?eid=1" for 165.91.227.221 at 2016-04-07 18:53:47 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gW6amKZ9+lWyerDChyVgMKGw/MW7RZ2498l/W/Z11wcmUsG27YlhRAsNyMtK2cje/lQPk3IvdXpjAnN9p1HNJw==", "Title"=>"sdsdfs", "Location"=>"dfsf", "Description"=>"", "Start_Date"=>"", "End_Date"=>"", "commit"=>"Save", "eid"=>"1"}
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to https://project-kathryn02.c9users.io/eventupdate?eid=1
+Completed 302 Found in 35ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/eventupdate?eid=1" for 165.91.227.221 at 2016-04-07 18:53:48 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#update as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[35mEvent Load (0.4ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/update.html.haml within layouts/application (29.2ms)
+Completed 200 OK in 487ms (Views: 468.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/QuestionEdit?eid=1" for 165.91.227.221 at 2016-04-07 18:53:49 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#update as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/update.html.haml within layouts/application (59.4ms)
+Completed 500 Internal Server Error in 76ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    40:                   %th Question Type
+    41:                   %th Question Option
+    42:               %tbody
+    43:                 - @questions.each do |q|
+    44:                   %tr
+    45:                     %td= q.qid
+    46:                     %td= q.qtitle
+  app/views/questions/update.html.haml:43:in `_app_views_questions_update_html_haml___722279135508393686_70280703020500'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (27.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (183.9ms)
+
+
+Started GET "/QuestionEdit?eid=1" for 165.91.227.221 at 2016-04-07 18:53:50 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#update as HTML
+  Parameters: {"eid"=>"1"}
+  Rendered questions/update.html.haml within layouts/application (27.9ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    40:                   %th Question Type
+    41:                   %th Question Option
+    42:               %tbody
+    43:                 - @questions.each do |q|
+    44:                   %tr
+    45:                     %td= q.qid
+    46:                     %td= q.qtitle
+  app/views/questions/update.html.haml:43:in `_app_views_questions_update_html_haml___722279135508393686_99729520'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (25.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (176.3ms)

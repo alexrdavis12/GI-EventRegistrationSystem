@@ -132,8 +132,21 @@ class QuestionsController < ApplicationController
 	end
 	
 	def update
-	eid = params[:eid]
-    @event = Question.find(eid)
+
+    @flash_notice = ''
+		@error_type = 0
+
+		if params[:eid] != nil
+			@eid = params[:eid]
+		elsif params[:commit] == nil || params[:commit] != 'Edit'
+			@flash_notice = "Event ID is not specified!"
+			@error_type = -1
+			render 'edit'
+			return
+		end
+
+		qarray = []
+		
 		if params[:commit] != nil && params[:commit] == 'Edit'
 				params.each do |key, value|
 					

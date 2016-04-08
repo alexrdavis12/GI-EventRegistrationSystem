@@ -28,7 +28,7 @@
           =@flash_notice
       -if @error_type != -1
         %input{:type=>"hidden", :value => 1, :id => 'current_qid'}
-        = form_tag(:action => 'edit', :eid => @q.qid) do
+        = form_tag(:action => 'edit', :qid => @q.qid) do
           %div#q_form
             %input{:type=>"hidden", :value=>@eid, :name=>:q_eid}
           %li{:id=>'q_list', :style=>"list-style-type:none"}
