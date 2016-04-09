@@ -1,16 +1,5 @@
 class AnswersController < ApplicationController
 	before_filter :authenticate_user, :only => [:create]
-	
-	def index
-		eid = params[:eid]
-		@eid = params[:eid]
-		@answers = Answer.where(eid: eid)
-		@answers.seteid(eid)
-    	respond_to do |format|
-      		format.html
-      		format.csv { send_data @answers.to_csv }
-    	end
-	end
 
 	def isadmin
 		id = session[:user_id]
@@ -19,6 +8,18 @@ class AnswersController < ApplicationController
 	    	flash[:notice]="You are not authorized to that page"
 	    	flash[:color]="Invalid"
 	    	redirect_to '/login'
+    	end
+	end
+	
+	def index
+		self.isadmin
+		eid = params[:eid]
+		@eid = params[:eid]
+		@answers = Answer.where(eid: eid)
+		@answers.seteid(eid)
+    	respond_to do |format|
+      		format.html
+      		format.csv { send_data @answers.to_csv }
     	end
 	end
 
