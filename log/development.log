@@ -2335,3 +2335,186 @@ Processing by EventsController#allevent as HTML
   [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events"[0m
   Rendered events/allevent.html.haml within layouts/application (22.3ms)
 Completed 200 OK in 167ms (Views: 162.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 165.91.4.137 at 2016-04-09 19:23:29 +0000
+Cannot render console from 165.91.4.137! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#login as HTML
+Redirected to https://csce431-steevymathew.c9users.io/home
+Filter chain halted as :save_login_state rendered or redirected
+Completed 302 Found in 22ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 165.91.4.137 at 2016-04-09 19:23:30 +0000
+Cannot render console from 165.91.4.137! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered sessions/home.html.haml within layouts/application (12.9ms)
+Completed 200 OK in 502ms (Views: 450.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/allevent" for 165.91.4.137 at 2016-04-09 19:23:37 +0000
+Cannot render console from 165.91.4.137! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/allevent.html.haml within layouts/application (28.5ms)
+Completed 200 OK in 233ms (Views: 228.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin" for 165.91.4.137 at 2016-04-09 19:24:04 +0000
+Cannot render console from 165.91.4.137! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+Redirected to https://csce431-steevymathew.c9users.io/login
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for 165.91.4.137 at 2016-04-09 19:24:04 +0000
+Cannot render console from 165.91.4.137! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login as HTML
+Redirected to https://csce431-steevymathew.c9users.io/home
+Filter chain halted as :save_login_state rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 165.91.4.137 at 2016-04-09 19:24:04 +0000
+Cannot render console from 165.91.4.137! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered sessions/home.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 149ms (Views: 147.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/datashow?eid=3" for 165.91.4.137 at 2016-04-09 19:25:10 +0000
+Cannot render console from 165.91.4.137! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#show as HTML
+  Parameters: {"eid"=>"3"}
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT DISTINCT "answers"."uid" FROM "answers" WHERE "answers"."eid" = ?[0m  [["eid", 3]]
+  Rendered admin/show.html.haml within layouts/application (59.6ms)
+Completed 200 OK in 230ms (Views: 218.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/pie.self-6b67d2a4176b50cd13631509b8a061a02d88228e1f41e688faffc5033678511e.js?body=1" for 165.91.4.137 at 2016-04-09 19:25:10 +0000
+Cannot render console from 165.91.4.137! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/allevent" for 165.91.4.137 at 2016-04-09 19:25:18 +0000
+Cannot render console from 165.91.4.137! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/allevent.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 147ms (Views: 144.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/answer.csv.csv?eid=3" for 165.91.4.137 at 2016-04-09 19:25:26 +0000
+Cannot render console from 165.91.4.137! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#index as CSV
+  Parameters: {"eid"=>"3"}
+  [1m[35mEvent Load (0.4ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 3]]
+Completed 404 Not Found in 77ms (ActiveRecord: 0.4ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Event with 'id'=3):
+  app/models/answer.rb:10:in `block in to_csv'
+  app/models/answer.rb:7:in `to_csv'
+  app/controllers/answers_controller.rb:11:in `block (2 levels) in index'
+  app/controllers/answers_controller.rb:9:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (130.0ms)
+
+
+Started GET "/allevent" for 165.91.4.137 at 2016-04-09 19:25:38 +0000
+Cannot render console from 165.91.4.137! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/allevent.html.haml within layouts/application (3.4ms)
+Completed 200 OK in 219ms (Views: 216.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/eventsurvey?eid=1" for 165.91.4.137 at 2016-04-09 19:26:02 +0000
+Cannot render console from 165.91.4.137! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#showquestion as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."uid" = ? AND "answers"."eid" = ?[0m  [["uid", 3], ["eid", 1]]
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."eid" = ?  [["eid", 1]]
+  Rendered answers/showquestion.html.haml within layouts/application (139.9ms)
+Completed 200 OK in 349ms (Views: 344.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/show_question.self-8dd4e96ed457582df05f95c4af0302a7606271a5ae1354f9bfbbf68a6c4324ec.js?body=1" for 165.91.4.137 at 2016-04-09 19:26:03 +0000
+Cannot render console from 165.91.4.137! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/eventsurvey?eid=3" for 165.91.4.137 at 2016-04-09 19:26:12 +0000
+Cannot render console from 165.91.4.137! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#showquestion as HTML
+  Parameters: {"eid"=>"3"}
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."uid" = ? AND "answers"."eid" = ?[0m  [["uid", 3], ["eid", 3]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."eid" = ?  [["eid", 3]]
+  Rendered answers/showquestion.html.haml within layouts/application (54.9ms)
+Completed 200 OK in 378ms (Views: 289.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/eventsurvey" for 165.91.4.137 at 2016-04-09 19:26:16 +0000
+Cannot render console from 165.91.4.137! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F4/jbE6p7rHz9mglB8c+RXDMLIPFfEGxbosF5agwHJw+rx8oz/gyIG+z0vP/hMIgBupdnUbpVe1nU3k9yxoM6A==", "q_eid"=>"3", "commit"=>"Submit"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+Redirected to https://csce431-steevymathew.c9users.io/answershow
+Completed 302 Found in 143ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/answershow" for 165.91.4.137 at 2016-04-09 19:26:16 +0000
+Cannot render console from 165.91.4.137! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#show as HTML
+  Rendered answers/show.html.haml within layouts/application (12.7ms)
+Completed 200 OK in 256ms (Views: 255.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/allevent" for 165.91.4.137 at 2016-04-09 19:26:22 +0000
+Cannot render console from 165.91.4.137! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/allevent.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 162ms (Views: 159.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/profile" for 165.91.4.137 at 2016-04-09 19:26:25 +0000
+Cannot render console from 165.91.4.137! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#profile as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered sessions/profile.html.haml within layouts/application (59.5ms)
+Completed 200 OK in 266ms (Views: 263.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin" for 165.91.4.137 at 2016-04-09 19:27:30 +0000
+Cannot render console from 165.91.4.137! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Redirected to https://csce431-steevymathew.c9users.io/login
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for 165.91.4.137 at 2016-04-09 19:27:30 +0000
+Cannot render console from 165.91.4.137! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login as HTML
+Redirected to https://csce431-steevymathew.c9users.io/home
+Filter chain halted as :save_login_state rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 165.91.4.137 at 2016-04-09 19:27:30 +0000
+Cannot render console from 165.91.4.137! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered sessions/home.html.haml within layouts/application (0.2ms)
+Completed 200 OK in 156ms (Views: 154.8ms | ActiveRecord: 0.1ms)
