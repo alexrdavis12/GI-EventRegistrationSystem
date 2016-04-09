@@ -12,9 +12,19 @@ class AnswersController < ApplicationController
     	end
 	end
 
+	def isadmin
+		id = session[:user_id]
+    	@users = User.find(id)
+    	if(@users.level!=0)
+	    	flash[:notice]="You are not authorized to that page"
+	    	flash[:color]="Invalid"
+	    	redirect_to '/login'
+    	end
+	end
+
 	def create
 	  # show questions
-
+	  self.isadmin
 	  if params[:eid] != nil
 	  	@eid = params[:eid]
 	  else

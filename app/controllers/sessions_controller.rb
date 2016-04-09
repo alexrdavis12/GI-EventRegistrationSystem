@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
   	authorized_user = User.authenticate(params[:email], params[:login_password])
       if authorized_user&&authorized_user.level==1
        session[:user_id] = authorized_user.id  
-       flash[:notice]="Welcome back, you logged in as #{authorized_user.email}"
+       flash[:notice]="Welcome back, you are logged in as #{authorized_user.email}"
        redirect_to '/allevent'
        return
       elsif authorized_user&&authorized_user.level==0
