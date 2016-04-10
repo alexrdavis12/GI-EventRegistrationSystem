@@ -1,30 +1,39 @@
 %nav.navbar.navbar-inverse{:role => "navigation"}
-	.navbar-header
-		%a.navbar-brand{:href => "#"} M.A.G.I
-	%ul.nav.navbar-nav.navbar-right
-		%li
-			%a{:href=>'allevent'}
-				%i{:class=>"fa fa-align-justify fa-fw"} 
-				Event
-
-		%li
-			%a{:href=>'profile'}
-				%i{:class=>"fa fa-user fa-fw"} 
-				Profile
-				
-		%li
-			%a{:href=>'logout'}
-				%i{:class=>"fa fa-sign-out fa-fw"} 
-				Logout
-
-
-
+    .navbar-header
+        %a.navbar-brand{:href => "#"} M.A.G.I
+    %ul.nav.navbar-nav.navbar-right
+        %li
+            %a{:href=>'allevent'}
+                %i{:class=>"fa fa-align-justify fa-fw"} 
+                Event
+        %li
+            %a{:href=>'profile'}
+                %i{:class=>"fa fa-user fa-fw"} 
+                Profile
+        %li
+            %a{:href=>'logout'}
+                %i{:class=>"fa fa-sign-out fa-fw"} 
+                Logout
+%nav.navbar.navbar-vertical-left
+    %ul.nav.navbar-nav{:role => "tablist"}
+        %li
+            %a{"data-toggle" => "tab", :href => "#events", :role => "tab"}
+                %i.fa.fa-dashboard.fa-fw.fa-lg
+                %span Registered Events
+        %li{:class=> "active"}
+            %a{"data-toggle" => "tab", :href => "#vehicles", :role => "tab"}
+                %i.fa.fa-table.fa-fw.fa-lg
+                %span My Vehicles
 .container
-	.row
-		.col-sm-2
-		.col-sm-8
-		.alert.alert-success
-			=flash[:notice] 
-		.col-sm-2
-
-
+    .row
+        .col-sm-2
+        .col-sm-8
+        .alert.alert-success
+            =flash[:notice] 
+        .col-sm-2
+.container{:class => "tab-content"}
+    .row{:id => "events", :class => "tab-pane"}
+    .row{:id => "vehicles", :class => "tab-pane active"}
+        %a.btn.btn-success{:id => 'add_vehicle_btn', :href => 'vehiclecreate'}
+            %i.fa.fa-plus.fa-lg
+            Add Vehicle
