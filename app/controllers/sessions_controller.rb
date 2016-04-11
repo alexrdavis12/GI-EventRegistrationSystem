@@ -28,11 +28,18 @@ class SessionsController < ApplicationController
  
   def home
     id = session[:user_id]
-    @vehicles=Vehicle.where(user_id: id).all
-    @registeredevents =''
-    @registeredeid = Answer.where(uid: id).all.uniq.pluck(:eid)
-    if (@registeredeid.length !=0)
-      @registeredevents = Event.find(@registeredeid)
+    @user = User.find(id)
+    if @user.level == 1
+      @vehicles=Vehicle.where(user_id: id).all
+      @registeredevents =''
+      @registeredeid = Answer.where(uid: id).all.uniq.pluck(:eid)
+      if (@registeredeid.length !=0)
+        @registeredevents = Event.find(@registeredeid)
+      end
+    else 
+      if @user.level ==0
+       redirect_to '/admin'
+      end
     end
   end
 
