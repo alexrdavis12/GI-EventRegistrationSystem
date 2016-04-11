@@ -1,5 +1,19 @@
 class QuestionsController < ApplicationController
+
+	def isadmin
+		id = session[:user_id]
+    	@users = User.find(id)
+    	if(@users.level!=0)
+	    	flash[:notice]="You are not authorized to that page"
+	    	flash[:color]="Invalid"
+	    	redirect_to '/login'
+    	end
+		@events=Event.all
+	end
+
+
 	def create
+		self.isadmin
 		@flash_notice = ''
 		@error_type = 0
 

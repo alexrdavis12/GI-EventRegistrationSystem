@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
        return
       elsif authorized_user&&authorized_user.level==0
        session[:user_id] = authorized_user.id  
-       flash[:notice]="Welcome home, administrator #{authorized_user.email}"
+       flash[:notice]="Welcome home, Administrator #{authorized_user.email}"
        redirect_to '/admin'
        return
     else
