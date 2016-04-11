@@ -24,7 +24,7 @@ When /^(?:|I )click Edit Question"([^"]*)"$/ do |button|
    pending # express the regexp above with the code you wish you had
 end
 
-Then ((/^I should see the event form with question information "(.*?)" with "(.*?)"$/)) do |field,text|
+Then (/^I should see the event form with question information "(.*?)" with "(.*?)"$/) do |field,text|
    fill_in(field, with:text)
    pending # express the regexp above with the code you wish you had
 end
