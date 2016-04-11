@@ -47,7 +47,7 @@ class AnswersController < ApplicationController
 	          	end
 	        end
 	          
-	        redirect_to '/answershow'
+	        redirect_to '/home'
 	    	return
 	    end
 

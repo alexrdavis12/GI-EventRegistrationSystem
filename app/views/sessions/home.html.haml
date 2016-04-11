@@ -16,11 +16,11 @@
                 Logout
 %nav.navbar.navbar-vertical-left
     %ul.nav.navbar-nav{:role => "tablist"}
-        %li
+        %li{:class=> "active"}
             %a{"data-toggle" => "tab", :href => "#events", :role => "tab"}
                 %i.fa.fa-list-alt.fa-fw.fa-lg
                 %span Registered Events
-        %li{:class=> "active"}
+        %li
             %a{"data-toggle" => "tab", :href => "#vehicles", :role => "tab"}
                 %i.fa.fa-car.fa-fw.fa-lg
                 %span My Vehicles
@@ -31,13 +31,57 @@
     .row
         .col-md-1
         .col-md-11
-            .alert.alert-success
-                =flash[:notice]
-    .row{:id => "events", :class => "tab-pane"}
-    .row{:id => "vehicles", :class => "tab-pane active"}
+    .row{:id => "events", :class => "tab-pane active"}
         .col-md-2
             .col-md-10
                 .container
+                    .h1.text-center Registered Events
+                    .row
+                        .col-md-2
+                        .col-md-8
+                            -if flash[:notice] != nil
+                                .alert.alert-success.alert-dismissable
+                                    %button.close{:type=>"button", "data-dismiss"=>"alert"}
+                                        %span{"aria-hidden"=>true}×
+                                        %span.sr-only Close
+                                    %strong 
+                                        =flash[:notice]
+                                        =flash[:color]
+                            -if @registeredevents.length == 0
+                                .alert.alert-info.alert-dismissable
+                                    %button.close{:type=>"button", "data-dismiss"=>"alert"}
+                                        %span{"aria-hidden"=>true}×
+                                        %span.sr-only Close
+                                    %strong You are not currently registered for any events
+                            -else
+                                - cnt= 0
+                                - @registeredevents.each do |e|
+                                    - cnt+=1
+                                    .panel.panel-primary
+                                        .panel-heading
+                                            %h3.panel-title Event #{cnt}
+                                        .panel-body
+                                            %label= e.etitle 
+                                            %br
+                                            %label Location
+                                            = e.elocation
+                                            %br
+                                            %label Start Date  
+                                            = e.estart
+                                            %br
+                                            %label End Date  
+                                            = e.eend
+                                            %br
+                                            %label Event Description 
+                                            = e.edescription
+                        %a.btn.btn-success{:id => 'availableEvents', :href => 'allevent'}
+                            %i.fa.fa-plus.fa-lg
+                            Available Events
+    .row{:id => "vehicles", :class => "tab-pane"}
+        .col-md-2
+            .col-md-10
+                .container
+                    .h1.text-center My Vehicles
                     .row
                         .col-md-2
                         .col-md-8
