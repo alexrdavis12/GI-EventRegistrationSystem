@@ -253,7 +253,7 @@ class QuestionsController < ApplicationController
 		        end
 		          
 		        cureid = params[:q_eid]
-		        redirect_to "/questionupdate?eid=#{cureid}"	    	
+		        redirect_to "/questionupdate?eid=#{qid}"	    	
 		        return
 		    end
 	
