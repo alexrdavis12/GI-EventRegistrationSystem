@@ -3278,6 +3278,7 @@ Processing by SessionsController#home as HTML
 Completed 200 OK in 210ms (Views: 208.1ms | ActiveRecord: 0.2ms)
 
 
+<<<<<<< HEAD
 Started GET "/answer.csv.csv?eid=1" for 165.91.4.137 at 2016-04-09 21:01:16 +0000
 Cannot render console from 165.91.4.137! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
 Processing by AnswersController#index as CSV
@@ -3303,3 +3304,652 @@ AbstractController::DoubleRenderError (Render and/or redirect were called multip
   Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
   Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
   Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (88.5ms)
+=======
+Started GET "/home" for 165.91.13.43 at 2016-04-11 06:48:14 +0000
+Cannot render console from 165.91.13.43! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mVehicle Load (0.2ms)[0m  SELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?  [["user_id", 4]]
+  Rendered sessions/home.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 246ms (Views: 243.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 10.240.0.204 at 2016-04-11 16:38:32 +0000
+Cannot render console from 10.240.0.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#login as HTML
+  Rendered sessions/login.html.haml within layouts/application (235.9ms)
+Completed 200 OK in 589ms (Views: 557.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.206 at 2016-04-11 16:38:34 +0000
+Cannot render console from 10.240.0.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-datetimepicker.min.self-788e29abac8dcfbc60d7f7490dd02b623d42c2174b604ebff6e8faa66c5d876e.css?body=1" for 10.240.0.192 at 2016-04-11 16:38:34 +0000
+Cannot render console from 10.240.0.192! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-2fe4f8a61d73606fbcb036b41f380591906a4da65a9eb5ec0a210fe6980b2ca7.css?body=1" for 10.240.0.165 at 2016-04-11 16:38:34 +0000
+Cannot render console from 10.240.0.165! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for 10.240.0.203 at 2016-04-11 16:38:34 +0000
+Cannot render console from 10.240.0.203! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/answers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.200 at 2016-04-11 16:38:34 +0000
+Cannot render console from 10.240.0.200! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-603f330c29af013305325569c8c75d03d688963abd8cde4fffec17b5ce417bfb.css?body=1" for 10.240.0.207 at 2016-04-11 16:38:34 +0000
+Cannot render console from 10.240.0.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/data.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.147 at 2016-04-11 16:38:34 +0000
+Cannot render console from 10.240.0.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.200 at 2016-04-11 16:38:34 +0000
+Cannot render console from 10.240.0.200! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/questions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.186 at 2016-04-11 16:38:34 +0000
+Cannot render console from 10.240.0.186! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-0de50f0224d6e8cae3e2502cc1d9cfabdc0d76270f21057592cf35d51d65ebfb.css?body=1" for 10.240.0.197 at 2016-04-11 16:38:34 +0000
+Cannot render console from 10.240.0.197! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.189 at 2016-04-11 16:38:34 +0000
+Cannot render console from 10.240.0.189! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.208 at 2016-04-11 16:38:34 +0000
+Cannot render console from 10.240.0.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-a889e7abcadb5dbdb0529c0dc69d5a86744647c95c657e19413c888ea981fd29.css?body=1" for 10.240.0.110 at 2016-04-11 16:38:34 +0000
+Cannot render console from 10.240.0.110! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 10.240.0.204 at 2016-04-11 16:38:34 +0000
+Cannot render console from 10.240.0.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 10.240.0.200 at 2016-04-11 16:38:34 +0000
+Cannot render console from 10.240.0.200! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 10.240.0.208 at 2016-04-11 16:38:34 +0000
+Cannot render console from 10.240.0.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 10.240.0.187 at 2016-04-11 16:38:34 +0000
+Cannot render console from 10.240.0.187! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 10.240.0.206 at 2016-04-11 16:38:34 +0000
+Cannot render console from 10.240.0.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 10.240.0.197 at 2016-04-11 16:38:35 +0000
+Cannot render console from 10.240.0.197! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 10.240.0.197 at 2016-04-11 16:38:35 +0000
+Cannot render console from 10.240.0.197! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 10.240.0.200 at 2016-04-11 16:38:35 +0000
+Cannot render console from 10.240.0.200! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 10.240.0.208 at 2016-04-11 16:38:35 +0000
+Cannot render console from 10.240.0.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 10.240.0.197 at 2016-04-11 16:38:35 +0000
+Cannot render console from 10.240.0.197! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 10.240.0.192 at 2016-04-11 16:38:35 +0000
+Cannot render console from 10.240.0.192! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 10.240.0.147 at 2016-04-11 16:38:35 +0000
+Cannot render console from 10.240.0.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 10.240.0.200 at 2016-04-11 16:38:35 +0000
+Cannot render console from 10.240.0.200! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 10.240.0.204 at 2016-04-11 16:38:35 +0000
+Cannot render console from 10.240.0.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 10.240.0.208 at 2016-04-11 16:38:35 +0000
+Cannot render console from 10.240.0.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 10.240.0.110 at 2016-04-11 16:38:35 +0000
+Cannot render console from 10.240.0.110! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.240.0.157 at 2016-04-11 16:38:35 +0000
+Cannot render console from 10.240.0.157! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/im3-554298bfba1eab7ed16dfc520f300082d3924d01db3b2eeabad3907c8443852c.png" for 10.240.0.200 at 2016-04-11 16:38:35 +0000
+Cannot render console from 10.240.0.200! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/create" for 10.240.0.204 at 2016-04-11 16:38:39 +0000
+Cannot render console from 10.240.0.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.haml within layouts/application (54.8ms)
+Completed 200 OK in 495ms (Views: 327.4ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/create" for 10.240.0.192 at 2016-04-11 16:39:17 +0000
+Cannot render console from 10.240.0.192! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JpcXffOZhxClLe7KlrPHSxbMuGl994nCIunumzBTFOAUTDgYrZFIeYExHQykuMp/NfUfwGw0QbekVIrgfXoWHQ==", "email"=>"vtesting@vehicles.com", "password"=>"[FILTERED]", "pswdconfirm"=>"password", "lastname"=>"Vehicle", "firstname"=>"Testing", "gender"=>"female", "zipcode"=>"77840", "commit"=>"Create"}
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'vtesting@vehicles.com' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'vtesting@vehicles.com' LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "users" ("email", "lastname", "firstname", "gender", "level", "zipcode", "salt", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "vtesting@vehicles.com"], ["lastname", "Vehicle"], ["firstname", "Testing"], ["gender", "female"], ["level", 1], ["zipcode", "77840"], ["salt", "$2a$10$.SBTzgUf0M.pQoGiPj5oS."], ["encrypted_password", "$2a$10$.SBTzgUf0M.pQoGiPj5oS.4CGdM4cL2IVaIs5PEC4/fZW.Nih66J6"], ["created_at", "2016-04-11 16:39:17.787519"], ["updated_at", "2016-04-11 16:39:17.787519"]]
+  [1m[35m (11.0ms)[0m  commit transaction
+Redirected to http://swe-alexrdavis12.c9users.io:8080/allevent
+Completed 302 Found in 256ms (ActiveRecord: 12.2ms)
+
+
+Started GET "/allevent" for 10.240.0.179 at 2016-04-11 16:39:17 +0000
+Cannot render console from 10.240.0.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/allevent.html.haml within layouts/application (31.5ms)
+Completed 200 OK in 266ms (Views: 239.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/fontawesome-webfont-a7c7e4930090e038a280fd61d88f0dc03dad4aeaedbd8c9be3dd9aa4c3b6f8d1.woff" for 10.240.0.179 at 2016-04-11 16:39:19 +0000
+Cannot render console from 10.240.0.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/home" for 10.240.0.192 at 2016-04-11 16:39:23 +0000
+Cannot render console from 10.240.0.192! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mVehicle Load (0.4ms)[0m  SELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?  [["user_id", 5]]
+  Rendered sessions/home.html.haml within layouts/application (19.8ms)
+Completed 200 OK in 271ms (Views: 239.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/vehiclecreate" for 10.240.0.166 at 2016-04-11 16:39:28 +0000
+Cannot render console from 10.240.0.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VehiclesController#create as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered vehicles/create.html.haml within layouts/application (17.9ms)
+Completed 200 OK in 278ms (Views: 267.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/vehiclecreate" for 10.240.0.197 at 2016-04-11 16:39:57 +0000
+Cannot render console from 10.240.0.197! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VehiclesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ybrIkFwW8FTVFYRk+dV2R/wa5I8qcNnG2KFYiKb02q37Yef1Ah4/PfEJd6LL3ntz3yNDJjuzEbNeHDzz693YUA==", "Name"=>"sadfaf", "Class"=>"dfdf", "Nation"=>"USA", "War"=>"1812", "Description"=>"Tanker man", "commit"=>"Create"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "vehicles" ("vname", "vclass", "vnation", "vwar", "vdescription", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["vname", "sadfaf"], ["vclass", "dfdf"], ["vnation", "USA"], ["vwar", "1812"], ["vdescription", "Tanker man"], ["user_id", 5]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "vehicles_count" = COALESCE("vehicles_count", 0) + 1 WHERE "users"."id" = ?  [["id", 5]]
+  [1m[36m (15.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://swe-alexrdavis12.c9users.io:8080/vehicleshow?vid=13
+Completed 302 Found in 199ms (ActiveRecord: 17.0ms)
+
+
+Started GET "/vehicleshow?vid=13" for 10.240.0.208 at 2016-04-11 16:39:57 +0000
+Cannot render console from 10.240.0.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VehiclesController#show as HTML
+  Parameters: {"vid"=>"13"}
+  [1m[35mVehicle Load (0.3ms)[0m  SELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT 1  [["id", 13]]
+  Rendered vehicles/show.html.haml within layouts/application (8.7ms)
+Completed 200 OK in 170ms (Views: 168.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 10.240.0.197 at 2016-04-11 16:40:00 +0000
+Cannot render console from 10.240.0.197! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mVehicle Load (0.2ms)[0m  SELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?  [["user_id", 5]]
+  Rendered sessions/home.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 256ms (Views: 254.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/allevent" for 10.240.0.166 at 2016-04-11 16:40:41 +0000
+Cannot render console from 10.240.0.166! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/allevent.html.haml within layouts/application (121.6ms)
+Completed 200 OK in 280ms (Views: 278.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/eventsurvey?eid=1" for 10.240.0.197 at 2016-04-11 16:40:44 +0000
+Cannot render console from 10.240.0.197! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#showquestion as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."uid" = ? AND "answers"."eid" = ?[0m  [["uid", 5], ["eid", 1]]
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."eid" = ?  [["eid", 1]]
+  Rendered answers/showquestion.html.haml within layouts/application (33.1ms)
+Completed 200 OK in 236ms (Views: 222.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/show_question.self-8dd4e96ed457582df05f95c4af0302a7606271a5ae1354f9bfbbf68a6c4324ec.js?body=1" for 10.240.0.179 at 2016-04-11 16:40:44 +0000
+Cannot render console from 10.240.0.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/eventsurvey" for 10.240.0.179 at 2016-04-11 16:40:47 +0000
+Cannot render console from 10.240.0.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cb5RiGB0fOt9mv0I2AYfBpS7EG3kn2IkRYWHdE6Ng0pDZX7tPnyzglmGDs7qDRIyt4K3xPVcqlHDOOMPA6SBtw==", "q_eid"=>"1", "Q1"=>{"answer"=>"sds"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions"."qtitle" FROM "questions" WHERE "questions"."eid" = ? AND "questions"."qid" = ? LIMIT 1  [["eid", 1], ["qid", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "answers" ("uid", "qid", "qtitle", "eid", "answer", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["uid", 5], ["qid", 1], ["qtitle", "question111111111"], ["eid", 1], ["answer", "sds"], ["created_at", "2016-04-11 16:40:47.703548"], ["updated_at", "2016-04-11 16:40:47.703548"]]
+  [1m[36m (12.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://swe-alexrdavis12.c9users.io:8080/answershow
+Completed 302 Found in 27ms (ActiveRecord: 13.9ms)
+
+
+Started GET "/answershow" for 10.240.0.110 at 2016-04-11 16:40:47 +0000
+Cannot render console from 10.240.0.110! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#show as HTML
+  Rendered answers/show.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 199ms (Views: 197.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 10.240.0.207 at 2016-04-11 16:40:52 +0000
+Cannot render console from 10.240.0.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mVehicle Load (0.2ms)[0m  [1mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 5]]
+  Rendered sessions/home.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 392ms (Views: 208.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/vehiclecreate" for 10.240.0.156 at 2016-04-11 16:45:39 +0000
+Cannot render console from 10.240.0.156! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VehiclesController#create as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered vehicles/create.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 213ms (Views: 210.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 165.91.13.108 at 2016-04-11 16:59:30 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#login as HTML
+Redirected to https://swe-alexrdavis12.c9users.io/home
+Filter chain halted as :save_login_state rendered or redirected
+Completed 302 Found in 32ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 165.91.13.108 at 2016-04-11 16:59:31 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mVehicle Load (0.4ms)[0m  [1mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 5]]
+  Rendered sessions/home.html.haml within layouts/application (36.8ms)
+Completed 200 OK in 735ms (Views: 625.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.13.108 at 2016-04-11 16:59:32 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/answers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.13.108 at 2016-04-11 16:59:32 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-datetimepicker.min.self-788e29abac8dcfbc60d7f7490dd02b623d42c2174b604ebff6e8faa66c5d876e.css?body=1" for 165.91.13.108 at 2016-04-11 16:59:32 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-603f330c29af013305325569c8c75d03d688963abd8cde4fffec17b5ce417bfb.css?body=1" for 165.91.13.108 at 2016-04-11 16:59:32 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for 165.91.13.108 at 2016-04-11 16:59:32 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-2fe4f8a61d73606fbcb036b41f380591906a4da65a9eb5ec0a210fe6980b2ca7.css?body=1" for 165.91.13.108 at 2016-04-11 16:59:32 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.13.108 at 2016-04-11 16:59:32 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/data.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.13.108 at 2016-04-11 16:59:32 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/questions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.13.108 at 2016-04-11 16:59:32 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.13.108 at 2016-04-11 16:59:32 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-0de50f0224d6e8cae3e2502cc1d9cfabdc0d76270f21057592cf35d51d65ebfb.css?body=1" for 165.91.13.108 at 2016-04-11 16:59:32 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.13.108 at 2016-04-11 16:59:32 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-a889e7abcadb5dbdb0529c0dc69d5a86744647c95c657e19413c888ea981fd29.css?body=1" for 165.91.13.108 at 2016-04-11 16:59:32 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 165.91.13.108 at 2016-04-11 16:59:32 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 165.91.13.108 at 2016-04-11 16:59:33 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 165.91.13.108 at 2016-04-11 16:59:33 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 165.91.13.108 at 2016-04-11 16:59:33 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 165.91.13.108 at 2016-04-11 16:59:33 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 165.91.13.108 at 2016-04-11 16:59:33 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 165.91.13.108 at 2016-04-11 16:59:33 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 165.91.13.108 at 2016-04-11 16:59:33 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 165.91.13.108 at 2016-04-11 16:59:33 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 165.91.13.108 at 2016-04-11 16:59:33 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 165.91.13.108 at 2016-04-11 16:59:33 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 165.91.13.108 at 2016-04-11 16:59:33 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 165.91.13.108 at 2016-04-11 16:59:33 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 165.91.13.108 at 2016-04-11 16:59:33 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 165.91.13.108 at 2016-04-11 16:59:33 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 165.91.13.108 at 2016-04-11 16:59:33 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 165.91.13.108 at 2016-04-11 16:59:33 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/fontawesome-webfont-a7c7e4930090e038a280fd61d88f0dc03dad4aeaedbd8c9be3dd9aa4c3b6f8d1.woff" for 165.91.13.108 at 2016-04-11 16:59:33 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/vehiclecreate" for 165.91.13.108 at 2016-04-11 16:59:40 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VehiclesController#create as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered vehicles/create.html.haml within layouts/application (137.2ms)
+Completed 200 OK in 494ms (Views: 492.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/vehiclecreate" for 165.91.13.108 at 2016-04-11 16:59:55 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VehiclesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"izvKFUzQsg/cIawO5TtK+RRQ+YZJZpMxDzZlujO9Rqm54OVwEth9Zvg9X8jXMEfNN2leL1ilW0SJiwHBfpREVA==", "Name"=>"dfdsf", "Class"=>"2", "Nation"=>"adgdr", "War"=>"dfdg", "Description"=>"vgdfgdafgdgd", "commit"=>"Create"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "vehicles" ("vname", "vclass", "vnation", "vwar", "vdescription", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["vname", "dfdsf"], ["vclass", "2"], ["vnation", "adgdr"], ["vwar", "dfdg"], ["vdescription", "vgdfgdafgdgd"], ["user_id", 5]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "vehicles_count" = COALESCE("vehicles_count", 0) + 1 WHERE "users"."id" = ?[0m  [["id", 5]]
+  [1m[35m (12.0ms)[0m  commit transaction
+Redirected to https://swe-alexrdavis12.c9users.io/vehicleshow?vid=14
+Completed 302 Found in 68ms (ActiveRecord: 13.4ms)
+
+
+Started GET "/vehicleshow?vid=14" for 165.91.13.108 at 2016-04-11 16:59:56 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VehiclesController#show as HTML
+  Parameters: {"vid"=>"14"}
+  [1m[36mVehicle Load (1.0ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT 1[0m  [["id", 14]]
+  Rendered vehicles/show.html.haml within layouts/application (14.8ms)
+Completed 200 OK in 269ms (Views: 265.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 165.91.13.108 at 2016-04-11 17:01:11 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#login as HTML
+Redirected to https://swe-alexrdavis12.c9users.io/home
+Filter chain halted as :save_login_state rendered or redirected
+Completed 302 Found in 28ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 165.91.13.108 at 2016-04-11 17:01:12 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mVehicle Load (0.4ms)[0m  [1mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 5]]
+  Rendered sessions/home.html.haml within layouts/application (45.8ms)
+Completed 200 OK in 696ms (Views: 589.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/vehiclecreate" for 165.91.13.108 at 2016-04-11 17:01:25 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VehiclesController#create as HTML
+  [1m[35mUser Load (2.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered vehicles/create.html.haml within layouts/application (17.7ms)
+Completed 200 OK in 247ms (Views: 243.4ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/vehiclecreate" for 165.91.13.108 at 2016-04-11 17:01:51 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VehiclesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DPvrQpxd+3q+RbRQH3KapLvBhIHzL9SXT5+vdqvYIvY+IMQnwlU0E5pZR5YteZeQmPgjKOLsHOLJIssN5vEgCw==", "Name"=>"sefsdf", "Class"=>"Tracked", "Nation"=>"dsfsd", "War"=>"vxcvdfasdfafdgadfgadfgadfgdf", "Description"=>"asdfadfsdffa", "commit"=>"Create"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "vehicles" ("vname", "vclass", "vnation", "vwar", "vdescription", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["vname", "sefsdf"], ["vclass", "Tracked"], ["vnation", "dsfsd"], ["vwar", "vxcvdfasdfafdgadfgadfgadfgdf"], ["vdescription", "asdfadfsdffa"], ["user_id", 5]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "vehicles_count" = COALESCE("vehicles_count", 0) + 1 WHERE "users"."id" = ?[0m  [["id", 5]]
+  [1m[35m (18.7ms)[0m  commit transaction
+Redirected to https://swe-alexrdavis12.c9users.io/vehicleshow?vid=15
+Completed 302 Found in 239ms (ActiveRecord: 20.3ms)
+
+
+Started GET "/vehicleshow?vid=15" for 165.91.13.108 at 2016-04-11 17:01:51 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VehiclesController#show as HTML
+  Parameters: {"vid"=>"15"}
+  [1m[36mVehicle Load (0.5ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT 1[0m  [["id", 15]]
+  Rendered vehicles/show.html.haml within layouts/application (40.5ms)
+Completed 200 OK in 429ms (Views: 424.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home" for 165.91.13.108 at 2016-04-11 17:01:56 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mVehicle Load (0.3ms)[0m  [1mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 5]]
+  Rendered sessions/home.html.haml within layouts/application (24.8ms)
+Completed 200 OK in 273ms (Views: 270.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/vehicledelete?vid=13" for 165.91.13.108 at 2016-04-11 17:02:56 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VehiclesController#delete as HTML
+  Parameters: {"vid"=>"13"}
+  [1m[35mVehicle Load (0.2ms)[0m  SELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT 1  [["id", 13]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "vehicles" WHERE "vehicles"."id" = ?  [["id", 13]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "vehicles_count" = COALESCE("vehicles_count", 0) - 1 WHERE "users"."id" = ?  [["id", 5]]
+  [1m[36m (8.4ms)[0m  [1mcommit transaction[0m
+Redirected to https://swe-alexrdavis12.c9users.io/home
+Completed 302 Found in 66ms (ActiveRecord: 9.4ms)
+
+
+Started GET "/home" for 165.91.13.108 at 2016-04-11 17:02:56 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mVehicle Load (0.2ms)[0m  [1mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 5]]
+  Rendered sessions/home.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 292ms (Views: 289.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/vehicledelete?vid=14" for 165.91.13.108 at 2016-04-11 17:02:58 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VehiclesController#delete as HTML
+  Parameters: {"vid"=>"14"}
+  [1m[35mVehicle Load (0.2ms)[0m  SELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "vehicles" WHERE "vehicles"."id" = ?  [["id", 14]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mSQL (0.1ms)[0m  UPDATE "users" SET "vehicles_count" = COALESCE("vehicles_count", 0) - 1 WHERE "users"."id" = ?  [["id", 5]]
+  [1m[36m (19.4ms)[0m  [1mcommit transaction[0m
+Redirected to https://swe-alexrdavis12.c9users.io/home
+Completed 302 Found in 142ms (ActiveRecord: 20.2ms)
+
+
+Started GET "/home" for 165.91.13.108 at 2016-04-11 17:02:58 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mVehicle Load (0.2ms)[0m  [1mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 5]]
+  Rendered sessions/home.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 252ms (Views: 248.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/vehicleedit?vid=15" for 165.91.13.108 at 2016-04-11 17:03:00 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VehiclesController#edit as HTML
+  Parameters: {"vid"=>"15"}
+  [1m[35mVehicle Load (0.2ms)[0m  SELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT 1  [["id", 15]]
+  Rendered vehicles/edit.html.haml within layouts/application (9.2ms)
+Completed 200 OK in 359ms (Views: 357.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/vehicleupdate?vid=15" for 165.91.13.108 at 2016-04-11 17:03:16 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VehiclesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gtgfIn39j3JRhsu9PEMKcSeibWlNmEQ4Mk2jbi0BXhawAzBHI/VAG3WaOHsOSAdFBJvKwFxbjE208McVYChc6w==", "Name"=>"bhkbhkbhkb", "Class"=>"hbmbhbhj", "Nation"=>"kjjkbnjknjn", "War"=>"jkbjhbhbhjbhjhjb", "Description"=>"%option{:value => 1}= \"label 1\"\r\n      %option{:value => 2}= \"label 2\" ", "commit"=>"Save", "vid"=>"15"}
+  [1m[36mVehicle Load (0.2ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "vehicles" SET "vname" = ?, "vclass" = ?, "vnation" = ?, "vwar" = ?, "vdescription" = ? WHERE "vehicles"."id" = ?[0m  [["vname", "bhkbhkbhkb"], ["vclass", "hbmbhbhj"], ["vnation", "kjjkbnjknjn"], ["vwar", "jkbjhbhbhjbhjhjb"], ["vdescription", "%option{:value => 1}= \"label 1\"\r\n      %option{:value => 2}= \"label 2\" "], ["id", 15]]
+  [1m[35m (74.2ms)[0m  commit transaction
+Redirected to https://swe-alexrdavis12.c9users.io/vehicleupdate?vid=15
+Completed 302 Found in 80ms (ActiveRecord: 74.8ms)
+
+
+Started GET "/vehicleupdate?vid=15" for 165.91.13.108 at 2016-04-11 17:03:16 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VehiclesController#update as HTML
+  Parameters: {"vid"=>"15"}
+  [1m[36mVehicle Load (0.2ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT 1[0m  [["id", 15]]
+  Rendered vehicles/update.html.haml within layouts/application (13.1ms)
+Completed 200 OK in 273ms (Views: 271.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 165.91.13.108 at 2016-04-11 17:03:20 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mVehicle Load (0.3ms)[0m  [1mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 5]]
+  Rendered sessions/home.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 246ms (Views: 243.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/vehicleshow?vid=15" for 165.91.13.108 at 2016-04-11 17:03:25 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VehiclesController#show as HTML
+  Parameters: {"vid"=>"15"}
+  [1m[35mVehicle Load (0.2ms)[0m  SELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT 1  [["id", 15]]
+  Rendered vehicles/show.html.haml within layouts/application (8.0ms)
+Completed 200 OK in 173ms (Views: 171.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 165.91.13.108 at 2016-04-11 17:03:28 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mVehicle Load (0.3ms)[0m  SELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?  [["user_id", 5]]
+  Rendered sessions/home.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 269ms (Views: 267.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/vehicledelete?vid=15" for 165.91.13.108 at 2016-04-11 17:04:02 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VehiclesController#delete as HTML
+  Parameters: {"vid"=>"15"}
+  [1m[36mVehicle Load (0.3ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT 1[0m  [["id", 15]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "vehicles" WHERE "vehicles"."id" = ?[0m  [["id", 15]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "users" SET "vehicles_count" = COALESCE("vehicles_count", 0) - 1 WHERE "users"."id" = ?[0m  [["id", 5]]
+  [1m[35m (19.7ms)[0m  commit transaction
+Redirected to https://swe-alexrdavis12.c9users.io/home
+Completed 302 Found in 27ms (ActiveRecord: 20.6ms)
+
+
+Started GET "/home" for 165.91.13.108 at 2016-04-11 17:04:02 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mVehicle Load (0.2ms)[0m  SELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?  [["user_id", 5]]
+  Rendered sessions/home.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 197ms (Views: 194.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/home" for 165.91.13.108 at 2016-04-11 17:07:13 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mVehicle Load (0.2ms)[0m  SELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?  [["user_id", 5]]
+  Rendered sessions/home.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 221ms (Views: 218.9ms | ActiveRecord: 0.4ms)
+>>>>>>> origin/Alex
