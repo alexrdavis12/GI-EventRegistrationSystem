@@ -6717,3 +6717,507 @@ Processing by SessionsController#home as HTML
   [1m[35mVehicle Load (0.2ms)[0m  SELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?  [["user_id", 5]]
   Rendered sessions/home.html.haml within layouts/application (1.4ms)
 Completed 200 OK in 221ms (Views: 218.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 165.91.13.108 at 2016-04-11 17:19:31 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#login as HTML
+Redirected to https://swe-alexrdavis12.c9users.io/home
+Filter chain halted as :save_login_state rendered or redirected
+Completed 302 Found in 18ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 165.91.13.108 at 2016-04-11 17:19:32 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mVehicle Load (0.3ms)[0m  [1mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 5]]
+  Rendered sessions/home.html.haml within layouts/application (17.5ms)
+Completed 200 OK in 525ms (Views: 430.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/allevent" for 165.91.13.108 at 2016-04-11 17:19:36 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/allevent.html.haml within layouts/application (30.2ms)
+Completed 200 OK in 257ms (Views: 242.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/im3-554298bfba1eab7ed16dfc520f300082d3924d01db3b2eeabad3907c8443852c.png" for 165.91.13.108 at 2016-04-11 17:19:36 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/profile" for 165.91.13.108 at 2016-04-11 17:19:39 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#profile as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered sessions/profile.html.haml within layouts/application (43.0ms)
+Completed 200 OK in 432ms (Views: 403.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/allevent" for 165.91.13.108 at 2016-04-11 17:19:42 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/allevent.html.haml within layouts/application (12.6ms)
+Completed 200 OK in 404ms (Views: 392.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/home" for 165.91.13.108 at 2016-04-11 17:19:44 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mVehicle Load (2.1ms)[0m  [1mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 5]]
+  Rendered sessions/home.html.haml within layouts/application (22.6ms)
+Completed 200 OK in 359ms (Views: 354.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/allevent" for 165.91.13.108 at 2016-04-11 17:19:51 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/allevent.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 351ms (Views: 348.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/eventsurvey?eid=1" for 165.91.13.108 at 2016-04-11 17:19:53 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#showquestion as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."uid" = ? AND "answers"."eid" = ?  [["uid", 5], ["eid", 1]]
+Redirected to https://swe-alexrdavis12.c9users.io/allevent
+Completed 302 Found in 100ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/allevent" for 165.91.13.108 at 2016-04-11 17:19:53 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/allevent.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 217ms (Views: 214.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/eventsurvey?eid=1" for 165.91.13.108 at 2016-04-11 17:19:55 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#showquestion as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."uid" = ? AND "answers"."eid" = ?[0m  [["uid", 5], ["eid", 1]]
+Redirected to https://swe-alexrdavis12.c9users.io/allevent
+Completed 302 Found in 5ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/allevent" for 165.91.13.108 at 2016-04-11 17:19:55 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/allevent.html.haml within layouts/application (8.3ms)
+Completed 200 OK in 225ms (Views: 222.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/eventsurvey?eid=1" for 165.91.13.108 at 2016-04-11 17:19:56 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#showquestion as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."uid" = ? AND "answers"."eid" = ?  [["uid", 5], ["eid", 1]]
+Redirected to https://swe-alexrdavis12.c9users.io/allevent
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/allevent" for 165.91.13.108 at 2016-04-11 17:19:56 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/allevent.html.haml within layouts/application (4.4ms)
+Completed 200 OK in 182ms (Views: 180.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/eventsurvey?eid=1" for 165.91.13.108 at 2016-04-11 17:19:57 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#showquestion as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."uid" = ? AND "answers"."eid" = ?[0m  [["uid", 5], ["eid", 1]]
+Redirected to https://swe-alexrdavis12.c9users.io/allevent
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/allevent" for 165.91.13.108 at 2016-04-11 17:19:57 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/allevent.html.haml within layouts/application (5.3ms)
+Completed 200 OK in 164ms (Views: 161.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/eventsurvey?eid=1" for 165.91.13.108 at 2016-04-11 17:19:58 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#showquestion as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."uid" = ? AND "answers"."eid" = ?  [["uid", 5], ["eid", 1]]
+Redirected to https://swe-alexrdavis12.c9users.io/allevent
+Completed 302 Found in 98ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/allevent" for 165.91.13.108 at 2016-04-11 17:19:58 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/allevent.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 195ms (Views: 193.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/eventsurvey?eid=1" for 165.91.13.108 at 2016-04-11 17:20:02 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#showquestion as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."uid" = ? AND "answers"."eid" = ?[0m  [["uid", 5], ["eid", 1]]
+Redirected to https://swe-alexrdavis12.c9users.io/allevent
+Completed 302 Found in 161ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/allevent" for 165.91.13.108 at 2016-04-11 17:20:03 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/allevent.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 238ms (Views: 236.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/eventsurvey?eid=1" for 165.91.13.108 at 2016-04-11 17:20:07 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#showquestion as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[35mAnswer Load (0.9ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."uid" = ? AND "answers"."eid" = ?  [["uid", 5], ["eid", 1]]
+Redirected to https://swe-alexrdavis12.c9users.io/allevent
+Completed 302 Found in 4ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/allevent" for 165.91.13.108 at 2016-04-11 17:20:07 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/allevent.html.haml within layouts/application (4.4ms)
+Completed 200 OK in 183ms (Views: 180.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/eventsurvey?eid=1" for 165.91.13.108 at 2016-04-11 17:20:07 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#showquestion as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."uid" = ? AND "answers"."eid" = ?[0m  [["uid", 5], ["eid", 1]]
+Redirected to https://swe-alexrdavis12.c9users.io/allevent
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/allevent" for 165.91.13.108 at 2016-04-11 17:20:07 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/allevent.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 164ms (Views: 161.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/eventsurvey?eid=1" for 165.91.13.108 at 2016-04-11 17:20:08 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#showquestion as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."uid" = ? AND "answers"."eid" = ?  [["uid", 5], ["eid", 1]]
+Redirected to https://swe-alexrdavis12.c9users.io/allevent
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/allevent" for 165.91.13.108 at 2016-04-11 17:20:08 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/allevent.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 151ms (Views: 148.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/eventsurvey?eid=1" for 165.91.13.108 at 2016-04-11 17:20:10 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#showquestion as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."uid" = ? AND "answers"."eid" = ?[0m  [["uid", 5], ["eid", 1]]
+Redirected to https://swe-alexrdavis12.c9users.io/allevent
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/allevent" for 165.91.13.108 at 2016-04-11 17:20:10 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/allevent.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 161ms (Views: 159.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/eventsurvey?eid=1" for 165.91.13.108 at 2016-04-11 17:20:10 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#showquestion as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."uid" = ? AND "answers"."eid" = ?  [["uid", 5], ["eid", 1]]
+Redirected to https://swe-alexrdavis12.c9users.io/allevent
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/allevent" for 165.91.13.108 at 2016-04-11 17:20:10 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/allevent.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 205ms (Views: 203.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/eventsurvey?eid=1" for 165.91.13.108 at 2016-04-11 17:20:11 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#showquestion as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."uid" = ? AND "answers"."eid" = ?[0m  [["uid", 5], ["eid", 1]]
+Redirected to https://swe-alexrdavis12.c9users.io/allevent
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/allevent" for 165.91.13.108 at 2016-04-11 17:20:11 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/allevent.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 154ms (Views: 151.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/eventsurvey?eid=1" for 165.91.13.108 at 2016-04-11 17:20:11 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#showquestion as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."uid" = ? AND "answers"."eid" = ?  [["uid", 5], ["eid", 1]]
+Redirected to https://swe-alexrdavis12.c9users.io/allevent
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/allevent" for 165.91.13.108 at 2016-04-11 17:20:11 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/allevent.html.haml within layouts/application (3.4ms)
+Completed 200 OK in 167ms (Views: 165.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/eventsurvey?eid=1" for 165.91.13.108 at 2016-04-11 17:20:12 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#showquestion as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."uid" = ? AND "answers"."eid" = ?[0m  [["uid", 5], ["eid", 1]]
+Redirected to https://swe-alexrdavis12.c9users.io/allevent
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/allevent" for 165.91.13.108 at 2016-04-11 17:20:12 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/allevent.html.haml within layouts/application (5.3ms)
+Completed 200 OK in 410ms (Views: 407.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/eventsurvey?eid=1" for 165.91.13.108 at 2016-04-11 17:20:12 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#showquestion as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."uid" = ? AND "answers"."eid" = ?  [["uid", 5], ["eid", 1]]
+Redirected to https://swe-alexrdavis12.c9users.io/allevent
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/eventsurvey?eid=1" for 165.91.13.108 at 2016-04-11 17:20:12 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#showquestion as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."uid" = ? AND "answers"."eid" = ?[0m  [["uid", 5], ["eid", 1]]
+Redirected to https://swe-alexrdavis12.c9users.io/allevent
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/allevent" for 165.91.13.108 at 2016-04-11 17:20:12 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/allevent.html.haml within layouts/application (4.4ms)
+Completed 200 OK in 178ms (Views: 175.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/eventsurvey?eid=1" for 165.91.13.108 at 2016-04-11 17:20:13 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#showquestion as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."uid" = ? AND "answers"."eid" = ?  [["uid", 5], ["eid", 1]]
+Redirected to https://swe-alexrdavis12.c9users.io/allevent
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/allevent" for 165.91.13.108 at 2016-04-11 17:20:13 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/allevent.html.haml within layouts/application (5.3ms)
+Completed 200 OK in 192ms (Views: 190.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/eventsurvey?eid=1" for 165.91.13.108 at 2016-04-11 17:20:17 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#showquestion as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."uid" = ? AND "answers"."eid" = ?[0m  [["uid", 5], ["eid", 1]]
+Redirected to https://swe-alexrdavis12.c9users.io/allevent
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/allevent" for 165.91.13.108 at 2016-04-11 17:20:17 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/allevent.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 154ms (Views: 151.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/allevent" for 165.91.13.108 at 2016-04-11 17:20:29 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/allevent.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 144ms (Views: 142.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/allevent" for 165.91.13.108 at 2016-04-11 17:20:30 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/allevent.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 210ms (Views: 208.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 165.91.13.108 at 2016-04-11 17:26:14 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#login as HTML
+Redirected to https://swe-alexrdavis12.c9users.io/home
+Filter chain halted as :save_login_state rendered or redirected
+Completed 302 Found in 30ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 165.91.13.108 at 2016-04-11 17:26:15 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mVehicle Load (0.3ms)[0m  [1mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 5]]
+  Rendered sessions/home.html.haml within layouts/application (13.0ms)
+Completed 200 OK in 582ms (Views: 479.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/allevent" for 165.91.13.108 at 2016-04-11 17:26:19 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/allevent.html.haml within layouts/application (23.0ms)
+Completed 200 OK in 348ms (Views: 341.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/logout" for 165.91.13.108 at 2016-04-11 17:26:22 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#logout as HTML
+Redirected to https://swe-alexrdavis12.c9users.io/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.13.108 at 2016-04-11 17:26:22 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login as HTML
+  Rendered sessions/login.html.haml within layouts/application (50.4ms)
+Completed 200 OK in 401ms (Views: 399.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 165.91.13.108 at 2016-04-11 17:26:24 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.haml within layouts/application (18.3ms)
+Completed 200 OK in 272ms (Views: 258.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/create" for 165.91.13.108 at 2016-04-11 17:26:53 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ncnIHVGQEZzp893KUhLB4eJ7nwt6N68j4xmXVXGYc7qvEud4D5je9c3vLgxgGczVwUI4omv0Z1ZlpPMuPLFxRw==", "email"=>"asdfasd@gfasdfasf.com", "password"=>"[FILTERED]", "pswdconfirm"=>"asdfasdf", "lastname"=>"asdf", "firstname"=>"asdf", "gender"=>"female", "zipcode"=>"77856", "commit"=>"Create"}
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'asdfasd@gfasdfasf.com' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'asdfasd@gfasdfasf.com' LIMIT 1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "users" ("email", "lastname", "firstname", "gender", "level", "zipcode", "salt", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "asdfasd@gfasdfasf.com"], ["lastname", "asdf"], ["firstname", "asdf"], ["gender", "female"], ["level", 1], ["zipcode", "77856"], ["salt", "$2a$10$C/hsnWzAj0XiJlVRlBeAKe"], ["encrypted_password", "$2a$10$C/hsnWzAj0XiJlVRlBeAKeSWA6qKtm9GmuJxnL2kFZxLLQyiACpcW"], ["created_at", "2016-04-11 17:26:54.154475"], ["updated_at", "2016-04-11 17:26:54.154475"]]
+  [1m[35m (17.6ms)[0m  commit transaction
+Redirected to https://swe-alexrdavis12.c9users.io/allevent
+Completed 302 Found in 223ms (ActiveRecord: 19.0ms)
+
+
+Started GET "/allevent" for 165.91.13.108 at 2016-04-11 17:26:54 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/allevent.html.haml within layouts/application (24.8ms)
+Completed 200 OK in 308ms (Views: 299.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/eventsurvey?eid=1" for 165.91.13.108 at 2016-04-11 17:27:02 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#showquestion as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."uid" = ? AND "answers"."eid" = ?[0m  [["uid", 6], ["eid", 1]]
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."eid" = ?  [["eid", 1]]
+  Rendered answers/showquestion.html.haml within layouts/application (45.6ms)
+Completed 200 OK in 238ms (Views: 229.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/show_question.self-8dd4e96ed457582df05f95c4af0302a7606271a5ae1354f9bfbbf68a6c4324ec.js?body=1" for 165.91.13.108 at 2016-04-11 17:27:02 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/eventsurvey" for 165.91.13.108 at 2016-04-11 17:27:05 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UcsavR4UuywRvABN3sieudEi1e9s21Au3DnfLVBEdUdjEDXYQBx0RTWg84vsw5ON8htyRn0YmFtahLtWHW13ug==", "q_eid"=>"1", "Q1"=>{"answer"=>"jhbjhb"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions"."qtitle" FROM "questions" WHERE "questions"."eid" = ? AND "questions"."qid" = ? LIMIT 1  [["eid", 1], ["qid", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "answers" ("uid", "qid", "qtitle", "eid", "answer", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["uid", 6], ["qid", 1], ["qtitle", "question111111111"], ["eid", 1], ["answer", "jhbjhb"], ["created_at", "2016-04-11 17:27:06.099450"], ["updated_at", "2016-04-11 17:27:06.099450"]]
+  [1m[36m (18.8ms)[0m  [1mcommit transaction[0m
+Redirected to https://swe-alexrdavis12.c9users.io/answershow
+Completed 302 Found in 134ms (ActiveRecord: 20.2ms)
+
+
+Started GET "/answershow" for 165.91.13.108 at 2016-04-11 17:27:06 +0000
+Cannot render console from 165.91.13.108! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#show as HTML
+  Rendered answers/show.html.haml within layouts/application (15.0ms)
+Completed 200 OK in 270ms (Views: 269.6ms | ActiveRecord: 0.0ms)
