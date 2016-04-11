@@ -31,7 +31,7 @@
     .col-md-4
       = form_tag(:action => 'create') do
         .form-group 
-          %label Email/Username:
+          %label Email:
           %input{:class => 'form-control', :value=>@user.email, :name=>:email}
         .form-group
           %label Password: 
@@ -61,7 +61,6 @@
           %label.checkbox-inline
             %input{:type=>'radio', :value=>'female', :name=>:gender}
             Female
-
         .form-group
           %label Zipcode:
           %input{:class => 'form-control', :value=>@user.zipcode, :name=>:zipcode}

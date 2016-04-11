@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151203020326) do
+ActiveRecord::Schema.define(version: 20160409194349) do
 
   create_table "answers", force: :cascade do |t|
     t.integer  "eid"
@@ -57,6 +57,23 @@ ActiveRecord::Schema.define(version: 20151203020326) do
     t.string   "encrypted_password"
     t.integer  "level"
     t.string   "zipcode"
+    t.integer  "hasvehicle"
+    t.string   "unit"
+    t.integer  "isco"
+  end
+
+  add_index "users", ["hasvehicle"], name: "index_users_on_hasvehicle"
+  add_index "users", ["isco"], name: "index_users_on_isco"
+  add_index "users", ["unit"], name: "index_users_on_unit"
+
+  create_table "vehicles", force: :cascade do |t|
+    t.string  "vname"
+    t.string  "vclass"
+    t.string  "vnation"
+    t.string  "vwar"
+    t.string  "vdescription"
+    t.integer "vid"
+    t.integer "uid"
   end
 
 end
