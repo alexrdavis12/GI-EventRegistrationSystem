@@ -1,0 +1,55 @@
+%nav.navbar.navbar-inverse{:role => "navigation"}
+  .navbar-header
+    %a.navbar-brand{:href => "home"} M.A.G.I.
+  %ul.nav.navbar-nav.navbar-right
+    %li
+      %a{:href=>'allevent'}
+        %i{:class=>"fa fa-align-justify fa-fw"} 
+        Event
+
+    %li
+      %a{:href=>'profile'}
+        %i{:class=>"fa fa-user fa-fw"} 
+        Profile
+        
+    %li
+      %a{:href=>'logout'}
+        %i{:class=>"fa fa-sign-out fa-fw"} 
+        Logout
+        
+.container
+  .row
+    .col-md-2
+    .col-md-8
+      .panel.panel-primary
+        .panel-heading
+          %h3.panel-title Vehicle
+        .panel-body
+          = form_tag(:action => 'create') do
+            .form-group
+              %label Vehicle Name
+              %input{:class => 'form-control', :value=>'', :name=>"Name"}
+        
+            .form-group
+              %label Vehicle Class
+              %select{:class => 'form-control', :value=>'', :name=>"Class"}
+                %option{:value => 'Wheeled'}= "Wheeled"
+                %option{:value => 'Tracked'}= "Tracked" 
+                %option{:value => 'Other'}="Other"
+            
+            %label Vehicle Impression
+            .form-group
+              .col-md-1
+              .col-md-4
+                %label Nation
+                %input{:class => 'form-control', :value=>'', :name=>"Nation"}
+              .col-md-1
+              .col-md-4
+                %label War
+                %input{:class => 'form-control', :value=>'', :name=>"War"}
+        
+            .form-group
+              %label Vehicle Description
+              %textarea{:class => 'form-control', :rows => "8", :value=>'', :name=>"Description"}
+      
+            = submit_tag("Create", :class => 'btn btn-primary')
