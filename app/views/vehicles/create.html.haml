@@ -32,8 +32,10 @@
         
             .form-group
               %label Vehicle Class
-              %input{:class => 'form-control', :value=>'', :name=>"Class"}
-                    
+              %select{:class => 'form-control', :value=>'', :name=>"Class"}
+                %option{:value => 'Wheeled'}= "Wheeled"
+                %option{:value => 'Tracked'}= "Tracked" 
+                %option{:value => 'Other'}="Other"
             
             %label Vehicle Impression
             .form-group
