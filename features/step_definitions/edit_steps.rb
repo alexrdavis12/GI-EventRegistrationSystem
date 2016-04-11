@@ -19,6 +19,10 @@ Then (/^I should see the event form with event information "(.*?)" with "(.*?)"$
      
 end
 
+Given /^(?:|I )am on the Event Question (.+)$/ do |page_name|
+   #pending
+end
+
 When /^(?:|I )click Edit Question"([^"]*)"$/ do |button|
    click_button(button)
    pending # express the regexp above with the code you wish you had
