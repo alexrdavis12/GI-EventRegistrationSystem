@@ -6,10 +6,9 @@ And(/^There are more than one event on the page$/) do
    #visit('EventCreate?eid=1')
    page.find("a", text:"Edit").click
    pending # express the regexp above with the code you wish you had
-
 end
 
-When /^(?:|I )click Edit"([^"]*)"$/ do |button|
+When /^(?:|I )click Edit"([^"]*)"$/ do |button| 
    click_button(button)
    pending # express the regexp above with the code you wish you had
 end
