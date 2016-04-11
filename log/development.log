@@ -3953,3 +3953,1502 @@ Processing by SessionsController#home as HTML
   Rendered sessions/home.html.haml within layouts/application (1.4ms)
 Completed 200 OK in 221ms (Views: 218.9ms | ActiveRecord: 0.4ms)
 >>>>>>> origin/Alex
+
+
+Started GET "/" for 165.91.12.202 at 2016-04-11 17:20:05 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.4) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.4) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:31:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (172.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddDatafieldToUsers (20160409173157)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "users" ADD "hasvehicle" integer[0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_users_on_hasvehicle" ON "users" ("hasvehicle")[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD "unit" varchar
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "index_users_on_unit" ON "users" ("unit")
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" ADD "isco" integer[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_unit' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_unit' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "index_users_on_isco" ON "users" ("isco")
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "vehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "class" varchar, "nation" varchar, "war" varchar, "description" varchar) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160409173157"]]
+  [1m[36m (12.6ms)[0m  [1mcommit transaction[0m
+Migrating to IdVehicle (20160409182548)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "vehicles" ADD "vid" integer[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "vehicles" ADD "uid" integer
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160409182548"]]
+  [1m[35m (13.7ms)[0m  commit transaction
+Migrating to RenameVehicleColumns (20160409194349)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (2.5ms)[0m  CREATE TEMPORARY TABLE "avehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "vclass" varchar, "nation" varchar, "war" varchar, "description" varchar, "vid" integer, "uid" integer) 
+  [1m[36m (0.3ms)[0m  [1mSELECT * FROM "vehicles"[0m
+  [1m[35m (0.6ms)[0m  DROP TABLE "vehicles"
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "vehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "vclass" varchar, "nation" varchar, "war" varchar, "description" varchar, "vid" integer, "uid" integer) [0m
+  [1m[35m (0.3ms)[0m  SELECT * FROM "avehicles"
+  [1m[36m (0.6ms)[0m  [1mDROP TABLE "avehicles"[0m
+  [1m[35m (0.5ms)[0m  CREATE TEMPORARY TABLE "avehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "vname" varchar, "vclass" varchar, "nation" varchar, "war" varchar, "description" varchar, "vid" integer, "uid" integer) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "vehicles"[0m
+  [1m[35m (0.6ms)[0m  DROP TABLE "vehicles"
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "vehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "vname" varchar, "vclass" varchar, "nation" varchar, "war" varchar, "description" varchar, "vid" integer, "uid" integer) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "avehicles"
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "avehicles"[0m
+  [1m[35m (0.3ms)[0m  CREATE TEMPORARY TABLE "avehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "vname" varchar, "vclass" varchar, "vnation" varchar, "war" varchar, "description" varchar, "vid" integer, "uid" integer) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "vehicles"[0m
+  [1m[35m (0.4ms)[0m  DROP TABLE "vehicles"
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "vehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "vname" varchar, "vclass" varchar, "vnation" varchar, "war" varchar, "description" varchar, "vid" integer, "uid" integer) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "avehicles"
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "avehicles"[0m
+  [1m[35m (0.2ms)[0m  CREATE TEMPORARY TABLE "avehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "vname" varchar, "vclass" varchar, "vnation" varchar, "vwar" varchar, "description" varchar, "vid" integer, "uid" integer) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "vehicles"[0m
+  [1m[35m (0.2ms)[0m  DROP TABLE "vehicles"
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "vehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "vname" varchar, "vclass" varchar, "vnation" varchar, "vwar" varchar, "description" varchar, "vid" integer, "uid" integer) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "avehicles"
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "avehicles"[0m
+  [1m[35m (0.2ms)[0m  CREATE TEMPORARY TABLE "avehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "vname" varchar, "vclass" varchar, "vnation" varchar, "vwar" varchar, "vdescription" varchar, "vid" integer, "uid" integer) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "vehicles"[0m
+  [1m[35m (0.2ms)[0m  DROP TABLE "vehicles"
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "vehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "vname" varchar, "vclass" varchar, "vnation" varchar, "vwar" varchar, "vdescription" varchar, "vid" integer, "uid" integer) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "avehicles"
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "avehicles"[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160409194349"]]
+  [1m[36m (14.9ms)[0m  [1mcommit transaction[0m
+Migrating to AddForeignKeytoVehicles (20160411054413)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TEMPORARY TABLE "avehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "vname" varchar, "vclass" varchar, "vnation" varchar, "vwar" varchar, "vdescription" varchar, "vid" integer, "user_id" integer) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "vehicles"
+  [1m[36m (0.4ms)[0m  [1mDROP TABLE "vehicles"[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "vehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "vname" varchar, "vclass" varchar, "vnation" varchar, "vwar" varchar, "vdescription" varchar, "vid" integer, "user_id" integer) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "avehicles"[0m
+  [1m[35m (0.2ms)[0m  DROP TABLE "avehicles"
+  [1m[36m (0.3ms)[0m  [1mCREATE  INDEX "index_vehicles_on_user_id" ON "vehicles" ("user_id")[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160411054413"]]
+  [1m[36m (12.9ms)[0m  [1mcommit transaction[0m
+Migrating to AddVehiclesCountToUsers (20160411064421)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mALTER TABLE "users" ADD "vehicles_count" int[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160411064421"]]
+  [1m[36m (11.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_isco' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_isco' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_unit' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_unit' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_vehicles_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_vehicles_on_user_id' AND type='index'
+
+
+
+Started GET "/" for 10.240.0.187 at 2016-04-11 17:22:27 +0000
+Cannot render console from 10.240.0.187! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#login as HTML
+  Rendered sessions/login.html.haml within layouts/application (205.5ms)
+Completed 200 OK in 578ms (Views: 557.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for 10.240.0.165 at 2016-04-11 17:22:29 +0000
+Cannot render console from 10.240.0.165! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.187 at 2016-04-11 17:22:29 +0000
+Cannot render console from 10.240.0.187! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-datetimepicker.min.self-788e29abac8dcfbc60d7f7490dd02b623d42c2174b604ebff6e8faa66c5d876e.css?body=1" for 10.240.0.167 at 2016-04-11 17:22:29 +0000
+Cannot render console from 10.240.0.167! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/answers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.189 at 2016-04-11 17:22:29 +0000
+Cannot render console from 10.240.0.189! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-603f330c29af013305325569c8c75d03d688963abd8cde4fffec17b5ce417bfb.css?body=1" for 10.240.0.110 at 2016-04-11 17:22:29 +0000
+Cannot render console from 10.240.0.110! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-2fe4f8a61d73606fbcb036b41f380591906a4da65a9eb5ec0a210fe6980b2ca7.css?body=1" for 10.240.0.75 at 2016-04-11 17:22:29 +0000
+Cannot render console from 10.240.0.75! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/data.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.189 at 2016-04-11 17:22:29 +0000
+Cannot render console from 10.240.0.189! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.156 at 2016-04-11 17:22:29 +0000
+Cannot render console from 10.240.0.156! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-0de50f0224d6e8cae3e2502cc1d9cfabdc0d76270f21057592cf35d51d65ebfb.css?body=1" for 10.240.0.187 at 2016-04-11 17:22:29 +0000
+Cannot render console from 10.240.0.187! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/questions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.200 at 2016-04-11 17:22:29 +0000
+Cannot render console from 10.240.0.200! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.167 at 2016-04-11 17:22:29 +0000
+Cannot render console from 10.240.0.167! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 10.240.0.165 at 2016-04-11 17:22:29 +0000
+Cannot render console from 10.240.0.165! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-a889e7abcadb5dbdb0529c0dc69d5a86744647c95c657e19413c888ea981fd29.css?body=1" for 10.240.0.186 at 2016-04-11 17:22:29 +0000
+Cannot render console from 10.240.0.186! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 10.240.0.110 at 2016-04-11 17:22:29 +0000
+Cannot render console from 10.240.0.110! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 10.240.0.208 at 2016-04-11 17:22:29 +0000
+Cannot render console from 10.240.0.208! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 10.240.0.206 at 2016-04-11 17:22:29 +0000
+Cannot render console from 10.240.0.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 10.240.0.200 at 2016-04-11 17:22:29 +0000
+Cannot render console from 10.240.0.200! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 10.240.0.167 at 2016-04-11 17:22:29 +0000
+Cannot render console from 10.240.0.167! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 10.240.0.186 at 2016-04-11 17:22:29 +0000
+Cannot render console from 10.240.0.186! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 10.240.0.200 at 2016-04-11 17:22:29 +0000
+Cannot render console from 10.240.0.200! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 10.240.0.206 at 2016-04-11 17:22:29 +0000
+Cannot render console from 10.240.0.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 10.240.0.207 at 2016-04-11 17:22:29 +0000
+Cannot render console from 10.240.0.207! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 10.240.0.186 at 2016-04-11 17:22:29 +0000
+Cannot render console from 10.240.0.186! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 10.240.0.200 at 2016-04-11 17:22:29 +0000
+Cannot render console from 10.240.0.200! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 10.240.0.206 at 2016-04-11 17:22:29 +0000
+Cannot render console from 10.240.0.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 10.240.0.157 at 2016-04-11 17:22:29 +0000
+Cannot render console from 10.240.0.157! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 10.240.0.147 at 2016-04-11 17:22:29 +0000
+Cannot render console from 10.240.0.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 10.240.0.167 at 2016-04-11 17:22:29 +0000
+Cannot render console from 10.240.0.167! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 10.240.0.186 at 2016-04-11 17:22:29 +0000
+Cannot render console from 10.240.0.186! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 10.240.0.165 at 2016-04-11 17:22:29 +0000
+Cannot render console from 10.240.0.165! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/im3-554298bfba1eab7ed16dfc520f300082d3924d01db3b2eeabad3907c8443852c.png" for 10.240.0.75 at 2016-04-11 17:22:29 +0000
+Cannot render console from 10.240.0.75! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/login_attempt" for 10.240.0.189 at 2016-04-11 17:22:42 +0000
+Cannot render console from 10.240.0.189! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KjagTjz/UOp9P+R5XZdmXo6wtsf5zuXObBC183frZqb/ycpp/fUoya7lk5h7KZ8BA8OpIFTSLVGZlf/dBiD03A==", "email"=>"mdtest@mail.com", "login_password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "mdtest@mail.com"]]
+Redirected to http://csce431-steevymathew.c9users.io:8080/login
+Completed 302 Found in 53ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/login" for 10.240.0.189 at 2016-04-11 17:22:42 +0000
+Cannot render console from 10.240.0.189! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login as HTML
+  Rendered sessions/login.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 167ms (Views: 166.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 10.240.0.75 at 2016-04-11 17:22:46 +0000
+Cannot render console from 10.240.0.75! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.haml within layouts/application (15.6ms)
+Completed 200 OK in 242ms (Views: 228.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/create" for 10.240.0.179 at 2016-04-11 17:23:30 +0000
+Cannot render console from 10.240.0.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2jlMNiQ1QLv2XkHbRwDgWwHHeSNhQZASd2Lk//0ducYPxiYR5T84mCWENjphvhkEjLRmxMxdWI2C567RjNYrvA==", "email"=>"mdtest@mail.com", "password"=>"[FILTERED]", "pswdconfirm"=>"password", "lastname"=>"d", "firstname"=>"m", "gender"=>"male", "zipcode"=>"75089", "commit"=>"Create"}
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'mdtest@mail.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'mdtest@mail.com' LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("email", "lastname", "firstname", "gender", "level", "zipcode", "salt", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["email", "mdtest@mail.com"], ["lastname", "d"], ["firstname", "m"], ["gender", "male"], ["level", 1], ["zipcode", "75089"], ["salt", "$2a$10$8mZPLS03E6LpWOAzshqT2."], ["encrypted_password", "$2a$10$8mZPLS03E6LpWOAzshqT2.q9lH.YFeMMnoUaDRET6PrtDcgjtffmC"], ["created_at", "2016-04-11 17:23:30.731718"], ["updated_at", "2016-04-11 17:23:30.731718"]]
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://csce431-steevymathew.c9users.io:8080/allevent
+Completed 302 Found in 245ms (ActiveRecord: 11.2ms)
+
+
+Started GET "/allevent" for 10.240.0.186 at 2016-04-11 17:23:30 +0000
+Cannot render console from 10.240.0.186! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/allevent.html.haml within layouts/application (33.9ms)
+Completed 200 OK in 222ms (Views: 211.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/fontawesome-webfont-a7c7e4930090e038a280fd61d88f0dc03dad4aeaedbd8c9be3dd9aa4c3b6f8d1.woff" for 10.240.0.189 at 2016-04-11 17:23:31 +0000
+Cannot render console from 10.240.0.189! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/home" for 10.240.0.204 at 2016-04-11 17:23:40 +0000
+Cannot render console from 10.240.0.204! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mVehicle Load (0.4ms)[0m  [1mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered sessions/home.html.haml within layouts/application (14.3ms)
+Completed 200 OK in 231ms (Views: 206.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/allevent" for 10.240.0.189 at 2016-04-11 17:23:45 +0000
+Cannot render console from 10.240.0.189! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/allevent.html.haml within layouts/application (23.4ms)
+Completed 200 OK in 311ms (Views: 308.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/eventsurvey?eid=1" for 10.240.0.179 at 2016-04-11 17:23:49 +0000
+Cannot render console from 10.240.0.179! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#showquestion as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."uid" = ? AND "answers"."eid" = ?  [["uid", 4], ["eid", 1]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."eid" = ?[0m  [["eid", 1]]
+  Rendered answers/showquestion.html.haml within layouts/application (57.3ms)
+Completed 200 OK in 333ms (Views: 273.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/show_question.self-8dd4e96ed457582df05f95c4af0302a7606271a5ae1354f9bfbbf68a6c4324ec.js?body=1" for 10.240.0.110 at 2016-04-11 17:23:49 +0000
+Cannot render console from 10.240.0.110! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/eventsurvey" for 10.240.0.110 at 2016-04-11 17:24:07 +0000
+Cannot render console from 10.240.0.110! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uzDl2YlpuJ5tPF9GOVfM5iCYwSwAS711Q8a82hq1rm1uz4/+SGPAvb7mKKcf6TW5revey61Xdeq2Q/b0a348Fw==", "q_eid"=>"1", "Q1"=>{"answer"=>"a1"}, "Q2_checkboxes"=>{"answer1"=>"1"}, "Q2001001"=>{"answer"=>""}, "commit"=>"Submit"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+Redirected to http://csce431-steevymathew.c9users.io:8080/login
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions"."qtitle" FROM "questions" WHERE "questions"."eid" = ? AND "questions"."qid" = ? LIMIT 1  [["eid", 1], ["qid", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "answers" ("uid", "qid", "qtitle", "eid", "answer", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["uid", 4], ["qid", 1], ["qtitle", "qq1"], ["eid", 1], ["answer", "a1"], ["created_at", "2016-04-11 17:24:07.139217"], ["updated_at", "2016-04-11 17:24:07.139217"]]
+  [1m[36m (11.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions"."qtitle" FROM "questions" WHERE "questions"."eid" = ? AND "questions"."qid" = ? LIMIT 1  [["eid", 1], ["qid", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "answers" ("uid", "qid", "qtitle", "eid", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["uid", 4], ["qid", 2], ["qtitle", "qq2"], ["eid", 1], ["created_at", "2016-04-11 17:24:07.155948"], ["updated_at", "2016-04-11 17:24:07.155948"]]
+  [1m[36m (15.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mQuestion Load (2.0ms)[0m  SELECT  "questions"."qtitle" FROM "questions" WHERE "questions"."eid" = ? AND "questions"."qid" = ? LIMIT 1  [["eid", 1], ["qid", 2001001]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "answers" ("uid", "qid", "qtitle", "eid", "answer", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["uid", 4], ["qid", 2001001], ["qtitle", "dfadasdasdasd"], ["eid", 1], ["answer", ""], ["created_at", "2016-04-11 17:24:07.184100"], ["updated_at", "2016-04-11 17:24:07.184100"]]
+  [1m[36m (7.0ms)[0m  [1mcommit transaction[0m
+Redirected to 
+Completed 500 Internal Server Error in 71ms (ActiveRecord: 38.7ms)
+
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/answers_controller.rb:61:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (17.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (101.3ms)
+
+
+Started GET "/" for 165.91.12.202 at 2016-04-11 17:35:15 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#login as HTML
+Redirected to https://csce431-steevymathew.c9users.io/home
+Filter chain halted as :save_login_state rendered or redirected
+Completed 302 Found in 23ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 165.91.12.202 at 2016-04-11 17:35:16 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mVehicle Load (0.4ms)[0m  [1mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered sessions/home.html.haml within layouts/application (27.0ms)
+Completed 200 OK in 433ms (Views: 350.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.12.202 at 2016-04-11 17:35:17 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/answers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.12.202 at 2016-04-11 17:35:17 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-datetimepicker.min.self-788e29abac8dcfbc60d7f7490dd02b623d42c2174b604ebff6e8faa66c5d876e.css?body=1" for 165.91.12.202 at 2016-04-11 17:35:17 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-603f330c29af013305325569c8c75d03d688963abd8cde4fffec17b5ce417bfb.css?body=1" for 165.91.12.202 at 2016-04-11 17:35:17 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for 165.91.12.202 at 2016-04-11 17:35:17 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/data.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.12.202 at 2016-04-11 17:35:17 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.12.202 at 2016-04-11 17:35:17 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-2fe4f8a61d73606fbcb036b41f380591906a4da65a9eb5ec0a210fe6980b2ca7.css?body=1" for 165.91.12.202 at 2016-04-11 17:35:17 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/questions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.12.202 at 2016-04-11 17:35:17 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-0de50f0224d6e8cae3e2502cc1d9cfabdc0d76270f21057592cf35d51d65ebfb.css?body=1" for 165.91.12.202 at 2016-04-11 17:35:17 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.12.202 at 2016-04-11 17:35:17 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.12.202 at 2016-04-11 17:35:17 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-a889e7abcadb5dbdb0529c0dc69d5a86744647c95c657e19413c888ea981fd29.css?body=1" for 165.91.12.202 at 2016-04-11 17:35:17 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 165.91.12.202 at 2016-04-11 17:35:17 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 165.91.12.202 at 2016-04-11 17:35:17 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 165.91.12.202 at 2016-04-11 17:35:17 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 165.91.12.202 at 2016-04-11 17:35:17 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 165.91.12.202 at 2016-04-11 17:35:17 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 165.91.12.202 at 2016-04-11 17:35:17 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 165.91.12.202 at 2016-04-11 17:35:17 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 165.91.12.202 at 2016-04-11 17:35:17 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 165.91.12.202 at 2016-04-11 17:35:17 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 165.91.12.202 at 2016-04-11 17:35:17 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 165.91.12.202 at 2016-04-11 17:35:17 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 165.91.12.202 at 2016-04-11 17:35:17 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 165.91.12.202 at 2016-04-11 17:35:17 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 165.91.12.202 at 2016-04-11 17:35:17 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 165.91.12.202 at 2016-04-11 17:35:17 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 165.91.12.202 at 2016-04-11 17:35:17 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 165.91.12.202 at 2016-04-11 17:35:17 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/fontawesome-webfont-a7c7e4930090e038a280fd61d88f0dc03dad4aeaedbd8c9be3dd9aa4c3b6f8d1.woff" for 165.91.12.202 at 2016-04-11 17:35:17 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/allevent" for 165.91.12.202 at 2016-04-11 17:35:20 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/allevent.html.haml within layouts/application (16.2ms)
+Completed 200 OK in 206ms (Views: 201.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/im3-554298bfba1eab7ed16dfc520f300082d3924d01db3b2eeabad3907c8443852c.png" for 165.91.12.202 at 2016-04-11 17:35:20 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/eventsurvey?eid=1" for 165.91.12.202 at 2016-04-11 17:35:22 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#showquestion as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."uid" = ? AND "answers"."eid" = ?  [["uid", 4], ["eid", 1]]
+Redirected to https://csce431-steevymathew.c9users.io/allevent
+Completed 302 Found in 20ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/allevent" for 165.91.12.202 at 2016-04-11 17:35:22 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/allevent.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 195ms (Views: 193.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/eventsurvey?eid=1" for 165.91.12.202 at 2016-04-11 17:35:24 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#showquestion as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."uid" = ? AND "answers"."eid" = ?[0m  [["uid", 4], ["eid", 1]]
+Redirected to https://csce431-steevymathew.c9users.io/allevent
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/allevent" for 165.91.12.202 at 2016-04-11 17:35:24 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/allevent.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 204ms (Views: 202.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/allevent" for 165.91.12.202 at 2016-04-11 17:35:30 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/allevent.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 245ms (Views: 242.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/allevent" for 165.91.12.202 at 2016-04-11 17:35:33 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/allevent.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 308ms (Views: 305.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/home" for 165.91.12.202 at 2016-04-11 17:35:36 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mVehicle Load (0.2ms)[0m  [1mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered sessions/home.html.haml within layouts/application (31.4ms)
+Completed 200 OK in 221ms (Views: 218.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/logout" for 165.91.12.202 at 2016-04-11 17:35:44 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#logout as HTML
+Redirected to https://csce431-steevymathew.c9users.io/
+Completed 302 Found in 75ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.12.202 at 2016-04-11 17:35:44 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login as HTML
+  Rendered sessions/login.html.haml within layouts/application (13.9ms)
+Completed 200 OK in 182ms (Views: 181.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login_attempt" for 165.91.12.202 at 2016-04-11 17:35:56 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LAo5f8RXzy1OmuWUyfiY6x+0DDXOVGCM78PcP2DtevH59VNYBV23Dp1AknXvRmG0kscT0mNIqBMaRpYRESboiw==", "email"=>"info@americangimuseum.org", "login_password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "info@americangimuseum.org"]]
+Redirected to https://csce431-steevymathew.c9users.io/admin
+Completed 302 Found in 114ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/admin" for 165.91.12.202 at 2016-04-11 17:35:56 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  Rendered admin/index.html.haml within layouts/application (15.0ms)
+Completed 200 OK in 169ms (Views: 167.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/EventCreate" for 165.91.12.202 at 2016-04-11 17:36:01 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#create as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered events/create.html.haml within layouts/application (100.0ms)
+Completed 200 OK in 268ms (Views: 265.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/date.self-17576b0c7d23a7382cfaecb35f64494b6662c217b664ad4b3f479ff1572a9aa0.js?body=1" for 165.91.12.202 at 2016-04-11 17:36:01 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/EventCreate" for 165.91.12.202 at 2016-04-11 17:36:13 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LGuZAdb4CyisTMcHLA1Qd8lJGT95Jqe8r+jtM8W9Ulz5lPMmF/JzC3+WsOYKs6koRDoG2NQ6byNabacdtHbAJg==", "Title"=>";iug", "Location"=>"job", "Description"=>"iugu", "Start_Date"=>"2016-04-15", "End_Date"=>"2016-05-06", "commit"=>"Create"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "events" ("etitle", "elocation", "estart", "eend", "edescription", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["etitle", ";iug"], ["elocation", "job"], ["estart", "2016-04-15"], ["eend", "2016-05-06"], ["edescription", "iugu"], ["created_at", "2016-04-11 17:36:13.097279"], ["updated_at", "2016-04-11 17:36:13.097279"]]
+  [1m[36m (16.1ms)[0m  [1mcommit transaction[0m
+Redirected to https://csce431-steevymathew.c9users.io/eventshow?eid=2
+Completed 302 Found in 177ms (ActiveRecord: 17.0ms)
+
+
+Started GET "/eventshow?eid=2" for 165.91.12.202 at 2016-04-11 17:36:13 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#show as HTML
+  Parameters: {"eid"=>"2"}
+  [1m[35mEvent Load (0.3ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered events/show.html.haml within layouts/application (10.5ms)
+Completed 200 OK in 193ms (Views: 190.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/QuestionCreate?eid=2" for 165.91.12.202 at 2016-04-11 17:36:15 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered questions/create.html.haml within layouts/application (171.6ms)
+Completed 200 OK in 316ms (Views: 313.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/create_event.self-a72aa8672ac733b76d5b35167cfccc8b0e3616ad5a583ba4a572be4333def378.js?body=1" for 165.91.12.202 at 2016-04-11 17:36:16 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/QuestionCreate" for 165.91.12.202 at 2016-04-11 17:36:21 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"knKbI0zzK9o/aGDCkOpc8mdDjQGzYlyD2Uq05fIofAJHjfEEjflT+eyyFyO2VKWt6jCS5h5+lBwsz/7Lg+PueA==", "q_eid"=>"2", "Q1"=>{"title"=>"lknn", "type"=>"1"}, "commit"=>"Create"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "questions" ("qid", "eid", "qtitle", "qtype", "qoption", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["qid", 1], ["eid", 2], ["qtitle", "lknn"], ["qtype", "1"], ["qoption", ""], ["created_at", "2016-04-11 17:36:21.249985"], ["updated_at", "2016-04-11 17:36:21.249985"]]
+  [1m[36m (17.1ms)[0m  [1mcommit transaction[0m
+Redirected to https://csce431-steevymathew.c9users.io/questionshow?eid=2
+Completed 302 Found in 37ms (ActiveRecord: 18.0ms)
+
+
+Started GET "/questionshow?eid=2" for 165.91.12.202 at 2016-04-11 17:36:21 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#show as HTML
+  Parameters: {"eid"=>"2"}
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."eid" = ?  [["eid", 2]]
+  Rendered questions/show.html.haml within layouts/application (10.4ms)
+Completed 200 OK in 168ms (Views: 166.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/allevent" for 165.91.12.202 at 2016-04-11 17:36:23 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[36mUser Load (80.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to https://csce431-steevymathew.c9users.io/admin
+Completed 302 Found in 84ms (ActiveRecord: 80.4ms)
+
+
+Started GET "/admin" for 165.91.12.202 at 2016-04-11 17:36:23 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered admin/index.html.haml within layouts/application (22.4ms)
+Completed 200 OK in 252ms (Views: 249.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/logout" for 165.91.12.202 at 2016-04-11 17:36:27 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#logout as HTML
+Redirected to https://csce431-steevymathew.c9users.io/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.12.202 at 2016-04-11 17:36:27 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login as HTML
+  Rendered sessions/login.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 152ms (Views: 151.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login_attempt" for 165.91.12.202 at 2016-04-11 17:36:36 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1hOeUWBnCDQzX4P9RkbSvmYMwCIKZsaf7l5+nmmwplED7PR2oW1wF+CF9Bxg+Cvh63/fxad6DgAb2zSwGHs0Kw==", "email"=>"mdtest@mail.com", "login_password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "mdtest@mail.com"]]
+Redirected to https://csce431-steevymathew.c9users.io/allevent
+Completed 302 Found in 101ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/allevent" for 165.91.12.202 at 2016-04-11 17:36:37 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/allevent.html.haml within layouts/application (17.8ms)
+Completed 200 OK in 397ms (Views: 227.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/eventsurvey?eid=2" for 165.91.12.202 at 2016-04-11 17:36:40 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#showquestion as HTML
+  Parameters: {"eid"=>"2"}
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."uid" = ? AND "answers"."eid" = ?[0m  [["uid", 4], ["eid", 2]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."eid" = ?  [["eid", 2]]
+  Rendered answers/showquestion.html.haml within layouts/application (36.5ms)
+Completed 200 OK in 328ms (Views: 325.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/show_question.self-8dd4e96ed457582df05f95c4af0302a7606271a5ae1354f9bfbbf68a6c4324ec.js?body=1" for 165.91.12.202 at 2016-04-11 17:36:40 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/eventsurvey" for 165.91.12.202 at 2016-04-11 17:36:43 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+U+FFFV6h3sEr4EuUAHyZmbgd5uFibU99HPKMRaiDvIssO8zlHD/WNd19s92vws565NofCiVfaIB9oAfZ2mciA==", "q_eid"=>"2", "Q1"=>{"answer"=>"uoh"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions"."qtitle" FROM "questions" WHERE "questions"."eid" = ? AND "questions"."qid" = ? LIMIT 1  [["eid", 2], ["qid", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "answers" ("uid", "qid", "qtitle", "eid", "answer", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["uid", 4], ["qid", 1], ["qtitle", "lknn"], ["eid", 2], ["answer", "uoh"], ["created_at", "2016-04-11 17:36:43.924069"], ["updated_at", "2016-04-11 17:36:43.924069"]]
+  [1m[36m (129.9ms)[0m  [1mcommit transaction[0m
+Redirected to https://csce431-steevymathew.c9users.io/answershow
+Completed 302 Found in 138ms (ActiveRecord: 131.9ms)
+
+
+Started GET "/answershow" for 165.91.12.202 at 2016-04-11 17:36:44 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#show as HTML
+  Rendered answers/show.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 163ms (Views: 161.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.12.202 at 2016-04-11 17:38:43 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#login as HTML
+Redirected to https://csce431-steevymathew.c9users.io/home
+Filter chain halted as :save_login_state rendered or redirected
+Completed 302 Found in 31ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 165.91.12.202 at 2016-04-11 17:38:44 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mVehicle Load (0.3ms)[0m  [1mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered sessions/home.html.haml within layouts/application (30.1ms)
+Completed 200 OK in 633ms (Views: 530.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/allevent" for 165.91.12.202 at 2016-04-11 17:38:49 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/allevent.html.haml within layouts/application (30.6ms)
+Completed 200 OK in 193ms (Views: 186.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/logout" for 165.91.12.202 at 2016-04-11 17:38:52 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#logout as HTML
+Redirected to https://csce431-steevymathew.c9users.io/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.12.202 at 2016-04-11 17:38:52 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login as HTML
+  Rendered sessions/login.html.haml within layouts/application (12.6ms)
+Completed 200 OK in 181ms (Views: 179.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login_attempt" for 165.91.12.202 at 2016-04-11 17:39:21 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BDfjtXM3UQm/b9Wtb2j0EYLiie2O+aAC0CjeW9IbKu3RyImSsj0pKmy1okxJ1g1OD5GWCiPlaJ0lrZR1o9C4lw==", "email"=>"info@americangimuseum.org", "login_password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "info@americangimuseum.org"]]
+Redirected to https://csce431-steevymathew.c9users.io/admin
+Completed 302 Found in 87ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/admin" for 165.91.12.202 at 2016-04-11 17:39:21 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  Rendered admin/index.html.haml within layouts/application (9.5ms)
+Completed 200 OK in 177ms (Views: 175.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/EventCreate" for 165.91.12.202 at 2016-04-11 17:39:23 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#create as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered events/create.html.haml within layouts/application (22.7ms)
+Completed 200 OK in 328ms (Views: 219.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/EventCreate" for 165.91.12.202 at 2016-04-11 17:39:40 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ikOg8TuJ92Znlw0aDmR47QEwSWwHQ4Wt0/R4M+1bIttfvMrW+oOPRbRNevso2oGyjENWi6pfTTImcTIdnJCwoQ==", "Title"=>"zrdxtkfclgv", "Location"=>"rcylvhbk", "Description"=>"uohu;ho", "Start_Date"=>"2016-03-27", "End_Date"=>"2016-05-05", "commit"=>"Create"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "events" ("etitle", "elocation", "estart", "eend", "edescription", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["etitle", "zrdxtkfclgv"], ["elocation", "rcylvhbk"], ["estart", "2016-03-27"], ["eend", "2016-05-05"], ["edescription", "uohu;ho"], ["created_at", "2016-04-11 17:39:40.291950"], ["updated_at", "2016-04-11 17:39:40.291950"]]
+  [1m[36m (10.3ms)[0m  [1mcommit transaction[0m
+Redirected to https://csce431-steevymathew.c9users.io/eventshow?eid=3
+Completed 302 Found in 176ms (ActiveRecord: 11.1ms)
+
+
+Started GET "/eventshow?eid=3" for 165.91.12.202 at 2016-04-11 17:39:40 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#show as HTML
+  Parameters: {"eid"=>"3"}
+  [1m[35mEvent Load (0.4ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered events/show.html.haml within layouts/application (7.2ms)
+Completed 200 OK in 239ms (Views: 236.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/QuestionCreate?eid=3" for 165.91.12.202 at 2016-04-11 17:39:43 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered questions/create.html.haml within layouts/application (28.2ms)
+Completed 200 OK in 367ms (Views: 245.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/QuestionCreate" for 165.91.12.202 at 2016-04-11 17:39:48 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kKkVQVXKeJj/RPtfZYtIv6IiCDPbf+WSR+AL+qxttzNFVn9mlMAAuyyejL5DNbHgL1EX1HZjLQ2yZUHU3aYlSQ==", "q_eid"=>"3", "Q1"=>{"title"=>"giy", "type"=>"1"}, "commit"=>"Create"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "questions" ("qid", "eid", "qtitle", "qtype", "qoption", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["qid", 1], ["eid", 3], ["qtitle", "giy"], ["qtype", "1"], ["qoption", ""], ["created_at", "2016-04-11 17:39:48.646763"], ["updated_at", "2016-04-11 17:39:48.646763"]]
+  [1m[36m (10.8ms)[0m  [1mcommit transaction[0m
+Redirected to https://csce431-steevymathew.c9users.io/questionshow?eid=3
+Completed 302 Found in 181ms (ActiveRecord: 13.0ms)
+
+
+Started GET "/questionshow?eid=3" for 165.91.12.202 at 2016-04-11 17:39:48 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#show as HTML
+  Parameters: {"eid"=>"3"}
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."eid" = ?  [["eid", 3]]
+  Rendered questions/show.html.haml within layouts/application (12.0ms)
+Completed 200 OK in 221ms (Views: 219.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/allevent" for 165.91.12.202 at 2016-04-11 17:39:51 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to https://csce431-steevymathew.c9users.io/admin
+Completed 302 Found in 5ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/admin" for 165.91.12.202 at 2016-04-11 17:39:52 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (3.8ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered admin/index.html.haml within layouts/application (35.1ms)
+Completed 200 OK in 340ms (Views: 334.2ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/EventCreate" for 165.91.12.202 at 2016-04-11 17:39:56 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#create as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/create.html.haml within layouts/application (7.7ms)
+Completed 200 OK in 343ms (Views: 307.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/EventCreate" for 165.91.12.202 at 2016-04-11 17:40:00 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xfhtRXAOvyUS/pDvnpLttvQbsDmdj3XlsFMSZXryT9gQBwdisQTHBsEk5w64LBTpeWiv3jCTvXpF1lhLCzndog==", "Title"=>"", "Location"=>"", "Description"=>"", "Start_Date"=>"", "End_Date"=>"", "commit"=>"Create"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "events" ("etitle", "elocation", "edescription", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["etitle", ""], ["elocation", ""], ["edescription", ""], ["created_at", "2016-04-11 17:40:00.030640"], ["updated_at", "2016-04-11 17:40:00.030640"]]
+  [1m[35m (24.6ms)[0m  commit transaction
+Redirected to https://csce431-steevymathew.c9users.io/eventshow?eid=4
+Completed 302 Found in 30ms (ActiveRecord: 25.4ms)
+
+
+Started GET "/eventshow?eid=4" for 165.91.12.202 at 2016-04-11 17:40:00 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#show as HTML
+  Parameters: {"eid"=>"4"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered events/show.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 185ms (Views: 183.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/QuestionCreate?eid=4" for 165.91.12.202 at 2016-04-11 17:40:02 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"4"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered questions/create.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 262ms (Views: 260.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/QuestionCreate" for 165.91.12.202 at 2016-04-11 17:40:04 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"52oCAj1nQohxoh+qWGuB9Pc14AHxblLmv9X/hOSp3fEylWgl/G06q6J4aEt+1Xirekb/5lxymnlKULWqlWJPiw==", "q_eid"=>"4", "Q1"=>{"title"=>"", "type"=>"1"}, "commit"=>"Create"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered questions/create.html.haml within layouts/application (36.2ms)
+Completed 200 OK in 314ms (Views: 311.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/QuestionCreate" for 165.91.12.202 at 2016-04-11 17:40:09 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HpKOyNxJFJilwqy10arfSLvPXQ4piyFsXWcg6bMuR9bLbeTvHUNsu3YY21T3FCYXNrxC6YSX6fOo4mrHwuXVrA==", "q_eid"=>"", "Q1"=>{"title"=>" k;", "type"=>"1"}, "commit"=>"Create"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered questions/create.html.haml within layouts/application (6.5ms)
+Completed 200 OK in 283ms (Views: 243.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/QuestionCreate" for 165.91.12.202 at 2016-04-11 17:40:12 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4A86UdFnD85jvyfpb9felFfMfCwD025y350jnyxM5KA18FB2EG137bBlUAhJaSfL2r9jy67Ppu0qGGmxXYd22g==", "q_eid"=>"", "Q1"=>{"title"=>"", "type"=>"1"}, "commit"=>"Create"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered questions/create.html.haml within layouts/application (6.5ms)
+Completed 200 OK in 181ms (Views: 179.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/QuestionCreate" for 165.91.12.202 at 2016-04-11 17:40:14 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Coub1idwFuF+ww3xrQW6cQb2IaSeeHRSdSmWek7yLXjfdPHx5npuwq0ZehCLu0Mui4U+QzNkvM2ArNxUPzm/Ag==", "q_eid"=>"", "Q1"=>{"title"=>"", "type"=>"1"}, "commit"=>"Create"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered questions/create.html.haml within layouts/application (8.5ms)
+Completed 200 OK in 218ms (Views: 214.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/QuestionCreate" for 165.91.12.202 at 2016-04-11 17:40:16 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+pwvQM1z17CT0F0GuTBFNivU4JAMVoeZ7mnL5uTenUQvY0VnDHmvk0AKKuefjrxppqf/d6FKTwYb7IHIlRUPPg==", "q_eid"=>"", "Q1"=>{"title"=>"", "type"=>"1"}, "commit"=>"Create"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered questions/create.html.haml within layouts/application (8.6ms)
+Completed 200 OK in 256ms (Views: 250.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/QuestionCreate" for 165.91.12.202 at 2016-04-11 17:40:40 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8K29ihJZh2yAgr820VRAlBtsK28dhtUcc2cUVrY4sHslUtet01P/T1NYyNf36rnLlh80iLCaHYOG4l54x/MiAQ==", "q_eid"=>"", "Q1"=>{"title"=>";lm;", "type"=>"1"}, "Q2"=>{"title"=>";lm", "type"=>"1"}, "commit"=>"Create"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered questions/create.html.haml within layouts/application (6.4ms)
+Completed 200 OK in 274ms (Views: 271.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/eventshow?eid=4" for 165.91.12.202 at 2016-04-11 17:40:54 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#show as HTML
+  Parameters: {"eid"=>"4"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered events/show.html.haml within layouts/application (35.1ms)
+Completed 200 OK in 294ms (Views: 291.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/QuestionCreate?eid=4" for 165.91.12.202 at 2016-04-11 17:40:56 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"4"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered questions/create.html.haml within layouts/application (19.0ms)
+Completed 200 OK in 274ms (Views: 263.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/QuestionCreate" for 165.91.12.202 at 2016-04-11 17:41:01 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"li74Y+//owDOBu4I1hX+0X+lxaB11PMK4XgEJfo5u+xD0ZJELvXbIx3cmenwqweO8tbaR9jIO5UU/U4Li/Iplg==", "q_eid"=>"4", "Q1"=>{"title"=>"iuj", "type"=>"1"}, "commit"=>"Create"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "questions" ("qid", "eid", "qtitle", "qtype", "qoption", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["qid", 1], ["eid", 4], ["qtitle", "iuj"], ["qtype", "1"], ["qoption", ""], ["created_at", "2016-04-11 17:41:01.294922"], ["updated_at", "2016-04-11 17:41:01.294922"]]
+  [1m[35m (161.0ms)[0m  commit transaction
+Redirected to https://csce431-steevymathew.c9users.io/questionshow?eid=4
+Completed 302 Found in 176ms (ActiveRecord: 161.8ms)
+
+
+Started GET "/questionshow?eid=4" for 165.91.12.202 at 2016-04-11 17:41:01 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#show as HTML
+  Parameters: {"eid"=>"4"}
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."eid" = ?[0m  [["eid", 4]]
+  Rendered questions/show.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 347ms (Views: 345.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/allevent" for 165.91.12.202 at 2016-04-11 17:41:11 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Redirected to https://csce431-steevymathew.c9users.io/admin
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/admin" for 165.91.12.202 at 2016-04-11 17:41:11 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"
+  Rendered admin/index.html.haml within layouts/application (6.4ms)
+Completed 200 OK in 210ms (Views: 205.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/EventCreate" for 165.91.12.202 at 2016-04-11 17:41:19 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#create as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered events/create.html.haml within layouts/application (7.8ms)
+Completed 200 OK in 316ms (Views: 314.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/EventCreate" for 165.91.12.202 at 2016-04-11 17:41:21 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NEVkPe/tbdtmXFz9wECqM0IDELvkzksjavq0HKXhdEDhug4aLucV+LWGKxzm/lNsz3APXEnSg7yff/4y1CrmOg==", "Title"=>"", "Location"=>"", "Description"=>"", "Start_Date"=>"", "End_Date"=>"", "commit"=>"Create"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "events" ("etitle", "elocation", "edescription", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["etitle", ""], ["elocation", ""], ["edescription", ""], ["created_at", "2016-04-11 17:41:21.722823"], ["updated_at", "2016-04-11 17:41:21.722823"]]
+  [1m[36m (133.2ms)[0m  [1mcommit transaction[0m
+Redirected to https://csce431-steevymathew.c9users.io/eventshow?eid=5
+Completed 302 Found in 138ms (ActiveRecord: 133.8ms)
+
+
+Started GET "/eventshow?eid=5" for 165.91.12.202 at 2016-04-11 17:41:22 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#show as HTML
+  Parameters: {"eid"=>"5"}
+  [1m[35mEvent Load (0.3ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered events/show.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 231ms (Views: 228.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/QuestionCreate?eid=5" for 165.91.12.202 at 2016-04-11 17:41:24 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered questions/create.html.haml within layouts/application (7.3ms)
+Completed 200 OK in 324ms (Views: 321.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/QuestionCreate" for 165.91.12.202 at 2016-04-11 17:41:28 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fURaFFVGWHsJ4oqUoqWIYEgvjGScAkYPliTUxruAmMqouzAzlEwgWNo4/XWEG3E/xVyTgzEejpBjoZ7oyksKsA==", "q_eid"=>"5", "Q1"=>{"title"=>"lj ", "type"=>"1"}, "commit"=>"Create"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "questions" ("qid", "eid", "qtitle", "qtype", "qoption", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["qid", 1], ["eid", 5], ["qtitle", "lj "], ["qtype", "1"], ["qoption", ""], ["created_at", "2016-04-11 17:41:28.446515"], ["updated_at", "2016-04-11 17:41:28.446515"]]
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+Redirected to https://csce431-steevymathew.c9users.io/questionshow?eid=5
+Completed 302 Found in 162ms (ActiveRecord: 10.7ms)
+
+
+Started GET "/questionshow?eid=5" for 165.91.12.202 at 2016-04-11 17:41:28 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#show as HTML
+  Parameters: {"eid"=>"5"}
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."eid" = ?  [["eid", 5]]
+  Rendered questions/show.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 225ms (Views: 223.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/allevent" for 165.91.12.202 at 2016-04-11 17:41:30 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to https://csce431-steevymathew.c9users.io/admin
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/admin" for 165.91.12.202 at 2016-04-11 17:41:31 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#index as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered admin/index.html.haml within layouts/application (6.2ms)
+Completed 200 OK in 240ms (Views: 236.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/logout" for 165.91.12.202 at 2016-04-11 17:41:32 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#logout as HTML
+Redirected to https://csce431-steevymathew.c9users.io/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.12.202 at 2016-04-11 17:41:32 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login as HTML
+  Rendered sessions/login.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 205ms (Views: 204.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login_attempt" for 165.91.12.202 at 2016-04-11 17:41:45 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+i/M9eYTOoc/9oosZmerw2sqD66p4XOFIZ8hOxrkAiYv0KbSJxlCpOws/c1A2VKc5lkQSQT9uxrUGmsVay+QXA==", "email"=>"mdtest@mail.com", "login_password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "mdtest@mail.com"]]
+Redirected to https://csce431-steevymathew.c9users.io/allevent
+Completed 302 Found in 112ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/allevent" for 165.91.12.202 at 2016-04-11 17:41:45 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/allevent.html.haml within layouts/application (32.3ms)
+Completed 200 OK in 294ms (Views: 291.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/eventsurvey?eid=5" for 165.91.12.202 at 2016-04-11 17:41:54 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#showquestion as HTML
+  Parameters: {"eid"=>"5"}
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."uid" = ? AND "answers"."eid" = ?[0m  [["uid", 4], ["eid", 5]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."eid" = ?  [["eid", 5]]
+  Rendered answers/showquestion.html.haml within layouts/application (43.6ms)
+Completed 200 OK in 371ms (Views: 268.6ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/eventsurvey" for 165.91.12.202 at 2016-04-11 17:41:59 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hv8Klyaw18puBCAbIhRrqR0SL0hjfvgYzLSJ69De4bRTAGCw57qv6b3eV/oEqpL2kGEwr85iMIc5McPFoRVzzg==", "q_eid"=>"5", "Q1"=>{"answer"=>"pij"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions"."qtitle" FROM "questions" WHERE "questions"."eid" = ? AND "questions"."qid" = ? LIMIT 1  [["eid", 5], ["qid", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "answers" ("uid", "qid", "qtitle", "eid", "answer", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["uid", 4], ["qid", 1], ["qtitle", "lj "], ["eid", 5], ["answer", "pij"], ["created_at", "2016-04-11 17:41:59.883161"], ["updated_at", "2016-04-11 17:41:59.883161"]]
+  [1m[36m (8.9ms)[0m  [1mcommit transaction[0m
+Redirected to https://csce431-steevymathew.c9users.io/answershow
+Completed 302 Found in 42ms (ActiveRecord: 15.2ms)
+
+
+Started GET "/answershow" for 165.91.12.202 at 2016-04-11 17:42:00 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#show as HTML
+  Rendered answers/show.html.haml within layouts/application (6.7ms)
+Completed 200 OK in 223ms (Views: 221.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/QuestionCreate" for 165.91.12.202 at 2016-04-11 17:46:16 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#create as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+Redirected to https://csce431-steevymathew.c9users.io/login
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 1.9ms)
+
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/questions_controller.rb:25:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (166.3ms)
+
+
+Started GET "/" for 165.91.12.202 at 2016-04-11 17:47:05 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#login as HTML
+Redirected to https://csce431-steevymathew.c9users.io/home
+Filter chain halted as :save_login_state rendered or redirected
+Completed 302 Found in 23ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 165.91.12.202 at 2016-04-11 17:47:06 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mVehicle Load (0.2ms)[0m  [1mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered sessions/home.html.haml within layouts/application (27.2ms)
+Completed 200 OK in 470ms (Views: 378.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/allevent" for 165.91.12.202 at 2016-04-11 17:47:09 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/allevent.html.haml within layouts/application (28.6ms)
+Completed 200 OK in 188ms (Views: 182.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/eventsurvey?eid=4" for 165.91.12.202 at 2016-04-11 17:47:14 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#showquestion as HTML
+  Parameters: {"eid"=>"4"}
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."uid" = ? AND "answers"."eid" = ?  [["uid", 4], ["eid", 4]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."eid" = ?[0m  [["eid", 4]]
+  Rendered answers/showquestion.html.haml within layouts/application (21.4ms)
+Completed 200 OK in 162ms (Views: 154.7ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/eventsurvey" for 165.91.12.202 at 2016-04-11 17:47:20 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"igE6aXwKXPmQpcXGnV9nJLdp8Tiybz66IJV93rjV56Rf/lBOvQAk2kN/sie74Z57Ohru3x9z9iXVEDfwyR513g==", "q_eid"=>"4", "Q1"=>{"answer"=>"uoh"}, "commit"=>"Submit"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+Redirected to https://csce431-steevymathew.c9users.io/login
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions"."qtitle" FROM "questions" WHERE "questions"."eid" = ? AND "questions"."qid" = ? LIMIT 1  [["eid", 4], ["qid", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "answers" ("uid", "qid", "qtitle", "eid", "answer", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["uid", 4], ["qid", 1], ["qtitle", "iuj"], ["eid", 4], ["answer", "uoh"], ["created_at", "2016-04-11 17:47:20.549203"], ["updated_at", "2016-04-11 17:47:20.549203"]]
+  [1m[36m (13.7ms)[0m  [1mcommit transaction[0m
+Redirected to 
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 14.8ms)
+
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/answers_controller.rb:62:in `create'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (13.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (123.0ms)
+
+
+Started GET "/logout" for 165.91.12.202 at 2016-04-11 17:48:46 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#logout as HTML
+Redirected to https://csce431-steevymathew.c9users.io/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.12.202 at 2016-04-11 17:48:46 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login as HTML
+  Rendered sessions/login.html.haml within layouts/application (12.8ms)
+Completed 200 OK in 234ms (Views: 233.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/allevent" for 165.91.12.202 at 2016-04-11 17:48:53 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", nil]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.4ms)
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=):
+  app/controllers/events_controller.rb:88:in `allevent'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (18.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (178.1ms)
+
+
+Started GET "/allevent" for 165.91.12.202 at 2016-04-11 17:48:54 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", nil]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.2ms)
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=):
+  app/controllers/events_controller.rb:88:in `allevent'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (135.9ms)
+
+
+Started GET "/" for 165.91.12.202 at 2016-04-11 17:53:21 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#login as HTML
+  Rendered sessions/login.html.haml within layouts/application (202.3ms)
+Completed 200 OK in 562ms (Views: 507.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login_attempt" for 165.91.12.202 at 2016-04-11 17:53:35 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a+/Wucezpf1tLHMiF2skgVfgPHe06mZPtg2BSUmPq62+ELyeBrnd3r72BMMx1d3e2pMjkBn2rtBDiMtnOEQ51w==", "email"=>"mdtest@mail.com", "login_password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "mdtest@mail.com"]]
+Redirected to https://csce431-steevymathew.c9users.io/allevent
+Completed 302 Found in 243ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/allevent" for 165.91.12.202 at 2016-04-11 17:53:35 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/allevent.html.haml within layouts/application (27.6ms)
+Completed 200 OK in 246ms (Views: 237.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/eventsurvey?eid=3" for 165.91.12.202 at 2016-04-11 17:53:39 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#showquestion as HTML
+  Parameters: {"eid"=>"3"}
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."uid" = ? AND "answers"."eid" = ?[0m  [["uid", 4], ["eid", 3]]
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."eid" = ?  [["eid", 3]]
+  Rendered answers/showquestion.html.haml within layouts/application (36.4ms)
+Completed 200 OK in 316ms (Views: 186.2ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/eventsurvey" for 165.91.12.202 at 2016-04-11 17:53:47 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sSsBBdkFilWaGC57pjeDhIdVKlSR6gTFoszkHhknDUJk1GsiGA/ydknCWZqAiXrbCiY1szz2zFpXSa4waOyfOA==", "q_eid"=>"3", "Q1"=>{"answer"=>"gcj"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT  "questions"."qtitle" FROM "questions" WHERE "questions"."eid" = ? AND "questions"."qid" = ? LIMIT 1  [["eid", 3], ["qid", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "answers" ("uid", "qid", "qtitle", "eid", "answer", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["uid", 4], ["qid", 1], ["qtitle", "giy"], ["eid", 3], ["answer", "gcj"], ["created_at", "2016-04-11 17:53:47.424090"], ["updated_at", "2016-04-11 17:53:47.424090"]]
+  [1m[36m (9.5ms)[0m  [1mcommit transaction[0m
+Redirected to https://csce431-steevymathew.c9users.io/answershow
+Completed 302 Found in 33ms (ActiveRecord: 10.8ms)
+
+
+Started POST "/eventsurvey" for 165.91.12.202 at 2016-04-11 17:53:47 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sSsBBdkFilWaGC57pjeDhIdVKlSR6gTFoszkHhknDUJk1GsiGA/ydknCWZqAiXrbCiY1szz2zFpXSa4waOyfOA==", "q_eid"=>"3", "Q1"=>{"answer"=>"gcj"}, "commit"=>"Submit"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions"."qtitle" FROM "questions" WHERE "questions"."eid" = ? AND "questions"."qid" = ? LIMIT 1[0m  [["eid", 3], ["qid", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "answers" ("uid", "qid", "qtitle", "eid", "answer", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["uid", 4], ["qid", 1], ["qtitle", "giy"], ["eid", 3], ["answer", "gcj"], ["created_at", "2016-04-11 17:53:47.542142"], ["updated_at", "2016-04-11 17:53:47.542142"]]
+  [1m[35m (12.8ms)[0m  commit transaction
+Redirected to https://csce431-steevymathew.c9users.io/answershow
+Completed 302 Found in 25ms (ActiveRecord: 13.9ms)
+
+
+Started GET "/answershow" for 165.91.12.202 at 2016-04-11 17:53:47 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#show as HTML
+  Rendered answers/show.html.haml within layouts/application (5.9ms)
+Completed 200 OK in 212ms (Views: 211.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/allevent" for 165.91.12.202 at 2016-04-11 17:53:58 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/allevent.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 202ms (Views: 199.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 165.91.12.202 at 2016-04-11 18:02:38 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login as HTML
+  Rendered sessions/login.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 196ms (Views: 195.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 165.91.12.202 at 2016-04-11 18:08:08 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#logout as HTML
+Redirected to https://csce431-steevymathew.c9users.io/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.12.202 at 2016-04-11 18:08:08 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login as HTML
+  Rendered sessions/login.html.haml within layouts/application (14.1ms)
+Completed 200 OK in 197ms (Views: 195.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 165.91.12.202 at 2016-04-11 18:08:11 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.haml within layouts/application (16.4ms)
+Completed 200 OK in 244ms (Views: 242.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.12.202 at 2016-04-11 18:10:06 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login as HTML
+  Rendered sessions/login.html.haml within layouts/application (2.4ms)
+Completed 200 OK in 354ms (Views: 353.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login_attempt" for 165.91.12.202 at 2016-04-11 18:10:16 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w6lu1iCIUXA8t/lDjUhpypiKkRzUPpZnZ8bfzm0VRukjBVAszocftirPouvCxkH+HGJfYyARwllVdQWovTNAwQ==", "email"=>"mdtest@mail.com", "login_password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "mdtest@mail.com"]]
+Redirected to https://csce431-steevymathew.c9users.io/allevent
+Completed 302 Found in 250ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/allevent" for 165.91.12.202 at 2016-04-11 18:10:17 +0000
+Cannot render console from 165.91.12.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mEvent Load (1.1ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/allevent.html.haml within layouts/application (13.0ms)
+Completed 200 OK in 314ms (Views: 310.8ms | ActiveRecord: 1.3ms)

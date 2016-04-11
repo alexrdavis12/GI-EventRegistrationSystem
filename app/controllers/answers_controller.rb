@@ -25,7 +25,6 @@ class AnswersController < ApplicationController
 
 	def create
 	  # show questions
-	  self.isadmin
 	  if params[:eid] != nil
 	  	@eid = params[:eid]
 	  else
