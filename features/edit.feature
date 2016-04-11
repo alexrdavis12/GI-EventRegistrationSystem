@@ -4,8 +4,8 @@ Background: Given I am on the event page
 
 Scenario: Edit Event Information 
   When I click edit
-  Then I should see it change to the event form with previous information 
+  Then I should see it change to the event form with event information 
   
-Scenario: Edit Specific Event Question
+Scenario: Edit Event Question
   When I click edit
-  Then I should see it change to edit form with question information
+  Then I should see it change to the edit form with question information
