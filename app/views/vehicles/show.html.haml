@@ -1,0 +1,67 @@
+%nav.navbar.navbar-inverse{:role => "navigation"}
+  .navbar-header
+    %a.navbar-brand{:href => "home"} M.A.G.I.
+  %ul.nav.navbar-nav.navbar-right
+    %li
+      %a{:href=>'allevent'}
+        %i{:class=>"fa fa-align-justify fa-fw"} 
+        Event
+        
+    %li
+      %a{:href=>'profile'}
+        %i{:class=>"fa fa-user fa-fw"} 
+        Profile
+        
+    %li
+      %a{:href=>'logout'}
+        %i{:class=>"fa fa-sign-out fa-fw"} 
+        Logout
+
+.container
+  .row
+    .col-md-3
+    .col-md-6
+      - if flash[:notice]!=nil
+        .alert.alert-success
+          %button.close{:type=>"button", "data-dismiss"=>"alert"}
+            %span{"aria-hidden"=>true}×
+            %span.sr-only Close
+          =flash[:notice]
+
+      .panel.panel-info
+        .panel-heading
+          Vehicle ID
+        .panel-body
+          =@vehicle.id
+      
+        .panel-heading
+          Vehicle Name
+        .panel-body
+          =@vehicle.vname
+      
+        .panel-heading
+          Vehicle Class
+        .panel-body
+          =@vehicle.vclass
+      
+        .panel-heading
+          Vehicle Nation
+        .panel-body
+          =@vehicle.vnation
+      
+        .panel-heading
+          Vehicle War
+        .panel-body
+          =@vehicle.vwar
+      
+        .panel-heading
+          Vehicle Description
+        .panel-body
+          =@vehicle.vdescription
+      %div
+        .col-md-9
+        .col-md-3
+        %a{:href => "home", :visited=>'color: #FFFFFF', :class =>'btn btn-primary btn-primary', :role=>'button'} Back to Home
+      %br
+      %br
+    .col-md-3
