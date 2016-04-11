@@ -1,4 +1,4 @@
-Given /^(?:|I )am on the Event page (.+)$/ do |page_name|
+Given /^(?:|I )am on the "(.+)" page$/ do |page_name|
    pending # express the regexp above with the code you wish you had visit path_to(page_name)
 end
 
