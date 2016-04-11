@@ -8,5 +8,6 @@ Scenario: Edit Event Information
 Scenario: Edit Event Question
   Given I am on the Event Question form
   When I click "Edit Question"
-  Then I should see "it change to the edit form with question information"
+  Then I should see it change to the edit form with "question" information
+
 
