@@ -18,22 +18,69 @@
     %ul.nav.navbar-nav{:role => "tablist"}
         %li
             %a{"data-toggle" => "tab", :href => "#events", :role => "tab"}
-                %i.fa.fa-dashboard.fa-fw.fa-lg
+                %i.fa.fa-list-alt.fa-fw.fa-lg
                 %span Registered Events
         %li{:class=> "active"}
             %a{"data-toggle" => "tab", :href => "#vehicles", :role => "tab"}
-                %i.fa.fa-table.fa-fw.fa-lg
+                %i.fa.fa-car.fa-fw.fa-lg
                 %span My Vehicles
-.container
-    .row
-        .col-sm-2
-        .col-sm-8
-        .alert.alert-success
-            =flash[:notice] 
-        .col-sm-2
+              
+
+        
 .container{:class => "tab-content"}
+    .row
+        .col-md-1
+        .col-md-11
+            .alert.alert-success
+                =flash[:notice]
     .row{:id => "events", :class => "tab-pane"}
     .row{:id => "vehicles", :class => "tab-pane active"}
-        %a.btn.btn-success{:id => 'add_vehicle_btn', :href => 'vehiclecreate'}
-            %i.fa.fa-plus.fa-lg
-            Add Vehicle
+        .col-md-2
+            .col-md-10
+                .container
+                    .row
+                        .col-md-2
+                        .col-md-8
+                            -if flash[:notice] != nil
+                                .alert.alert-success.alert-dismissable
+                                    %button.close{:type=>"button", "data-dismiss"=>"alert"}
+                                        %span{"aria-hidden"=>true}×
+                                        %span.sr-only Close
+                                    %strong 
+                                        =flash[:notice]
+                                        =flash[:color]
+                            -if @vehicles.length == 0
+                                .alert.alert-info.alert-dismissable
+                                    %button.close{:type=>"button", "data-dismiss"=>"alert"}
+                                        %span{"aria-hidden"=>true}×
+                                        %span.sr-only Close
+                                    %strong No registered vehicles
+                            -else
+                                - cnt= 0
+                                - @vehicles.each do |v|
+                                    - cnt+=1
+                                    .panel.panel-primary
+                                        .panel-heading
+                                            %h3.panel-title Vehicle #{cnt}
+                                        .panel-body
+                                            %label= v.vname 
+                                            %br
+                                            %label Vehicle Class 
+                                            = v.vclass
+                                            %br
+                                            %label Nation  
+                                            = v.vnation
+                                            %br
+                                            %label War  
+                                            = v.vwar
+                                            %br
+                                            %label Vehicle Description 
+                                            = v.vdescription
+                                            %br
+                                            %a{:href => "vehicleshow?vid=#{v.id}", :class =>'btn btn-primary btn-sm', :role=>'button'} Show
+                                            %a{:href => "vehicleedit?vid=#{v.id}", :class =>'btn btn-primary btn-sm', :role=>'button'} Edit
+                                            %a{:href => "vehicledelete?vid=#{v.id}", :class =>'btn btn-primary btn-sm', :role=>'button'} Delete
+                                            %br
+                        %a.btn.btn-success{:id => 'add_vehicle_btn', :href => 'vehiclecreate'}
+                            %i.fa.fa-plus.fa-lg
+                            Add Vehicle

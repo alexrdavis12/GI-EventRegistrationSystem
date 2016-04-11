@@ -1,5 +1,6 @@
 class VehiclesController < ApplicationController
-    
+  before_filter :authenticate_user, :only => [:create]
+  
   def create
     @vehicle=Vehicle.new
     @flash_notice = ""
@@ -10,6 +11,7 @@ class VehiclesController < ApplicationController
       @vehicle.vnation = params[:Nation]
       @vehicle.vwar = params[:War]
       @vehicle.vdescription = params[:Description]
+      @vehicle.user_id = session[:user_id]
       if @vehicle.valid?
         if @vehicle.save
           session[:vid] = @vehicle.id
@@ -73,5 +75,10 @@ class VehiclesController < ApplicationController
     end
   end 
     
-    
+  def delete
+  	vid = params[:vid]
+  	Vehicle.find(vid).destroy
+  	redirect_to '/home'
+  end
+  
 end
