@@ -30,38 +30,38 @@
 
       .panel.panel-info
         .panel-heading
-          Event ID
+          Vehicle ID
         .panel-body
-          =@event.id
+          =@vehicle.id
       
         .panel-heading
-          Event Title
+          Vehicle Name
         .panel-body
-          =@event.etitle
+          =@vehicle.vname
       
         .panel-heading
-          Event Location
+          Vehicle Class
         .panel-body
-          =@event.elocation
+          =@vehicle.vclass
       
         .panel-heading
-          Event Description
+          Vehicle Nation
         .panel-body
-          =@event.edescription
+          =@vehicle.vnation
       
         .panel-heading
-          Start Date
+          Vehicle War
         .panel-body
-          =@event.estart
+          =@vehicle.vwar
       
         .panel-heading
-          End Date
+          Vehicle Description
         .panel-body
-          =@event.eend
+          =@vehicle.vdescription
       %div
         .col-md-9
         .col-md-3
-        %a{:href => "QuestionCreate?eid=#{@event.id}", :visited=>'color: #FFFFFF', :class =>'btn btn-primary btn-primary', :role=>'button'} Add question for it
+        %a{:href => "home", :visited=>'color: #FFFFFF', :class =>'btn btn-primary btn-primary', :role=>'button'} Back to Home
       %br
       %br
     .col-md-3

@@ -11,11 +11,11 @@ class SessionsController < ApplicationController
       if authorized_user&&authorized_user.level==1
        session[:user_id] = authorized_user.id  
        flash[:notice]="Wow, Welcome again, you logged in as #{authorized_user.email}"
-       redirect_to '/allevent'
+       redirect_to '/home'
        return
       elsif authorized_user&&authorized_user.level==0
        session[:user_id] = authorized_user.id  
-       flash[:notice]="Welcome home, administrator #{authorized_user.email}"
+       flash[:notice]="Welcome home, Administrator #{authorized_user.email}"
        redirect_to '/admin'
        return
     else
@@ -27,6 +27,20 @@ class SessionsController < ApplicationController
   end
  
   def home
+    id = session[:user_id]
+    @user = User.find(id)
+    if @user.level == 1
+      @vehicles=Vehicle.where(user_id: id).all
+      @registeredevents =''
+      @registeredeid = Answer.where(uid: id).all.uniq.pluck(:eid)
+      if (@registeredeid.length !=0)
+        @registeredevents = Event.find(@registeredeid)
+      end
+    else 
+      if @user.level ==0
+       redirect_to '/admin'
+      end
+    end
   end
 
 
@@ -57,7 +71,7 @@ class SessionsController < ApplicationController
             session[:user_id] = @user.id
             @flash_notice = "Sign Up Successfully!"
             # UserNotifier.send_signup_email(@user).deliver_later
-            redirect_to '/allevent'
+            redirect_to '/home'
             return
           else
             @user.password = nil

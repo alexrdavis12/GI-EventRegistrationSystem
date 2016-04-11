@@ -20,24 +20,33 @@ function delete_subquestion(qid, option_id, subqcnt) {
 function add_optionsforsub(qid, option_id, subqcnt) {
 	cnt = $("#Q" + qid + "_" + option_id + "_" + subqcnt + "_optcnt").val();
 	$("#Q" + qid + "_" + option_id + "_" + subqcnt + "_optcnt").val(++cnt);
-	$("#Q" + qid + "_" + option_id + "_" + subqcnt + "_insertpos").before("<div class='form-group' id='Q" + qid+ "_" + option_id + "_" + subqcnt + "_" + cnt + "'>\
-										 <input class='form-control' name='S" + qid + "_" + option_id + "_" + subqcnt + "[opt" + cnt + "]' value=''><div class='form-group'></div><a class='btn btn-danger pull-right' href='javascript:delete_optionforsub("+ qid + "," + option_id + "," + subqcnt + "," + cnt + ")'><i class='fa fa-trash-o fa-lg'></i> Delete Option</a>\
-										 </div>\
-										 ");
+	$("#Q" + qid + "_" + option_id + "_" + subqcnt + "_sub_options_list").append("<div class='form-group' id='Q" + qid+ "_" + option_id + "_" + subqcnt + "_" + cnt + "' style='margin-bottom: 15px'>\
+												     <div class='col-xs-11' style='margin-bottom: 5px'>\
+													 	<input class='form-control' name='S" + qid + "_" + option_id + "_" + subqcnt + "[opt" + cnt + "]' value=''>\
+													 </div>\
+													 <div class='col-xs-1' style='margin-bottom: 5px'>\
+														 <a class='btn btn-danger pull-right' id='Q" + qid + "_SO"+cnt+"' href='javascript:delete_optionforsub("+ qid + "," + option_id + ","+ subqcnt + "," + cnt + ")'>\
+														 	<i class='fa fa-trash-o fa-lg'></i>\
+														 </a>\
+													 </div>\
+												 </div>");
 }
 
-function add_options(qid, displaysub) {
-
-	if (displaysub == 1)
-		vis = ""
-	else
-		vis = "disabled"
-
+function add_options(qid) {
+	vis = ""
 	cnt = $("#Q" + qid + "_optcnt").val();
 	$("#Q" + qid + "_optcnt").val(++cnt);
-	$("#Q" + qid + "_insertpos").before("<div class='form-group' id='Q" + qid+ "_" + cnt + "'>\
-										 <input class='form-control' name='Q" + qid + "[opt" + cnt + "]' value=''><div class='form-group'></div><a class='btn btn-danger pull-right' href='javascript:delete_option("+ qid + "," + cnt + ")' value='vis'><i class='fa fa-trash-o fa-lg'></i> Delete Option</a><a class='btn btn-success' href='javascript:add_subquestion(" + select_qid + "," + cnt + ")'><i class='fa fa-plus fa-lg'></i> Add Sub-question</a></input>\
-										 <input id='Q" + qid + "_" + cnt + "_subqcnt' type='hidden' value='0'>\
+	$("#Q" + qid + "_options_list").append("<div class='form-group' id='Q" + qid+ "_" + cnt + "' >\
+											 <input class='form-control'  name='Q" + qid + "[opt" + cnt + "]' value=''>\
+											 <a class='btn btn-danger pull-right' id='Q" + qid + "_O"+cnt+"' href='javascript:delete_option("+ qid + "," + cnt + ")' value='vis' style='margin-top: 15px'>\
+											 	<i class='fa fa-trash-o fa-lg'></i>\
+											 	Delete Option\
+											 </a>\
+											 <a class='btn btn-success' href='javascript:add_subquestion(" + select_qid + "," + cnt + ")' style='margin-top: 15px'>\
+											 	<i class='fa fa-plus fa-lg'></i>\
+											 	Add Sub-question\
+											 </a>\
+											 <input id='Q" + qid + "_" + cnt + "_subqcnt' type='hidden' value='0'>\
 										 </div>\
 										 ");
 }
@@ -46,6 +55,7 @@ function add_subquestion(select_qid, option_id) {
 	cnt = $("#Q" + select_qid + "_" + option_id + "_subqcnt").val();
 	$("#Q" + select_qid + "_" + option_id + "_subqcnt").val(++cnt);
 	q_type_str = '<div class="form-group">\
+					<div class="form-group">\
 					  <label>Type </label>\
 					  <select class="form-control" belong="' + select_qid + '_'+ option_id + '_' + cnt +'" name="S' + select_qid + '_' + option_id + '_' + cnt +'[type]">\
 	                      <option value="1">Text</option>\
@@ -54,7 +64,7 @@ function add_subquestion(select_qid, option_id) {
 	                      <option value="4">Dropdown</option>\
 	                      <option value="5">Paragraph Text</option>\
                 	  </select>\
-                	  <div class="form-group"></div>\
+                	</div>\
                 	  <a class="btn btn-danger pull-right" href="javascript:delete_subquestion(' + select_qid + ', ' + option_id + ',' + cnt + ')">\
                 	  	<i class="fa fa-trash-o fa-lg"></i>\
                 	  	Delete Sub-question\
@@ -62,21 +72,21 @@ function add_subquestion(select_qid, option_id) {
                   </div>';
     if($("#Q" + select_qid + "_" + option_id+"_list").length == 1)  //A list has been previously created for this set of subquestions so use it
     {
-    	 str = 	"<div class='panel panel-danger' id='QQ" + select_qid + "_" + option_id + "_" + cnt + "'>\
+    	 str = 	"<div class='panel panel-danger' id='QQ" + select_qid + "_" + option_id + "_" + cnt + "' style='margin-top: 15px'>\
     	 			<div class='panel-heading'>\
     	 				<h3 class='panel-title'>\
     	 					Sub-question\
-    	 					<a class='btn btn-sm pull-right' style='color: #3071a9; background: none; outline: 0;'\
+    	 					<a class='btn btn-sm pull-right' id='QQ" + select_qid + "_" + option_id + "_" + cnt + "_up' style='color: #500000; background: none; outline: 0;'\
     	 					href='javascript:move_subq_up("+select_qid + "," + option_id + "," + cnt + ")'>\
     	 						<i class='fa fa-chevron-up fa-lg'/>\
     	 					</a>\
-    	 					<a class='btn btn-sm pull-right' style='color: #3071a9; background: none; outline: 0'\
+    	 					<a class='btn btn-sm pull-right' id='QQ" + select_qid + "_" + option_id + "_" + cnt + "_down' style='color: #500000; background: none; outline: 0'\
     	 					href='javascript:move_subq_down(" + select_qid + "," + option_id + "," + cnt + ")'>\
     	 						<i class='fa fa-chevron-down fa-lg'></i>\
     	 					</a>\
     	 				</h3>\
     	 			</div>\
-    	 			<div class='panel-body'>\
+    	 			<div class='panel-body' style='background-color:#f2dede'>\
     	 				<div class='form-group'><input class='form-control' name='S" + select_qid + "_" + option_id + "_" + cnt + "[title]' value=''>\
     	 				</div>\
     	 				"+ q_type_str +"\
@@ -88,28 +98,28 @@ function add_subquestion(select_qid, option_id) {
     else //A list has not been previously created for this set of subquestions so create one
     {
     	str = 	"<li id='Q" + select_qid + "_" + option_id+"_list' style='list-style-type:none'>\
-    				<div class='panel panel-danger' id='QQ" + select_qid + "_" + option_id + "_" + cnt + "'>\
+    				<div class='panel panel-danger' id='QQ" + select_qid + "_" + option_id + "_" + cnt + "' style='margin-top: 15px'>\
 	    				<div class='panel-heading'>\
 	    					<h3 class='panel-title'>\
 	    						Sub-question\
-	    						<a class='btn btn-sm pull-right' style='color: #3071a9; background: none; outline: 0;'\
+	    						<a class='btn btn-sm pull-right' id='QQ" + select_qid + "_" + option_id + "_" + cnt + "_up' style='color: #500000; background: none; outline: 0;'\
 	    						href='javascript:move_subq_up(" + select_qid + "," + option_id + "," + cnt + ")'>\
 	    							<i class='fa fa-chevron-up fa-lg'/>\
 	    						</a>\
-	    						<a class='btn btn-sm pull-right' style='color: #3071a9; background: none; outline: 0'\
+	    						<a class='btn btn-sm pull-right'  id='QQ" + select_qid + "_" + option_id + "_" + cnt + "_down' style='color:#500000; background: none; outline: 0'\
 	    						href='javascript:move_subq_down(" + select_qid + "," + option_id + "," + cnt + ")'>\
 	    							<i class='fa fa-chevron-down fa-lg'/>\
 	    						</a>\
 	    					</h3>\
 	    				</div>\
-    					<div class='panel-body'>\
+    					<div class='panel-body'  style='background-color:#f2dede'>\
     						<div class='form-group'>\
     							<input class='form-control' name='S" + select_qid + "_" + option_id + "_" + cnt + "[title]' value=''>\
     						</div>" + q_type_str + "\
     					</div>\
     				</div>\
     			</li>";
-    	$("#Q" + select_qid + "_" + option_id).after(str);	
+    	$("#Q" + select_qid + "_O" + option_id).before(str);	
     	hookClickSel();
     }
 	
@@ -120,50 +130,60 @@ function add_subquestion(select_qid, option_id) {
 }
 
 function trigger_option_subquestion(dom_obj, select_qid, option_id, subqcnt) {
-	dom_obj.after("<div id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_optdiv' class='form-group'><div class='panel panel-default'>\
-				   <div class='panel-heading'>Options</div>\
-				   <div class='panel-body' id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_options'>\
-				   <input id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_optcnt' type='hidden' value='1'>\
-				   <div class='form-group' id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_1'>\
-				   <input class='form-control' name='S" + select_qid + "_" + option_id + "_" + subqcnt + "[opt1]' value=''><div class='form-group'></div><a class='btn btn-danger pull-right' href='javascript:delete_optionforsub("+ select_qid + ", " + option_id + "," + subqcnt + ", 1)'><i class='fa fa-trash-o fa-lg'></i> Delete Option</a>\
-				   </div>\
-				   <a class='btn btn-success' id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_insertpos' href='javascript:add_optionsforsub("+ select_qid + "," + option_id + "," + subqcnt + ")'><i class='fa fa-plus fa-lg'></i> Add Option</a>\
-				   </div></div></div></div>");
+	dom_obj.after("<div id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_optdiv' class='form-group'  style='margin-top: 15px'>\
+				   		<div class='panel panel-default'>\
+				   			<div class='panel-heading'>Options</div>\
+				   			<div class='panel-body' id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_options' style='background-color:white'>\
+				   				<li id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_sub_options_list' style='margin-bottom: 15px'>\
+					   				<input id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_optcnt' type='hidden' value='1'>\
+					   				<div class='form-group' id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_1'>\
+						   				<div class='col-xs-11' style='margin-bottom: 5px'>\
+						   					<input class='form-control' name='S" + select_qid + "_" + option_id + "_" + subqcnt + "[opt1]' value=''>\
+						   				</div>\
+						   				<div class='col-xs-1' style='margin-bottom: 5px'>\
+						   					<a class='btn btn-danger pull-right' href='javascript:delete_optionforsub("+ select_qid + ", " + option_id + "," + subqcnt + ", 1)'>\
+						   						<i class='fa fa-trash-o fa-lg'></i>\
+						   					</a>\
+					   					</div>\
+					   				</div>\
+					   			</li>\
+					   			<a class='btn btn-success' id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_insertpos' href='javascript:add_optionsforsub("+ select_qid + "," + option_id + "," + subqcnt + ")' style='margin-top: 10px'>\
+				   					<i class='fa fa-plus fa-lg'>\
+				   					</i>\
+				   					Add Option\
+				   				</a>\
+				   			</div>\
+				   		</div>\
+				   </div>");
 }
 
 function trigger_option(dom_obj, select_qid, displaysub) {
-	if (displaysub == 1)
-		vis = ""
-	else
-		vis = "disabled"
-	dom_obj.after("<div id='Q" + select_qid + "_optdiv' class='form-group'>\
-								<div class='panel panel-default'>\
-									 <div class='panel-heading'>Options</div>\
-										 <div class='panel-body' id='Q" + select_qid + "_options'>\
-											 <input id='Q" + select_qid + "_optcnt' type='hidden' value='3'>\
-											 <div class='form-group' id='Q" + select_qid + "_1'>\
-					   							 <input class='form-control' name='Q" + select_qid + "[opt1]' value=''>\
-					   						 </div>\
-			   							 	 <div class='form-group'>\
-			   							 		<a class='btn btn-success' href='javascript:add_subquestion(" + select_qid + ", 1)'>\
-			   							 			<i class='fa fa-plus fa-lg'></i>\
-			   							 			Add Sub-question\
-			   							 		</a>\
-			   							 		<a class='btn btn-danger pull-right' href='javascript:delete_option(" + select_qid + ", 1)'>\
-			   							 			<i class='fa fa-trash-o fa-lg'></i>\
-			   							 			Delete Option\
-			   							 		</a>\
-			   							     </div>\
-			   							 	<input id='Q" + select_qid + "_1_subqcnt' type='hidden' value='0'>\
-				   							<a class='btn btn-success' id='Q" + select_qid + "_insertpos' href='javascript:add_options(\
-				   							"+ select_qid + "," + displaysub + ")'>\
-				   								<i class='fa fa-plus fa-lg'></i>\
-				   								Add Option\
-				   							</a>\
-										</div>\
-									</div>\
-								</div>\
-							</div>");
+	dom_obj.after("<div id='Q" + select_qid + "_optdiv' class='form-group' style='margin-top: 15px'>\
+						<div class='panel panel-default'>\
+							 <div class='panel-heading'>Options</div>\
+							 <div class='panel-body' id='Q" + select_qid + "_options' style='background-color:white'>\
+							 	<li id='Q" + select_qid + "_options_list'>\
+									 <input id='Q" + select_qid + "_optcnt' type='hidden' value='3'>\
+									 <div class='form-group' id='Q" + select_qid + "_1' >\
+			   							<input class='form-control'  name='Q" + select_qid + "[opt1]' value='' style='margin-bottom: 15px'>\
+		   							 	<a class='btn btn-success'id='Q" + select_qid + "_O1' href='javascript:add_subquestion(" + select_qid + ", 1)'>\
+   							 				<i class='fa fa-plus fa-lg'></i>\
+   							 				Add Sub-question\
+	   							 		</a>\
+	   							 		<a class='btn btn-danger pull-right' href='javascript:delete_option(" + select_qid + ", 1)'>\
+	   							 			<i class='fa fa-trash-o fa-lg'></i>\
+	   							 			Delete Option\
+	   							 		</a>\
+   										<input id='Q" + select_qid + "_1_subqcnt' type='hidden' value='0'>\
+									 </div>\
+								</li>\
+	   							<a class='btn btn-success' id='Q" + select_qid + "_insertpos' href='javascript:add_options("+ select_qid + ")'>\
+		   							<i class='fa fa-plus fa-lg'></i>\
+		   							Add Option\
+	   							</a>\
+							</div>\
+						</div>\
+					</div>");
 }
 
 function hookClickSel() {
@@ -241,7 +261,8 @@ $(document).ready(function(){
 	$('#create_q_btn').click(function(evt){
 		evt.stopImmediatePropagation();
 		current_qid += 1;
-		q_type_str = '<div class="form-group">\
+		q_type_str = '<div class="form-group"  style="margin-top: 15px">\
+						<div class="form-group">\
 						  <label>Type</label>\
 						  <select class="form-control" belong=' + current_qid + ' name="Q' + current_qid + '[type]">\
 		                      <option value="1">Text</option>\
@@ -250,28 +271,27 @@ $(document).ready(function(){
 		                      <option value="4">Dropdown</option>\
 		                      <option value="5">Paragraph Text</option>\
 	                	  </select>\
-	                	  <div class="form-group">\
-	                	  <a class="btn btn-danger pull-right" href="javascript:delete_question(' + current_qid + ')">\
+	                	</div>\
+	                	<a class="btn btn-danger pull-right" href="javascript:delete_question(' + current_qid + ')">\
 	  						<i class="fa fa-trash-o fa-lg"></i>\
 	  						Delete Question\
-						  </a>\
-						  </div>\
-						</div>';
-		$("#q_list").append("<div class='panel panel-success' id='Q" + current_qid + "'>\
+						</a>\
+					  </div>';
+		$("#q_list").append("<div class='panel panel-info' id='Q" + current_qid + "'>\
 								<div class='panel-heading'>\
 									<h3 class='panel-title'>\
 										Question\
-										<a class='btn btn-sm pull-right' style='color: #3071a9; background: none; outline: 0;'\
+										<a class='btn btn-sm pull-right' id='Q"+current_qid+"_up' style='color: #500000; background: none; outline: 0;'\
 										href='javascript:move_q_up(" + current_qid + ")'>\
 											<i class='fa fa-chevron-up fa-lg'></i>\
 										</a>\
-										<a class='btn btn-sm pull-right' style='color: #3071a9; background: none; outline: 0'\
+										<a class='btn btn-sm pull-right' id='Q"+current_qid+"_down' style='color: #500000; background: none; outline: 0'\
 										href='javascript:move_q_down(" + current_qid + ")'>\
 											<i class='fa fa-chevron-down fa-lg'></i>\
 										</a>\
 									</h3>\
 								</div>\
-								<div class='panel-body'>\
+								<div class='panel-body' style='background-color:#d9edf7'>\
 									<div class='form-group'><input class='form-control' name='Q" + current_qid + "[title]' value=''></div>\
 									" + q_type_str+ "\
 								</div>\

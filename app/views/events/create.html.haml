@@ -1,7 +1,7 @@
 = javascript_include_tag "date"
 %nav.navbar.navbar-inverse{:role => "navigation"}
   .navbar-header
-    %a.navbar-brand{:href => "#"} M.A.G.I
+    %a.navbar-brand{:href => "home"} M.A.G.I.
   %ul.nav.navbar-nav.navbar-right
     %li
       %a{:href=>'allevent'}
@@ -55,6 +55,5 @@
               %input{:type => 'text', :class => 'form-control', :id =>'dp2',:value=>'', :name=>"End_Date"}
   
             = submit_tag("Create", :class => 'btn btn-primary')
-       
   .row
     %p{:id => "demo"}
