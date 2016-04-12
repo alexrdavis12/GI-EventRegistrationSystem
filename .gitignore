@@ -15,6 +15,7 @@ deploy.sh
 .dat*
 .repl_history
 build/
+log/*.log
 
 ## Documentation cache and generated files:
 /.yardoc/
