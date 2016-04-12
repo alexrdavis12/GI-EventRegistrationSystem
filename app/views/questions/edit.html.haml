@@ -1,4 +1,4 @@
-= javascript_include_tag "create_event"
+= javascript_include_tag "edit_event"
 
 %nav.navbar.navbar-inverse{:role => "navigation"}
   .navbar-header
@@ -28,40 +28,41 @@
           =@flash_notice
       -if @error_type != -1
         %input{:type=>"hidden", :value => 1, :id => 'current_qid'}
-        = form_tag(:action => 'edit', :qid => @q.qid) do
+        = form_tag({:action => 'update', :eid => @eid}) do
           %div#q_form
             %input{:type=>"hidden", :value=>@eid, :name=>:q_eid}
-          %li{:id=>'q_list', :style=>"list-style-type:none"}
-            .panel.panel-info#Q1
-              .panel-heading
-                %h3.panel-title
-                  Question
-                  %a.btn.btn-sm.pull-right{ :href => "javascript:move_q_up(1)", :style => "color: #500000; background: none; outline: 0",:id => "Q1_up"}
-                    %i.fa.fa-chevron-up.fa-lg
-                  %a.btn.btn-sm.pull-right{:id => "Q1_down", :href => "javascript:move_q_down(1)", :style => "color: #500000; background: none; outline: 0"}
-                    %i.fa.fa-chevron-down.fa-lg
-                  //%input{:style => "float:right",:type => "button", :onclick => "", :id => 'down_btn', :value => '\\/'}
-                  //%input{:style => "float:right", :type => "button", :onclick => "", :id => 'up_btn', :value => '/\\'}
-              .panel-body{:style => 'background-color : #d9edf7'}
-                .form-group
-                  %input{:class => 'form-control', :value=>'', :name=>"Q1[title]", :placeholder => "Title"}
-                .form-group
-                  %label Type
-                  %select{:class => 'form-control', :name => "Q1[type]", :belong => "1"}
-                    %option{:value => 1}= "Text"
-                    %option{:value => 2}= "Checkboxes"
-                    %option{:value => 3}= "Radio Buttons"
-                    %option{:value => 4}= "Dropdown"
-                    %option{:value => 5}= "Paragraph Text"
+          - @questions.each do |q|
+            %li{:id=>'q_list', :style=>"list-style-type:none"}
+              .panel.panel-info#Q
+                .panel-heading
+                  %h3.panel-title
+                    Question
+                    %a.btn.btn-sm.pull-right{ :href => "javascript:move_q_up(#{q.id})", :style => "color: #500000; background: none; outline: 0", :id => "Q#{q.id}_up"}
+                      %i.fa.fa-chevron-up.fa-lg
+                    %a.btn.btn-sm.pull-right{:id => "Q#{q.id}_down", :href => "javascript:move_q_down(#{q.id})", :style => "color: #500000; background: none; outline: 0"}
+                      %i.fa.fa-chevron-down.fa-lg
+                    //%input{:style => "float:right",:type => "button", :onclick => "", :id => 'down_btn', :value => '\\/'}
+                    //%input{:style => "float:right", :type => "button", :onclick => "", :id => 'up_btn', :value => '/\\'}
+                .panel-body{:style => 'background-color : #d9edf7'}
                   .form-group
-                  %a.btn.btn-danger.pull-right{:href => "javascript:delete_question(1)"}
-                    %i.fa.fa-trash-o.fa-lg
-                    Delete Question
+                    %input{:class => 'form-control', :value=> q.qtitle, :name=>"Q#{q.id}[title]"}
+                  .form-group
+                    %label Type
+                    %select{:class => 'form-control', :name => "Q#{q.id}[type]", :belong => "#{q.id}", :placeholder => "#{q.qtype}"}
+                      %option{:value => 1}= "Text"
+                      %option{:value => 2}= "Checkboxes"
+                      %option{:value => 3}= "Radio Buttons"
+                      %option{:value => 4}= "Dropdown"
+                      %option{:value => 5}= "Paragraph Text"
+                    .form-group
+                    %a.btn.btn-danger.pull-right{:href => "javascript:delete_question(#{q.id})"}
+                      %i.fa.fa-trash-o.fa-lg
+                      Delete Question
           %a.btn.btn-success{:id => 'create_q_btn', }
             %i.fa.fa-plus.fa-lg
             Add Question
           //%input{:class => 'btn btn-primary', :type => "button", :onclick => "", :id => 'create_q_btn', :value => 'Add Question'} 
-          = submit_tag("Edit", :class => 'btn btn-primary pull-right')
+          = submit_tag("Save", :class => 'btn btn-primary pull-right')
     .col-md-2
   .row
     %br
