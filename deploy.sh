@@ -1,6 +1,6 @@
 #!/bin/bash
 git add app* bin* config* db* features* lib* log* public* script* spec* tes* vendor*
-git commit --all -m "edit vehicle"
+git commit --all -m "edit vehicle auto-populates"
 git push
 git push -f heroku master
 heroku open
