@@ -9032,3 +9032,183 @@ Processing by QuestionsController#show as HTML
   [1m[36mQuestion Load (0.8ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."eid" = ?[0m  [["eid", 10]]
   Rendered questions/show.html.haml within layouts/application (21.0ms)
 Completed 200 OK in 365ms (Views: 362.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 165.91.227.221 at 2016-04-12 16:44:24 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#login as HTML
+  Rendered sessions/login.html.haml within layouts/application (328.7ms)
+Completed 200 OK in 1026ms (Views: 979.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login_attempt" for 165.91.227.221 at 2016-04-12 16:44:28 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qmerWc9HsQ/JCh8GX80kjmcOg1J24lz1OIl859D+ihPPiDL8iZcWu14JmFCKBG4WlnVxxocBczNkzW5b4k2R0w==", "email"=>"info@americangimuseum.org", "login_password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "info@americangimuseum.org"]]
+Redirected to https://project-kathryn02.c9users.io/admin
+Completed 302 Found in 231ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/admin" for 165.91.227.221 at 2016-04-12 16:44:29 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (1.0ms)[0m  SELECT "events".* FROM "events"
+  Rendered admin/index.html.haml within layouts/application (57.2ms)
+Completed 200 OK in 504ms (Views: 493.1ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/eventedit?eid=9" for 165.91.227.221 at 2016-04-12 16:44:32 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#edit as HTML
+  Parameters: {"eid"=>"9"}
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 9]]
+  Rendered events/edit.html.haml within layouts/application (67.7ms)
+Completed 200 OK in 400ms (Views: 394.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/eventupdate?eid=9" for 165.91.227.221 at 2016-04-12 16:45:52 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"l63DaBXVPZY4LZl5yTVhAptxg2xsuCerNZukhFDsdbXyQlrNUwWaIq8uHi8c/Cuaagpx+J1bCG1p37Y4Yl9udQ==", "Title"=>"", "Location"=>"", "Description"=>"", "Start_Date"=>"", "End_Date"=>"", "commit"=>"Save", "eid"=>"9"}
+  [1m[35mEvent Load (0.6ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to https://project-kathryn02.c9users.io/eventupdate?eid=9
+Completed 302 Found in 59ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/eventupdate?eid=9" for 165.91.227.221 at 2016-04-12 16:45:52 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#update as HTML
+  Parameters: {"eid"=>"9"}
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 9]]
+  Rendered events/update.html.haml within layouts/application (25.0ms)
+Completed 200 OK in 422ms (Views: 419.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/QuestionEdit?eid=9" for 165.91.227.221 at 2016-04-12 16:45:54 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#edit as HTML
+  Parameters: {"eid"=>"9"}
+  [1m[35mQuestion Load (0.6ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."eid" = ?  [["eid", 9]]
+  Rendered questions/edit.html.haml within layouts/application (120.0ms)
+Completed 200 OK in 615ms (Views: 451.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/create_event.self-a72aa8672ac733b76d5b35167cfccc8b0e3616ad5a583ba4a572be4333def378.js?body=1" for 165.91.227.221 at 2016-04-12 16:45:55 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/questionupdate?eid=9" for 165.91.227.221 at 2016-04-12 16:47:02 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Kpx1Bb656ZQZibiEqwSt8xXG2aEpdRnMPzivIofY2S5Pc+yg+GlOII6KP9J+zedr5L0rNdiWNgpjfL2etWvC7g==", "q_eid"=>"9", "Q546"=>{"title"=>"11111", "type"=>"1"}, "Q547"=>{"title"=>"222222", "type"=>"1"}, "Q2"=>{"title"=>"", "type"=>"1"}, "commit"=>"Save", "eid"=>"9"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."eid" = ?[0m  [["eid", 9]]
+Redirected to https://project-kathryn02.c9users.io/QuestionEdit?eid=9
+Completed 302 Found in 8ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/QuestionEdit?eid=9" for 165.91.227.221 at 2016-04-12 16:47:02 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#edit as HTML
+  Parameters: {"eid"=>"9"}
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."eid" = ?  [["eid", 9]]
+  Rendered questions/edit.html.haml within layouts/application (40.3ms)
+Completed 200 OK in 314ms (Views: 312.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/questionupdate?eid=9" for 165.91.227.221 at 2016-04-12 16:47:08 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z9h6rJipvtOiTTBOOCLUCcZTR1kGP/dp0L1r3B6lk44CN+MJ3nkZZzVOtxjt656RNyi1zffc2K+M+XlgLBaITg==", "q_eid"=>"9", "Q546"=>{"title"=>"11111", "type"=>"1"}, "Q547"=>{"title"=>"222222", "type"=>"1"}, "Q2"=>{"title"=>"tdggfg", "type"=>"1"}, "commit"=>"Save", "eid"=>"9"}
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."eid" = ?[0m  [["eid", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."eid" = ?  [["eid", "9"]]
+  [1m[36mSQL (17.8ms)[0m  [1mDELETE FROM "questions" WHERE "questions"."id" = ?[0m  [["id", 546]]
+  [1m[35mSQL (12.9ms)[0m  DELETE FROM "questions" WHERE "questions"."id" = ?  [["id", 547]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "questions" ("qid", "eid", "qtitle", "qtype", "qoption", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["qid", 546], ["eid", 9], ["qtitle", "11111"], ["qtype", "1"], ["qoption", ""], ["created_at", "2016-04-12 16:47:08.287844"], ["updated_at", "2016-04-12 16:47:08.287844"]]
+  [1m[36m (12.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "questions" ("qid", "eid", "qtitle", "qtype", "qoption", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["qid", 547], ["eid", 9], ["qtitle", "222222"], ["qtype", "1"], ["qoption", ""], ["created_at", "2016-04-12 16:47:08.306256"], ["updated_at", "2016-04-12 16:47:08.306256"]]
+  [1m[35m (18.8ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "questions" ("qid", "eid", "qtitle", "qtype", "qoption", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["qid", 2], ["eid", 9], ["qtitle", "tdggfg"], ["qtype", "1"], ["qoption", ""], ["created_at", "2016-04-12 16:47:08.335014"], ["updated_at", "2016-04-12 16:47:08.335014"]]
+  [1m[36m (12.1ms)[0m  [1mcommit transaction[0m
+Redirected to https://project-kathryn02.c9users.io/questionupdate?eid=9
+Completed 302 Found in 122ms (ActiveRecord: 78.8ms)
+
+
+Started GET "/questionupdate?eid=9" for 165.91.227.221 at 2016-04-12 16:47:08 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#update as HTML
+  Parameters: {"eid"=>"9"}
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."eid" = ?  [["eid", 9]]
+  Rendered questions/update.html.haml within layouts/application (22.8ms)
+Completed 200 OK in 395ms (Views: 392.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/allevent" for 165.91.227.221 at 2016-04-12 16:47:14 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to https://project-kathryn02.c9users.io/admin
+Completed 302 Found in 8ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/admin" for 165.91.227.221 at 2016-04-12 16:47:14 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.8ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered admin/index.html.haml within layouts/application (47.0ms)
+Completed 200 OK in 681ms (Views: 672.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/eventedit?eid=10" for 165.91.227.221 at 2016-04-12 16:47:22 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#edit as HTML
+  Parameters: {"eid"=>"10"}
+  [1m[35mEvent Load (21.1ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 10]]
+  Rendered events/edit.html.haml within layouts/application (23.2ms)
+Completed 200 OK in 525ms (Views: 491.7ms | ActiveRecord: 21.1ms)
+
+
+Started GET "/allevent" for 165.91.227.221 at 2016-04-12 16:47:31 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to https://project-kathryn02.c9users.io/admin
+Completed 302 Found in 30ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/admin" for 165.91.227.221 at 2016-04-12 16:47:31 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered admin/index.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 371ms (Views: 368.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/allevent" for 165.91.227.221 at 2016-04-12 16:47:49 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Redirected to https://project-kathryn02.c9users.io/admin
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/admin" for 165.91.227.221 at 2016-04-12 16:47:49 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"
+  Rendered admin/index.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 467ms (Views: 464.0ms | ActiveRecord: 0.7ms)
