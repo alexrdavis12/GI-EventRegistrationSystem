@@ -1,4 +1,5 @@
 Given (/^(?:|I )am on the Event page$/) do 
+   visit('EventCreate?eid=1')
    #pending # express the regexp above with the code you wish you had visit path_to(page_name)
 end
 
