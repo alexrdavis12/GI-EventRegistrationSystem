@@ -28,11 +28,11 @@
           = form_tag(:action => 'update', :vid => @vehicle.id) do
             .form-group
               %label Vehicle Name
-              %input{:class => 'form-control', :value=>'', :name=>"Name"}
+              %input{:class => 'form-control', :value=>@vehicle.vname, :name=>"Name"}
         
             .form-group
               %label Vehicle Class
-              %input{:class => 'form-control', :value=>'', :name=>"Class"}
+              %input{:class => 'form-control', :value=>@vehicle.vclass, :name=>"Class"}
                     
             
             %label Vehicle Impression
@@ -40,14 +40,15 @@
               .col-md-1
               .col-md-4
                 %label Nation
-                %input{:class => 'form-control', :value=>'', :name=>"Nation"}
+                %input{:class => 'form-control', :value=>@vehicle.vnation, :name=>"Nation"}
               .col-md-1
               .col-md-4
                 %label War
-                %input{:class => 'form-control', :value=>'', :name=>"War"}
+                %input{:class => 'form-control', :value=>@vehicle.vwar, :name=>"War"}
         
             .form-group
               %label Vehicle Description
-              %textarea{:class => 'form-control', :rows => "8", :value=>'', :name=>"Description"}
+              %textarea{:class => 'form-control', :rows => "8", :value=>@vehicle.vdescription, :name=>"Description"}
+                =@vehicle.vdescription
       
             = submit_tag("Save", :class => 'btn btn-primary')
