@@ -1,6 +1,6 @@
 %nav.navbar.navbar-inverse{:role => "navigation"}
   .navbar-header
-    %a.navbar-brand{:href => "#"} M.A.G.I
+    %a.navbar-brand{:href => "home"} M.A.G.I.
   %ul.nav.navbar-nav.navbar-right
     %li
       %a{:href=>'allevent'}
@@ -38,7 +38,7 @@
     .col-md-2
     .col-md-8
       -if flash[:notice] != nil
-        .alert.alert-success.alert-dismissable
+        .alert.alert-info.alert-dismissable
           %button.close{:type=>"button", "data-dismiss"=>"alert"}
             %span{"aria-hidden"=>true}×
             %span.sr-only Close

@@ -3,6 +3,11 @@
 # This file is used by web_steps.rb, which you should also delete
 #
 # You have been warned
+
+
+
+
+__END__
 module NavigationHelpers
   # Maps a name to a path. Used by the
   #
@@ -15,7 +20,6 @@ module NavigationHelpers
 
     when /^the home\s?page$/
       '/'
-
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
@@ -26,6 +30,7 @@ module NavigationHelpers
       begin
         page_name =~ /^the (.*) page$/
         path_components = $1.split(/\s+/)
+        #raise "Trying to send ... \"#{page_name}\" ...\n"
         self.send(path_components.push('path').join('_').to_sym)
       rescue NoMethodError, ArgumentError
         raise "Can't find mapping from \"#{page_name}\" to a path.\n" +
