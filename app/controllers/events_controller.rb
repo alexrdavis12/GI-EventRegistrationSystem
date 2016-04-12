@@ -1,5 +1,17 @@
 class EventsController < ApplicationController
+
+	def isadmin
+		  id = session[:user_id]
+    	@users = User.find(id)
+    	if(@users.level!=0)
+	    	flash[:notice]="You are not authorized to that page"
+	    	flash[:color]="Invalid"
+	    	redirect_to '/login'
+    	end
+	end
+
 	def create
+	  self.isadmin
 		@event = Event.new
 		@flash_notice = ""
 
@@ -38,12 +50,14 @@ class EventsController < ApplicationController
   end
   
   def edit
+    self.isadmin
     eid = params[:eid]
     @event = Event.find(eid)
     @flash_notice = ""
   end
   
   def update
+    self.isadmin
     eid = params[:eid]
     @event = Event.find(eid)
     if params[:commit] != nil && params[:commit] == 'Save'
