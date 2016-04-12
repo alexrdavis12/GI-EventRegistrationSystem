@@ -31,9 +31,9 @@
         = form_tag({:action => 'update', :eid => @eid}) do
           %div#q_form
             %input{:type=>"hidden", :value=>@eid, :name=>:q_eid}
-          - @questions.each do |q|
-            %li{:id=>'q_list', :style=>"list-style-type:none"}
-              .panel.panel-info#Q
+          %li{:id=>'q_list', :style=>"list-style-type:none"}
+            - @questions.each do |q|
+              .panel.panel-info{:id => "Q#{q.id}"}
                 .panel-heading
                   %h3.panel-title
                     Question
@@ -48,17 +48,18 @@
                     %input{:class => 'form-control', :value=> q.qtitle, :name=>"Q#{q.id}[title]"}
                   .form-group
                     %label Type
-                    %select{:class => 'form-control', :name => "Q#{q.id}[type]", :belong => "#{q.id}", :placeholder => "#{q.qtype}"}
+                    %select{:class => 'form-control', :value=> q.qtype, :name => "Q#{q.id}[type]", :belong => "#{q.id}"}
                       %option{:value => 1}= "Text"
                       %option{:value => 2}= "Checkboxes"
                       %option{:value => 3}= "Radio Buttons"
                       %option{:value => 4}= "Dropdown"
                       %option{:value => 5}= "Paragraph Text"
+                    //%input{:class => 'form-control', :value=> q.qoption :name => "Q#{q.id}[type]"}
                     .form-group
                     %a.btn.btn-danger.pull-right{:href => "javascript:delete_question(#{q.id})"}
                       %i.fa.fa-trash-o.fa-lg
                       Delete Question
-          %a.btn.btn-success{:id => 'create_q_btn', }
+          %a.btn.btn-success{:id => 'create_q_btn'}
             %i.fa.fa-plus.fa-lg
             Add Question
           //%input{:class => 'btn btn-primary', :type => "button", :onclick => "", :id => 'create_q_btn', :value => 'Add Question'} 

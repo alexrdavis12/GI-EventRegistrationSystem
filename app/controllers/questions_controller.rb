@@ -126,12 +126,19 @@ class QuestionsController < ApplicationController
 
 	end
 
+	def save
+        eid=params[:eid]
+        qid=params[:qid]
+  	    @question = Question.where(eid: eid).find(qid)
+    end
+	
 	def show
         eid = params[:eid]
         @questions = Question.where(eid: eid )
 	end
 	
 	def edit
+		@flash_notice = ""
         eid = params[:eid]
         @eid = eid
         @questions = Question.where(eid: eid )
@@ -140,15 +147,13 @@ class QuestionsController < ApplicationController
 	def update
 
 	eid = params[:eid]
+	@questionsold = Question.where(eid: eid )
     @questions = Question.where(eid: eid )
-
-    @flash_notice = ''
-		@error_type = 0
 
 		if params[:eid] != nil
 			@eid = params[:eid]
 		elsif params[:commit] == nil || params[:commit] != 'Save'
-			@flash_notice = "Event ID is not specified!"
+			flash[:notice] = "Event ID is not specified!"
 			@error_type = -1
 			redirect_to "/QuestionEdit?eid=#{eid}"
 			return
@@ -204,7 +209,7 @@ class QuestionsController < ApplicationController
 	          		@question.qoption = option_str[0...-1]
 
 	          		if @question.valid?
-	          			qarray << @question
+	          			@questions << @question
 	          		else
 	          			@flash_notice = "Edit Error"
 	          			redirect_to "/QuestionEdit?eid=#{eid}"
@@ -248,7 +253,7 @@ class QuestionsController < ApplicationController
 	          		@question.qoption = option_str[0...-1]
 
 	          		if @question.valid?
-	          			qarray << @question
+	          			@questions << @question
 	          		else
 	          			@flash_notice = "Edit Error"
 	          			redirect_to "/QuestionEdit?eid=#{eid}"
@@ -257,7 +262,12 @@ class QuestionsController < ApplicationController
 	          	end
 	        end
 
-	        qarray.each do |question|
+			@questionsold.each do |q|
+				if q.valid?
+					q.delete
+				end
+			end	
+	        @questions.each do |question|
 	        	question.save
 	        end
 	          
