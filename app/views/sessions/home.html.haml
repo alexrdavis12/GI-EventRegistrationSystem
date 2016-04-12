@@ -31,8 +31,9 @@
     .row
         .col-md-1
         .col-md-11
-            .alert.alert-success
-                =flash[:notice]
+            -if @flash_notice != ""
+                .alert.alert-success
+                    =flash[:notice]
     .row{:id => "events", :class => "tab-pane"}
     .row{:id => "vehicles", :class => "tab-pane active"}
         .col-md-2

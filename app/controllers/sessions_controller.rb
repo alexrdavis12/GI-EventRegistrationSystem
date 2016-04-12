@@ -29,6 +29,7 @@ class SessionsController < ApplicationController
   def home
     id = session[:user_id]
     @vehicles=Vehicle.where(user_id: id).all
+    @flash_notice = ""
   end
 
 
