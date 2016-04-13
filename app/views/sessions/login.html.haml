@@ -2,7 +2,7 @@
 
 %nav.navbar.navbar-inverse{:role => "navigation"}
   .navbar-header
-    %a.navbar-brand{:href => "#"} M.A.G.I
+    %a.navbar-brand{:href => "home"} M.A.G.I.
 
 .container
   .row{:style => "padding-top: 100px;"}
@@ -23,7 +23,7 @@
         = form_tag(:action => 'login_attempt') do
           %p
           .form-group
-            %label Username/Email:
+            %label Email:
             %input{:class => 'form-control', :name=>:email}
           
           .form-group
