@@ -4328,7 +4328,10 @@ Completed 200 OK in 453ms (Views: 448.3ms | ActiveRecord: 0.4ms)
 Started GET "/QuestionCreate?eid=2" for 165.91.227.221 at 2016-04-12 18:05:25 +0000
 Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
 Processing by QuestionsController#create as HTML
-<<<<<<< HEAD
+  Parameters: {"eid"=>"2"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered questions/create.html.haml within layouts/application (55.0ms)
+Completed 200 OK in 675ms (Views: 667.1ms | ActiveRecord: 0.4ms)
   Parameters: {"utf8"=>"✓", "authenticity_token"=>"zm7M9d8edxVEXgFy8+JqPtuW3HrxxT/+BE1JgWN8SACSmVfaJrm4cyBcv8bGO045WaS8y+jvS7yO02sDoEjrjQ==", "q_eid"=>"10", "Q1"=>{"title"=>"fsdfsdf", "type"=>"1"}, "commit"=>"Create"}
   [1m[35m (0.3ms)[0m  begin transaction
   [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "questions" ("qid", "eid", "qtitle", "qtype", "qoption", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["qid", 1], ["eid", 10], ["qtitle", "fsdfsdf"], ["qtype", "1"], ["qoption", ""], ["created_at", "2016-04-12 05:13:22.636344"], ["updated_at", "2016-04-12 05:13:22.636344"]]
@@ -4524,9 +4527,3 @@ Processing by AdminController#index as HTML
   [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"
   Rendered admin/index.html.haml within layouts/application (3.9ms)
 Completed 200 OK in 467ms (Views: 464.0ms | ActiveRecord: 0.7ms)
-=======
-  Parameters: {"eid"=>"2"}
-  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
-  Rendered questions/create.html.haml within layouts/application (55.0ms)
-Completed 200 OK in 675ms (Views: 667.1ms | ActiveRecord: 0.4ms)
->>>>>>> master
