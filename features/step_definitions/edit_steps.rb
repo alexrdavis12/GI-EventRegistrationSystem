@@ -13,11 +13,12 @@ Then(/^I should see Events $/) do
 end
 
 When (/^(?:|I) click Edit$/) do
-  visit('eventedit?eid=1')
+   visit('eventedit?eid=1')
   
 end
 
 Then (/^I should see it change to the event form with event information$/) do
+   expect(page).to have_content("Edit")
 
 end
   
@@ -33,6 +34,8 @@ When (/^(?:|I )click Edit Question$/) do
 end
 
 Then (/^I should see it change to the edit form with question information$/) do
+   visit('QuestionEdit?eid=1')
+   page.find("a", text:"edit").click
 
 end
 
