@@ -5,6 +5,8 @@ Feature: Reorder questions
 
 Background: Logged in as admin event needs to contain more than 1 question
 
+Given I Login in as admin
+
 Scenario: User sees Question
   When I go to the Questions Page
   Then I should see a Question
