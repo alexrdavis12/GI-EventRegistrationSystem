@@ -1,38 +1,38 @@
 Given (/^(?:|I )am on the Event page$/) do 
-   visit('EventCreate?eid=1')
-   #pending # express the regexp above with the code you wish you had visit path_to(page_name)
+   visit root_path
 end
 
-And(/^There are more than one event on the page$/) do
-   #visit('EventCreate?eid=1')
-   #page.find("a", text:"Edit").click
-   #pending # express the regexp above with the code you wish you had
+And(/^There are more than one event on the page$/) do 
+   visit('eventedit?eid=1')
+   page.find("a", text:"edit").click
 end
 
-When (/^(?:|I )click Edit$/) do 
-   #click_button(button)
-   #pending # express the regexp above with the code you wish you had
+Then(/^I should see Events $/) do 
+   expect(page).to have_content("Edit")
+ 
+end
+
+When (/^(?:|I) click Edit$/) do
+  visit('QuestionEdit?eid=1')
+  
 end
 
 Then (/^I should see it change to the event form with event information$/) do
-  #pending fill_in(field, with:text)
+
 end
   
 Given (/^(?:|I )am on the Event Question$/) do 
-   #pending
+   visit('QuestionEdit?eid=1')
+   #find(text: "Edit").click
+   click_button("edit")
+  
 end
 
 When (/^(?:|I )click Edit Question$/) do 
-   #click_button(button)
-   #pending # express the regexp above with the code you wish you had
+   
 end
 
-Then (/^I should see it change to the edit form with question information$/) do 
-   #fill_in(field, with:text)
-   #ending # express the regexp above with the code you wish you had
+Then (/^I should see it change to the edit form with question information$/) do
+
 end
-
-
-
-
 
