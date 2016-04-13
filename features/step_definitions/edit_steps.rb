@@ -13,7 +13,7 @@ Then(/^I should see Events $/) do
 end
 
 When (/^(?:|I) click Edit$/) do
-  visit('QuestionEdit?eid=1')
+  visit('eventedit?eid=1')
   
 end
 
@@ -29,7 +29,7 @@ Given (/^(?:|I )am on the Event Question$/) do
 end
 
 When (/^(?:|I )click Edit Question$/) do 
-   
+   visit('QuestionEdit?eid=1')
 end
 
 Then (/^I should see it change to the edit form with question information$/) do
