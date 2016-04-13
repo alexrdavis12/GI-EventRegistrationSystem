@@ -2,6 +2,7 @@ Feature: Edit Event
 
 Scenario: Edit Event Information 
   Given I am on the Event page
+  And There are more than one event on the page
   When I click Edit
   Then I should see it change to the event form with event information
   
