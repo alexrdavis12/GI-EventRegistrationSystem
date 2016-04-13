@@ -1,6 +1,6 @@
 #!/bin/bash
 git add app* bin* config* db* features* lib* log* public* script* spec* tes* vendor*
-git commit --all -m "testing vehicle auto-populates"
+git commit --all -m "testing master functionality"
 git push
-git push -f heroku Marc:master
+git push -f heroku master
 heroku open
