@@ -6980,6 +6980,7 @@ Cannot render console from 165.91.12.180! Allowed networks: 127.0.0.1, ::1, 127.
 Processing by SessionsController#login as HTML
   Rendered sessions/login.html.haml within layouts/application (4.3ms)
 Completed 200 OK in 778ms (Views: 776.8ms | ActiveRecord: 0.0ms)
+<<<<<<< HEAD
   Rendered events/update.html.haml within layouts/application (11.0ms)
 Completed 200 OK in 251ms (Views: 248.5ms | ActiveRecord: 0.5ms)
 
@@ -7604,3 +7605,380 @@ Processing by AdminController#index as HTML
   [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"
   Rendered admin/index.html.haml within layouts/application (3.9ms)
 Completed 200 OK in 467ms (Views: 464.0ms | ActiveRecord: 0.7ms)
+=======
+
+
+Started GET "/" for 165.91.4.143 at 2016-04-14 00:12:32 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#login as HTML
+  Rendered sessions/login.html.haml within layouts/application (289.9ms)
+Completed 200 OK in 902ms (Views: 870.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.143 at 2016-04-14 00:12:34 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/data.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.143 at 2016-04-14 00:12:34 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/answers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.143 at 2016-04-14 00:12:34 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-datetimepicker.min.self-788e29abac8dcfbc60d7f7490dd02b623d42c2174b604ebff6e8faa66c5d876e.css?body=1" for 165.91.4.143 at 2016-04-14 00:12:34 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-2fe4f8a61d73606fbcb036b41f380591906a4da65a9eb5ec0a210fe6980b2ca7.css?body=1" for 165.91.4.143 at 2016-04-14 00:12:34 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-603f330c29af013305325569c8c75d03d688963abd8cde4fffec17b5ce417bfb.css?body=1" for 165.91.4.143 at 2016-04-14 00:12:34 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for 165.91.4.143 at 2016-04-14 00:12:34 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.143 at 2016-04-14 00:12:34 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/questions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.143 at 2016-04-14 00:12:34 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-0de50f0224d6e8cae3e2502cc1d9cfabdc0d76270f21057592cf35d51d65ebfb.css?body=1" for 165.91.4.143 at 2016-04-14 00:12:34 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.143 at 2016-04-14 00:12:34 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.143 at 2016-04-14 00:12:34 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 165.91.4.143 at 2016-04-14 00:12:34 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-a889e7abcadb5dbdb0529c0dc69d5a86744647c95c657e19413c888ea981fd29.css?body=1" for 165.91.4.143 at 2016-04-14 00:12:35 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 165.91.4.143 at 2016-04-14 00:12:35 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 165.91.4.143 at 2016-04-14 00:12:35 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 165.91.4.143 at 2016-04-14 00:12:35 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 165.91.4.143 at 2016-04-14 00:12:35 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 165.91.4.143 at 2016-04-14 00:12:35 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 165.91.4.143 at 2016-04-14 00:12:35 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 165.91.4.143 at 2016-04-14 00:12:35 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 165.91.4.143 at 2016-04-14 00:12:35 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 165.91.4.143 at 2016-04-14 00:12:35 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 165.91.4.143 at 2016-04-14 00:12:35 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 165.91.4.143 at 2016-04-14 00:12:35 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 165.91.4.143 at 2016-04-14 00:12:35 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 165.91.4.143 at 2016-04-14 00:12:35 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 165.91.4.143 at 2016-04-14 00:12:35 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 165.91.4.143 at 2016-04-14 00:12:35 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 165.91.4.143 at 2016-04-14 00:12:35 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/im3-554298bfba1eab7ed16dfc520f300082d3924d01db3b2eeabad3907c8443852c.png" for 165.91.4.143 at 2016-04-14 00:12:35 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/create" for 165.91.4.143 at 2016-04-14 00:12:37 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.haml within layouts/application (13.6ms)
+Completed 200 OK in 262ms (Views: 224.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/create" for 165.91.4.143 at 2016-04-14 00:12:40 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.haml within layouts/application (3.7ms)
+Completed 200 OK in 241ms (Views: 239.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 165.91.4.143 at 2016-04-14 00:12:42 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.haml within layouts/application (11.9ms)
+Completed 200 OK in 335ms (Views: 334.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 165.91.4.143 at 2016-04-14 00:12:44 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 212ms (Views: 210.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login_attempt" for 165.91.4.143 at 2016-04-14 00:13:17 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"N7dncAftaR+RvG9sJxUbtyrdvT4/lppcc19sNLVxpjiXls1MIP4o40Cw6SRkC5BLJvROfiBV1L3q3cIHYOEq+g==", "email"=>"", "login_password"=>"[FILTERED]", "commit"=>"Log in"}
+Redirected to https://csce431-project-mdebolt.c9users.io/login
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 165.91.4.143 at 2016-04-14 00:13:17 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login as HTML
+  Rendered sessions/login.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 292ms (Views: 290.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 165.91.4.143 at 2016-04-14 00:13:26 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.haml within layouts/application (9.6ms)
+Completed 200 OK in 341ms (Views: 340.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login_attempt" for 165.91.4.143 at 2016-04-14 00:13:39 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5n1zp8PHoBgPuE3zmgLLdFEYMywfAefwApessmBlTalGXNmb5NTh5N60y7vZHECIXTHAbADCqRGbFQKBtfXBaw==", "email"=>"info@americangimuseum.org", "login_password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "info@americangimuseum.org"]]
+Redirected to https://csce431-project-mdebolt.c9users.io/login
+Completed 302 Found in 128ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/login" for 165.91.4.143 at 2016-04-14 00:13:39 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login as HTML
+  Rendered sessions/login.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 208ms (Views: 207.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login_attempt" for 165.91.4.143 at 2016-04-14 00:13:52 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oODWBAvamm/X9ifbP8Ojr8qa5KU0zmhLHkrTVWPMtpcAwXw4LMnbkwb6oZN83ShTxrMX5SsNJqqHyH1mtlw6VQ==", "email"=>"info@americangimuseum.org", "login_password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "info@americangimuseum.org"]]
+Redirected to https://csce431-project-mdebolt.c9users.io/admin
+Completed 302 Found in 86ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/admin" for 165.91.4.143 at 2016-04-14 00:13:52 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered admin/index.html.haml within layouts/application (26.5ms)
+Completed 200 OK in 192ms (Views: 185.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/fontawesome-webfont-a7c7e4930090e038a280fd61d88f0dc03dad4aeaedbd8c9be3dd9aa4c3b6f8d1.woff" for 165.91.4.143 at 2016-04-14 00:13:52 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/home" for 165.91.4.143 at 2016-04-14 00:13:56 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to https://csce431-project-mdebolt.c9users.io/admin
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/admin" for 165.91.4.143 at 2016-04-14 00:13:56 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered admin/index.html.haml within layouts/application (14.1ms)
+Completed 200 OK in 195ms (Views: 192.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/logout" for 165.91.4.143 at 2016-04-14 00:13:59 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#logout as HTML
+Redirected to https://csce431-project-mdebolt.c9users.io/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.4.143 at 2016-04-14 00:13:59 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login as HTML
+  Rendered sessions/login.html.haml within layouts/application (10.7ms)
+Completed 200 OK in 200ms (Views: 199.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login_attempt" for 165.91.4.143 at 2016-04-14 00:14:08 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IUnDLfP+hRKaPvGWksx+6WOHhs8lxmNQNsCDOnXcDPSBaGkR1O3E7ksyd97R0vUVb651jzoFLbGvQi0JoEyANg==", "email"=>"user@user.com", "login_password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "user@user.com"]]
+Redirected to https://csce431-project-mdebolt.c9users.io/login
+Completed 302 Found in 133ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 165.91.4.143 at 2016-04-14 00:14:09 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login as HTML
+  Rendered sessions/login.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 221ms (Views: 220.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login_attempt" for 165.91.4.143 at 2016-04-14 00:14:16 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qFxTSpQ+dMgfJeijidK4XBm7+0n1XQSrogU4GjdTSLMIffl2sy01NM4pbuvKzDOgFZIICeqeSko7h5Yp4sPEcQ==", "email"=>"a@a.com", "login_password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "a@a.com"]]
+Redirected to https://csce431-project-mdebolt.c9users.io/home
+Completed 302 Found in 88ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 165.91.4.143 at 2016-04-14 00:14:16 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.3ms)[0m  SELECT DISTINCT "answers"."eid" FROM "answers" WHERE "answers"."uid" = ?  [["uid", 3]]
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mVehicle Load (0.3ms)[0m  SELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?  [["user_id", 3]]
+  Rendered sessions/home.html.haml within layouts/application (27.0ms)
+Completed 200 OK in 224ms (Views: 189.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/vehicleedit?vid=13" for 165.91.4.143 at 2016-04-14 00:14:24 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VehiclesController#edit as HTML
+  Parameters: {"vid"=>"13"}
+  [1m[36mVehicle Load (0.4ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT 1[0m  [["id", 13]]
+  Rendered vehicles/edit.html.haml within layouts/application (11.9ms)
+Completed 200 OK in 276ms (Views: 273.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/vehicleedit?vid=13" for 165.91.4.143 at 2016-04-14 00:14:34 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VehiclesController#edit as HTML
+  Parameters: {"vid"=>"13"}
+  [1m[35mVehicle Load (0.2ms)[0m  SELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT 1  [["id", 13]]
+  Rendered vehicles/edit.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 292ms (Views: 289.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/vehicleupdate?vid=13" for 165.91.4.143 at 2016-04-14 00:14:38 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VehiclesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"twDJzYj4gaunf5ZvWtKCbkrxu9oBtV2Mcde+KL04M2sXIWPxr+vAV3ZzECcZzAmSRthImh52E23oVRAbaKi/qQ==", "Name"=>"A's Jeep", "Class"=>"Wheeled", "Nation"=>"U.S.", "War"=>"WWI", "Description"=>"It's awesome", "commit"=>"Save", "vid"=>"13"}
+  [1m[36mVehicle Load (1.6ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT 1[0m  [["id", 13]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mcommit transaction[0m
+Redirected to https://csce431-project-mdebolt.c9users.io/vehicleupdate?vid=13
+Completed 302 Found in 21ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/vehicleupdate?vid=13" for 165.91.4.143 at 2016-04-14 00:14:38 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VehiclesController#update as HTML
+  Parameters: {"vid"=>"13"}
+  [1m[35mVehicle Load (0.3ms)[0m  SELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT 1  [["id", 13]]
+  Rendered vehicles/update.html.haml within layouts/application (26.5ms)
+Completed 200 OK in 305ms (Views: 302.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/allevent" for 165.91.4.143 at 2016-04-14 00:14:41 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mEvent Load (0.2ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/allevent.html.haml within layouts/application (18.0ms)
+Completed 200 OK in 336ms (Views: 333.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/eventsurvey?eid=1" for 165.91.4.143 at 2016-04-14 00:14:43 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#showquestion as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."uid" = ? AND "answers"."eid" = ?[0m  [["uid", 3], ["eid", 1]]
+Redirected to https://csce431-project-mdebolt.c9users.io/allevent
+Completed 302 Found in 25ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/allevent" for 165.91.4.143 at 2016-04-14 00:14:43 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/allevent.html.haml within layouts/application (10.0ms)
+Completed 200 OK in 221ms (Views: 215.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/home" for 165.91.4.143 at 2016-04-14 00:14:45 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  SELECT DISTINCT "answers"."eid" FROM "answers" WHERE "answers"."uid" = ?  [["uid", 3]]
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mVehicle Load (0.2ms)[0m  SELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?  [["user_id", 3]]
+  Rendered sessions/home.html.haml within layouts/application (29.1ms)
+Completed 200 OK in 327ms (Views: 321.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/vehicleedit?vid=13" for 165.91.4.143 at 2016-04-14 00:15:51 +0000
+Cannot render console from 165.91.4.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VehiclesController#edit as HTML
+  Parameters: {"vid"=>"13"}
+  [1m[36mVehicle Load (0.3ms)[0m  [1mSELECT  "vehicles".* FROM "vehicles" WHERE "vehicles"."id" = ? LIMIT 1[0m  [["id", 13]]
+  Rendered vehicles/edit.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 312ms (Views: 309.9ms | ActiveRecord: 0.3ms)
+>>>>>>> Marc
