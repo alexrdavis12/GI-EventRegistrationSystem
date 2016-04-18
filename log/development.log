@@ -7906,3 +7906,1326 @@ Cannot render console from 165.91.4.145! Allowed networks: 127.0.0.1, ::1, 127.0
 Processing by SessionsController#create as HTML
   Rendered sessions/create.html.haml within layouts/application (49.3ms)
 Completed 200 OK in 761ms (Views: 658.2ms | ActiveRecord: 22.3ms)
+
+
+Started GET "/" for 165.91.227.221 at 2016-04-18 18:15:49 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#login as HTML
+  Rendered sessions/login.html.haml within layouts/application (243.7ms)
+Completed 200 OK in 928ms (Views: 900.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 165.91.227.221 at 2016-04-18 18:15:54 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.haml within layouts/application (45.6ms)
+Completed 200 OK in 360ms (Views: 313.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/create" for 165.91.227.221 at 2016-04-18 18:48:52 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.haml within layouts/application (135.3ms)
+Completed 500 Internal Server Error in 190ms (ActiveRecord: 2.1ms)
+
+ActionView::Template::Error (undefined method `phonenumber' for #<User:0x0000000b69ce08>):
+    55:           %input{:class => 'form-control', :value=>@user.firstname, :name=>:firstname}
+    56:         .form-group
+    57:           %label Phone Number:
+    58:           %input{:class => 'form-control', :value=>@user.phonenumber, :name=>:phonenumber}
+    59:         .form-group
+    60:           %label Gender
+    61:           %label.checkbox-inline
+  app/views/sessions/create.html.haml:58:in `block in _app_views_sessions_create_html_haml___3824262659150540894_97816700'
+  app/views/sessions/create.html.haml:32:in `_app_views_sessions_create_html_haml___3824262659150540894_97816700'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (249.2ms)
+
+
+Started GET "/create" for 165.91.227.221 at 2016-04-18 18:53:24 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.haml within layouts/application (45.5ms)
+Completed 500 Internal Server Error in 69ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `phonenumber' for #<User:0x007fb414348e68>):
+    55:           %input{:class => 'form-control', :value=>@user.firstname, :name=>:firstname}
+    56:         .form-group
+    57:           %label Phone Number:
+    58:           %input{:class => 'form-control', :value=>@user.phonenumber, :name=>:phonenumber}
+    59:         .form-group
+    60:           %label Gender
+    61:           %label.checkbox-inline
+  app/views/sessions/create.html.haml:58:in `block in _app_views_sessions_create_html_haml___3824262659150540894_97816700'
+  app/views/sessions/create.html.haml:32:in `_app_views_sessions_create_html_haml___3824262659150540894_97816700'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (18.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (130.6ms)
+
+
+Started GET "/create" for 165.91.227.221 at 2016-04-18 18:53:26 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.haml within layouts/application (19.3ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `phonenumber' for #<User:0x000000094c75a8>):
+    55:           %input{:class => 'form-control', :value=>@user.firstname, :name=>:firstname}
+    56:         .form-group
+    57:           %label Phone Number:
+    58:           %input{:class => 'form-control', :value=>@user.phonenumber, :name=>:phonenumber}
+    59:         .form-group
+    60:           %label Gender
+    61:           %label.checkbox-inline
+  app/views/sessions/create.html.haml:58:in `block in _app_views_sessions_create_html_haml___3824262659150540894_97816700'
+  app/views/sessions/create.html.haml:32:in `_app_views_sessions_create_html_haml___3824262659150540894_97816700'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (69.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (17.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (243.8ms)
+
+
+Started GET "/create" for 165.91.227.221 at 2016-04-18 19:07:20 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.haml within layouts/application (26.4ms)
+Completed 500 Internal Server Error in 80ms (ActiveRecord: 3.2ms)
+
+ActionView::Template::Error (undefined method `phonenumber' for #<User:0x0000000724cd98>):
+    55:           %input{:class => 'form-control', :value=>@user.firstname, :name=>:firstname}
+    56:         .form-group
+    57:           %label Phone Number:
+    58:           %input{:class => 'form-control', :value=>@user.phonenumber, :name=>:phonenumber}
+    59:         .form-group
+    60:           %label Gender
+    61:           %label.checkbox-inline
+  app/views/sessions/create.html.haml:58:in `block in _app_views_sessions_create_html_haml___3824262659150540894_97816700'
+  app/views/sessions/create.html.haml:32:in `_app_views_sessions_create_html_haml___3824262659150540894_97816700'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (20.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (190.8ms)
+
+
+Started GET "/" for 165.91.227.221 at 2016-04-18 19:13:28 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#login as HTML
+  Rendered sessions/login.html.haml within layouts/application (254.6ms)
+Completed 200 OK in 815ms (Views: 778.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 165.91.227.221 at 2016-04-18 19:13:31 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.haml within layouts/application (54.2ms)
+Completed 500 Internal Server Error in 104ms (ActiveRecord: 1.4ms)
+
+ActionView::Template::Error (undefined method `phonenumber' for #<User:0x0000000b3bf9b0>):
+    55:           %input{:class => 'form-control', :value=>@user.firstname, :name=>:firstname}
+    56:         .form-group
+    57:           %label Phone Number:
+    58:           %input{:class => 'form-control', :value=>@user.phonenumber, :name=>:phonenumber}
+    59:         .form-group
+    60:           %label Gender
+    61:           %label.checkbox-inline
+  app/views/sessions/create.html.haml:58:in `block in _app_views_sessions_create_html_haml__4295793481256737730_92477120'
+  app/views/sessions/create.html.haml:32:in `_app_views_sessions_create_html_haml__4295793481256737730_92477120'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (53.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (23.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (195.7ms)
+
+
+Started GET "/create" for 165.91.227.221 at 2016-04-18 19:13:32 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.haml within layouts/application (46.0ms)
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `phonenumber' for #<User:0x007fcd88321f60>):
+    55:           %input{:class => 'form-control', :value=>@user.firstname, :name=>:firstname}
+    56:         .form-group
+    57:           %label Phone Number:
+    58:           %input{:class => 'form-control', :value=>@user.phonenumber, :name=>:phonenumber}
+    59:         .form-group
+    60:           %label Gender
+    61:           %label.checkbox-inline
+  app/views/sessions/create.html.haml:58:in `block in _app_views_sessions_create_html_haml__4295793481256737730_70260364959520'
+  app/views/sessions/create.html.haml:32:in `_app_views_sessions_create_html_haml__4295793481256737730_70260364959520'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (40.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (150.5ms)
+
+
+Started GET "/" for 165.91.4.147 at 2016-04-18 22:57:07 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#login as HTML
+  Rendered sessions/login.html.haml within layouts/application (205.1ms)
+Completed 200 OK in 897ms (Views: 869.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.147 at 2016-04-18 22:57:10 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/data.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.147 at 2016-04-18 22:57:10 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-datetimepicker.min.self-788e29abac8dcfbc60d7f7490dd02b623d42c2174b604ebff6e8faa66c5d876e.css?body=1" for 165.91.4.147 at 2016-04-18 22:57:10 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for 165.91.4.147 at 2016-04-18 22:57:10 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-2fe4f8a61d73606fbcb036b41f380591906a4da65a9eb5ec0a210fe6980b2ca7.css?body=1" for 165.91.4.147 at 2016-04-18 22:57:10 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/answers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.147 at 2016-04-18 22:57:10 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-603f330c29af013305325569c8c75d03d688963abd8cde4fffec17b5ce417bfb.css?body=1" for 165.91.4.147 at 2016-04-18 22:57:10 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.147 at 2016-04-18 22:57:10 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/questions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.147 at 2016-04-18 22:57:10 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.147 at 2016-04-18 22:57:10 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.147 at 2016-04-18 22:57:11 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-0a47e2599240f8e31081133ff1040077aca34f655d8d9a5806e05547028d9f2c.css?body=1" for 165.91.4.147 at 2016-04-18 22:57:11 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-a889e7abcadb5dbdb0529c0dc69d5a86744647c95c657e19413c888ea981fd29.css?body=1" for 165.91.4.147 at 2016-04-18 22:57:11 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 165.91.4.147 at 2016-04-18 22:57:11 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 165.91.4.147 at 2016-04-18 22:57:11 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 165.91.4.147 at 2016-04-18 22:57:11 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 165.91.4.147 at 2016-04-18 22:57:11 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 165.91.4.147 at 2016-04-18 22:57:11 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 165.91.4.147 at 2016-04-18 22:57:11 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 165.91.4.147 at 2016-04-18 22:57:11 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 165.91.4.147 at 2016-04-18 22:57:11 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 165.91.4.147 at 2016-04-18 22:57:11 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 165.91.4.147 at 2016-04-18 22:57:11 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 165.91.4.147 at 2016-04-18 22:57:11 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 165.91.4.147 at 2016-04-18 22:57:11 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 165.91.4.147 at 2016-04-18 22:57:11 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 165.91.4.147 at 2016-04-18 22:57:11 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 165.91.4.147 at 2016-04-18 22:57:11 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 165.91.4.147 at 2016-04-18 22:57:11 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 165.91.4.147 at 2016-04-18 22:57:11 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/im3-554298bfba1eab7ed16dfc520f300082d3924d01db3b2eeabad3907c8443852c.png" for 165.91.4.147 at 2016-04-18 22:57:11 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/create" for 165.91.4.147 at 2016-04-18 22:57:13 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.haml within layouts/application (101.1ms)
+Completed 500 Internal Server Error in 188ms (ActiveRecord: 1.6ms)
+
+ActionView::Template::Error (undefined method `phonenumber' for #<User:0x0000000c01f7a0>):
+    55:           %input{:class => 'form-control', :value=>@user.firstname, :name=>:firstname}
+    56:         .form-group
+    57:           %label Phone Number:
+    58:           %input{:class => 'form-control', :value=>@user.phonenumber, :name=>:phonenumber}
+    59:         .form-group
+    60:           %label Gender
+    61:           %label.checkbox-inline
+  app/views/sessions/create.html.haml:58:in `block in _app_views_sessions_create_html_haml___2057367494919429406_104583240'
+  app/views/sessions/create.html.haml:32:in `_app_views_sessions_create_html_haml___2057367494919429406_104583240'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (29.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (12.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (186.6ms)
+
+
+Started GET "/create" for 165.91.4.147 at 2016-04-18 22:57:14 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.haml within layouts/application (46.2ms)
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `phonenumber' for #<User:0x007f4e083f92f8>):
+    55:           %input{:class => 'form-control', :value=>@user.firstname, :name=>:firstname}
+    56:         .form-group
+    57:           %label Phone Number:
+    58:           %input{:class => 'form-control', :value=>@user.phonenumber, :name=>:phonenumber}
+    59:         .form-group
+    60:           %label Gender
+    61:           %label.checkbox-inline
+  app/views/sessions/create.html.haml:58:in `block in _app_views_sessions_create_html_haml___2057367494919429406_69986561227600'
+  app/views/sessions/create.html.haml:32:in `_app_views_sessions_create_html_haml___2057367494919429406_69986561227600'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (20.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (166.5ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPhonenumber (20160418225936)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (1.1ms)[0m  [1mALTER TABLE "users" ADD "phonenumber" integer[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160418225936"]]
+  [1m[36m (14.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_isco' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_isco' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_unit' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_unit' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_vehicles_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_vehicles_on_user_id' AND type='index'
+
+
+
+Started GET "/create" for 165.91.4.147 at 2016-04-18 23:04:34 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.haml within layouts/application (7.7ms)
+Completed 200 OK in 295ms (Views: 266.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/answers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.147 at 2016-04-18 23:04:35 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-2fe4f8a61d73606fbcb036b41f380591906a4da65a9eb5ec0a210fe6980b2ca7.css?body=1" for 165.91.4.147 at 2016-04-18 23:04:35 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.147 at 2016-04-18 23:04:35 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-603f330c29af013305325569c8c75d03d688963abd8cde4fffec17b5ce417bfb.css?body=1" for 165.91.4.147 at 2016-04-18 23:04:35 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-datetimepicker.min.self-788e29abac8dcfbc60d7f7490dd02b623d42c2174b604ebff6e8faa66c5d876e.css?body=1" for 165.91.4.147 at 2016-04-18 23:04:35 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for 165.91.4.147 at 2016-04-18 23:04:35 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/data.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.147 at 2016-04-18 23:04:35 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/questions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.147 at 2016-04-18 23:04:35 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.147 at 2016-04-18 23:04:35 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-0a47e2599240f8e31081133ff1040077aca34f655d8d9a5806e05547028d9f2c.css?body=1" for 165.91.4.147 at 2016-04-18 23:04:35 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.147 at 2016-04-18 23:04:35 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.147 at 2016-04-18 23:04:35 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 165.91.4.147 at 2016-04-18 23:04:35 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-a889e7abcadb5dbdb0529c0dc69d5a86744647c95c657e19413c888ea981fd29.css?body=1" for 165.91.4.147 at 2016-04-18 23:04:35 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 165.91.4.147 at 2016-04-18 23:04:35 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 165.91.4.147 at 2016-04-18 23:04:35 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 165.91.4.147 at 2016-04-18 23:04:35 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 165.91.4.147 at 2016-04-18 23:04:35 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 165.91.4.147 at 2016-04-18 23:04:35 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 165.91.4.147 at 2016-04-18 23:04:35 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 165.91.4.147 at 2016-04-18 23:04:35 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 165.91.4.147 at 2016-04-18 23:04:35 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 165.91.4.147 at 2016-04-18 23:04:35 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 165.91.4.147 at 2016-04-18 23:04:35 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 165.91.4.147 at 2016-04-18 23:04:35 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 165.91.4.147 at 2016-04-18 23:04:35 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 165.91.4.147 at 2016-04-18 23:04:35 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 165.91.4.147 at 2016-04-18 23:04:35 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 165.91.4.147 at 2016-04-18 23:04:35 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 165.91.4.147 at 2016-04-18 23:04:35 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/im3-554298bfba1eab7ed16dfc520f300082d3924d01db3b2eeabad3907c8443852c.png" for 165.91.4.147 at 2016-04-18 23:04:36 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/create" for 165.91.4.147 at 2016-04-18 23:06:23 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pZoaRJYVj75G6P0t8UCKuPnofsai6z4kqZ69uyg86wNuDpViLPqbzUVzgnygEZJ55AhCmIKDMzIAreve9PJV9w==", "email"=>"kathryn02@yahoo.com", "password"=>"[FILTERED]", "pswdconfirm"=>"kathryn2011", "lastname"=>"M", "firstname"=>"Kathryn", "phonenumber"=>"2108444228", "gender"=>"female", "zipcode"=>"77840", "commit"=>"Create"}
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'kathryn02@yahoo.com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'kathryn02@yahoo.com' LIMIT 1[0m
+  [1m[35mSQL (4.6ms)[0m  INSERT INTO "users" ("email", "lastname", "firstname", "phonenumber", "gender", "level", "zipcode", "salt", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["email", "kathryn02@yahoo.com"], ["lastname", "M"], ["firstname", "Kathryn"], ["phonenumber", 2108444228], ["gender", "female"], ["level", 1], ["zipcode", "77840"], ["salt", "$2a$10$QRUD2ygqpYLuuO4mPnBMU."], ["encrypted_password", "$2a$10$QRUD2ygqpYLuuO4mPnBMU.mhcWpKIUkphxqlM3FaTtp2LFnv1Tp4."], ["created_at", "2016-04-18 23:06:23.318488"], ["updated_at", "2016-04-18 23:06:23.318488"]]
+  [1m[36m (42.1ms)[0m  [1mcommit transaction[0m
+Redirected to https://project-kathryn02.c9users.io/home
+Completed 302 Found in 274ms (ActiveRecord: 47.6ms)
+
+
+Started GET "/home" for 165.91.4.147 at 2016-04-18 23:06:23 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (1.8ms)[0m  SELECT DISTINCT "answers"."eid" FROM "answers" WHERE "answers"."uid" = ?  [["uid", 2]]
+  [1m[36mVehicle Load (0.9ms)[0m  [1mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered sessions/home.html.haml within layouts/application (71.2ms)
+Completed 200 OK in 777ms (Views: 587.9ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/assets/fontawesome-webfont-a7c7e4930090e038a280fd61d88f0dc03dad4aeaedbd8c9be3dd9aa4c3b6f8d1.woff" for 165.91.4.147 at 2016-04-18 23:06:24 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/allevent" for 165.91.4.147 at 2016-04-18 23:06:38 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/allevent.html.haml within layouts/application (31.4ms)
+Completed 200 OK in 456ms (Views: 440.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/allevent" for 165.91.4.147 at 2016-04-18 23:06:42 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/allevent.html.haml within layouts/application (11.1ms)
+Completed 200 OK in 661ms (Views: 657.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/logout" for 165.91.4.147 at 2016-04-18 23:06:44 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#logout as HTML
+Redirected to https://project-kathryn02.c9users.io/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.4.147 at 2016-04-18 23:06:44 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login as HTML
+  Rendered sessions/login.html.haml within layouts/application (15.0ms)
+Completed 200 OK in 351ms (Views: 349.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login_attempt" for 165.91.4.147 at 2016-04-18 23:07:04 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yZQLstEVuGC5NT556E0D4LTgBU+3Kr23j5r4kqnHZs0CAISUa/qsE7quQSi5HBshqQA5EZdCsKEmqa73dQnYOQ==", "email"=>"info@americangimuseum.org", "login_password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "info@americangimuseum.org"]]
+Redirected to https://project-kathryn02.c9users.io/admin
+Completed 302 Found in 80ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/admin" for 165.91.4.147 at 2016-04-18 23:07:04 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (1.0ms)[0m  SELECT "events".* FROM "events"
+  Rendered admin/index.html.haml within layouts/application (16.8ms)
+Completed 200 OK in 273ms (Views: 269.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/EventCreate" for 165.91.4.147 at 2016-04-18 23:07:06 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#create as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered events/create.html.haml within layouts/application (61.4ms)
+Completed 200 OK in 377ms (Views: 356.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/date.self-17576b0c7d23a7382cfaecb35f64494b6662c217b664ad4b3f479ff1572a9aa0.js?body=1" for 165.91.4.147 at 2016-04-18 23:07:06 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/EventCreate" for 165.91.4.147 at 2016-04-18 23:07:16 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4Wy/q1OevikBvUEoI6HJIYzxR3HGEh52zEuoZvEpovMq+DCN6XGqWgImPnly8NHgkRF7L+Z6E2BleP4DLeccBw==", "Title"=>"1111", "Location"=>"", "Description"=>"", "Start_Date"=>"", "End_Date"=>"", "commit"=>"Create"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "events" ("etitle", "elocation", "edescription", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["etitle", "1111"], ["elocation", ""], ["edescription", ""], ["created_at", "2016-04-18 23:07:16.042611"], ["updated_at", "2016-04-18 23:07:16.042611"]]
+  [1m[36m (15.5ms)[0m  [1mcommit transaction[0m
+Redirected to https://project-kathryn02.c9users.io/eventshow?eid=1
+Completed 302 Found in 187ms (ActiveRecord: 16.4ms)
+
+
+Started GET "/eventshow?eid=1" for 165.91.4.147 at 2016-04-18 23:07:16 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#show as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[35mEvent Load (0.4ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered events/show.html.haml within layouts/application (13.6ms)
+Completed 200 OK in 327ms (Views: 321.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/QuestionCreate?eid=1" for 165.91.4.147 at 2016-04-18 23:07:20 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#create as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered questions/create.html.haml within layouts/application (75.4ms)
+Completed 200 OK in 627ms (Views: 621.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/create_event.self-a72aa8672ac733b76d5b35167cfccc8b0e3616ad5a583ba4a572be4333def378.js?body=1" for 165.91.4.147 at 2016-04-18 23:07:21 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/QuestionCreate" for 165.91.4.147 at 2016-04-18 23:07:28 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NMQ4GaY8hCU1om9LLxObuEH4Kr7PplsCrFv9pbdOZOL/ULc/HNOQVjY5EBp+QoN5XBgW4O/OVhQFaKvAa4DaFg==", "q_eid"=>"1", "Q1"=>{"title"=>"q1", "type"=>"1"}, "commit"=>"Create"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "questions" ("qid", "eid", "qtitle", "qtype", "qoption", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["qid", 1], ["eid", 1], ["qtitle", "q1"], ["qtype", "1"], ["qoption", ""], ["created_at", "2016-04-18 23:07:28.532869"], ["updated_at", "2016-04-18 23:07:28.532869"]]
+  [1m[36m (23.6ms)[0m  [1mcommit transaction[0m
+Redirected to https://project-kathryn02.c9users.io/questionshow?eid=1
+Completed 302 Found in 83ms (ActiveRecord: 27.2ms)
+
+
+Started GET "/questionshow?eid=1" for 165.91.4.147 at 2016-04-18 23:07:28 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by QuestionsController#show as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[35mQuestion Load (1.1ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."eid" = ?  [["eid", 1]]
+  Rendered questions/show.html.haml within layouts/application (19.9ms)
+Completed 200 OK in 341ms (Views: 337.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/allevent" for 165.91.4.147 at 2016-04-18 23:07:31 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to https://project-kathryn02.c9users.io/admin
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/admin" for 165.91.4.147 at 2016-04-18 23:07:31 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered admin/index.html.haml within layouts/application (26.5ms)
+Completed 200 OK in 330ms (Views: 326.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/logout" for 165.91.4.147 at 2016-04-18 23:07:34 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#logout as HTML
+Redirected to https://project-kathryn02.c9users.io/
+Completed 302 Found in 9ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.4.147 at 2016-04-18 23:07:34 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login as HTML
+  Rendered sessions/login.html.haml within layouts/application (8.9ms)
+Completed 200 OK in 342ms (Views: 340.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login_attempt" for 165.91.4.147 at 2016-04-18 23:09:01 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"laiMq8oIVdVtRQYonhzX7xj1waK+BohQOUxHdoLpzjBePAONcOdBpm7eeXnPTc8uBRX9/J5uhUaQfxETXidwxA==", "email"=>"kathryn02@yahoo.com", "login_password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "kathryn02@yahoo.com"]]
+Redirected to https://project-kathryn02.c9users.io/home
+Completed 302 Found in 81ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/home" for 165.91.4.147 at 2016-04-18 23:09:01 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.3ms)[0m  [1mSELECT DISTINCT "answers"."eid" FROM "answers" WHERE "answers"."uid" = ?[0m  [["uid", 2]]
+  [1m[35mVehicle Load (0.2ms)[0m  SELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?  [["user_id", 2]]
+  Rendered sessions/home.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 244ms (Views: 238.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/allevent" for 165.91.4.147 at 2016-04-18 23:09:06 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/allevent.html.haml within layouts/application (7.0ms)
+Completed 200 OK in 234ms (Views: 231.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/eventsurvey?eid=1" for 165.91.4.147 at 2016-04-18 23:09:07 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#showquestion as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."uid" = ? AND "answers"."eid" = ?[0m  [["uid", 2], ["eid", 1]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."eid" = ?  [["eid", 1]]
+  Rendered answers/showquestion.html.haml within layouts/application (56.9ms)
+Completed 200 OK in 279ms (Views: 275.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/show_question.self-8dd4e96ed457582df05f95c4af0302a7606271a5ae1354f9bfbbf68a6c4324ec.js?body=1" for 165.91.4.147 at 2016-04-18 23:09:07 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/eventsurvey" for 165.91.4.147 at 2016-04-18 23:09:13 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pO4+RkJCY18+yumxB1yZxpuRwpNbdkILX82CAfm7aYlverFg+K13LD1RluBWDYEHhnH+zXseTx32/tRkJXXXfQ==", "q_eid"=>"1", "Q1"=>{"answer"=>"skdfjoiejfj"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT  "questions"."qtitle" FROM "questions" WHERE "questions"."eid" = ? AND "questions"."qid" = ? LIMIT 1  [["eid", 1], ["qid", 1]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "answers" ("uid", "qid", "qtitle", "eid", "answer", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["uid", 2], ["qid", 1], ["qtitle", "q1"], ["eid", 1], ["answer", "skdfjoiejfj"], ["created_at", "2016-04-18 23:09:13.633104"], ["updated_at", "2016-04-18 23:09:13.633104"]]
+  [1m[36m (24.7ms)[0m  [1mcommit transaction[0m
+Redirected to https://project-kathryn02.c9users.io/home
+Completed 302 Found in 75ms (ActiveRecord: 26.7ms)
+
+
+Started GET "/home" for 165.91.4.147 at 2016-04-18 23:09:13 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  SELECT DISTINCT "answers"."eid" FROM "answers" WHERE "answers"."uid" = ?  [["uid", 2]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mVehicle Load (0.3ms)[0m  SELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?  [["user_id", 2]]
+  Rendered sessions/home.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 266ms (Views: 260.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/logout" for 165.91.4.147 at 2016-04-18 23:09:18 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#logout as HTML
+Redirected to https://project-kathryn02.c9users.io/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.4.147 at 2016-04-18 23:09:18 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login as HTML
+  Rendered sessions/login.html.haml within layouts/application (7.3ms)
+Completed 200 OK in 409ms (Views: 407.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login_attempt" for 165.91.4.147 at 2016-04-18 23:09:25 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"50SJ2E4DeFDDxmIngdHTQbTKVRg/OOMfvztsuEZqK8As0Ab+9OxsI8BdHXbQgMuAqSppRh9Q7gkWCDrdmqSVNA==", "email"=>"info@americangimuseum.org", "login_password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "info@americangimuseum.org"]]
+Redirected to https://project-kathryn02.c9users.io/admin
+Completed 302 Found in 80ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/admin" for 165.91.4.147 at 2016-04-18 23:09:25 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered admin/index.html.haml within layouts/application (3.8ms)
+Completed 200 OK in 348ms (Views: 344.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/datashow?eid=1" for 165.91.4.147 at 2016-04-18 23:09:28 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#show as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAnswer Load (0.5ms)[0m  [1mSELECT DISTINCT "answers"."uid" FROM "answers" WHERE "answers"."eid" = ?[0m  [["eid", 1]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users"."lastname" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users"."firstname" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users"."email" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users"."phonenumber" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users"."zipcode" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered admin/show.html.haml within layouts/application (93.0ms)
+Completed 200 OK in 409ms (Views: 393.7ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/pie.self-6b67d2a4176b50cd13631509b8a061a02d88228e1f41e688faffc5033678511e.js?body=1" for 165.91.4.147 at 2016-04-18 23:09:28 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/answer.csv.csv?eid=1" for 165.91.4.147 at 2016-04-18 23:09:34 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#index as CSV
+  Parameters: {"eid"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."eid" = ?[0m  [["eid", 1]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT DISTINCT "answers"."uid" FROM "answers" WHERE "answers"."eid" = ?  [["eid", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users"."lastname" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users"."firstname" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users"."email" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users"."phonenumber" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."eid" = ? AND "answers"."uid" = ?[0m  [["eid", 1], ["uid", 2]]
+  Rendered text template (0.0ms)
+Sent data  (28.6ms)
+Completed 200 OK in 64ms (Views: 28.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/datashow?eid=1" for 165.91.4.147 at 2016-04-18 23:21:39 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#show as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[35mUser Load (5.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAnswer Load (0.6ms)[0m  [1mSELECT DISTINCT "answers"."uid" FROM "answers" WHERE "answers"."eid" = ?[0m  [["eid", 1]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users"."lastname" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users"."firstname" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users"."email" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users"."phonenumber" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users"."zipcode" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered admin/show.html.haml within layouts/application (120.4ms)
+Completed 200 OK in 398ms (Views: 366.4ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-2fe4f8a61d73606fbcb036b41f380591906a4da65a9eb5ec0a210fe6980b2ca7.css?body=1" for 165.91.4.147 at 2016-04-18 23:21:39 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-603f330c29af013305325569c8c75d03d688963abd8cde4fffec17b5ce417bfb.css?body=1" for 165.91.4.147 at 2016-04-18 23:21:39 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for 165.91.4.147 at 2016-04-18 23:21:39 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/answers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.147 at 2016-04-18 23:21:39 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.147 at 2016-04-18 23:21:39 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-datetimepicker.min.self-788e29abac8dcfbc60d7f7490dd02b623d42c2174b604ebff6e8faa66c5d876e.css?body=1" for 165.91.4.147 at 2016-04-18 23:21:40 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/data.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.147 at 2016-04-18 23:21:40 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.147 at 2016-04-18 23:21:40 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-0a47e2599240f8e31081133ff1040077aca34f655d8d9a5806e05547028d9f2c.css?body=1" for 165.91.4.147 at 2016-04-18 23:21:40 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/questions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.147 at 2016-04-18 23:21:40 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.147 at 2016-04-18 23:21:40 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.147 at 2016-04-18 23:21:40 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-a889e7abcadb5dbdb0529c0dc69d5a86744647c95c657e19413c888ea981fd29.css?body=1" for 165.91.4.147 at 2016-04-18 23:21:40 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 165.91.4.147 at 2016-04-18 23:21:40 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 165.91.4.147 at 2016-04-18 23:21:40 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 165.91.4.147 at 2016-04-18 23:21:40 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 165.91.4.147 at 2016-04-18 23:21:40 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 165.91.4.147 at 2016-04-18 23:21:40 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 165.91.4.147 at 2016-04-18 23:21:40 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 165.91.4.147 at 2016-04-18 23:21:40 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 165.91.4.147 at 2016-04-18 23:21:40 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 165.91.4.147 at 2016-04-18 23:21:40 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 165.91.4.147 at 2016-04-18 23:21:40 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 165.91.4.147 at 2016-04-18 23:21:40 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 165.91.4.147 at 2016-04-18 23:21:40 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 165.91.4.147 at 2016-04-18 23:21:40 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 165.91.4.147 at 2016-04-18 23:21:40 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 165.91.4.147 at 2016-04-18 23:21:40 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 165.91.4.147 at 2016-04-18 23:21:40 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 165.91.4.147 at 2016-04-18 23:21:40 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/pie.self-6b67d2a4176b50cd13631509b8a061a02d88228e1f41e688faffc5033678511e.js?body=1" for 165.91.4.147 at 2016-04-18 23:21:40 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/logout" for 165.91.4.147 at 2016-04-18 23:24:30 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#logout as HTML
+Redirected to https://project-kathryn02.c9users.io/
+Completed 302 Found in 7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.4.147 at 2016-04-18 23:24:30 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login as HTML
+  Rendered sessions/login.html.haml within layouts/application (8.1ms)
+Completed 200 OK in 301ms (Views: 296.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 165.91.4.147 at 2016-04-18 23:24:32 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 329ms (Views: 326.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/create" for 165.91.4.147 at 2016-04-18 23:25:07 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FhY+V9MYYil5MFY31TsG56joI9P5+W0rTVbxijeCh03dgrFxafd2WnqrKWaEah4mtQgfjdmRYD3kZafv60w5uQ==", "email"=>"otherkat@yahoo.com", "password"=>"[FILTERED]", "pswdconfirm"=>"kathryn2011", "lastname"=>"K", "firstname"=>"M", "phonenumber"=>"210-844-4228", "gender"=>"female", "zipcode"=>"77843", "commit"=>"Create"}
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'otherkat@yahoo.com' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'otherkat@yahoo.com' LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("email", "lastname", "firstname", "phonenumber", "gender", "level", "zipcode", "salt", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["email", "otherkat@yahoo.com"], ["lastname", "K"], ["firstname", "M"], ["phonenumber", 210], ["gender", "female"], ["level", 1], ["zipcode", "77843"], ["salt", "$2a$10$EqcWG4I5GWdS26F13pqRbu"], ["encrypted_password", "$2a$10$EqcWG4I5GWdS26F13pqRbu03uAbvuKkbwuuD1V3PA4TF9yWldtDJK"], ["created_at", "2016-04-18 23:25:08.102682"], ["updated_at", "2016-04-18 23:25:08.102682"]]
+  [1m[36m (14.0ms)[0m  [1mcommit transaction[0m
+Redirected to https://project-kathryn02.c9users.io/home
+Completed 302 Found in 176ms (ActiveRecord: 15.6ms)
+
+
+Started GET "/home" for 165.91.4.147 at 2016-04-18 23:25:08 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.2ms)[0m  SELECT DISTINCT "answers"."eid" FROM "answers" WHERE "answers"."uid" = ?  [["uid", 3]]
+  [1m[36mVehicle Load (0.2ms)[0m  [1mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered sessions/home.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 231ms (Views: 227.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/allevent" for 165.91.4.147 at 2016-04-18 23:25:10 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/allevent.html.haml within layouts/application (76.9ms)
+Completed 200 OK in 335ms (Views: 333.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/eventsurvey?eid=1" for 165.91.4.147 at 2016-04-18 23:25:11 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#showquestion as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."uid" = ? AND "answers"."eid" = ?  [["uid", 3], ["eid", 1]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."eid" = ?[0m  [["eid", 1]]
+  Rendered answers/showquestion.html.haml within layouts/application (27.9ms)
+Completed 200 OK in 414ms (Views: 404.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/eventsurvey" for 165.91.4.147 at 2016-04-18 23:25:15 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dtQ1BLqIJRt+/3fXAsrRtnPQbJ3VNOncriAepKfNh8+9QLoiAGcxaH1kCIZTm8l3bjBQw/Vc5MoHE0jBewM5Ow==", "q_eid"=>"1", "Q1"=>{"answer"=>"fdgsdfgasdf"}, "commit"=>"Submit"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions"."qtitle" FROM "questions" WHERE "questions"."eid" = ? AND "questions"."qid" = ? LIMIT 1[0m  [["eid", 1], ["qid", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "answers" ("uid", "qid", "qtitle", "eid", "answer", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["uid", 3], ["qid", 1], ["qtitle", "q1"], ["eid", 1], ["answer", "fdgsdfgasdf"], ["created_at", "2016-04-18 23:25:15.116752"], ["updated_at", "2016-04-18 23:25:15.116752"]]
+  [1m[35m (14.0ms)[0m  commit transaction
+Redirected to https://project-kathryn02.c9users.io/home
+Completed 302 Found in 22ms (ActiveRecord: 15.0ms)
+
+
+Started GET "/home" for 165.91.4.147 at 2016-04-18 23:25:15 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.2ms)[0m  [1mSELECT DISTINCT "answers"."eid" FROM "answers" WHERE "answers"."uid" = ?[0m  [["uid", 3]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mVehicle Load (0.8ms)[0m  [1mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered sessions/home.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 264ms (Views: 257.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/logout" for 165.91.4.147 at 2016-04-18 23:25:17 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#logout as HTML
+Redirected to https://project-kathryn02.c9users.io/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.4.147 at 2016-04-18 23:25:17 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login as HTML
+  Rendered sessions/login.html.haml within layouts/application (6.7ms)
+Completed 200 OK in 265ms (Views: 264.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login_attempt" for 165.91.4.147 at 2016-04-18 23:25:31 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7MU59B9nhm9xmIZ8Q1F0zSefwJQW/RMTiXJ5g0Pcd/gnUbbSpYiSHHID+S0SAGwMOn/8yjaVHgUgQS/mnxLJDA==", "email"=>"info@americangimuseum.org", "login_password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (1.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "info@americangimuseum.org"]]
+Redirected to https://project-kathryn02.c9users.io/login
+Completed 302 Found in 94ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/login" for 165.91.4.147 at 2016-04-18 23:25:31 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login as HTML
+  Rendered sessions/login.html.haml within layouts/application (9.9ms)
+Completed 200 OK in 340ms (Views: 336.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login_attempt" for 165.91.4.147 at 2016-04-18 23:25:38 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VGMZJWF7lTDkH8v5mJN21+SuX3FxvmN75DCDYzBa9UGf95YD25SBQ+eEtKjJwm4W+U5jL1HWbm1NA9UG7JRLtQ==", "email"=>"info@americangimuseum.org", "login_password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "info@americangimuseum.org"]]
+Redirected to https://project-kathryn02.c9users.io/admin
+Completed 302 Found in 84ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/admin" for 165.91.4.147 at 2016-04-18 23:25:38 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered admin/index.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 289ms (Views: 285.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/datashow?eid=1" for 165.91.4.147 at 2016-04-18 23:25:42 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#show as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAnswer Load (0.4ms)[0m  [1mSELECT DISTINCT "answers"."uid" FROM "answers" WHERE "answers"."eid" = ?[0m  [["eid", 1]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users"."lastname" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users"."firstname" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users"."email" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users"."phonenumber" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users"."zipcode" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users"."lastname" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users"."firstname" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users"."email" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (1.1ms)[0m  SELECT  "users"."phonenumber" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users"."zipcode" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered admin/show.html.haml within layouts/application (75.0ms)
+Completed 200 OK in 587ms (Views: 540.5ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/logout" for 165.91.4.147 at 2016-04-18 23:26:02 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#logout as HTML
+Redirected to https://project-kathryn02.c9users.io/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.4.147 at 2016-04-18 23:26:02 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login as HTML
+  Rendered sessions/login.html.haml within layouts/application (4.1ms)
+Completed 200 OK in 245ms (Views: 244.5ms | ActiveRecord: 0.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_isco' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_isco' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_unit' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_unit' AND type='index'
+
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_vehicles_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_vehicles_on_user_id' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPhonenumber (20160418232800)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "users" ADD "phonenumber" varchar[0m
+SQLite3::SQLException: duplicate column name: phonenumber: ALTER TABLE "users" ADD "phonenumber" varchar
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPhonenumber (20160418232800)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (3.4ms)[0m  [1mALTER TABLE "users" ADD "phonenumber" varchar[0m
+SQLite3::SQLException: duplicate column name: phonenumber: ALTER TABLE "users" ADD "phonenumber" varchar
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPhonenumberTake2 (20160418233517)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "users" ADD "phonenumber" varchar[0m
+SQLite3::SQLException: duplicate column name: phonenumber: ALTER TABLE "users" ADD "phonenumber" varchar
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPhonenumberTake2 (20160418233517)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (42.4ms)[0m  [1mCREATE TEMPORARY TABLE "ausers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "lastname" varchar, "firstname" varchar, "gender" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "salt" varchar, "encrypted_password" varchar, "level" integer, "zipcode" varchar, "hasvehicle" integer, "unit" varchar, "isco" integer, "vehicles_count" integer, "phonenumber" integer) [0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_isco' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_isco' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_unit' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_unit' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  CREATE  INDEX "tindex_ausers_on_isco" ON "ausers" ("isco")
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "tindex_ausers_on_unit" ON "ausers" ("unit")[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "tindex_ausers_on_hasvehicle" ON "ausers" ("hasvehicle")
+  [1m[36m (0.2ms)[0m  [1mSELECT * FROM "users"[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "ausers" ("id","email","lastname","firstname","gender","created_at","updated_at","salt","encrypted_password","level","zipcode","hasvehicle","unit","isco","vehicles_count","phonenumber") VALUES (1, 'info@americangimuseum.org', 'Admin', 'Admin', '', '2016-04-14 00:44:21.112733', '2016-04-14 00:44:21.112733', '$2a$10$HqLlzfd2q4bsQ.jZyCNIX.', '$2a$10$HqLlzfd2q4bsQ.jZyCNIX.PAohPXXVbp1WlikdSaPxeIxVSnitTbC', 0, NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "ausers" ("id","email","lastname","firstname","gender","created_at","updated_at","salt","encrypted_password","level","zipcode","hasvehicle","unit","isco","vehicles_count","phonenumber") VALUES (2, 'kathryn02@yahoo.com', 'M', 'Kathryn', 'female', '2016-04-18 23:06:23.318488', '2016-04-18 23:06:23.318488', '$2a$10$QRUD2ygqpYLuuO4mPnBMU.', '$2a$10$QRUD2ygqpYLuuO4mPnBMU.mhcWpKIUkphxqlM3FaTtp2LFnv1Tp4.', 1, '77840', NULL, NULL, NULL, NULL, 2108444228)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "ausers" ("id","email","lastname","firstname","gender","created_at","updated_at","salt","encrypted_password","level","zipcode","hasvehicle","unit","isco","vehicles_count","phonenumber") VALUES (3, 'otherkat@yahoo.com', 'K', 'M', 'female', '2016-04-18 23:25:08.102682', '2016-04-18 23:25:08.102682', '$2a$10$EqcWG4I5GWdS26F13pqRbu', '$2a$10$EqcWG4I5GWdS26F13pqRbu03uAbvuKkbwuuD1V3PA4TF9yWldtDJK', 1, '77843', NULL, NULL, NULL, NULL, 210)
+  [1m[36m (0.8ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "lastname" varchar, "firstname" varchar, "gender" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "salt" varchar, "encrypted_password" varchar, "level" integer, "zipcode" varchar, "hasvehicle" integer, "unit" varchar, "isco" integer, "vehicles_count" integer) 
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_ausers_on_hasvehicle' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_ausers_on_hasvehicle' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_ausers_on_unit' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_ausers_on_unit' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_ausers_on_isco' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_ausers_on_isco' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "index_users_on_hasvehicle" ON "users" ("hasvehicle")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "index_users_on_unit" ON "users" ("unit")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_unit' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_unit' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_users_on_isco" ON "users" ("isco")[0m
+  [1m[35m (0.3ms)[0m  SELECT * FROM "ausers"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "users" ("id","email","lastname","firstname","gender","created_at","updated_at","salt","encrypted_password","level","zipcode","hasvehicle","unit","isco","vehicles_count") VALUES (1, 'info@americangimuseum.org', 'Admin', 'Admin', '', '2016-04-14 00:44:21.112733', '2016-04-14 00:44:21.112733', '$2a$10$HqLlzfd2q4bsQ.jZyCNIX.', '$2a$10$HqLlzfd2q4bsQ.jZyCNIX.PAohPXXVbp1WlikdSaPxeIxVSnitTbC', 0, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "users" ("id","email","lastname","firstname","gender","created_at","updated_at","salt","encrypted_password","level","zipcode","hasvehicle","unit","isco","vehicles_count") VALUES (2, 'kathryn02@yahoo.com', 'M', 'Kathryn', 'female', '2016-04-18 23:06:23.318488', '2016-04-18 23:06:23.318488', '$2a$10$QRUD2ygqpYLuuO4mPnBMU.', '$2a$10$QRUD2ygqpYLuuO4mPnBMU.mhcWpKIUkphxqlM3FaTtp2LFnv1Tp4.', 1, '77840', NULL, NULL, NULL, NULL)
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "users" ("id","email","lastname","firstname","gender","created_at","updated_at","salt","encrypted_password","level","zipcode","hasvehicle","unit","isco","vehicles_count") VALUES (3, 'otherkat@yahoo.com', 'K', 'M', 'female', '2016-04-18 23:25:08.102682', '2016-04-18 23:25:08.102682', '$2a$10$EqcWG4I5GWdS26F13pqRbu', '$2a$10$EqcWG4I5GWdS26F13pqRbu03uAbvuKkbwuuD1V3PA4TF9yWldtDJK', 1, '77843', NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.8ms)[0m  DROP TABLE "ausers"
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" ADD "phonenumber" varchar[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160418233517"]]
+  [1m[36m (13.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_isco' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_isco' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_unit' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_unit' AND type='index'
+
+  [1m[36m (4.9ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_vehicles_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_vehicles_on_user_id' AND type='index'
+
