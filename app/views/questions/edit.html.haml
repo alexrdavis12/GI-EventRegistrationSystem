@@ -48,13 +48,47 @@
                     %input{:class => 'form-control', :value=> q.qtitle, :name=>"Q#{q.id}[title]"}
                   .form-group
                     %label Type
-                    %select{:class => 'form-control', :value=> q.qtype, :name => "Q#{q.id}[type]", :belong => "#{q.id}"}
-                      %option{:value => 1}= "Text"
-                      %option{:value => 2}= "Checkboxes"
-                      %option{:value => 3}= "Radio Buttons"
-                      %option{:value => 4}= "Dropdown"
-                      %option{:value => 5}= "Paragraph Text"
-                    //%input{:class => 'form-control', :value=> q.qoption :name => "Q#{q.id}[type]"}
+                    - if q.qtype == "1"
+                      %select{:class => 'form-control', :value=> q.qtype, :name => "Q#{q.id}[type]", :belong => "#{q.id}", :onload => "javascript:trigger_option(this, #{q.id}, 0)"}
+                        %option{:value => 1}= "Text"
+                        %option{:value => 2}= "Checkboxes"
+                        %option{:value => 3}= "Radio Buttons"
+                        %option{:value => 4}= "Dropdown"
+                        %option{:value => 5}= "Paragraph Text"
+                      //%input{:class => 'form-control', :value=> q.qoption :name => "Q#{q.id}[type]"}
+                      //:javascript => trigger_option(this, q.id, 0)  
+                    - elsif q.qtype == "2"
+                      %select{:class => 'form-control', :value=> q.qtype, :name => "Q#{q.id}[type]", :belong => "#{q.id}"}
+                        %option{:value => 1}= "Text"
+                        %option{:value => 2, :selected => ""}= "Checkboxes"
+                        %option{:value => 3}= "Radio Buttons"
+                        %option{:value => 4}= "Dropdown"
+                        %option{:value => 5}= "Paragraph Text"
+                      //%input{:class => 'form-control', :value=> q.qoption :name => "Q#{q.id}[type]"}
+                    - elsif q.qtype == "3"
+                      %select{:class => 'form-control', :value=> q.qtype, :name => "Q#{q.id}[type]", :belong => "#{q.id}"}
+                        %option{:value => 1}= "Text"
+                        %option{:value => 2}= "Checkboxes"
+                        %option{:value => 3, :selected => ""}= "Radio Buttons"
+                        %option{:value => 4}= "Dropdown"
+                        %option{:value => 5}= "Paragraph Text"
+                      //%input{:class => 'form-control', :value=> q.qoption :name => "Q#{q.id}[type]"}  
+                    - elsif q.qtype == "4"
+                      %select{:class => 'form-control', :value=> q.qtype, :name => "Q#{q.id}[type]", :belong => "#{q.id}"}
+                        %option{:value => 1}= "Text"
+                        %option{:value => 2}= "Checkboxes"
+                        %option{:value => 3}= "Radio Buttons"
+                        %option{:value => 4, :selected => ""}= "Dropdown"
+                        %option{:value => 5}= "Paragraph Text"
+                      //%input{:class => 'form-control', :value=> q.qoption :name => "Q#{q.id}[type]"}  
+                    - elsif q.qtype == "5"
+                      %select{:class => 'form-control', :value=> q.qtype, :name => "Q#{q.id}[type]", :belong => "#{q.id}"}
+                        %option{:value => 1}= "Text"
+                        %option{:value => 2}= "Checkboxes"
+                        %option{:value => 3}= "Radio Buttons"
+                        %option{:value => 4}= "Dropdown"
+                        %option{:value => 5, :selected => ""}= "Paragraph Text"
+                      //%input{:class => 'form-control', :value=> q.qoption :name => "Q#{q.id}[type]"}  
                     .form-group
                     %a.btn.btn-danger.pull-right{:href => "javascript:delete_question(#{q.id})"}
                       %i.fa.fa-trash-o.fa-lg
