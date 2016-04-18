@@ -36,3 +36,4 @@ Scenario: create
   And I fill in "role" with "teacher"
   And I press "Create"
   Then I should see "Sign Up Successfully!"
+  
