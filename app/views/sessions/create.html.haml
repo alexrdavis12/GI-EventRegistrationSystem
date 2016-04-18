@@ -54,6 +54,9 @@
           %label First Name:
           %input{:class => 'form-control', :value=>@user.firstname, :name=>:firstname}
         .form-group
+          %label Phone Number:
+          %input{:class => 'form-control', :value=>@user.phonenumber, :name=>:phonenumber}
+        .form-group
           %label Gender
           %label.checkbox-inline
             %input{:type=>'radio', :value=>'male', :name=>:gender}
