@@ -71,6 +71,15 @@
               %input{:type=>'radio', :value=>'female', :name=>:gender, :checked=>'checked'}
               Female
         .form-group
+          %label Address:
+          %input{:class => 'form-control', :value=>@current_user.addressline1, :name=>:addressline1}
+        .form-group
+          %label City:
+          %input{:class => 'form-control', :value=>@current_user.city, :name=>:city}
+        .form-group
+          %label State:
+          %input{:class => 'form-control', :value=>@current_user.state, :name=>:state}
+        .form-group
           %label Zip Code:
           %input{:class => 'form-control', :value=>@current_user.zipcode, :name=>:zipcode}
         

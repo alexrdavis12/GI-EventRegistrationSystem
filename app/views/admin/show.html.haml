@@ -158,11 +158,14 @@
                   %th Last Name
                   %th Email
                   %th Phone Number
+                  %th Address
+                  %th City
+                  %th State
                   %th Area
               %tbody
                 - cnt=0
                 - @Users.each do |u|
-                  - if cnt%5==0
+                  - if cnt%8==0
                     %tr
                   %td= u
                   - cnt+=1

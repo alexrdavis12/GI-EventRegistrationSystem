@@ -59,6 +59,9 @@ class SessionsController < ApplicationController
         @user.lastname = params[:lastname]
         @user.phonenumber = params[:phonenumber]
         @user.gender = params[:gender]
+        @user.addressline1 = params[:addressline1]
+        @user.city = params[:city]
+        @user.state = params[:state]
         @user.level=1
         @user.zipcode=params[:zipcode]
         if ZIP_CODE.find(params[:zipcode]) == nil
@@ -100,6 +103,9 @@ class SessionsController < ApplicationController
       @current_user.lastname = params[:lastname]
       @current_user.phonenumber = params[:phonenumber]
       @current_user.gender = params[:gender]
+      @current_user.addressline1 = params[:addressline1]
+      @current_user.city = params[:city]
+      @current_user.state = params[:state]
       @current_user.zipcode = params[:zipcode]
       if ZIP_CODE.find(params[:zipcode]) == nil
         @current_user.zipcode = nil
@@ -139,7 +145,7 @@ class SessionsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def user_params
-    params.require(:user).permit(:email, :password, :lastname, :firstname, :phonenumber, :gender, :role)
+    params.require(:user).permit(:email, :password, :lastname, :firstname, :phonenumber, :gender, :addressline1, :city, :state, :role)
   end
 
 

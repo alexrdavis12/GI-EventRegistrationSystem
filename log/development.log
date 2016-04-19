@@ -10345,3 +10345,825 @@ Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0
 Processing by SessionsController#create as HTML
   Rendered sessions/create.html.haml within layouts/application (5.5ms)
 Completed 200 OK in 255ms (Views: 253.5ms | ActiveRecord: 0.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_unit' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_unit' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_isco' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_isco' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_vehicles_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_vehicles_on_user_id' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddAddress (20160419141332)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE "users" ADD "addressline1" varchar[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "users" ADD "state" varchar
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160419141332"]]
+  [1m[35m (12.8ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_unit' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_unit' AND type='index'
+
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_isco' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_isco' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+
+  [1m[36m (0.4ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_vehicles_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_vehicles_on_user_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.4ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_unit' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_unit' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_isco' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_isco' AND type='index'
+
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_vehicles_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_vehicles_on_user_id' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddAddress (20160419142111)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (4.2ms)[0m  [1mCREATE TEMPORARY TABLE "ausers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "lastname" varchar, "firstname" varchar, "gender" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "salt" varchar, "encrypted_password" varchar, "level" integer, "zipcode" varchar, "hasvehicle" integer, "unit" varchar, "isco" integer, "vehicles_count" integer, "phonenumber" varchar, "addressline1" varchar, "state" varchar) [0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_unit' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_unit' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_isco' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_isco' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "tindex_ausers_on_unit" ON "ausers" ("unit")
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "tindex_ausers_on_isco" ON "ausers" ("isco")[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "tindex_ausers_on_hasvehicle" ON "ausers" ("hasvehicle")
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "users"[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "ausers" ("id","email","lastname","firstname","gender","created_at","updated_at","salt","encrypted_password","level","zipcode","hasvehicle","unit","isco","vehicles_count","phonenumber","addressline1","state") VALUES (1, 'info@americangimuseum.org', 'Admin', 'Admin', '', '2016-04-19 00:04:11.001447', '2016-04-19 00:04:11.001447', '$2a$10$fe9gV.GmMuLQ7D.rqoYpPe', '$2a$10$fe9gV.GmMuLQ7D.rqoYpPeV3cGyeCw4A4l42DRddc9vGhGMNkG4Wq', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "ausers" ("id","email","lastname","firstname","gender","created_at","updated_at","salt","encrypted_password","level","zipcode","hasvehicle","unit","isco","vehicles_count","phonenumber","addressline1","state") VALUES (2, 'kathryn02@yahoo.com', 'M', 'Kathryn', 'female', '2016-04-19 00:09:09.591342', '2016-04-19 00:09:09.591342', '$2a$10$jWCR7RJwRnxDmehFC5Mzn.', '$2a$10$jWCR7RJwRnxDmehFC5Mzn.oSZpZz2fzFlp.JP/QqAMlree96aPAqS', 1, '77843', NULL, NULL, NULL, NULL, '2108444228', NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "ausers" ("id","email","lastname","firstname","gender","created_at","updated_at","salt","encrypted_password","level","zipcode","hasvehicle","unit","isco","vehicles_count","phonenumber","addressline1","state") VALUES (3, 'otherkat@yahoo.com', 'M', 'Kat', 'female', '2016-04-19 00:20:57.057480', '2016-04-19 00:20:57.057480', '$2a$10$2u0T2JSq9C/3F3X7q.5WO.', '$2a$10$2u0T2JSq9C/3F3X7q.5WO.lzcxJmCdWyGshGfEuLg3iHQyBJl8Tq.', 1, '77845', NULL, NULL, NULL, NULL, '2131-41564-4156', NULL, NULL)
+  [1m[36m (1.4ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "lastname" varchar, "firstname" varchar, "gender" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "salt" varchar, "encrypted_password" varchar, "level" integer, "zipcode" varchar, "hasvehicle" integer, "unit" varchar, "isco" integer, "vehicles_count" integer, "phonenumber" varchar, "state" varchar) 
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_ausers_on_hasvehicle' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_ausers_on_hasvehicle' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_ausers_on_isco' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_ausers_on_isco' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_ausers_on_unit' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_ausers_on_unit' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "index_users_on_hasvehicle" ON "users" ("hasvehicle")
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "index_users_on_isco" ON "users" ("isco")
+  [1m[36m (0.8ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_isco' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_isco' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_users_on_unit" ON "users" ("unit")[0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "ausers"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "users" ("id","email","lastname","firstname","gender","created_at","updated_at","salt","encrypted_password","level","zipcode","hasvehicle","unit","isco","vehicles_count","phonenumber","state") VALUES (1, 'info@americangimuseum.org', 'Admin', 'Admin', '', '2016-04-19 00:04:11.001447', '2016-04-19 00:04:11.001447', '$2a$10$fe9gV.GmMuLQ7D.rqoYpPe', '$2a$10$fe9gV.GmMuLQ7D.rqoYpPeV3cGyeCw4A4l42DRddc9vGhGMNkG4Wq', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "users" ("id","email","lastname","firstname","gender","created_at","updated_at","salt","encrypted_password","level","zipcode","hasvehicle","unit","isco","vehicles_count","phonenumber","state") VALUES (2, 'kathryn02@yahoo.com', 'M', 'Kathryn', 'female', '2016-04-19 00:09:09.591342', '2016-04-19 00:09:09.591342', '$2a$10$jWCR7RJwRnxDmehFC5Mzn.', '$2a$10$jWCR7RJwRnxDmehFC5Mzn.oSZpZz2fzFlp.JP/QqAMlree96aPAqS', 1, '77843', NULL, NULL, NULL, NULL, '2108444228', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "users" ("id","email","lastname","firstname","gender","created_at","updated_at","salt","encrypted_password","level","zipcode","hasvehicle","unit","isco","vehicles_count","phonenumber","state") VALUES (3, 'otherkat@yahoo.com', 'M', 'Kat', 'female', '2016-04-19 00:20:57.057480', '2016-04-19 00:20:57.057480', '$2a$10$2u0T2JSq9C/3F3X7q.5WO.', '$2a$10$2u0T2JSq9C/3F3X7q.5WO.lzcxJmCdWyGshGfEuLg3iHQyBJl8Tq.', 1, '77845', NULL, NULL, NULL, NULL, '2131-41564-4156', NULL)[0m
+  [1m[35m (0.5ms)[0m  DROP TABLE "ausers"
+  [1m[36m (0.2ms)[0m  [1mCREATE TEMPORARY TABLE "ausers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "lastname" varchar, "firstname" varchar, "gender" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "salt" varchar, "encrypted_password" varchar, "level" integer, "zipcode" varchar, "hasvehicle" integer, "unit" varchar, "isco" integer, "vehicles_count" integer, "phonenumber" varchar, "state" varchar) [0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_unit' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_unit' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_isco' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_isco' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "tindex_ausers_on_unit" ON "ausers" ("unit")[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "tindex_ausers_on_isco" ON "ausers" ("isco")
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "tindex_ausers_on_hasvehicle" ON "ausers" ("hasvehicle")[0m
+  [1m[35m (0.2ms)[0m  SELECT * FROM "users"
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "ausers" ("id","email","lastname","firstname","gender","created_at","updated_at","salt","encrypted_password","level","zipcode","hasvehicle","unit","isco","vehicles_count","phonenumber","state") VALUES (1, 'info@americangimuseum.org', 'Admin', 'Admin', '', '2016-04-19 00:04:11.001447', '2016-04-19 00:04:11.001447', '$2a$10$fe9gV.GmMuLQ7D.rqoYpPe', '$2a$10$fe9gV.GmMuLQ7D.rqoYpPeV3cGyeCw4A4l42DRddc9vGhGMNkG4Wq', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL)[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "ausers" ("id","email","lastname","firstname","gender","created_at","updated_at","salt","encrypted_password","level","zipcode","hasvehicle","unit","isco","vehicles_count","phonenumber","state") VALUES (2, 'kathryn02@yahoo.com', 'M', 'Kathryn', 'female', '2016-04-19 00:09:09.591342', '2016-04-19 00:09:09.591342', '$2a$10$jWCR7RJwRnxDmehFC5Mzn.', '$2a$10$jWCR7RJwRnxDmehFC5Mzn.oSZpZz2fzFlp.JP/QqAMlree96aPAqS', 1, '77843', NULL, NULL, NULL, NULL, '2108444228', NULL)
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "ausers" ("id","email","lastname","firstname","gender","created_at","updated_at","salt","encrypted_password","level","zipcode","hasvehicle","unit","isco","vehicles_count","phonenumber","state") VALUES (3, 'otherkat@yahoo.com', 'M', 'Kat', 'female', '2016-04-19 00:20:57.057480', '2016-04-19 00:20:57.057480', '$2a$10$2u0T2JSq9C/3F3X7q.5WO.', '$2a$10$2u0T2JSq9C/3F3X7q.5WO.lzcxJmCdWyGshGfEuLg3iHQyBJl8Tq.', 1, '77845', NULL, NULL, NULL, NULL, '2131-41564-4156', NULL)[0m
+  [1m[35m (0.7ms)[0m  DROP TABLE "users"
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "lastname" varchar, "firstname" varchar, "gender" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "salt" varchar, "encrypted_password" varchar, "level" integer, "zipcode" varchar, "hasvehicle" integer, "unit" varchar, "isco" integer, "vehicles_count" integer, "phonenumber" varchar) [0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_ausers_on_hasvehicle' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_ausers_on_hasvehicle' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_ausers_on_isco' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_ausers_on_isco' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_ausers_on_unit' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_ausers_on_unit' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_users_on_hasvehicle" ON "users" ("hasvehicle")[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_users_on_isco" ON "users" ("isco")[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_isco' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_isco' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "index_users_on_unit" ON "users" ("unit")
+  [1m[36m (0.2ms)[0m  [1mSELECT * FROM "ausers"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "users" ("id","email","lastname","firstname","gender","created_at","updated_at","salt","encrypted_password","level","zipcode","hasvehicle","unit","isco","vehicles_count","phonenumber") VALUES (1, 'info@americangimuseum.org', 'Admin', 'Admin', '', '2016-04-19 00:04:11.001447', '2016-04-19 00:04:11.001447', '$2a$10$fe9gV.GmMuLQ7D.rqoYpPe', '$2a$10$fe9gV.GmMuLQ7D.rqoYpPeV3cGyeCw4A4l42DRddc9vGhGMNkG4Wq', 0, NULL, NULL, NULL, NULL, NULL, NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "users" ("id","email","lastname","firstname","gender","created_at","updated_at","salt","encrypted_password","level","zipcode","hasvehicle","unit","isco","vehicles_count","phonenumber") VALUES (2, 'kathryn02@yahoo.com', 'M', 'Kathryn', 'female', '2016-04-19 00:09:09.591342', '2016-04-19 00:09:09.591342', '$2a$10$jWCR7RJwRnxDmehFC5Mzn.', '$2a$10$jWCR7RJwRnxDmehFC5Mzn.oSZpZz2fzFlp.JP/QqAMlree96aPAqS', 1, '77843', NULL, NULL, NULL, NULL, '2108444228')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "users" ("id","email","lastname","firstname","gender","created_at","updated_at","salt","encrypted_password","level","zipcode","hasvehicle","unit","isco","vehicles_count","phonenumber") VALUES (3, 'otherkat@yahoo.com', 'M', 'Kat', 'female', '2016-04-19 00:20:57.057480', '2016-04-19 00:20:57.057480', '$2a$10$2u0T2JSq9C/3F3X7q.5WO.', '$2a$10$2u0T2JSq9C/3F3X7q.5WO.lzcxJmCdWyGshGfEuLg3iHQyBJl8Tq.', 1, '77845', NULL, NULL, NULL, NULL, '2131-41564-4156')
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "ausers"[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD "addressline1" varchar
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "city" varchar[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "state" varchar
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160419142111"]]
+  [1m[35m (25.9ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_unit' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_unit' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_isco' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_isco' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+
+  [1m[36m (0.5ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_vehicles_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_vehicles_on_user_id' AND type='index'
+[0m
+
+
+Started GET "/" for 165.91.227.221 at 2016-04-19 14:39:48 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#login as HTML
+  Rendered sessions/login.html.haml within layouts/application (185.3ms)
+Completed 200 OK in 767ms (Views: 746.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login_attempt" for 165.91.227.221 at 2016-04-19 14:39:54 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bY7LyZmUUm+krWLwIVUUXut/gCkiXIW5X3YDKNcoxREPjsSOVW1g/z2AJiwM7tp7kP3rei45T0vTlkpen7onyQ==", "email"=>"info@americangimuseum.org", "login_password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "info@americangimuseum.org"]]
+Redirected to https://project-kathryn02.c9users.io/admin
+Completed 302 Found in 180ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/admin" for 165.91.227.221 at 2016-04-19 14:39:54 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (0.5ms)[0m  SELECT "events".* FROM "events"
+  Rendered admin/index.html.haml within layouts/application (29.3ms)
+Completed 200 OK in 354ms (Views: 340.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/allevent" for 165.91.227.221 at 2016-04-19 14:39:57 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to https://project-kathryn02.c9users.io/admin
+Completed 302 Found in 8ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/admin" for 165.91.227.221 at 2016-04-19 14:39:57 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered admin/index.html.haml within layouts/application (38.2ms)
+Completed 200 OK in 371ms (Views: 364.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/logout" for 165.91.227.221 at 2016-04-19 14:40:00 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#logout as HTML
+Redirected to https://project-kathryn02.c9users.io/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.227.221 at 2016-04-19 14:40:00 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login as HTML
+  Rendered sessions/login.html.haml within layouts/application (18.8ms)
+Completed 200 OK in 321ms (Views: 319.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 165.91.227.221 at 2016-04-19 14:40:05 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.haml within layouts/application (30.5ms)
+Completed 200 OK in 299ms (Views: 297.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/create" for 165.91.227.221 at 2016-04-19 14:41:17 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cDmWUFEDkiTEt4+/fs/ai3DgYPv5JLqfQzj7sOo/+AYSOZkXnfqgtF2ay2NTdBSuC2ILqPVBcG3P2LLGoq0a3g==", "email"=>"kathryn02@yahoo.com", "password"=>"[FILTERED]", "pswdconfirm"=>"kathryn2011", "firstname"=>"Kat", "lastname"=>"M", "phonenumber"=>"210-844-4228", "gender"=>"female", "addressline1"=>"Dartmouth St", "city"=>"College Station", "state"=>"TX", "zipcode"=>"77845", "commit"=>"Create"}
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'kathryn02@yahoo.com' LIMIT 1
+  Rendered sessions/create.html.haml within layouts/application (30.8ms)
+Completed 200 OK in 382ms (Views: 304.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/create" for 165.91.227.221 at 2016-04-19 14:41:42 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RDEhkmTSiUYRuVBX51zgQj3GC5krGUaYFxDI8sZqpnsmMS7VqCu71oiUFIvK5y5nRkRgyid8jGqb8IGEjvhEow==", "email"=>"otherkathryn@yahoo.com", "password"=>"[FILTERED]", "pswdconfirm"=>"kathryn2011", "firstname"=>"Kat", "lastname"=>"M", "phonenumber"=>"210-844-4228", "gender"=>"female", "addressline1"=>"Dartmouth St", "city"=>"College Station", "state"=>"TX", "zipcode"=>"77845", "commit"=>"Create"}
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'otherkathryn@yahoo.com' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'otherkathryn@yahoo.com' LIMIT 1[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "users" ("email", "firstname", "lastname", "phonenumber", "gender", "addressline1", "city", "state", "level", "zipcode", "salt", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["email", "otherkathryn@yahoo.com"], ["firstname", "Kat"], ["lastname", "M"], ["phonenumber", "210-844-4228"], ["gender", "female"], ["addressline1", "Dartmouth St"], ["city", "College Station"], ["state", "TX"], ["level", 1], ["zipcode", "77845"], ["salt", "$2a$10$26a7ZhWoydSOXt3W//llvu"], ["encrypted_password", "$2a$10$26a7ZhWoydSOXt3W//llvuEy8wWB3v2inWqd9F.CSdF9NB1nbFGoq"], ["created_at", "2016-04-19 14:41:42.703119"], ["updated_at", "2016-04-19 14:41:42.703119"]]
+  [1m[36m (21.7ms)[0m  [1mcommit transaction[0m
+Redirected to https://project-kathryn02.c9users.io/home
+Completed 302 Found in 125ms (ActiveRecord: 24.3ms)
+
+
+Started GET "/home" for 165.91.227.221 at 2016-04-19 14:41:42 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.4ms)[0m  SELECT DISTINCT "answers"."eid" FROM "answers" WHERE "answers"."uid" = ?  [["uid", 4]]
+  [1m[36mVehicle Load (0.5ms)[0m  [1mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered sessions/home.html.haml within layouts/application (46.1ms)
+Completed 200 OK in 381ms (Views: 334.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/allevent" for 165.91.227.221 at 2016-04-19 14:41:47 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/allevent.html.haml within layouts/application (23.7ms)
+Completed 200 OK in 310ms (Views: 307.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/eventsurvey?eid=1" for 165.91.227.221 at 2016-04-19 14:41:48 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#showquestion as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[35mAnswer Load (0.5ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."uid" = ? AND "answers"."eid" = ?  [["uid", 4], ["eid", 1]]
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."eid" = ?[0m  [["eid", 1]]
+  Rendered answers/showquestion.html.haml within layouts/application (61.8ms)
+Completed 200 OK in 448ms (Views: 439.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/show_question.self-8dd4e96ed457582df05f95c4af0302a7606271a5ae1354f9bfbbf68a6c4324ec.js?body=1" for 165.91.227.221 at 2016-04-19 14:41:48 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/eventsurvey" for 165.91.227.221 at 2016-04-19 14:41:50 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XjpkHYaL2Vd17iRMO+CNhqKn2eMSernBTP+r1O+vBOs8OmtaSnLrx+zDYJAWW0Oj2SWysB4fczPAH+Kipz3mMw==", "q_eid"=>"1", "Q1"=>{"answer"=>"1"}, "commit"=>"Submit"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mQuestion Load (0.8ms)[0m  [1mSELECT  "questions"."qtitle" FROM "questions" WHERE "questions"."eid" = ? AND "questions"."qid" = ? LIMIT 1[0m  [["eid", 1], ["qid", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.4ms)[0m  [1mINSERT INTO "answers" ("uid", "qid", "qtitle", "eid", "answer", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["uid", 4], ["qid", 1], ["qtitle", "dfsdg"], ["eid", 1], ["answer", "1"], ["created_at", "2016-04-19 14:41:50.467418"], ["updated_at", "2016-04-19 14:41:50.467418"]]
+  [1m[35m (11.3ms)[0m  commit transaction
+Redirected to https://project-kathryn02.c9users.io/home
+Completed 302 Found in 42ms (ActiveRecord: 15.2ms)
+
+
+Started GET "/home" for 165.91.227.221 at 2016-04-19 14:41:50 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.4ms)[0m  [1mSELECT DISTINCT "answers"."eid" FROM "answers" WHERE "answers"."uid" = ?[0m  [["uid", 4]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mVehicle Load (0.3ms)[0m  [1mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 4]]
+  Rendered sessions/home.html.haml within layouts/application (2.7ms)
+Completed 200 OK in 328ms (Views: 315.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/profile" for 165.91.227.221 at 2016-04-19 14:41:54 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#profile as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered sessions/profile.html.haml within layouts/application (23.2ms)
+Completed 200 OK in 309ms (Views: 305.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/setting" for 165.91.227.221 at 2016-04-19 14:42:00 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#setting as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered sessions/setting.html.haml within layouts/application (35.2ms)
+Completed 200 OK in 293ms (Views: 290.0ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/setting" for 165.91.227.221 at 2016-04-19 14:42:04 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#setting as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HgoIp/UFDPNW2h4XIWzrQ8YZpWHSJXiI+G2EprLxeBt8CgfgOfw+Y8/3WssM1yVmvZvOMt5Asnp0jc3Q+mOaww==", "email"=>"otherkathryn@yahoo.com", "password"=>"[FILTERED]", "firstname"=>"Kat", "lastname"=>"M", "phonenumber"=>"210-844-4228", "gender"=>"female", "addressline1"=>"Dartmouth St", "city"=>"College Station", "state"=>"TX", "zipcode"=>"77845", "commit"=>"Save"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Exists (1.5ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."email" = 'otherkathryn@yahoo.com' AND "users"."id" != 4) LIMIT 1
+  Rendered sessions/setting.html.haml within layouts/application (39.4ms)
+Completed 200 OK in 374ms (Views: 353.4ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/setting" for 165.91.227.221 at 2016-04-19 14:42:11 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#setting as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/avbUbWuRXKm0JrGH0tgNRBhefmP9DLRbPeoEPnC8ZSfq9QWeVd34j/93hoy8K4Qa+MSqoOR+CPgF+FmsVATTA==", "email"=>"otherkathryn@yahoo.com", "password"=>"[FILTERED]", "firstname"=>"Kat", "lastname"=>"M", "phonenumber"=>"210-844-4228", "gender"=>"female", "addressline1"=>"Dartmouth St", "city"=>"College Station", "state"=>"TX", "zipcode"=>"77845", "commit"=>"Save"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."email" = 'otherkathryn@yahoo.com' AND "users"."id" != 4) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."email" = 'otherkathryn@yahoo.com' AND "users"."id" != 4) LIMIT 1
+  [1m[36mSQL (0.8ms)[0m  [1mUPDATE "users" SET "salt" = ?, "encrypted_password" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["salt", "$2a$10$GaqvpavnoXNl60RsFENT/u"], ["encrypted_password", "$2a$10$GaqvpavnoXNl60RsFENT/uBqOY6lLLNn1B2bV.AZTvOgrWzYoVE1K"], ["updated_at", "2016-04-19 14:42:11.135095"], ["id", 4]]
+  [1m[35m (12.2ms)[0m  commit transaction
+Redirected to https://project-kathryn02.c9users.io/profile
+Completed 302 Found in 104ms (ActiveRecord: 13.9ms)
+
+
+Started GET "/profile" for 165.91.227.221 at 2016-04-19 14:42:11 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#profile as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered sessions/profile.html.haml within layouts/application (19.3ms)
+Completed 200 OK in 266ms (Views: 260.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/logout" for 165.91.227.221 at 2016-04-19 14:42:15 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#logout as HTML
+Redirected to https://project-kathryn02.c9users.io/
+Completed 302 Found in 7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.227.221 at 2016-04-19 14:42:15 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login as HTML
+  Rendered sessions/login.html.haml within layouts/application (5.9ms)
+Completed 200 OK in 362ms (Views: 360.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login_attempt" for 165.91.227.221 at 2016-04-19 14:42:20 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+qwJyFitipIY6lnVbypkUJb2Hm52dRyDOeiuqEU2P2mYrAaPlFS4AoHHHQlCkap17XR1PXoQ1nG1COfeDaTdsQ==", "email"=>"info@americangimuseum.org", "login_password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "info@americangimuseum.org"]]
+Redirected to https://project-kathryn02.c9users.io/admin
+Completed 302 Found in 78ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/admin" for 165.91.227.221 at 2016-04-19 14:42:20 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered admin/index.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 299ms (Views: 295.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/datashow?eid=1" for 165.91.227.221 at 2016-04-19 14:42:22 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#show as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAnswer Load (0.5ms)[0m  [1mSELECT DISTINCT "answers"."uid" FROM "answers" WHERE "answers"."eid" = ?[0m  [["eid", 1]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users"."firstname" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users"."lastname" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users"."email" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users"."phonenumber" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users"."addressline1" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users"."city" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users"."state" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users"."zipcode" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users"."firstname" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users"."lastname" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users"."email" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users"."phonenumber" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users"."addressline1" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users"."city" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users"."state" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users"."zipcode" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users"."firstname" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users"."lastname" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users"."email" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users"."phonenumber" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users"."addressline1" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users"."city" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users"."state" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users"."zipcode" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered admin/show.html.haml within layouts/application (84.6ms)
+Completed 200 OK in 753ms (Views: 696.2ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/assets/pie.self-6b67d2a4176b50cd13631509b8a061a02d88228e1f41e688faffc5033678511e.js?body=1" for 165.91.227.221 at 2016-04-19 14:42:23 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/answer.csv.csv?eid=1" for 165.91.227.221 at 2016-04-19 14:43:31 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#index as CSV
+  Parameters: {"eid"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."eid" = ?  [["eid", 1]]
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT DISTINCT "answers"."uid" FROM "answers" WHERE "answers"."eid" = ?[0m  [["eid", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users"."lastname" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users"."firstname" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users"."email" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users"."phonenumber" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users"."addressline1" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users"."city" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users"."state" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 2.6ms)
+
+NameError (undefined local variable or method `user_address' for #<Class:0x00000008b073b0>):
+  app/models/answer.rb:49:in `block (2 levels) in to_csv'
+  app/models/answer.rb:40:in `each'
+  app/models/answer.rb:40:in `block in to_csv'
+  app/models/answer.rb:7:in `to_csv'
+  app/controllers/answers_controller.rb:22:in `block (2 levels) in index'
+  app/controllers/answers_controller.rb:20:in `index'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (16.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (143.6ms)
+
+
+Started GET "/datashow?eid=1" for 165.91.227.221 at 2016-04-19 14:44:40 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#show as HTML
+  Parameters: {"eid"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT DISTINCT "answers"."uid" FROM "answers" WHERE "answers"."eid" = ?  [["eid", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users"."firstname" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users"."lastname" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users"."email" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users"."phonenumber" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users"."addressline1" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users"."city" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users"."state" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users"."zipcode" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users"."firstname" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users"."lastname" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users"."email" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users"."phonenumber" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users"."addressline1" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users"."city" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users"."state" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users"."zipcode" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users"."firstname" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users"."lastname" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users"."email" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users"."phonenumber" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users"."addressline1" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users"."city" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users"."state" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users"."zipcode" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered admin/show.html.haml within layouts/application (43.6ms)
+Completed 200 OK in 364ms (Views: 249.4ms | ActiveRecord: 14.5ms)
+
+
+Started GET "/assets/bootstrap-datetimepicker.min.self-788e29abac8dcfbc60d7f7490dd02b623d42c2174b604ebff6e8faa66c5d876e.css?body=1" for 165.91.227.221 at 2016-04-19 14:44:40 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for 165.91.227.221 at 2016-04-19 14:44:40 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-2fe4f8a61d73606fbcb036b41f380591906a4da65a9eb5ec0a210fe6980b2ca7.css?body=1" for 165.91.227.221 at 2016-04-19 14:44:40 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.227.221 at 2016-04-19 14:44:40 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/answers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.227.221 at 2016-04-19 14:44:40 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-603f330c29af013305325569c8c75d03d688963abd8cde4fffec17b5ce417bfb.css?body=1" for 165.91.227.221 at 2016-04-19 14:44:40 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/data.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.227.221 at 2016-04-19 14:44:40 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.227.221 at 2016-04-19 14:44:40 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/questions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.227.221 at 2016-04-19 14:44:40 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-0a47e2599240f8e31081133ff1040077aca34f655d8d9a5806e05547028d9f2c.css?body=1" for 165.91.227.221 at 2016-04-19 14:44:40 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.227.221 at 2016-04-19 14:44:40 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.227.221 at 2016-04-19 14:44:40 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-a889e7abcadb5dbdb0529c0dc69d5a86744647c95c657e19413c888ea981fd29.css?body=1" for 165.91.227.221 at 2016-04-19 14:44:40 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 165.91.227.221 at 2016-04-19 14:44:40 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 165.91.227.221 at 2016-04-19 14:44:40 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 165.91.227.221 at 2016-04-19 14:44:40 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 165.91.227.221 at 2016-04-19 14:44:40 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 165.91.227.221 at 2016-04-19 14:44:40 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 165.91.227.221 at 2016-04-19 14:44:40 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 165.91.227.221 at 2016-04-19 14:44:40 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 165.91.227.221 at 2016-04-19 14:44:41 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 165.91.227.221 at 2016-04-19 14:44:41 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 165.91.227.221 at 2016-04-19 14:44:41 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 165.91.227.221 at 2016-04-19 14:44:41 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 165.91.227.221 at 2016-04-19 14:44:41 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 165.91.227.221 at 2016-04-19 14:44:41 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 165.91.227.221 at 2016-04-19 14:44:41 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 165.91.227.221 at 2016-04-19 14:44:41 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 165.91.227.221 at 2016-04-19 14:44:41 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 165.91.227.221 at 2016-04-19 14:44:41 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/pie.self-6b67d2a4176b50cd13631509b8a061a02d88228e1f41e688faffc5033678511e.js?body=1" for 165.91.227.221 at 2016-04-19 14:44:41 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/answer.csv.csv?eid=1" for 165.91.227.221 at 2016-04-19 14:44:43 +0000
+Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AnswersController#index as CSV
+  Parameters: {"eid"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE "questions"."eid" = ?[0m  [["eid", 1]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT DISTINCT "answers"."uid" FROM "answers" WHERE "answers"."eid" = ?  [["eid", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users"."lastname" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users"."firstname" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users"."email" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users"."phonenumber" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users"."addressline1" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users"."city" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users"."state" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."eid" = ? AND "answers"."uid" = ?  [["eid", 1], ["uid", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users"."lastname" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users"."firstname" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users"."email" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users"."phonenumber" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users"."addressline1" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users"."city" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users"."state" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."eid" = ? AND "answers"."uid" = ?  [["eid", 1], ["uid", 3]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users"."lastname" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users"."firstname" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users"."email" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users"."phonenumber" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users"."addressline1" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users"."city" FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users"."state" FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."eid" = ? AND "answers"."uid" = ?  [["eid", 1], ["uid", 4]]
+  Rendered text template (0.0ms)
+Sent data  (9.8ms)
+Completed 200 OK in 66ms (Views: 9.4ms | ActiveRecord: 6.9ms)
