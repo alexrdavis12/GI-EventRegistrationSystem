@@ -55,8 +55,8 @@ class SessionsController < ApplicationController
     if params[:commit] != nil && params[:commit] == 'Create'
         @user.email = params[:email]
         @user.password = params[:password]
-        @user.lastname = params[:lastname]
         @user.firstname = params[:firstname]
+        @user.lastname = params[:lastname]
         @user.phonenumber = params[:phonenumber]
         @user.gender = params[:gender]
         @user.level=1
@@ -96,8 +96,8 @@ class SessionsController < ApplicationController
     if params[:commit] != nil && params[:commit] == 'Save'
       @current_user.email = params[:email]
       @current_user.password = params[:password]
-      @current_user.lastname = params[:lastname]
       @current_user.firstname = params[:firstname]
+      @current_user.lastname = params[:lastname]
       @current_user.phonenumber = params[:phonenumber]
       @current_user.gender = params[:gender]
       @current_user.zipcode = params[:zipcode]
