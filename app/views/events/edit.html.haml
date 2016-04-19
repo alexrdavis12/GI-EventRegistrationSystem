@@ -45,6 +45,7 @@
             .form-group
               %label Event Description
               %textarea{:class => 'form-control', :value=> @event.edescription, :name=>"Description"}
+                =@event.edescription
   
             .form-group
               %label Start Date

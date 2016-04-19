@@ -74,11 +74,11 @@ class EventsController < ApplicationController
       	  	redirect_to "/eventupdate?eid=#{eid}"
       		else
       			@flash_notice += "DB Error"
-      			render "edit"
+      			redirect_to "/eventedit?eid=#{eid}"
       		end
       	else
       		@flash_notice += "Save Error"
-      		render "edit"
+      		redirect_to "/eventedit?eid=#{eid}"
       	end
     end
   end
