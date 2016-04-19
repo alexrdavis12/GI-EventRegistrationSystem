@@ -145,6 +145,7 @@
       %br
       %br
       %br
+      %br
       .panel.panel-primary
         .panel-heading
           %h1.panel-title Event Data
@@ -161,7 +162,7 @@
               %tbody
                 - cnt=0
                 - @Users.each do |u|
-                  - if cnt%4==0
+                  - if cnt%5==0
                     %tr
                   %td= u
                   - cnt+=1
@@ -172,6 +173,7 @@
   .row{:id => "chart", :class => "tab-pane"}
     .col-md-3
     .col-md-7
+      %br
       %br
       %br
       %br
