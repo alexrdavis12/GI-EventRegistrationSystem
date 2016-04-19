@@ -1,25 +1,26 @@
 %script{:src=>"https://code.highcharts.com/highcharts.js"}
 = javascript_include_tag "pie"
 
-%nav.navbar.navbar-fixed-top.navbar-inverse{:role => "navigation", :position => "fixed"}
+%nav.navbar.navbar-inverse{:role => "navigation"}
   .navbar-header
-    %a.navbar-brand{:href => "home"} M.A.G.I.
+    %a.navbar-brand{:href => "home"} M.A.G.I
   %ul.nav.navbar-nav.navbar-right
+    %li
+      %a{:href=>'home'}
+        %i{:class=>"fa fa-home fa-fw"} 
+        Home 
     %li
       %a{:href=>'allevent'}
         %i{:class=>"fa fa-align-justify fa-fw"} 
         Event
-
     %li
       %a{:href=>'profile'}
         %i{:class=>"fa fa-user fa-fw"} 
         Profile
-        
     %li
       %a{:href=>'logout'}
         %i{:class=>"fa fa-sign-out fa-fw"} 
         Logout
-
 %nav.navbar.navbar-vertical-left
   %ul.nav.navbar-nav{:role => "tablist"}
     %li{:class=> "active"}
@@ -185,3 +186,11 @@
 %div{:id=>'Dallas', :style=>'display: none'}=@dallasOrFortWorth
 %div{:id=>'Other', :style=>'display: none'}=@otherAreaInTexas
 %div{:id=>'Out', :style=>'display: none'}=@outOfTexas
+
+.footer{:style => "padding-top: 100px;"}
+  .row{:style => "background-color:rgba(15,39,64,1.00);"}
+    .col-md-3
+    .col-md-6
+      =image_tag "im3.png", :width=>"100%"
+    .col-md-3    
+    
