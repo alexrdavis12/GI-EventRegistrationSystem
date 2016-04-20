@@ -39,7 +39,7 @@ Scenario: User Home center should have no Vehicles for new user (SAD PATH)
   And I am on the "My Vehicles" tab
   Then I should not see "Vehicle 1"
   
-Scenario: User Home center's Vehicle Tab should allow user to add new vehicles (SAD PATH)
+Scenario: User Home center's Vehicle Tab should allow user to add new vehicles 
   Given I am on the Home Page
   And I am on the "My Vehicles" tab
   And I click on "Add Vehicle"
@@ -49,7 +49,11 @@ Scenario: User Home center's Vehicle Tab should allow user to add new vehicles (
   When I click on "Back to Home"
   And I am on the "My Vehicles" tab
   Then I should see "Tanky"
-
+  
+Scenario: User Home center should have no Impressions for new user (SAD PATH)
+  Given I am on the Home Page
+  And I am on the "My Vehicles" tab
+  Then I should not see "Vehicle 1"
 
 
   
