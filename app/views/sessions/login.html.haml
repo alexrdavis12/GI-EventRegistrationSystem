@@ -1,9 +1,7 @@
 - @page_title = "UserAuth | Login"
-
 %nav.navbar.navbar-inverse{:role => "navigation"}
   .navbar-header
     %a.navbar-brand{:href => "home"} M.A.G.I.
-
 .container
   .row{:style => "padding-top: 100px;"}
     .col-md-4
@@ -40,10 +38,10 @@
             .col-md-3
 
 
-.footer{:style => "padding-top: 100px;"}
+.footer{:id => "footer", :style => "margin-bottom: 0"}
   .row{:style => "background-color:rgba(15,39,64,1.00);"}
     .col-md-3
     .col-md-6
-      =image_tag "im3.png", :width=>"100%"
+      =image_tag "im3.png", :width=>"100%", :position=>"fixed", :bottom=>"0"
     .col-md-3
     
