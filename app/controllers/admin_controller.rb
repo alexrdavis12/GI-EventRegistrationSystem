@@ -42,9 +42,6 @@ class AdminController < ApplicationController
 			@Users.push(User.where(id: u).select(:lastname).take[:lastname])
 			@Users.push(User.where(id: u).select(:email).take[:email])
 			@Users.push(User.where(id: u).select(:phonenumber).take[:phonenumber])
-			@Users.push(User.where(id: u).select(:addressline1).take[:addressline1])
-			@Users.push(User.where(id: u).select(:city).take[:city])
-			@Users.push(User.where(id: u).select(:state).take[:state])
 			zipcode=User.where(id: u).select(:zipcode).take[:zipcode]
 			latitude=(90-ZIP_CODE.find(zipcode)["latitude"].to_f)/180*Math::PI
 			longitude=ZIP_CODE.find(zipcode)["longitude"].to_f/180*Math::PI		

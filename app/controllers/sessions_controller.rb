@@ -58,6 +58,12 @@ class SessionsController < ApplicationController
         @user.firstname = params[:firstname]
         @user.lastname = params[:lastname]
         @user.phonenumber = params[:phonenumber]
+        if !(/^\d{3}-\d{3}-\d{4}$/.match(params[:phonenumber])  ||/^\d{3}\d{3}\d{4}$/.match(params[:phonenumber]))
+          @user.phonenumber = nil
+          @flash_notice = "Phone Number Error"
+          render 'create'
+          return
+        end
         @user.gender = params[:gender]
         @user.addressline1 = params[:addressline1]
         @user.city = params[:city]
@@ -66,7 +72,7 @@ class SessionsController < ApplicationController
         @user.zipcode=params[:zipcode]
         if ZIP_CODE.find(params[:zipcode]) == nil
           @user.zipcode = nil
-          flash[:notice] = "Zip Code Error"
+          @flash_notice = "Zip Code Error"
           render 'create'
           return
         end
