@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160418233517) do
+ActiveRecord::Schema.define(version: 20160419162536) do
 
   create_table "answers", force: :cascade do |t|
     t.integer  "eid"
@@ -21,6 +21,20 @@ ActiveRecord::Schema.define(version: 20160418233517) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "qtitle"
+  end
+
+  create_table "commander", force: :cascade do |t|
+    t.integer "uid"
+    t.integer "cid"
+  end
+
+  create_table "educator", force: :cascade do |t|
+    t.integer "uid"
+    t.integer "edid"
+    t.string  "edname"
+    t.string  "eddescription"
+    t.integer "edtotalnumber"
+    t.string  "edorganization"
   end
 
   create_table "events", force: :cascade do |t|
@@ -34,6 +48,16 @@ ActiveRecord::Schema.define(version: 20160418233517) do
     t.datetime "updated_at",   null: false
   end
 
+  create_table "impressions", force: :cascade do |t|
+    t.integer "uid"
+    t.integer "unitid"
+    t.string  "iname"
+    t.string  "iside"
+    t.string  "iwar"
+    t.string  "idescription"
+    t.integer "cid"
+  end
+
   create_table "questions", force: :cascade do |t|
     t.integer  "qid"
     t.integer  "eid"
@@ -44,6 +68,15 @@ ActiveRecord::Schema.define(version: 20160418233517) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "parentopt"
+  end
+
+  create_table "units", force: :cascade do |t|
+    t.integer "cid"
+    t.integer "unitid"
+    t.string  "uname"
+    t.string  "uside"
+    t.integer "utotalmembers"
+    t.string  "udescription"
   end
 
   create_table "users", force: :cascade do |t|
@@ -79,5 +112,12 @@ ActiveRecord::Schema.define(version: 20160418233517) do
   end
 
   add_index "vehicles", ["user_id"], name: "index_vehicles_on_user_id"
+
+  create_table "vendorbooths", force: :cascade do |t|
+    t.integer "uid"
+    t.integer "boothid"
+    t.string  "vbname"
+    t.string  "vbdescription"
+  end
 
 end
