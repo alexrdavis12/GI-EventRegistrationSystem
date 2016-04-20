@@ -16,7 +16,7 @@ class Answer < ActiveRecord::Base
 	      #print "Event id: #{@eid}"
 	      questions = Question.where(eid: @eid).all
 	      
-	      csvtitle = ["User Last Name", "User First Name", "User Email"]
+	      csvtitle = ["User Last Name", "User First Name", "User Email", "User Phone Number"]
 	      qoptionlist = []
 	      questions.each do |q|
 	      	qoptionlist << q.qoption
@@ -41,8 +41,9 @@ class Answer < ActiveRecord::Base
 	      	user_last_name = User.where(:id => uid).select(:lastname).take[:lastname]
 	      	user_first_name = User.where(:id => uid).select(:firstname).take[:firstname]
 	      	user_email = User.where(:id => uid).select(:email).take[:email]
+	      	user_phone_number = User.where(:id => uid).select(:phonenumber).take[:phonenumber]
 	      	answer = Answer.where(:uid => uid)
-	      	answerlist = ["#{user_last_name}", "#{user_first_name}", "#{user_email}"]
+	      	answerlist = ["#{user_last_name}", "#{user_first_name}", "#{user_email}", "#{user_phone_number}"]
 	      	qindex = 0
 	      	answer.each do |ans|
 	      		if qoptionlist[qindex] != ""
