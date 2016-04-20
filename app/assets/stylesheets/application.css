@@ -18,12 +18,22 @@ a:link, a:visited {
  text-decoration: none;
 }
 
-head {
+body {
     background-image: url(login_bg.jpg);
-    background-position: center;
+    background-size: contain;
+    background-origin: border-box;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-origin: content-box;
+    background-position: top;
     z-index: -1;
     
+}
+
+#footer {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    /*height: 100%;*/
+    /*width: 100%;*/
+
 }
