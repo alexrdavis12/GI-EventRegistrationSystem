@@ -15328,3 +15328,38 @@ Cannot render console from 50.24.190.89! Allowed networks: 127.0.0.1, ::1, 127.0
 Processing by SessionsController#login as HTML
   Rendered sessions/login.html.haml within layouts/application (2.6ms)
 Completed 200 OK in 269ms (Views: 268.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 50.24.190.89 at 2016-04-20 10:25:54 +0000
+Cannot render console from 50.24.190.89! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#login as HTML
+  Rendered sessions/login.html.haml within layouts/application (142.9ms)
+Completed 200 OK in 281ms (Views: 269.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login_attempt" for 50.24.190.89 at 2016-04-20 10:25:59 +0000
+Cannot render console from 50.24.190.89! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SBGgRtm+1jyYQ6NqIb2RslkNHlwGaLjIqz8CfU8YvGBm1cUBS43gHzZFfy6n+AmGGfnYfE9SeqUZ7W3Q6QmCYg==", "email"=>"info@americangimuseum.org", "login_password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "info@americangimuseum.org"]]
+Redirected to https://csce431-project-mdebolt.c9users.io/admin
+Completed 302 Found in 166ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/admin" for 50.24.190.89 at 2016-04-20 10:25:59 +0000
+Cannot render console from 50.24.190.89! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"
+  Rendered admin/index.html.haml within layouts/application (11.5ms)
+Completed 200 OK in 120ms (Views: 114.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/profile" for 50.24.190.89 at 2016-04-20 10:26:03 +0000
+Cannot render console from 50.24.190.89! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#profile as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered sessions/profile.html.haml within layouts/application (7.6ms)
+Completed 200 OK in 109ms (Views: 106.9ms | ActiveRecord: 0.2ms)
