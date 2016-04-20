@@ -1,22 +1,23 @@
 %nav.navbar.navbar-inverse{:role => "navigation"}
   .navbar-header
-    %a.navbar-brand{:href => "home"} M.A.G.I.
+    %a.navbar-brand{:href => "home"} M.A.G.I
   %ul.nav.navbar-nav.navbar-right
+    %li
+      %a{:href=>'home'}
+        %i{:class=>"fa fa-home fa-fw"} 
+        Home 
     %li
       %a{:href=>'allevent'}
         %i{:class=>"fa fa-align-justify fa-fw"} 
         Event
-
     %li
       %a{:href=>'profile'}
         %i{:class=>"fa fa-user fa-fw"} 
         Profile
-        
     %li
       %a{:href=>'logout'}
         %i{:class=>"fa fa-sign-out fa-fw"} 
         Logout
-
 .container
   .row
     .col-md-2
@@ -59,11 +60,11 @@
               %br
 
 
-.footer{:style => "padding-top: 100px;"}
+.footer{:id => "footer", :style => "margin-bottom: 0"}
   .row{:style => "background-color:rgba(15,39,64,1.00);"}
     .col-md-3
     .col-md-6
-      =image_tag "im3.png", :width=>"100%"
+      =image_tag "im3.png", :width=>"100%", :position=>"fixed", :bottom=>"0"
     .col-md-3
     
     

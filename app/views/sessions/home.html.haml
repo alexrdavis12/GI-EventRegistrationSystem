@@ -3,6 +3,10 @@
         %a.navbar-brand{:href => "home"} M.A.G.I
     %ul.nav.navbar-nav.navbar-right
         %li
+            %a{:href=>'home'}
+                %i{:class=>"fa fa-home fa-fw"} 
+                Home
+        %li
             %a{:href=>'allevent'}
                 %i{:class=>"fa fa-align-justify fa-fw"} 
                 Event
@@ -16,23 +20,44 @@
                 Logout
 %nav.navbar.navbar-vertical-left
     %ul.nav.navbar-nav{:role => "tablist"}
+        %li
+            %a{"data-toggle" => "tab", :href => "#profile", :role => "tab"}
+                %i.fa.class.fa-user.fa-fw.fa-lg
+                %span Profile
         %li{:class=> "active"}
-            %a{"data-toggle" => "tab", :href => "#events", :role => "tab"}
+            %a{"data-toggle" => "tab", :href => "#events", :role => "tab", :style => "background: #FFE796"}
                 %i.fa.fa-list-alt.fa-fw.fa-lg
                 %span Registered Events
         %li
-            %a{"data-toggle" => "tab", :href => "#vehicles", :role => "tab"}
+            %a{"data-toggle" => "tab", :href => "#vehicles", :role => "tab", :style => "background: #FFE796"}
                 %i.fa.fa-car.fa-fw.fa-lg
-                %span My Vehicles
-
+                %span Vehicles
+        %li
+            %a{"data-toggle" => "tab", :href => "#impressions", :role => "tab"}
+                %i.fa.class.fa-flag.fa-fw.fa-lg
+                %span Impressions
+        %li
+            %a{"data-toggle" => "tab", :href => "#vendorbooths", :role => "tab"}
+                %i.fa.fa-credit-card.fa-lg
+                %span Vendor Booths
+                
+                
 .container{:class => "tab-content"}
-    .row{:id => "events", :class => "tab-pane active"}
+    .row{:id => "profile", :class => "tab-pane"}
         .col-md-2
+            .col-md-10
+                .container
+                    .h1.text-center Profile
+                    .row
+                        .col-md-2
+                        .col-md-8
+    .row{:id => "events", :class => "tab-pane active"}
+        .col-md-1
             .col-md-10
                 .container
                     .h1.text-center Registered Events
                     .row
-                        .col-md-2
+                        .col-md-1
                         .col-md-8
                             -if flash[:notice] != nil
                                 .alert.alert-success.alert-dismissable
@@ -78,7 +103,7 @@
                 .container
                     .h1.text-center My Vehicles
                     .row
-                        .col-md-2
+                        .col-md-1
                         .col-md-8
                             -if flash[:notice] != nil
                                 .alert.alert-success.alert-dismissable
@@ -123,3 +148,26 @@
                         %a.btn.btn-success{:id => 'add_vehicle_btn', :href => 'vehiclecreate'}
                             %i.fa.fa-plus.fa-lg
                             Add Vehicle
+    .row{:id => "impressions", :class => "tab-pane"}
+        .col-md-2
+            .col-md-10
+                .container
+                    .h1.text-center Impressions
+                    .row
+                        .col-md-2
+                        .col-md-8
+    .row{:id => "vendorbooths", :class => "tab-pane"}
+        .col-md-2
+            .col-md-10
+                .container
+                    .h1.text-center Vendor Booths
+                    .row
+                        .col-md-2
+                        .col-md-8
+
+.footer{:id => "footer", :style => "margin-bottom: 0"}
+    .row{:style => "background-color:rgba(15,39,64,1.00);"}
+        .col-md-3
+        .col-md-6
+            =image_tag "im3.png", :width=>"100%", :position=>"fixed", :bottom=>"0"
+        .col-md-3

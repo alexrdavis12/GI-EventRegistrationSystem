@@ -2,20 +2,25 @@
 = javascript_include_tag "pie"
 
 %nav.navbar.navbar-inverse{:role => "navigation"}
-  .navbar-header
-    %a.navbar-brand{:href => "home"} M.A.G.I.
-  %ul.nav.navbar-nav
-    %li
-      %a{:href => "#"} Link
-    %li
-      %a{:href => "#"} Link
-  %ul.nav.navbar-nav.navbar-right
-    %li
-      =link_to "Event", 'allevent'
-    %li
-      =link_to 'profile', 'profile'
-    %li
-      =link_to 'logout', 'logout'
+    .navbar-header
+        %a.navbar-brand{:href => "home"} M.A.G.I
+    %ul.nav.navbar-nav.navbar-right
+        %li
+            %a{:href=>'home'}
+                %i{:class=>"fa fa-home fa-fw"} 
+                Home
+        %li
+            %a{:href=>'allevent'}
+                %i{:class=>"fa fa-align-justify fa-fw"} 
+                Event
+        %li
+            %a{:href=>'profile'}
+                %i{:class=>"fa fa-user fa-fw"} 
+                Profile
+        %li
+            %a{:href=>'logout'}
+                %i{:class=>"fa fa-sign-out fa-fw"} 
+                Logout
 
 %div{:id=>'con', :style=>'height: 500px'}
 
@@ -27,4 +32,9 @@
 %div{:id=>'Other', :style=>'display: none'}19
 %div{:id=>'Out', :style=>'display: none'}73
 
-	
+.footer{:id => "footer", :style => "margin-bottom: 0"}
+  .row{:style => "background-color:rgba(15,39,64,1.00);"}
+    .col-md-3
+    .col-md-6
+      =image_tag "im3.png", :width=>"100%", :position=>"fixed", :bottom=>"0"
+    .col-md-3
