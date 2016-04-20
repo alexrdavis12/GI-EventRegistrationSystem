@@ -17,3 +17,13 @@
 a:link, a:visited {
  text-decoration: none;
 }
+
+head {
+    background-image: url(login_bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-origin: content-box;
+    z-index: -1;
+    
+}
