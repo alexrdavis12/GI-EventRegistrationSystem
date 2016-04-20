@@ -2,41 +2,42 @@
 %nav.navbar.navbar-inverse{:role => "navigation"}
   .navbar-header
     %a.navbar-brand{:href => "home"} M.A.G.I.
-
-.container
-  .row{:style => "padding-top: 100px;"}
-    .col-md-4
-    .col-md-4
-      .row
-
-        %h1 Login
-        %br
-        -if flash[:notice] != nil
-          .alert.alert-danger
-            %button.close{:type=>"button", "data-dismiss"=>"alert"}
-              %span{"aria-hidden"=>true}×
-              %span.sr-only Close
-            %strong 
-              =flash[:notice]
-              =flash[:color]
-        = form_tag(:action => 'login_attempt') do
-          %p
-          .form-group
-            %label Email:
-            %input{:class => 'form-control', :name=>:email}
-          
-          .form-group
-            %label Password: 
-            %input{:type => :password, :class => 'form-control',:name=>:login_password}
-
+.contaner{:id=>'body'}
+  =image_tag "login_bg.jpg", :width=>"100%", :position=>"fixed", :bottom=>"0"
+  .container
+    .row{:style => "padding-top: 100px;"}
+      .col-md-4
+      .col-md-4
+        .row
+  
+          %h1 Login
           %br
-          .row
-            .col-md-3
-            .col-md-3
-              = submit_tag("Log in", :class => 'btn btn-success')
-            .col-md-3
-              %a{:href => 'create', :class =>'btn btn-success btn-pad right-pad'} Register
-            .col-md-3
+          -if flash[:notice] != nil
+            .alert.alert-danger
+              %button.close{:type=>"button", "data-dismiss"=>"alert"}
+                %span{"aria-hidden"=>true}×
+                %span.sr-only Close
+              %strong 
+                =flash[:notice]
+                =flash[:color]
+          = form_tag(:action => 'login_attempt') do
+            %p
+            .form-group
+              %label Email:
+              %input{:class => 'form-control', :name=>:email}
+            
+            .form-group
+              %label Password: 
+              %input{:type => :password, :class => 'form-control',:name=>:login_password}
+  
+            %br
+            .row
+              .col-md-3
+              .col-md-3
+                = submit_tag("Log in", :class => 'btn btn-success')
+              .col-md-3
+                %a{:href => 'create', :class =>'btn btn-success btn-pad right-pad'} Register
+              .col-md-3
 
 
 .footer{:id => "footer", :style => "margin-bottom: 0"}
