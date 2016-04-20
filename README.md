@@ -40,3 +40,10 @@ To sync branch with master:
 Have fun!
 
 Local: rails s -p $PORT -b $IP
+
+rake db:drop
+rake db:create
+rake db:migrate
+rake db:seed
+
+clear cookies

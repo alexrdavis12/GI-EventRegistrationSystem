@@ -52,6 +52,9 @@
           %label First Name:
           %input{:class => 'form-control', :value=>@current_user.firstname, :name=>:firstname}
         .form-group
+          %label Phone Number:
+          %input{:class => 'form-control', :value=>@current_user.phonenumber, :name=>:phonenumber}
+        .form-group
           %label Gender:
           - if @current_user.gender == "male"
             %label.checkbox-inline
