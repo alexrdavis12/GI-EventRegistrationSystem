@@ -6,10 +6,33 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <!--<nav class='navbar navbar-inverse' role='navigation'>-->
+  <!--  <div class='navbar-header'>-->
+  <!--    <a class='navbar-brand' href='home'>M.A.G.I.</a>-->
+  <!--  </div>-->
+  <!--</nav>-->
 </head>
 <body>
   
   <%= yield %>
 
 </body>
+<footer>
+  <div class='row' style='background-color:rgba(15,39,64,1.00);'>
+    <div class='col-md-3'></div>
+    <div class='col-md-6'>
+      <%= image_tag "im3.png", :width=>"100%", :position=>"fixed", :bottom=>"0"%>
+    </div>
+    <div class='col-md-3'></div>
+  </div>
+  
+  <!--move everything with id="footer" here-->
+  <!--.footer{:id => "footer", :style => "margin-bottom: 0"}-->
+  <!--.row{:style => "background-color:rgba(15,39,64,1.00);"}-->
+  <!--  .col-md-3-->
+  <!--  .col-md-6-->
+  <!--    =image_tag "im3.png", :width=>"100%", :position=>"fixed", :bottom=>"0"-->
+  <!--  .col-md-3-->
+  <!--erase id="footer" section from every sheet-->
+</footer>
 </html>
