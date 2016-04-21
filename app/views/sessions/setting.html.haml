@@ -1,24 +1,24 @@
 %nav.navbar.navbar-inverse{:role => "navigation"}
   .navbar-header
-    %a.navbar-brand{:href => "home"} M.A.G.I.
+    %a.navbar-brand{:href => "home"} M.A.G.I
   %ul.nav.navbar-nav.navbar-right
+    %li
+      %a{:href=>'home'}
+        %i{:class=>"fa fa-home fa-fw"} 
+        Home 
     %li
       %a{:href=>'allevent'}
         %i{:class=>"fa fa-align-justify fa-fw"} 
         Event
-
     %li
       %a{:href=>'profile'}
         %i{:class=>"fa fa-user fa-fw"} 
         Profile
-        
     %li
       %a{:href=>'logout'}
         %i{:class=>"fa fa-sign-out fa-fw"} 
         Logout
-
-
-
+          
 .container
   .row
     .col-md-4
@@ -46,11 +46,11 @@
           %label Password: 
           %input{:class => 'form-control', :type=>:password, :name=>:password}
         .form-group
-          %label Last Name:
-          %input{:class => 'form-control', :value=>@current_user.lastname, :name=>:lastname}
-        .form-group
           %label First Name:
           %input{:class => 'form-control', :value=>@current_user.firstname, :name=>:firstname}
+        .form-group
+          %label Last Name:
+          %input{:class => 'form-control', :value=>@current_user.lastname, :name=>:lastname}
         .form-group
           %label Phone Number:
           %input{:class => 'form-control', :value=>@current_user.phonenumber, :name=>:phonenumber}
@@ -70,6 +70,15 @@
             %label.checkbox-inline
               %input{:type=>'radio', :value=>'female', :name=>:gender, :checked=>'checked'}
               Female
+        .form-group
+          %label Address:
+          %input{:class => 'form-control', :value=>@current_user.addressline1, :name=>:addressline1}
+        .form-group
+          %label City:
+          %input{:class => 'form-control', :value=>@current_user.city, :name=>:city}
+        .form-group
+          %label State:
+          %input{:class => 'form-control', :value=>@current_user.state, :name=>:state}
         .form-group
           %label Zip Code:
           %input{:class => 'form-control', :value=>@current_user.zipcode, :name=>:zipcode}

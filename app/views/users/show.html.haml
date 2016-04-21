@@ -1,20 +1,49 @@
+%nav.navbar.navbar-inverse{:role => "navigation"}
+    .navbar-header
+        %a.navbar-brand{:href => "home"} M.A.G.I
+    %ul.nav.navbar-nav.navbar-right
+        %li
+            %a{:href=>'home'}
+                %i{:class=>"fa fa-home fa-fw"} 
+                Home
+        %li
+            %a{:href=>'allevent'}
+                %i{:class=>"fa fa-align-justify fa-fw"} 
+                Event
+        %li
+            %a{:href=>'profile'}
+                %i{:class=>"fa fa-user fa-fw"} 
+                Profile
+        %li
+            %a{:href=>'logout'}
+                %i{:class=>"fa fa-sign-out fa-fw"} 
+                Logout
 %p#notice= notice
 
 %p
   %b Email:
   = @user.email
 %p
-  %b Lastname:
-  = @user.lastname
-%p
-  %b Firstname:
+  %b First Name:
   = @user.firstname
 %p
-  %b Phonenumber:
+  %b Last Name:
+  = @user.lastname
+%p
+  %b Phone Number:
   = @user.phonenumber
 %p
   %b Gender:
   = @user.gender
+%p
+  %b Address:
+  = @user.addressline1
+%p
+  %b City:
+  = @user.city
+%p
+  %b State:
+  = @user.state
 %p
   %b Role:
   = @user.role

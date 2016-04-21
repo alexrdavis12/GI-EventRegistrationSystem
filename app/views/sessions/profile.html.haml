@@ -1,23 +1,24 @@
 %nav.navbar.navbar-inverse{:role => "navigation"}
   .navbar-header
-    %a.navbar-brand{:href => "home"} M.A.G.I.
+    %a.navbar-brand{:href => "home"} M.A.G.I
   %ul.nav.navbar-nav.navbar-right
+    %li
+      %a{:href=>'home'}
+        %i{:class=>"fa fa-home fa-fw"} 
+        Home 
     %li
       %a{:href=>'allevent'}
         %i{:class=>"fa fa-align-justify fa-fw"} 
         Event
-
     %li
       %a{:href=>'profile'}
         %i{:class=>"fa fa-user fa-fw"} 
         Profile
-        
     %li
       %a{:href=>'logout'}
         %i{:class=>"fa fa-sign-out fa-fw"} 
         Logout
-
-
+          
 .container
       
   .row
@@ -38,17 +39,17 @@
                 = @current_user.email
             %tr
               %td
-                %b Lastname:
-              %td
-                = @current_user.lastname
-            %tr
-              %td
-                %b Firstname:
+                %b First Name:
               %td
                 = @current_user.firstname
             %tr
               %td
-                %b Phonenumber:
+                %b Last Name:
+              %td
+                = @current_user.lastname
+            %tr
+              %td
+                %b Phone Number:
               %td
                 = @current_user.phonenumber
             %tr
@@ -56,6 +57,21 @@
                 %b Gender:
               %td
                 = @current_user.gender
+            %tr
+              %td
+                %b Address:
+              %td
+                = @current_user.addressline1
+            %tr
+              %td
+                %b City:
+              %td
+                = @current_user.city
+            %tr
+              %td
+                %b State:
+              %td
+                = @current_user.state
             %tr
               %td
                 %b Zip Code:
