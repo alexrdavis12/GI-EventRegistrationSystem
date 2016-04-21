@@ -38,7 +38,7 @@ class SessionsController < ApplicationController
       end
     else 
       if @user.level ==0
-       redirect_to '/admin'
+       redirect_to '/adminhome'
       end
     end
   end
