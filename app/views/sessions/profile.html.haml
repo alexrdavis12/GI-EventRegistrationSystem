@@ -1,23 +1,24 @@
 %nav.navbar.navbar-inverse{:role => "navigation"}
   .navbar-header
-    %a.navbar-brand{:href => "home"} M.A.G.I.
+    %a.navbar-brand{:href => "home"} M.A.G.I
   %ul.nav.navbar-nav.navbar-right
+    %li
+      %a{:href=>'home'}
+        %i{:class=>"fa fa-home fa-fw"} 
+        Home 
     %li
       %a{:href=>'allevent'}
         %i{:class=>"fa fa-align-justify fa-fw"} 
         Event
-
     %li
       %a{:href=>'profile'}
         %i{:class=>"fa fa-user fa-fw"} 
         Profile
-        
     %li
       %a{:href=>'logout'}
         %i{:class=>"fa fa-sign-out fa-fw"} 
         Logout
-
-
+          
 .container
       
   .row
@@ -38,19 +39,39 @@
                 = @current_user.email
             %tr
               %td
-                %b Lastname:
+                %b First Name:
+              %td
+                = @current_user.firstname
+            %tr
+              %td
+                %b Last Name:
               %td
                 = @current_user.lastname
             %tr
               %td
-                %b Firstname:
+                %b Phone Number:
               %td
-                = @current_user.firstname
+                = @current_user.phonenumber
             %tr
               %td
                 %b Gender:
               %td
                 = @current_user.gender
+            %tr
+              %td
+                %b Address:
+              %td
+                = @current_user.addressline1
+            %tr
+              %td
+                %b City:
+              %td
+                = @current_user.city
+            %tr
+              %td
+                %b State:
+              %td
+                = @current_user.state
             %tr
               %td
                 %b Zip Code:
@@ -60,10 +81,10 @@
       %a{:href => setting_path, :class =>'btn btn-success'} Edit 
   
 
-
-.footer{:style => "padding-top: 100px;"}
-  .row{:style => "background-color:rgba(15,39,64,1.00);"}
-    .col-md-3
-    .col-md-6
-      =image_tag "im3.png", :width=>"100%"
-    .col-md-3
+//
+// .footer{:id => "footer", :style => "margin-bottom: 0"}
+//   .row{:style => "background-color:rgba(15,39,64,1.00);"}
+//     .col-md-3
+//     .col-md-6
+//       =image_tag "im3.png", :width=>"100%", :position=>"fixed", :bottom=>"0"
+//     .col-md-3

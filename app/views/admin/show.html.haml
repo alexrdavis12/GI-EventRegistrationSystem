@@ -1,44 +1,45 @@
 %script{:src=>"https://code.highcharts.com/highcharts.js"}
 = javascript_include_tag "pie"
 
-%nav.navbar.navbar-fixed-top.navbar-inverse{:role => "navigation", :position => "fixed"}
+%nav.navbar.navbar-inverse{:role => "navigation"}
   .navbar-header
-    %a.navbar-brand{:href => "home"} M.A.G.I.
+    %a.navbar-brand{:href => "home"} M.A.G.I
   %ul.nav.navbar-nav.navbar-right
+    %li
+      %a{:href=>'home'}
+        %i{:class=>"fa fa-home fa-fw"} 
+        Home 
     %li
       %a{:href=>'allevent'}
         %i{:class=>"fa fa-align-justify fa-fw"} 
         Event
-
     %li
       %a{:href=>'profile'}
         %i{:class=>"fa fa-user fa-fw"} 
         Profile
-        
     %li
       %a{:href=>'logout'}
         %i{:class=>"fa fa-sign-out fa-fw"} 
         Logout
-
 %nav.navbar.navbar-vertical-left
   %ul.nav.navbar-nav{:role => "tablist"}
     %li{:class=> "active"}
-      %a{"data-toggle" => "tab", :href => "#dashboard", :role => "tab"}
+      %a{"data-toggle" => "tab", :href => "#dashboard", :role => "tab", :style => "background: #FFE796"}
         %i.fa.fa-dashboard.fa-fw.fa-lg
         %span Dashboard
     %li
-      %a{"data-toggle" => "tab", :href => "#table", :role => "tab"}
+      %a{"data-toggle" => "tab", :href => "#table", :role => "tab", :style => "background: #FFE796"}
         %i.fa.fa-table.fa-fw.fa-lg
         %span Table
     %li
-      %a{"data-toggle" => "tab", :href => "#chart", :role => "tab"}
+      %a{"data-toggle" => "tab", :href => "#chart", :role => "tab", :style => "background: #FFE796"}
         %i.fa.fa-pie-chart.fa-fw.fa-lg
         %span Chart
 
 
 .container{:class => "tab-content"}
   .row{:id => "dashboard", :class => "tab-pane active"}
-    .col-md-3
+    .col-md-2
     .col-md-9
       %br
       %br
@@ -145,6 +146,7 @@
       %br
       %br
       %br
+      %br
       .panel.panel-primary
         .panel-heading
           %h1.panel-title Event Data
@@ -153,14 +155,15 @@
             %table.table.table-striped.table-bordered.table-hover
               %thead
                 %tr
-                  %th Last Name
                   %th First Name
+                  %th Last Name
                   %th Email
+                  %th Phone Number
                   %th Area
               %tbody
                 - cnt=0
                 - @Users.each do |u|
-                  - if cnt%4==0
+                  - if cnt%5==0
                     %tr
                   %td= u
                   - cnt+=1
@@ -175,6 +178,7 @@
       %br
       %br
       %br
+      %br
       %div{:id=>'con', :style=>'height: 500px'}
   
 %div{:id=>'Local', :style=>'display: none'}=@collegeStation
@@ -184,3 +188,10 @@
 %div{:id=>'Dallas', :style=>'display: none'}=@dallasOrFortWorth
 %div{:id=>'Other', :style=>'display: none'}=@otherAreaInTexas
 %div{:id=>'Out', :style=>'display: none'}=@outOfTexas
+
+// .footer{:id => "footer", :style => "margin-bottom: 0"}
+//   .row{:style => "background-color:rgba(15,39,64,1.00);"}
+//     .col-md-3
+//     .col-md-6
+//       =image_tag "im3.png", :width=>"100%", :position=>"fixed", :bottom=>"0"
+//     .col-md-3

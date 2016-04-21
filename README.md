@@ -40,3 +40,21 @@ To sync branch with master:
 Have fun!
 
 Local: rails s -p $PORT -b $IP
+
+# Deploy Script:
+
+#!/bin/bash
+git add app* bin* config* db* features* lib* log* public* script* spec* tes* vendor*
+git commit --all -m "added phone number field"
+git push
+git push heroku kathryn02:master
+heroku open
+
+# Fix Database Error:
+
+rake db:drop
+rake db:create
+rake db:migrate
+rake db:seed
+
+clear cookies
