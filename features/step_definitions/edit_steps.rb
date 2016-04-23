@@ -1,4 +1,4 @@
-iven (/^(?:|I )am on the Event page$/) do 
+Given (/^(?:|I )am on the Event page$/) do 
    visit root_path
 end
 
