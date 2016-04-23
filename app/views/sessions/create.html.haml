@@ -48,11 +48,11 @@
               });
             });
         .form-group
-          %label Last Name:
-          %input{:class => 'form-control', :value=>@user.lastname, :name=>:lastname}
-        .form-group
           %label First Name:
           %input{:class => 'form-control', :value=>@user.firstname, :name=>:firstname}
+        .form-group
+          %label Last Name:
+          %input{:class => 'form-control', :value=>@user.lastname, :name=>:lastname}
         .form-group
           %label Phone Number:
           %input{:class => 'form-control', :value=>@user.phonenumber, :name=>:phonenumber}
@@ -65,6 +65,15 @@
             %input{:type=>'radio', :value=>'female', :name=>:gender}
             Female
         .form-group
+          %label Address:
+          %input{:class => 'form-control', :value=>@user.addressline1, :name=>:addressline1}
+        .form-group
+          %label City:
+          %input{:class => 'form-control', :value=>@user.city, :name=>:city}
+        .form-group
+          %label State:
+          %input{:class => 'form-control', :value=>@user.state, :name=>:state}
+        .form-group
           %label Zipcode:
           %input{:class => 'form-control', :value=>@user.zipcode, :name=>:zipcode}
         .row
@@ -73,10 +82,10 @@
             = submit_tag("Create", :class => 'btn btn-success')
           .col-md-4
     .col-md-4
-
-.footer{:id => "footer", :style => "margin-bottom: 0"}
-  .row{:style => "background-color:rgba(15,39,64,1.00);"}
-    .col-md-3
-    .col-md-6
-      =image_tag "im3.png", :width=>"100%", :position=>"fixed", :bottom=>"0"
-    .col-md-3
+//
+// .footer{:id => "footer", :style => "margin-bottom: 0"}
+//   .row{:style => "background-color:rgba(15,39,64,1.00);"}
+//     .col-md-3
+//     .col-md-6
+//       =image_tag "im3.png", :width=>"100%", :position=>"fixed", :bottom=>"0"
+//     .col-md-3

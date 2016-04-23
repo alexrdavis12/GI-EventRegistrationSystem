@@ -39,17 +39,17 @@
                 = @current_user.email
             %tr
               %td
-                %b Lastname:
-              %td
-                = @current_user.lastname
-            %tr
-              %td
-                %b Firstname:
+                %b First Name:
               %td
                 = @current_user.firstname
             %tr
               %td
-                %b Phonenumber:
+                %b Last Name:
+              %td
+                = @current_user.lastname
+            %tr
+              %td
+                %b Phone Number:
               %td
                 = @current_user.phonenumber
             %tr
@@ -59,6 +59,21 @@
                 = @current_user.gender
             %tr
               %td
+                %b Address:
+              %td
+                = @current_user.addressline1
+            %tr
+              %td
+                %b City:
+              %td
+                = @current_user.city
+            %tr
+              %td
+                %b State:
+              %td
+                = @current_user.state
+            %tr
+              %td
                 %b Zip Code:
               %td
                 = @current_user.zipcode
@@ -66,10 +81,10 @@
       %a{:href => setting_path, :class =>'btn btn-success'} Edit 
   
 
-
-.footer{:id => "footer", :style => "margin-bottom: 0"}
-  .row{:style => "background-color:rgba(15,39,64,1.00);"}
-    .col-md-3
-    .col-md-6
-      =image_tag "im3.png", :width=>"100%", :position=>"fixed", :bottom=>"0"
-    .col-md-3
+//
+// .footer{:id => "footer", :style => "margin-bottom: 0"}
+//   .row{:style => "background-color:rgba(15,39,64,1.00);"}
+//     .col-md-3
+//     .col-md-6
+//       =image_tag "im3.png", :width=>"100%", :position=>"fixed", :bottom=>"0"
+//     .col-md-3

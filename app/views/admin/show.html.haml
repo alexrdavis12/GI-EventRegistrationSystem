@@ -146,6 +146,7 @@
       %br
       %br
       %br
+      %br
       .panel.panel-primary
         .panel-heading
           %h1.panel-title Event Data
@@ -154,15 +155,15 @@
             %table.table.table-striped.table-bordered.table-hover
               %thead
                 %tr
-                  %th Last Name
                   %th First Name
+                  %th Last Name
                   %th Email
                   %th Phone Number
                   %th Area
               %tbody
                 - cnt=0
                 - @Users.each do |u|
-                  - if cnt%4==0
+                  - if cnt%5==0
                     %tr
                   %td= u
                   - cnt+=1
@@ -177,6 +178,7 @@
       %br
       %br
       %br
+      %br
       %div{:id=>'con', :style=>'height: 500px'}
   
 %div{:id=>'Local', :style=>'display: none'}=@collegeStation
@@ -187,9 +189,9 @@
 %div{:id=>'Other', :style=>'display: none'}=@otherAreaInTexas
 %div{:id=>'Out', :style=>'display: none'}=@outOfTexas
 
-.footer{:id => "footer", :style => "margin-bottom: 0"}
-  .row{:style => "background-color:rgba(15,39,64,1.00);"}
-    .col-md-3
-    .col-md-6
-      =image_tag "im3.png", :width=>"100%", :position=>"fixed", :bottom=>"0"
-    .col-md-3
+// .footer{:id => "footer", :style => "margin-bottom: 0"}
+//   .row{:style => "background-color:rgba(15,39,64,1.00);"}
+//     .col-md-3
+//     .col-md-6
+//       =image_tag "im3.png", :width=>"100%", :position=>"fixed", :bottom=>"0"
+//     .col-md-3

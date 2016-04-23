@@ -26,33 +26,17 @@
     .col-md-8
       .panel.panel-primary
         .panel-heading
-          %h3.panel-title Vehicle
+          %h3.panel-title Vendor Booth
         .panel-body
-          = form_tag(:action => 'update', :vid => @vehicle.id) do
+          = form_tag(:action => 'update', :vbid => @vendorbooth.id) do
             .form-group
-              %label Vehicle Name
-              %input{:class => 'form-control', :value=>@vehicle.vname, :name=>"Name"}
+              %label Vendor Booth Name
+              %input{:class => 'form-control', :value=>@vendorbooth.vbname, :name=>"Name"}
         
             .form-group
-              %label Vehicle Class
-              %input{:class => 'form-control', :value=>@vehicle.vclass, :name=>"Class"}
-                    
-            
-            %label Vehicle Impression
-            .form-group
-              .col-md-1
-              .col-md-4
-                %label Nation
-                %input{:class => 'form-control', :value=>@vehicle.vnation, :name=>"Nation"}
-              .col-md-1
-              .col-md-4
-                %label War
-                %input{:class => 'form-control', :value=>@vehicle.vwar, :name=>"War"}
-        
-            .form-group
-              %label Vehicle Description
-              %textarea{:class => 'form-control', :rows => "8", :value=>@vehicle.vdescription, :name=>"Description"}
-                =@vehicle.vdescription
+              %label Vendor Booth Description
+              %textarea{:class => 'form-control', :rows => "8", :value=>@vendorbooth.vbdescription, :name=>"Description"}
+                =@vendorbooth.vbdescription
       
             = submit_tag("Save", :class => 'btn btn-primary')
 //            

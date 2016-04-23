@@ -36,6 +36,8 @@ class SessionsController < ApplicationController
       if (@registeredeid.length !=0)
         @registeredevents = Event.find(@registeredeid)
       end
+      @impressions = Impression.where(uid: id).all
+      @vendorbooths = Vendorbooth.where(uid: id).all
     else 
       if @user.level ==0
        redirect_to '/admin'
@@ -55,15 +57,24 @@ class SessionsController < ApplicationController
     if params[:commit] != nil && params[:commit] == 'Create'
         @user.email = params[:email]
         @user.password = params[:password]
-        @user.lastname = params[:lastname]
         @user.firstname = params[:firstname]
+        @user.lastname = params[:lastname]
         @user.phonenumber = params[:phonenumber]
+        if !(/^\d{3}-\d{3}-\d{4}$/.match(params[:phonenumber])  ||/^\d{3}\d{3}\d{4}$/.match(params[:phonenumber]))
+          @user.phonenumber = nil
+          @flash_notice = "Phone Number Error"
+          render 'create'
+          return
+        end
         @user.gender = params[:gender]
+        @user.addressline1 = params[:addressline1]
+        @user.city = params[:city]
+        @user.state = params[:state]
         @user.level=1
         @user.zipcode=params[:zipcode]
         if ZIP_CODE.find(params[:zipcode]) == nil
           @user.zipcode = nil
-          flash[:notice] = "Zip Code Error"
+          @flash_notice = "Zip Code Error"
           render 'create'
           return
         end
@@ -96,10 +107,13 @@ class SessionsController < ApplicationController
     if params[:commit] != nil && params[:commit] == 'Save'
       @current_user.email = params[:email]
       @current_user.password = params[:password]
-      @current_user.lastname = params[:lastname]
       @current_user.firstname = params[:firstname]
+      @current_user.lastname = params[:lastname]
       @current_user.phonenumber = params[:phonenumber]
       @current_user.gender = params[:gender]
+      @current_user.addressline1 = params[:addressline1]
+      @current_user.city = params[:city]
+      @current_user.state = params[:state]
       @current_user.zipcode = params[:zipcode]
       if ZIP_CODE.find(params[:zipcode]) == nil
         @current_user.zipcode = nil
@@ -139,7 +153,7 @@ class SessionsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def user_params
-    params.require(:user).permit(:email, :password, :lastname, :firstname, :phonenumber, :gender, :role)
+    params.require(:user).permit(:email, :password, :lastname, :firstname, :phonenumber, :gender, :addressline1, :city, :state, :role)
   end
 
 

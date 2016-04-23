@@ -24,17 +24,26 @@
   %b Email:
   = @user.email
 %p
-  %b Lastname:
-  = @user.lastname
-%p
-  %b Firstname:
+  %b First Name:
   = @user.firstname
 %p
-  %b Phonenumber:
+  %b Last Name:
+  = @user.lastname
+%p
+  %b Phone Number:
   = @user.phonenumber
 %p
   %b Gender:
   = @user.gender
+%p
+  %b Address:
+  = @user.addressline1
+%p
+  %b City:
+  = @user.city
+%p
+  %b State:
+  = @user.state
 %p
   %b Role:
   = @user.role
@@ -48,10 +57,10 @@
 = link_to 'Edit', edit_user_path(@user)
 \|
 = link_to 'Back', users_path
-
-.footer{:id => "footer", :style => "margin-bottom: 0"}
-  .row{:style => "background-color:rgba(15,39,64,1.00);"}
-    .col-md-3
-    .col-md-6
-      =image_tag "im3.png", :width=>"100%", :position=>"fixed", :bottom=>"0"
-    .col-md-3
+//
+// .footer{:id => "footer", :style => "margin-bottom: 0"}
+//   .row{:style => "background-color:rgba(15,39,64,1.00);"}
+//     .col-md-3
+//     .col-md-6
+//       =image_tag "im3.png", :width=>"100%", :position=>"fixed", :bottom=>"0"
+//     .col-md-3
