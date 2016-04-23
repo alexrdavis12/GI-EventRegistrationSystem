@@ -12,7 +12,7 @@ class VendorboothsController < ApplicationController
       if @vendorbooth.valid?
         if @vendorbooth.save
           session[:vbid] = @vendorbooth.id
-          flash[:notice] = "Vendorbooth Created Successfully!"
+          flash[:notice] = "Vendor Booth Created Successfully!"
           vbid = @vendorbooth.id
           redirect_to "/vendorboothshow?vbid=#{vbid}"
         else

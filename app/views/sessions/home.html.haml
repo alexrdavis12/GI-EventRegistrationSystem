@@ -31,12 +31,6 @@
         %li
             %a{"data-toggle" => "tab", :href => "#vehicles", :role => "tab", :style => "background: #FFE796"}
                 %i.fa.fa-car.fa-fw.fa-lg
-<<<<<<< HEAD
-                %span My Vehicles
-
-.container{:class => "tab-content"}
-    .row{:id => "events", :class => "tab-pane active"}
-=======
                 %span Vehicles
         %li
             %a{"data-toggle" => "tab", :href => "#impressions", :role => "tab"}
@@ -50,14 +44,63 @@
                 
 .container{:class => "tab-content"}
     .row{:id => "profile", :class => "tab-pane"}
->>>>>>> master
         .col-md-2
             .col-md-10
                 .container
-                    .h1.text-center Profile
+                    .h1.text-center My Profile
                     .row
                         .col-md-2
                         .col-md-8
+                            .table-responsive
+                                %table.table.table-basic
+                                    %tbody
+                                        %tr
+                                            %td
+                                                %b Email:
+                                            %td
+                                                = @current_user.email
+                                        %tr
+                                            %td
+                                                %b First Name:
+                                            %td
+                                                = @current_user.firstname
+                                        %tr
+                                            %td
+                                                %b Last Name:
+                                            %td
+                                                = @current_user.lastname
+                                        %tr
+                                            %td
+                                                %b Phone Number:
+                                            %td
+                                                = @current_user.phonenumber
+                                        %tr
+                                            %td
+                                                %b Gender:
+                                            %td
+                                                = @current_user.gender
+                                        %tr
+                                            %td
+                                                %b Address:
+                                            %td
+                                                = @current_user.addressline1
+                                        %tr
+                                            %td
+                                                %b City:
+                                            %td
+                                                = @current_user.city
+                                        %tr
+                                            %td
+                                                %b State:
+                                            %td
+                                                = @current_user.state
+                                        %tr
+                                            %td
+                                                %b Zip Code:
+                                            %td
+                                                = @current_user.zipcode
+                            .col-md-4.text-center
+                            %a{:href => setting_path, :class =>'btn btn-success'} Edit Profile
     .row{:id => "events", :class => "tab-pane active"}
         .col-md-1
             .col-md-10
@@ -108,7 +151,7 @@
         .col-md-2
             .col-md-10
                 .container
-                    .h1.text-center My Vehicles
+                    .h1.text-center Vehicles
                     .row
                         .col-md-1
                         .col-md-8

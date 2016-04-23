@@ -124,7 +124,7 @@ class SessionsController < ApplicationController
       if @current_user.valid?
         if @current_user.save
           flash[:notice] = "Information Updated"
-          redirect_to '/profile'
+          redirect_to '/home'
           return
         else
           @flash_notice = "Edit Error"
