@@ -205,8 +205,42 @@
                 .container
                     .h1.text-center Vendor Booths
                     .row
-                        .col-md-2
+                        .col-md-1
                         .col-md-8
+                            -if flash[:notice] != nil
+                                .alert.alert-success.alert-dismissable
+                                    %button.close{:type=>"button", "data-dismiss"=>"alert"}
+                                        %span{"aria-hidden"=>true}×
+                                        %span.sr-only Close
+                                    %strong 
+                                        =flash[:notice]
+                                        =flash[:color]
+                            -if @vendorbooths.length == 0
+                                .alert.alert-info.alert-dismissable
+                                    %button.close{:type=>"button", "data-dismiss"=>"alert"}
+                                        %span{"aria-hidden"=>true}×
+                                        %span.sr-only Close
+                                    %strong No registered Vendor Booths
+                            -else
+                                - cnt= 0
+                                - @vendorbooths.each do |vb|
+                                    - cnt+=1
+                                    .panel.panel-primary
+                                        .panel-heading
+                                            %h3.panel-title Vendor Booth #{cnt}
+                                        .panel-body
+                                            %label= vb.vbname 
+                                            %br
+                                            %label Description
+                                            = vb.vbdescription
+                                            %br
+                                            %a{:href => "vendorboothshow?vbid=#{vb.id}", :class =>'btn btn-primary btn-sm', :role=>'button'} Show
+                                            %a{:href => "vendorboothedit?vbid=#{vb.id}", :class =>'btn btn-primary btn-sm', :role=>'button'} Edit
+                                            %a{:href => "vendorboothdelete?vbid=#{vb.id}", :class =>'btn btn-primary btn-sm', :role=>'button'} Delete
+                                            %br
+                        %a.btn.btn-success{:id => 'add_vendorbooth_btn', :href => 'vendorboothcreate'}
+                            %i.fa.fa-plus.fa-lg
+                            Add Vendor Booth
 //
 // .footer{:id => "footer", :style => "margin-bottom: 0"}
 //     .row{:style => "background-color:rgba(15,39,64,1.00);"}

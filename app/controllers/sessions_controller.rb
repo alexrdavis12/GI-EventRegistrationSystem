@@ -37,6 +37,7 @@ class SessionsController < ApplicationController
         @registeredevents = Event.find(@registeredeid)
       end
       @impressions = Impression.where(uid: id).all
+      @vendorbooths = Vendorbooth.where(uid: id).all
     else 
       if @user.level ==0
        redirect_to '/admin'
