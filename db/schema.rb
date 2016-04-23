@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160419162536) do
+ActiveRecord::Schema.define(version: 20160423003820) do
 
   create_table "answers", force: :cascade do |t|
     t.integer  "eid"
@@ -23,12 +23,12 @@ ActiveRecord::Schema.define(version: 20160419162536) do
     t.string   "qtitle"
   end
 
-  create_table "commander", force: :cascade do |t|
+  create_table "commanders", force: :cascade do |t|
     t.integer "uid"
     t.integer "cid"
   end
 
-  create_table "educator", force: :cascade do |t|
+  create_table "educators", force: :cascade do |t|
     t.integer "uid"
     t.integer "edid"
     t.string  "edname"
@@ -50,12 +50,13 @@ ActiveRecord::Schema.define(version: 20160419162536) do
 
   create_table "impressions", force: :cascade do |t|
     t.integer "uid"
-    t.integer "unitid"
+    t.string  "unitid"
     t.string  "iname"
     t.string  "iside"
     t.string  "iwar"
     t.string  "idescription"
     t.integer "cid"
+    t.integer "iid"
   end
 
   create_table "questions", force: :cascade do |t|
@@ -121,6 +122,7 @@ ActiveRecord::Schema.define(version: 20160419162536) do
     t.integer "boothid"
     t.string  "vbname"
     t.string  "vbdescription"
+    t.integer "vbid"
   end
 
 end
