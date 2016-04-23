@@ -5,7 +5,7 @@ Feature: admin home page
   
 Background: Logged in as administrator contain three buttons on home page
   
-Given: Log in as administrator
+Given Log in as administrator
   
 Scenario: Create Event 
   When I click the create event button 
