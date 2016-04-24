@@ -133,16 +133,16 @@
                                         .panel-body
                                             %label= e.etitle 
                                             %br
-                                            %label Location
+                                            %label Location:
                                             = e.elocation
                                             %br
-                                            %label Start Date  
+                                            %label Start Date:
                                             = e.estart
                                             %br
-                                            %label End Date  
+                                            %label End Date:  
                                             = e.eend
                                             %br
-                                            %label Event Description 
+                                            %label Event Description: 
                                             = e.edescription
                         %a.btn.btn-success{:id => 'availableEvents', :href => 'allevent'}
                             %i.fa.fa-plus.fa-lg
@@ -179,16 +179,16 @@
                                         .panel-body
                                             %label= v.vname 
                                             %br
-                                            %label Vehicle Class 
+                                            %label Vehicle Class: 
                                             = v.vclass
                                             %br
-                                            %label Nation  
+                                            %label Nation:  
                                             = v.vnation
                                             %br
-                                            %label War  
+                                            %label War:  
                                             = v.vwar
                                             %br
-                                            %label Vehicle Description 
+                                            %label Vehicle Description: 
                                             = v.vdescription
                                             %br
                                             %a{:href => "vehicleshow?vid=#{v.id}", :class =>'btn btn-primary btn-sm', :role=>'button'} Show
@@ -230,16 +230,16 @@
                                         .panel-body
                                             %label= i.iname 
                                             %br
-                                            %label Unit  
+                                            %label Unit:  
                                             = i.unitid
                                             %br
-                                            %label War  
+                                            %label War: 
                                             = i.iwar
                                             %br
-                                            %label Side 
+                                            %label Side: 
                                             = i.iside
                                             %br
-                                            %label Description
+                                            %label Description:
                                             = i.idescription
                                             %br
                                             %a{:href => "impressionshow?iid=#{i.id}", :class =>'btn btn-primary btn-sm', :role=>'button'} Show
@@ -281,7 +281,10 @@
                                         .panel-body
                                             %label= vb.vbname 
                                             %br
-                                            %label Description
+                                            %label Number vendor spaces:
+                                            = vb.vbspaces
+                                            %br
+                                            %label Description:
                                             = vb.vbdescription
                                             %br
                                             %a{:href => "vendorboothshow?vbid=#{vb.id}", :class =>'btn btn-primary btn-sm', :role=>'button'} Show
