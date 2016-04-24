@@ -31,7 +31,7 @@
     = f.text_field :city
   .field
     = f.label :state
-    = f.select(:state, options_for_select([['Hot','hot'],['Medium','medium'],['Cold','cold']]))
+    = f.select :state, [['Hot','hot'],['Medium','medium'],['Cold','cold']]
   .actions
     = f.submit 'Save'
     
