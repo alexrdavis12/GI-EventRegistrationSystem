@@ -8,7 +8,20 @@ Given(/^I Login as an administrator$/) do
   expect(page).to have_content("Welcome home, Administrator")
 end
 
-When(/^I click the Create Event button$/)do
+When(/^I click MAGI$/) do 
+    visit('home?eid=1')
+end 
+
+Then(/^I should see admin home page$/) do 
+    expect(page).to have_content("Create Event")
+
+end 
+    
+    
+    
+    
+
+When(/^I click the Create Event button$/) do
     visit('EventCreate?eid=1')
 end
 
@@ -16,7 +29,7 @@ Then(/^I should see the event form$/) do
     expect(page).to have_content("Event")
 end
 
-When(/^I click the View Events button$/)do
+When(/^I click the View Events button$/) do
     visit('allevent?eid=1')
 end
 
