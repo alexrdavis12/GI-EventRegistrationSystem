@@ -1,0 +1,46 @@
+%nav.navbar.navbar-inverse{:role => "navigation"}
+  .navbar-header
+    %a.navbar-brand{:href => "home"} M.A.G.I
+  %ul.nav.navbar-nav.navbar-right
+    %li
+      %a{:href=>'home'}
+        %i{:class=>"fa fa-home fa-fw"} 
+        Home 
+    %li
+      %a{:href=>'allevent'}
+        %i{:class=>"fa fa-align-justify fa-fw"} 
+        Event
+    %li
+      %a{:href=>'profile'}
+        %i{:class=>"fa fa-user fa-fw"} 
+        Profile
+    %li
+      %a{:href=>'logout'}
+        %i{:class=>"fa fa-sign-out fa-fw"} 
+        Logout
+        
+.container
+  .row
+    .col-md-2
+    .col-md-8
+      .panel.panel-primary
+        .panel-heading
+          %h3.panel-title Vendor Booth
+        .panel-body
+          = form_tag(:action => 'create') do
+            .form-group
+              %label Vendor Booth Name
+              %input{:class => 'form-control', :value=>'', :name=>"Name"}
+        
+            .form-group
+              %label Vendor Booth Description
+              %textarea{:class => 'form-control', :rows => "8", :value=>'', :name=>"Description"}
+      
+            = submit_tag("Create", :class => 'btn btn-primary')
+//            
+// .footer{:id => "footer", :style => "margin-bottom: 0"}
+//   .row{:style => "background-color:rgba(15,39,64,1.00);"}
+//     .col-md-3
+//     .col-md-6
+//       =image_tag "im3.png", :width=>"100%", :position=>"fixed", :bottom=>"0"
+//     .col-md-3            

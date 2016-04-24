@@ -3848,59 +3848,6 @@ Processing by SessionsController#login as HTML
 Completed 200 OK in 130ms (Views: 128.5ms | ActiveRecord: 0.0ms)
 
 
-<<<<<<< HEAD
-Started GET "/" for 165.91.227.221 at 2016-04-12 17:46:44 +0000
-Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
-  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-Processing by SessionsController#login as HTML
-Redirected to https://project-kathryn02.c9users.io/home
-Filter chain halted as :save_login_state rendered or redirected
-Completed 302 Found in 40ms (ActiveRecord: 0.0ms)
-
-
-Started GET "/home" for 165.91.227.221 at 2016-04-12 17:46:46 +0000
-Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
-Processing by SessionsController#home as HTML
-  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
-  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
-Redirected to https://project-kathryn02.c9users.io/admin
-Completed 302 Found in 133ms (ActiveRecord: 3.2ms)
-
-
-Started GET "/admin" for 165.91.227.221 at 2016-04-12 17:46:46 +0000
-Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
-Processing by AdminController#index as HTML
-  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
-  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT "events".* FROM "events"[0m
-  Rendered admin/index.html.haml within layouts/application (57.7ms)
-Completed 200 OK in 1784ms (Views: 1767.7ms | ActiveRecord: 1.4ms)
-
-
-Started GET "/eventedit?eid=1" for 165.91.227.221 at 2016-04-12 17:46:57 +0000
-Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
-Processing by EventsController#edit as HTML
-  Parameters: {"eid"=>"1"}
-  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
-  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
-  Rendered events/edit.html.haml within layouts/application (130.3ms)
-Completed 200 OK in 519ms (Views: 513.2ms | ActiveRecord: 0.8ms)
-
-
-Started POST "/eventupdate?eid=1" for 165.91.227.221 at 2016-04-12 17:46:59 +0000
-Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
-Processing by EventsController#update as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G/zCiE4vgcgffiA1xQmCu9bNsRstubhirRHfV+tSesl+E1stCP8mfIh9p2MQwMgjJ7ZDj9xal6TxVc3r2eFhCQ==", "Title"=>"event2222222222", "Location"=>"location1111111111", "Description"=>"qwertyiuoppljwbfgjuhaerkvbwjk", "Start_Date"=>"2016-04-06", "End_Date"=>"2016-04-07", "commit"=>"Save", "eid"=>"1"}
-  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
-  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 1]]
-  [1m[35m (0.2ms)[0m  begin transaction
-  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
-Redirected to https://project-kathryn02.c9users.io/eventupdate?eid=1
-Completed 302 Found in 86ms (ActiveRecord: 1.0ms)
-
-
-Started GET "/eventupdate?eid=1" for 165.91.227.221 at 2016-04-12 17:46:59 +0000
-Cannot render console from 165.91.227.221! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
-=======
 Started GET "/" for 50.24.190.89 at 2016-04-12 09:45:10 +0000
 Cannot render console from 50.24.190.89! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
   [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
@@ -4046,7 +3993,6 @@ Completed 302 Found in 7ms (ActiveRecord: 0.7ms)
 
 Started GET "/eventupdate?eid=1" for 50.24.190.89 at 2016-04-12 09:45:29 +0000
 Cannot render console from 50.24.190.89! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
->>>>>>> 27974b9b12d2a6d0fb7b57797bd2d182b542748d
 Processing by EventsController#update as HTML
   Parameters: {"eid"=>"1"}
   [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]

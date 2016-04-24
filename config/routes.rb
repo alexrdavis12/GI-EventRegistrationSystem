@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'answer.csv' => 'answers#index', :as => :answers
   get 'login'  => 'sessions#login'
   get 'home'=>'sessions#home'
+  get 'adminhome'=> 'sessions#adminhome'
   get 'login_attempt'=>'sessions#login_attempt'
   post 'login_attempt'=>'sessions#login_attempt'
   get 'logout' => 'sessions#logout'
@@ -46,6 +47,25 @@ Rails.application.routes.draw do
   get 'questionupdate' => 'questions#update'
   post 'questionupdate' => 'questions#update'
   put 'questionupdate' => 'questions#update'
+  
+  get 'impressioncreate' =>'impressions#create'
+  post 'impressioncreate' =>'impressions#create'
+  get 'impressionshow' =>'impressions#show'
+  get 'impressiondelete' => 'impressions#delete'
+  get 'impressionedit' => 'impressions#edit'
+  post 'impressionedit' => 'impressions#edit'
+  get 'impressionupdate' => 'impressions#update'
+  post 'impressionupdate' => 'impressions#update'
+  
+  get 'vendorboothcreate' =>'vendorbooths#create'
+  post 'vendorboothcreate' =>'vendorbooths#create'
+  get 'vendorboothshow' =>'vendorbooths#show'
+  get 'vendorboothdelete' => 'vendorbooths#delete'
+  get 'vendorboothedit' => 'vendorbooths#edit'
+  post 'vendorboothedit' => 'vendorbooths#edit'
+  get 'vendorboothupdate' => 'vendorbooths#update'
+  post 'vendorboothupdate' => 'vendorbooths#update'
+  
   # post 'answershow' =>'answers#show'
   # get 'create' => 'answers#create'
   # post 'create' => 'answers#create'
