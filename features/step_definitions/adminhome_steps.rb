@@ -1,4 +1,4 @@
-Given(/^I Login in as an administrator$/) do
+Given(/^I Login as an administrator$/) do
   User.create!([{:email => 'info@americangimuseum.org', :lastname => 'Admin', :firstname => 'Admin',:password=>'MAGIadmin',:gender=>'',:created_at=>'',:updated_at=>'',:salt=>'$2a$10$jhA61Mm9GFSg.pcqwzJphu',:encrypted_password=>'$2a$10$jhA61Mm9GFSg.pcqwzJphuB/zwJO5nUmvIm.JfPMY15/toN2oo6jW',:level=>'0'}])
   visit("/login")
   fill_in 'email', :with => 'info@americangimuseum.org'
@@ -13,7 +13,7 @@ When(/^I click the Create Event button$/)do
 end
 
 Then(/^I should see the event form$/) do
-    expect(page).to have_content("event")
+    expect(page).to have_content("Event")
 end
 
 When(/^I click the View Events button$/)do

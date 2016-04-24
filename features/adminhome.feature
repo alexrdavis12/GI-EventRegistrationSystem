@@ -16,7 +16,7 @@ Scenario: View Events
   Then I should see events
   
 Scenario: Profile  
-  When I click the profile button
+  When I click the Profile button
   Then I should see admin profile
 
   
