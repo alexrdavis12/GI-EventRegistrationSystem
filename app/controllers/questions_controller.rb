@@ -46,7 +46,7 @@ class QuestionsController < ApplicationController
 
 					if (@question.eid == nil)
 	      	  			@flash_notice = "Illegal Arguments"
-	      	  			render 'create', eid: @eid
+	      	  				redirect_to "/QuestionCreate?eid=#{params[:q_eid]}"
 	      	  			return
 	      	  		end
 
@@ -55,14 +55,14 @@ class QuestionsController < ApplicationController
 	      	  		@question.qtitle = value[:title]
 	          		if (@question.qtitle == nil or @question.qtitle == "")
 	      	  			@flash_notice = "Empty title is not allowed"
-	      	  			render 'create', eid: @eid
+	      	  			redirect_to "/QuestionCreate?eid=#{params[:q_eid]}"
 	      	  			return
 	      	  		end
 
 	          		@question.qtype = value[:type]
 	          		if (@question.qtype == nil or @question.qtype == "" or !["1", "2", "3", "4", "5"].include?@question.qtype)
 	      	  			@flash_notice = "Illegal Type"
-	      	  			render 'create', eid: @eid
+	      	  			redirect_to "/QuestionCreate?eid=#{params[:q_eid]}"
 	      	  			return
 	      	  		end
 
@@ -79,7 +79,7 @@ class QuestionsController < ApplicationController
 	          			qarray << @question
 	          		else
 	          			@flash_notice = "Create Error"
-	          			render 'create', eid: @eid
+	          			redirect_to "/QuestionCreate?eid=#{params[:q_eid]}"
 	          			return
 	          		end
 	      	  		
@@ -95,19 +95,20 @@ class QuestionsController < ApplicationController
 
 	      	  		if (@question.eid == nil)
 	      	  			@flash_notice = "Illegal Arguments no eid"
-	      	  			render 'create', eid: @eid
+	      	  			redirect_to "/QuestionCreate?eid=#{params[:q_eid]}"
 	      	  			return
 	      	  		end
 	          		@question.qtitle = value[:title]
 	          		if (@question.qtitle == nil or @question.qtitle == "")
 	      	  			@flash_notice = "Empty title is not allowed"
-	      	  			render 'create', eid: @eid
+	      	  		#	render 'create', eid: @question.eid
+	      	  			redirect_to "/QuestionCreate?eid=#{params[:q_eid]}"
 	      	  			return
 	      	  		end
 	          		@question.qtype = value[:type]
 	          		if (@question.qtype == nil or @question.qtype == "" or !["1", "2", "3", "4", "5"].include?@question.qtype)
 	      	  			@flash_notice = "Illegal Type"
-	      	  			render 'create', eid: @eid
+	      	  			redirect_to "/QuestionCreate?eid=#{params[:q_eid]}"
 	      	  			return
 	      	  		end
 
@@ -123,7 +124,7 @@ class QuestionsController < ApplicationController
 	          			qarray << @question
 	          		else
 	          			@flash_notice = "Create Error"
-	          			render 'create', eid: @eid
+	          			redirect_to "/QuestionCreate?eid=#{params[:q_eid]}"
 	          			return
 	          		end
 	          	end
@@ -190,7 +191,7 @@ class QuestionsController < ApplicationController
 					@question.qid = qid
 					@question.eid = params[:q_eid]
 					@question.parentopt = parent_optid
-
+					eid = params[:q_eid]
 					if (@question.eid == nil)
 	      	  			@flash_notice = "Illegal Arguments"
 	      	  			redirect_to "/QuestionEdit?eid=#{eid}"
