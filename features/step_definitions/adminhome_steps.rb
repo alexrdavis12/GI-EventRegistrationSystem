@@ -21,7 +21,7 @@ When(/^I click the View Events button$/)do
 end
 
 Then(/^I should see events$/) do 
-    expect(page).to have_content("event")
+    expect(page).to have_content("Event")
 end
 
 When(/^I click the Profile button$/) do 
@@ -29,5 +29,5 @@ When(/^I click the Profile button$/) do
 end 
 
 Then(/^I should see admin profile$/) do 
-    expect(page). to have_content("profile")
+    expect(page). to have_content("Profile")
 end 
