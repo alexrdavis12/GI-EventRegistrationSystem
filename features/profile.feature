@@ -8,6 +8,11 @@ Background: User exists or is being created
   |eid|etitle |elocation|edescription|
   | 1 | test1 | loc     | disc       | 
 
+  Given Vehicles Exits
+  |vid|     vname    |  vclass |vnation|vwar|vdescription|user_id|
+  | 1 | tankasaurous | Tracked |   USA | WW2|dicoriptico | 1     | 
+  # | 2 | tankarina    | Tracked |   USA | WW2|dicoriptico | 2     | 
+
   Given I am on the create page
   And I fill in "email" with "1234@gmail.com"
   And I fill in "password" with "12345678"
@@ -39,10 +44,10 @@ Scenario: User Home center's profile tab should allow the user to edit
   And I am on the Profile tab
   Then I should see "Dallas"
   
-Scenario: User Home center should have no events for new user (SAD PATH)
-  Given I am on the Home Page
-  And I am on the "Registered Events" tab
-  Then I should not see "Event 1"
+# Scenario: User Home center should have no events for new user (SAD PATH)
+  # Given I am on the Home Page
+  # And I am on the "Registered Events" tab
+  # Then I should not see "Event 1"
   
 Scenario: User Home center should have events the user registered for
   Given I am on the Home Page
@@ -55,10 +60,10 @@ Scenario: User Home center should have events the user registered for
   And I am on the "Registered Events" tab
   Then I should see "Event"
   
-Scenario: User Home center should have no Vehicles for new user (SAD PATH)
-  Given I am on the Home Page
-  And I am on the "Vehicles" tab
-  Then I should not see "Vehicle 1"
+# Scenario: User Home center should have no Vehicles for new user (SAD PATH)
+#   Given I am on the Home Page
+#   And I am on the "Vehicles" tab
+#   Then I should not see "Vehicle 1"
   
 Scenario: User Home center's Vehicle Tab should allow user to add new vehicles 
   Given I am on the Home Page
@@ -71,10 +76,27 @@ Scenario: User Home center's Vehicle Tab should allow user to add new vehicles
   And I am on the "Vehicles" tab
   Then I should see "Tanky"
   
-Scenario: User Home center should have no Impressions for new user (SAD PATH)
+Scenario: User Home center's Vehicle Tab should allow user to see previously created vehicles
   Given I am on the Home Page
-  And I am on the "Impressions" tab
-  Then I should not see "Impression 1"
+  And I am on the "Vehicles" tab
+  When I click on "Show"
+  Then I should see "Vehicle ID"
+  
+# Scenario: User Home center's Vehicle Tab should allow user to edit previously created vehicles
+#   Given I am on the Home Page
+#   And I am on the "Vehicles" tab
+#   When I click on "Edit Vehicle Info"
+#   Then I should see "Vehicle Impression"
+#   And I fill in "Name" with "Tankmeister"
+#   And I submit form
+#   And I am on the Home Page
+#   When I am on the "Vehicles" tab
+#   Then I should see "Tankmeister"
+  
+# Scenario: User Home center should have no Impressions for new user (SAD PATH)
+#   Given I am on the Home Page
+#   And I am on the "Impressions" tab
+#   Then I should not see "Impression 1"
 
 Scenario: User Home center's Impressions Tab should allow user to add new impressions
   Given I am on the Home Page
@@ -91,10 +113,10 @@ Scenario: User Home center's Impressions Tab should allow user to add new impres
   And I am on the "Impressions" tab
   Then I should see "Lee"
   
-Scenario: User Home center should have no Vendor Booths for new user (SAD PATH)
-  Given I am on the Home Page
-  And I am on the "Vendor Booths" tab
-  Then I should not see "Vendor Booth 1"
+# Scenario: User Home center should have no Vendor Booths for new user (SAD PATH)
+#   Given I am on the Home Page
+#   And I am on the "Vendor Booths" tab
+#   Then I should not see "Vendor Booth 1"
 
 Scenario: User Home center's Vendor Booth Tab should allow user to add new vendor booths
   Given I am on the Home Page
