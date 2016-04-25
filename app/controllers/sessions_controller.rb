@@ -9,21 +9,21 @@ class SessionsController < ApplicationController
   def login_attempt
   	authorized_user = User.authenticate(params[:email], params[:login_password])
       if authorized_user&&authorized_user.level==1
-       session[:user_id] = authorized_user.id  
-       flash[:notice]="Welcome again, you logged in as #{authorized_user.email}"
-       redirect_to '/home'
-       return
+        session[:user_id] = authorized_user.id  
+        flash[:notice]="Welcome again, you logged in as #{authorized_user.email}"
+        redirect_to '/home'
+        return
       elsif authorized_user&&authorized_user.level==0
-       session[:user_id] = authorized_user.id  
-       flash[:notice]="Welcome home, Administrator #{authorized_user.email}"
-       redirect_to '/admin'
-       return
-    else
-    	flash[:notice]="Invalid Username or Password"
-    	flash[:color]="Invalid"
-    	redirect_to '/login'
-      return
-    end
+        session[:user_id] = authorized_user.id  
+        flash[:notice]="Welcome home, Administrator #{authorized_user.email}"
+        redirect_to '/adminhome'
+        return
+      else
+      	flash[:notice]="Invalid Username or Password"
+      	flash[:color]="Invalid"
+      	redirect_to '/login'
+        return
+      end
   end
  
   def home
