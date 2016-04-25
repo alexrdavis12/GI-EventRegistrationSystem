@@ -436,7 +436,7 @@ function origClickSel(){
 
 $(document).ready(function(){
 	current_qid = parseInt($("#current_qid").val());
-	alert("Testing changes...");
+	// alert("Testing changes...");
 	origClickSel();
 	$('#create_q_btn').click(function(evt){
 		evt.stopImmediatePropagation();
