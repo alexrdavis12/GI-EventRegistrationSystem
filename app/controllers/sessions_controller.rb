@@ -60,7 +60,7 @@ class SessionsController < ApplicationController
         @user.phonenumber = params[:phonenumber]
         if !(/^\d{3}-\d{3}-\d{4}$/.match(params[:phonenumber])  ||/^\d{3}\d{3}\d{4}$/.match(params[:phonenumber]))
           @user.phonenumber = nil
-          @flash_notice = "Phone Number Error"
+          @flash_notice = "Phone Number Error : Please Enter it as XXX-XXX-XXXX"
           render 'create'
           return
         end
@@ -72,7 +72,7 @@ class SessionsController < ApplicationController
         @user.zipcode=params[:zipcode]
         if ZIP_CODE.find(params[:zipcode]) == nil
           @user.zipcode = nil
-          @flash_notice = "Zip Code Error"
+          @flash_notice = "Zip Code Error : Please Enter a Valid 5 digit Zip Code"
           render 'create'
           return
         end
@@ -108,16 +108,22 @@ class SessionsController < ApplicationController
       @current_user.firstname = params[:firstname]
       @current_user.lastname = params[:lastname]
       @current_user.phonenumber = params[:phonenumber]
+      if !(/^\d{3}-\d{3}-\d{4}$/.match(params[:phonenumber])  ||/^\d{3}\d{3}\d{4}$/.match(params[:phonenumber]))
+          @user.phonenumber = nil
+          @flash_notice = "Phone Number Error : Please Enter it as XXX-XXX-XXXX"
+          render 'create'
+          return
+      end
       @current_user.gender = params[:gender]
       @current_user.addressline1 = params[:addressline1]
       @current_user.city = params[:city]
       @current_user.state = params[:state]
       @current_user.zipcode = params[:zipcode]
       if ZIP_CODE.find(params[:zipcode]) == nil
-        @current_user.zipcode = nil
-        @flash_notice = "Zip Code Error"
-        render 'setting'
-        return
+          @user.zipcode = nil
+          @flash_notice = "Zip Code Error : Please Enter a Valid 5 digit Zip Code"
+          render 'create'
+          return
       end
       if @current_user.valid?
         if @current_user.save

@@ -31,9 +31,9 @@
     = f.text_field :city
   .field
     = f.label :state
-    = f.text_field :state
+    = f.select:state
   .actions
-    = f.submit 'Save
+    = f.submit 'Save'
     
 .footer{:id => "footer", :style => "margin-bottom: 0"}
   .row{:style => "background-color:rgba(15,39,64,1.00);"}
