@@ -51,6 +51,25 @@ function add_options(qid) {
 										 ");
 }
 
+function orig_add_options(qid, input) {
+	vis = ""
+	cnt = $("#Q" + qid + "_optcnt").val();
+	$("#Q" + qid + "_optcnt").val(++cnt);
+	$("#Q" + qid + "_options_list").append("<div class='form-group' id='Q" + qid+ "_" + cnt + "' >\
+											 <input class='form-control'  name='Q" + qid + "[opt" + cnt + "]' value=" + input + ">\
+											 <a class='btn btn-danger pull-right' id='Q" + qid + "_O"+cnt+"' href='javascript:delete_option("+ qid + "," + cnt + ")' value='vis' style='margin-top: 15px'>\
+											 	<i class='fa fa-trash-o fa-lg'></i>\
+											 	Delete Option\
+											 </a>\
+											 <a class='btn btn-success' href='javascript:add_subquestion(" + select_qid + "," + cnt + ")' style='margin-top: 15px'>\
+											 	<i class='fa fa-plus fa-lg'></i>\
+											 	Add Sub-question\
+											 </a>\
+											 <input id='Q" + qid + "_" + cnt + "_subqcnt' type='hidden' value='0'>\
+										 </div>\
+										 ");
+}
+
 function add_subquestion(select_qid, option_id) {
 	cnt = $("#Q" + select_qid + "_" + option_id + "_subqcnt").val();
 	$("#Q" + select_qid + "_" + option_id + "_subqcnt").val(++cnt);
@@ -157,6 +176,34 @@ function trigger_option_subquestion(dom_obj, select_qid, option_id, subqcnt) {
 				   </div>");
 }
 
+function orig_trigger_option_subquestion(dom_obj, select_qid, option_id, subqcnt, input) {
+	dom_obj.after("<div id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_optdiv' class='form-group'  style='margin-top: 15px'>\
+				   		<div class='panel panel-default'>\
+				   			<div class='panel-heading'>Options</div>\
+				   			<div class='panel-body' id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_options' style='background-color:white'>\
+				   				<li id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_sub_options_list' style='margin-bottom: 15px'>\
+					   				<input id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_optcnt' type='hidden' value=1>\
+					   				<div class='form-group' id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_1'>\
+						   				<div class='col-xs-11' style='margin-bottom: 5px'>\
+						   					<input class='form-control' name='S" + select_qid + "_" + option_id + "_" + subqcnt + "[opt1]' value=" + input + ">\
+						   				</div>\
+						   				<div class='col-xs-1' style='margin-bottom: 5px'>\
+						   					<a class='btn btn-danger pull-right' href='javascript:delete_optionforsub("+ select_qid + ", " + option_id + "," + subqcnt + ", 1)'>\
+						   						<i class='fa fa-trash-o fa-lg'></i>\
+						   					</a>\
+					   					</div>\
+					   				</div>\
+					   			</li>\
+					   			<a class='btn btn-success' id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_insertpos' href='javascript:add_optionsforsub("+ select_qid + "," + option_id + "," + subqcnt + ")' style='margin-top: 10px'>\
+				   					<i class='fa fa-plus fa-lg'>\
+				   					</i>\
+				   					Add Option\
+				   				</a>\
+				   			</div>\
+				   		</div>\
+				   </div>");
+}
+
 function trigger_option(dom_obj, select_qid, displaysub) {
 	dom_obj.after("<div id='Q" + select_qid + "_optdiv' class='form-group' style='margin-top: 15px'>\
 						<div class='panel panel-default'>\
@@ -166,6 +213,35 @@ function trigger_option(dom_obj, select_qid, displaysub) {
 									 <input id='Q" + select_qid + "_optcnt' type='hidden' value='3'>\
 									 <div class='form-group' id='Q" + select_qid + "_1' >\
 			   							<input class='form-control'  name='Q" + select_qid + "[opt1]' value='' style='margin-bottom: 15px'>\
+		   							 	<a class='btn btn-success'id='Q" + select_qid + "_O1' href='javascript:add_subquestion(" + select_qid + ", 1)'>\
+   							 				<i class='fa fa-plus fa-lg'></i>\
+   							 				Add Sub-question\
+	   							 		</a>\
+	   							 		<a class='btn btn-danger pull-right' href='javascript:delete_option(" + select_qid + ", 1)'>\
+	   							 			<i class='fa fa-trash-o fa-lg'></i>\
+	   							 			Delete Option\
+	   							 		</a>\
+   										<input id='Q" + select_qid + "_1_subqcnt' type='hidden' value='0'>\
+									 </div>\
+								</li>\
+	   							<a class='btn btn-success' id='Q" + select_qid + "_insertpos' href='javascript:add_options("+ select_qid + ")'>\
+		   							<i class='fa fa-plus fa-lg'></i>\
+		   							Add Option\
+	   							</a>\
+							</div>\
+						</div>\
+					</div>");
+}
+
+function orig_trigger_option(dom_obj, select_qid, displaysub, input) {
+	dom_obj.after("<div id='Q" + select_qid + "_optdiv' class='form-group' style='margin-top: 15px'>\
+						<div class='panel panel-default'>\
+							 <div class='panel-heading'>Options</div>\
+							 <div class='panel-body' id='Q" + select_qid + "_options' style='background-color:white'>\
+							 	<li id='Q" + select_qid + "_options_list'>\
+									 <input id='Q" + select_qid + "_optcnt' type='hidden' value='3'>\
+									 <div class='form-group' id='Q" + select_qid + "_1' >\
+			   							<input class='form-control'  name='Q" + select_qid + "[opt1]' value=" + input + " style='margin-bottom: 15px'>\
 		   							 	<a class='btn btn-success'id='Q" + select_qid + "_O1' href='javascript:add_subquestion(" + select_qid + ", 1)'>\
    							 				<i class='fa fa-plus fa-lg'></i>\
    							 				Add Sub-question\
@@ -256,8 +332,112 @@ function hookClickSel() {
 	});
 }
 
+function origClickSel(){
+	$("select").change(function(evt){
+		evt.stopImmediatePropagation();
+		select_qid = $(this).attr('belong');
+		input = $(this).attr('info');
+			switch(parseInt($(this).val())){
+				case 1:
+					if ($("#Q" + select_qid + "_optdiv") != undefined) {
+						$("#Q" + select_qid + "_optdiv").remove();
+					}
+					break;
+				case 2:
+				// checkboxes
+					if ($("#Q" + select_qid + "_optdiv") != undefined) {
+						$("#Q" + select_qid + "_optdiv").remove();
+					}
+					if (select_qid.indexOf('_') == -1) { 
+						if (input != "" && input != undefined) {
+							optionlist = input.split('|')
+							for (i = 0; i < optionlist.length; i++) {
+							  if (i==0) orig_trigger_option($(this), select_qid, 1, optionlist[i]);
+							  else orig_add_options(select_qid, optionlist[i]);
+							}
+						}
+						else {
+							trigger_option($(this), select_qid, 1);
+						}
+					}
+					else {
+						belongarray = select_qid.split('_')
+						qid = belongarray[0];
+						option_id = belongarray[1];
+						subqcnt = belongarray[2];
+						trigger_option_subquestion($(this), qid, option_id, subqcnt);
+					}
+					break;
+				case 3:
+				// radio
+					if ($("#Q" + select_qid + "_optdiv") != undefined) {
+						$("#Q" + select_qid + "_optdiv").remove();
+					}
+
+					if (select_qid.indexOf('_') == -1) {
+						if (input != "" && input != undefined) {
+							optionlist = input.split('|')
+							for (i = 0; i < optionlist.length; i++) {
+							  if (i==0) orig_trigger_option($(this), select_qid, 1, optionlist[i]);
+							  else orig_add_options(select_qid, optionlist[i]);
+							}
+						}
+						else {
+							trigger_option($(this), select_qid, 1);
+						}
+					}
+					else {
+						belongarray = select_qid.split('_')
+						qid = belongarray[0];
+						option_id = belongarray[1];
+						subqcnt = belongarray[2];
+						trigger_option_subquestion($(this), qid, option_id, subqcnt);
+					}
+
+					break;
+				case 4:
+				// dropdown
+					if ($("#Q" + select_qid + "_optdiv") != undefined) {
+						$("#Q" + select_qid + "_optdiv").remove();
+					}
+
+					if (select_qid.indexOf('_') == -1) {
+						if (input != "" && input != undefined) {
+							optionlist = input.split('|')
+							for (i = 0; i < optionlist.length; i++) {
+							  if (i==0) orig_trigger_option($(this), select_qid, 1, optionlist[i]);
+							  else orig_add_options(select_qid, optionlist[i]);
+							}
+						}
+						else {
+							trigger_option($(this), select_qid, 1);
+						}
+					}
+					else {
+						belongarray = select_qid.split('_')
+						qid = belongarray[0];
+						option_id = belongarray[1];
+						subqcnt = belongarray[2];
+						trigger_option_subquestion($(this), qid, option_id, subqcnt);
+					}
+
+					break;
+				default:
+					if ($("#Q" + select_qid + "_optdiv") != undefined) {
+						$("#Q" + select_qid + "_optdiv").remove();
+					}
+					break;
+			}
+
+
+	});
+	$("select").change();
+}
+
 $(document).ready(function(){
 	current_qid = parseInt($("#current_qid").val());
+	alert("Testing changes...");
+	origClickSel();
 	$('#create_q_btn').click(function(evt){
 		evt.stopImmediatePropagation();
 		current_qid += 1;
