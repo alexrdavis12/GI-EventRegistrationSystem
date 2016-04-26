@@ -7,14 +7,16 @@ class User < ActiveRecord::Base
   before_save :encrypt_password
   after_save :clear_password
 
+  
+  PHONE_REGEX = /\d{3}\d{3}\d{4}/
   EMAIL_REGEX = /[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}/i
   validates :email, :presence => true, :uniqueness => true, :format => EMAIL_REGEX
+  validates :phonenumber, :presence => true, :format => PHONE_REGEX
   #validates :password, :confirmation => true
   #Only on Create so other actions like update password attribute can be nil
   validates_length_of :password, :in => 6..20
 
   #attr_accessible :email, :password, :password_confirmation
-
 
   def self.authenticate(email=" ", login_password=" ")
 

@@ -32,13 +32,13 @@
       = form_tag(:action => 'create') do
         .form-group 
           %label Email:
-          %input{:class => 'form-control', :value=>@user.email, :name=>:email}
+          %input{:class => 'form-control', :value=>@user.email, :name=>:email, :required => ""}
         .form-group
           %label Password: 
-          %input{:class => 'form-control', :type => :password, :name=>:password, :id=>"pwd1"}
+          %input{:class => 'form-control', :type => :password, :name=>:password, :id=>"pwd1", :required => ""}
         .form-group
           %label Password Confirm: 
-          %input{:class => 'form-control', :type => :password, :name=>:pswdconfirm, :id=>"pwd2"}
+          %input{:class => 'form-control', :type => :password, :name=>:pswdconfirm, :id=>"pwd2", :required => ""}
           :javascript
             $(function(){
               $("#pwd2").blur(function(){
@@ -49,15 +49,16 @@
             });
         .form-group
           %label First Name:
-          %input{:class => 'form-control', :value=>@user.firstname, :name=>:firstname}
+          %input{:class => 'form-control', :value=>@user.firstname, :name=>:firstname, :required => ""}
         .form-group
           %label Last Name:
-          %input{:class => 'form-control', :value=>@user.lastname, :name=>:lastname}
+          %input{:class => 'form-control', :value=>@user.lastname, :name=>:lastname, :required => ""}
         .form-group
           %label Phone Number:
-          %input{:class => 'form-control', :value=>@user.phonenumber, :name=>:phonenumber}
+          %input{:class => 'form-control', :value=>@user.phonenumber, :name=>:phonenumber, :required => ""}
         .form-group
-          %label Gender
+          %label Gender:
+          %br
           %label.checkbox-inline
             %input{:type=>'radio', :value=>'male', :name=>:gender}
             Male
@@ -66,13 +67,13 @@
             Female
         .form-group
           %label Address:
-          %input{:class => 'form-control', :value=>@user.addressline1, :name=>:addressline1}
+          %input{:class => 'form-control', :value=>@user.addressline1, :name=>:addressline1, :required => ""}
         .form-group
           %label City:
-          %input{:class => 'form-control', :value=>@user.city, :name=>:city}
+          %input{:class => 'form-control', :value=>@user.city, :name=>:city, :required => ""}
         .form-group
           %label State:
-          %input{:class => 'form-control', :value=>@user.state, :name=>:state}
+          %input{:class => 'form-control', :value=>@user.state, :name=>:state, :required => ""}
         .form-group
           %label Zipcode:
           %input{:class => 'form-control', :value=>@user.zipcode, :name=>:zipcode}
