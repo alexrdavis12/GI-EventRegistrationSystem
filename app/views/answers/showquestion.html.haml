@@ -75,7 +75,7 @@
                   %textarea{:class => 'form-control', :value=>'', :name=>"Q#{q.qid}[answer]"}
                 -else
                   %input{:class => 'form-control', :value=>'', :name=>"Q#{q.qid}[answer]"}
-            = submit_tag("Submit", :class => 'btn btn-primary')
+            = submit_tag("Submit", :class=> 'btn btn-primary', :onclick=> 'javascript:fix_form()')
     .col-md-2
   
   
