@@ -1,139 +1,5 @@
-%nav.navbar.navbar-inverse{:role => "navigation"}
-  .navbar-header
-    %a.navbar-brand{:href => "home"} M.A.G.I
-  %ul.nav.navbar-nav.navbar-right
-    %li
-      %a{:href=>'home'}
-        %i{:class=>"fa fa-home fa-fw"} 
-        Home 
-    %li
-      %a{:href=>'allevent'}
-        %i{:class=>"fa fa-align-justify fa-fw"} 
-        Event
-    %li
-      %a{:href=>'profile'}
-        %i{:class=>"fa fa-user fa-fw"} 
-        Profile
-    %li
-      %a{:href=>'logout'}
-        %i{:class=>"fa fa-sign-out fa-fw"} 
-        Logout
-          
-.container
-  .row
-    .col-md-4
-    .col-md-4
-      - if @flash_notice != ""
-        .alert.alert-danger
-          %button.close{:type=>"button", "data-dismiss"=>"alert"}
-            %span{"aria-hidden"=>true}×
-            %span.sr-only Close
-          %strong 
-            = @flash_notice
-            - if @current_user.errors.any?
-              - @current_user.errors.full_messages.each do |error|
-                = error
-    .col-md-4
-
-  .row
-    .col-md-4
-    .col-md-4
-      = form_tag(:action => 'setting') do
-        .form-group
-          %label Email:
-          %input{:class => 'form-control', :value=>@current_user.email, :name=>:email}
-        .form-group 
-          %label Password: 
-          %input{:class => 'form-control', :type=>:password, :name=>:password}
-        .form-group
-          %label First Name:
-          %input{:class => 'form-control', :value=>@current_user.firstname, :name=>:firstname}
-        .form-group
-          %label Last Name:
-          %input{:class => 'form-control', :value=>@current_user.lastname, :name=>:lastname}
-        .form-group
-          %label Phone Number:
-          %input{:class => 'form-control', :value=>@current_user.phonenumber, :name=>:phonenumber}
-        .form-group
-          %label Gender:
-          - if @current_user.gender == "male"
-            %label.checkbox-inline
-              %input{:type=>'radio', :value=>'male', :name=>:gender, :checked=>'checked'}
-              Male
-            %label.checkbox-inline
-              %input{:type=>'radio', :value=>'female', :name=>:gender}
-              Female
-          -else
-            %label.checkbox-inline
-              %input{:type=>'radio', :value=>'male', :name=>:gender}
-              Male
-            %label.checkbox-inline
-              %input{:type=>'radio', :value=>'female', :name=>:gender, :checked=>'checked'}
-              Female
-        .form-group
-          %label Address:
-          %input{:class => 'form-control', :value=>@current_user.addressline1, :name=>:addressline1}
-        .form-group
-          %label City:
-          %input{:class => 'form-control', :value=>@current_user.city, :name=>:city}
-        .form-group
-          %label State:
-          -if @current_user.state == "AL"
-            %select{:class => 'form-control', :value=>@current_user.state, :name=>:state}
-              %option{:value => "AL", :selected => ""}= "Alabama"
-              %option{:value => "AK"}= "Alaska"
-              %option{:value => "AZ"}= "Arizona"
-              %option{:value => "AR"}= "Arkansas"
-              %option{:value => "CA"}= "California"
-              %option{:value => "CO"}= "Colorado"
-              %option{:value => "CT"}= "Connecticut"
-              %option{:value => "DE"}= "Delaware"
-              %option{:value => "DC"}= "District of Columbia"
-              %option{:value => "FL"}= "Florida"
-              %option{:value => "GA"}= "Georgia"
-              %option{:value => "HI"}= "Hawaii"
-              %option{:value => "ID"}= "Idaho"
-              %option{:value => "IL"}= "Illinois"
-              %option{:value => "IN"}= "Indiana"
-              %option{:value => "IA"}= "Iowa"
-              %option{:value => "KS"}= "Kansas"
-              %option{:value => "KY"}= "Kentucky"
-              %option{:value => "LA"}= "Louisiana"
-              %option{:value => "ME"}= "Maine"
-              %option{:value => "MD"}= "Maryland"
-              %option{:value => "MA"}= "Massachusetts"
-              %option{:value => "MI"}= "Michigan"
-              %option{:value => "MN"}= "Minnesota"
-              %option{:value => "MS"}= "Mississippi"
-              %option{:value => "MO"}= "Missouri"
-              %option{:value => "MT"}= "Montana"
-              %option{:value => "NE"}= "Nebraska"
-              %option{:value => "NV"}= "Nevada"
-              %option{:value => "NH"}= "New Hampshire"
-              %option{:value => "NJ"}= "New Jersey"
-              %option{:value => "NM"}= "New Mexico"
-              %option{:value => "NY"}= "New York"
-              %option{:value => "NC"}= "North Carolina"
-              %option{:value => "ND"}= "North Dakota"
-              %option{:value => "OH"}= "Ohio"
-              %option{:value => "OK"}= "Oklahoma"
-              %option{:value => "OR"}= "Oregon"
-              %option{:value => "PA"}= "Pennsylvania"
-              %option{:value => "PR"}= "Puerto Rico"
-              %option{:value => "RI"}= "Rhode Island"
-              %option{:value => "SC"}= "South Carolina"
-              %option{:value => "SD"}= "South Dakota"
-              %option{:value => "TN"}= "Tennessee"
-              %option{:value => "TX"}= "Texas"
-              %option{:value => "UT"}= "Utah"
-              %option{:value => "VT"}= "Vermont"
-              %option{:value => "VA"}= "Virginia"
-              %option{:value => "WA"}= "Washington"
-              %option{:value => "WV"}= "West Virginia"
-              %option{:value => "WI"}= "Wisconsin"
-              %option{:value => "WY"}= "Wyoming"
-          - elsif @current_user.state == "AK"
-            %select{:class => 'form-control', :value=>@current_user.state, :name=>:state}
+          - elsif :state == "AK"
+            %select{:class => 'form-control', :value=>@user.state, :name=>:state}
               %option{:value => "AL"}= "Alabama"
               %option{:value => "AK", :selected => ""}= "Alaska"
               %option{:value => "AZ"}= "Arizona"
@@ -186,8 +52,8 @@
               %option{:value => "WV"}= "West Virginia"
               %option{:value => "WI"}= "Wisconsin"
               %option{:value => "WY"}= "Wyoming"
-          - elsif @current_user.state == "AZ"
-            %select{:class => 'form-control', :value=>@current_current_user.state, :name=>:state}
+          - elsif :state == "AZ"
+            %select{:class => 'form-control', :value=>@user.state, :name=>:state}
               %option{:value => "AL"}= "Alabama"
               %option{:value => "AK"}= "Alaska"
               %option{:value => "AZ", :selected => ""}= "Arizona"
@@ -240,8 +106,8 @@
               %option{:value => "WV"}= "West Virginia"
               %option{:value => "WI"}= "Wisconsin"
               %option{:value => "WY"}= "Wyoming"
-          - elsif @current_user.state == "AR"
-            %select{:class => 'form-control', :value=>@current_user.state, :name=>:state}
+          - elsif :state == "AR"
+            %select{:class => 'form-control', :value=>@user.state, :name=>:state}
               %option{:value => "AL"}= "Alabama"
               %option{:value => "AK"}= "Alaska"
               %option{:value => "AZ"}= "Arizona"
@@ -294,8 +160,8 @@
               %option{:value => "WV"}= "West Virginia"
               %option{:value => "WI"}= "Wisconsin"
               %option{:value => "WY"}= "Wyoming"
-          - elsif @current_user.state == "CA"
-            %select{:class => 'form-control', :value=>@current_user.state, :name=>:state}
+          - elsif :state == "CA"
+            %select{:class => 'form-control', :value=>@user.state, :name=>:state}
               %option{:value => "AL"}= "Alabama"
               %option{:value => "AK"}= "Alaska"
               %option{:value => "AZ"}= "Arizona"
@@ -348,8 +214,8 @@
               %option{:value => "WV"}= "West Virginia"
               %option{:value => "WI"}= "Wisconsin"
               %option{:value => "WY"}= "Wyoming"
-          - elsif @current_user.state == "CO"
-            %select{:class => 'form-control', :value=>@current_user.state, :name=>:state}
+          - elsif :state == "CO"
+            %select{:class => 'form-control', :value=>@user.state, :name=>:state}
               %option{:value => "AL"}= "Alabama"
               %option{:value => "AK"}= "Alaska"
               %option{:value => "AZ"}= "Arizona"
@@ -402,8 +268,8 @@
               %option{:value => "WV"}= "West Virginia"
               %option{:value => "WI"}= "Wisconsin"
               %option{:value => "WY"}= "Wyoming"
-          - elsif @current_user.state == "CT"
-            %select{:class => 'form-control', :value=>@current_user.state, :name=>:state}
+          - elsif :state == "CT"
+            %select{:class => 'form-control', :value=>@user.state, :name=>:state}
               %option{:value => "AL"}= "Alabama"
               %option{:value => "AK"}= "Alaska"
               %option{:value => "AZ"}= "Arizona"
@@ -456,8 +322,8 @@
               %option{:value => "WV"}= "West Virginia"
               %option{:value => "WI"}= "Wisconsin"
               %option{:value => "WY"}= "Wyoming"
-          - elsif @current_user.state == "DE"
-            %select{:class => 'form-control', :value=>@current_user.state, :name=>:state}
+          - elsif :state == "DE"
+            %select{:class => 'form-control', :value=>@user.state, :name=>:state}
               %option{:value => "AL"}= "Alabama"
               %option{:value => "AK"}= "Alaska"
               %option{:value => "AZ"}= "Arizona"
@@ -510,8 +376,8 @@
               %option{:value => "WV"}= "West Virginia"
               %option{:value => "WI"}= "Wisconsin"
               %option{:value => "WY"}= "Wyoming"
-          - elsif @current_user.state == "DC"
-            %select{:class => 'form-control', :value=>@current_user.state, :name=>:state}
+          - elsif :state == "DC"
+            %select{:class => 'form-control', :value=>@user.state, :name=>:state}
               %option{:value => "AL"}= "Alabama"
               %option{:value => "AK"}= "Alaska"
               %option{:value => "AZ"}= "Arizona"
@@ -564,8 +430,8 @@
               %option{:value => "WV"}= "West Virginia"
               %option{:value => "WI"}= "Wisconsin"
               %option{:value => "WY"}= "Wyoming"
-          - elsif @current_user.state == "FL"
-            %select{:class => 'form-control', :value=>@current_user.state, :name=>:state}
+          - elsif :state == "FL"
+            %select{:class => 'form-control', :value=>@user.state, :name=>:state}
               %option{:value => "AL"}= "Alabama"
               %option{:value => "AK"}= "Alaska"
               %option{:value => "AZ"}= "Arizona"
@@ -618,8 +484,8 @@
               %option{:value => "WV"}= "West Virginia"
               %option{:value => "WI"}= "Wisconsin"
               %option{:value => "WY"}= "Wyoming"
-          - elsif @current_user.state == "GA"
-            %select{:class => 'form-control', :value=>@current_user.state, :name=>:state}
+          - elsif :state == "GA"
+            %select{:class => 'form-control', :value=>@user.state, :name=>:state}
               %option{:value => "AL"}= "Alabama"
               %option{:value => "AK"}= "Alaska"
               %option{:value => "AZ"}= "Arizona"
@@ -672,8 +538,8 @@
               %option{:value => "WV"}= "West Virginia"
               %option{:value => "WI"}= "Wisconsin"
               %option{:value => "WY"}= "Wyoming"
-          - elsif @current_user.state == "HI"
-            %select{:class => 'form-control', :value=>@current_user.state, :name=>:state}
+          - elsif :state == "HI"
+            %select{:class => 'form-control', :value=>@user.state, :name=>:state}
               %option{:value => "AL"}= "Alabama"
               %option{:value => "AK"}= "Alaska"
               %option{:value => "AZ"}= "Arizona"
@@ -726,8 +592,8 @@
               %option{:value => "WV"}= "West Virginia"
               %option{:value => "WI"}= "Wisconsin"
               %option{:value => "WY"}= "Wyoming"
-          - elsif @current_user.state == "ID"
-            %select{:class => 'form-control', :value=>@current_user.state, :name=>:state}
+          - elsif :state == "ID"
+            %select{:class => 'form-control', :value=>@user.state, :name=>:state}
               %option{:value => "AL"}= "Alabama"
               %option{:value => "AK"}= "Alaska"
               %option{:value => "AZ"}= "Arizona"
@@ -780,8 +646,8 @@
               %option{:value => "WV"}= "West Virginia"
               %option{:value => "WI"}= "Wisconsin"
               %option{:value => "WY"}= "Wyoming"
-          - elsif @current_user.state == "IL"
-            %select{:class => 'form-control', :value=>@current_user.state, :name=>:state}
+          - elsif :state == "IL"
+            %select{:class => 'form-control', :value=>@user.state, :name=>:state}
               %option{:value => "AL"}= "Alabama"
               %option{:value => "AK"}= "Alaska"
               %option{:value => "AZ"}= "Arizona"
@@ -834,8 +700,8 @@
               %option{:value => "WV"}= "West Virginia"
               %option{:value => "WI"}= "Wisconsin"
               %option{:value => "WY"}= "Wyoming"
-          - elsif @current_user.state == "IN"
-            %select{:class => 'form-control', :value=>@current_user.state, :name=>:state}
+          - elsif :state == "IN"
+            %select{:class => 'form-control', :value=>@user.state, :name=>:state}
               %option{:value => "AL"}= "Alabama"
               %option{:value => "AK"}= "Alaska"
               %option{:value => "AZ"}= "Arizona"
@@ -888,8 +754,8 @@
               %option{:value => "WV"}= "West Virginia"
               %option{:value => "WI"}= "Wisconsin"
               %option{:value => "WY"}= "Wyoming"
-          - elsif @current_user.state == "IA"
-            %select{:class => 'form-control', :value=>@current_user.state, :name=>:state}
+          - elsif :state == "IA"
+            %select{:class => 'form-control', :value=>@user.state, :name=>:state}
               %option{:value => "AL"}= "Alabama"
               %option{:value => "AK"}= "Alaska"
               %option{:value => "AZ"}= "Arizona"
@@ -942,8 +808,8 @@
               %option{:value => "WV"}= "West Virginia"
               %option{:value => "WI"}= "Wisconsin"
               %option{:value => "WY"}= "Wyoming"
-          - elsif @current_user.state == "KS"
-            %select{:class => 'form-control', :value=>@current_user.state, :name=>:state}
+          - elsif :state == "KS"
+            %select{:class => 'form-control', :value=>@user.state, :name=>:state}
               %option{:value => "AL"}= "Alabama"
               %option{:value => "AK"}= "Alaska"
               %option{:value => "AZ"}= "Arizona"
@@ -996,8 +862,8 @@
               %option{:value => "WV"}= "West Virginia"
               %option{:value => "WI"}= "Wisconsin"
               %option{:value => "WY"}= "Wyoming"
-          - elsif @current_user.state == "KY"
-            %select{:class => 'form-control', :value=>@current_user.state, :name=>:state}
+          - elsif :state == "KY"
+            %select{:class => 'form-control', :value=>@user.state, :name=>:state}
               %option{:value => "AL"}= "Alabama"
               %option{:value => "AK"}= "Alaska"
               %option{:value => "AZ"}= "Arizona"
@@ -1050,8 +916,8 @@
               %option{:value => "WV"}= "West Virginia"
               %option{:value => "WI"}= "Wisconsin"
               %option{:value => "WY"}= "Wyoming"
-          - elsif @current_user.state == "LA"
-            %select{:class => 'form-control', :value=>@current_user.state, :name=>:state}
+          - elsif :state == "LA"
+            %select{:class => 'form-control', :value=>@user.state, :name=>:state}
               %option{:value => "AL"}= "Alabama"
               %option{:value => "AK"}= "Alaska"
               %option{:value => "AZ"}= "Arizona"
@@ -1104,8 +970,8 @@
               %option{:value => "WV"}= "West Virginia"
               %option{:value => "WI"}= "Wisconsin"
               %option{:value => "WY"}= "Wyoming"
-          - elsif @current_user.state == "ME"
-            %select{:class => 'form-control', :value=>@current_user.state, :name=>:state}
+          - elsif :state == "ME"
+            %select{:class => 'form-control', :value=>@user.state, :name=>:state}
               %option{:value => "AL"}= "Alabama"
               %option{:value => "AK"}= "Alaska"
               %option{:value => "AZ"}= "Arizona"
@@ -1158,8 +1024,8 @@
               %option{:value => "WV"}= "West Virginia"
               %option{:value => "WI"}= "Wisconsin"
               %option{:value => "WY"}= "Wyoming"
-          - elsif @current_user.state == "MD"
-            %select{:class => 'form-control', :value=>@current_user.state, :name=>:state}
+          - elsif :state == "MD"
+            %select{:class => 'form-control', :value=>@user.state, :name=>:state}
               %option{:value => "AL"}= "Alabama"
               %option{:value => "AK"}= "Alaska"
               %option{:value => "AZ"}= "Arizona"
@@ -1212,8 +1078,8 @@
               %option{:value => "WV"}= "West Virginia"
               %option{:value => "WI"}= "Wisconsin"
               %option{:value => "WY"}= "Wyoming"
-          - elsif @current_user.state == "MA"
-            %select{:class => 'form-control', :value=>@current_user.state, :name=>:state}
+          - elsif :state == "MA"
+            %select{:class => 'form-control', :value=>@user.state, :name=>:state}
               %option{:value => "AL"}= "Alabama"
               %option{:value => "AK"}= "Alaska"
               %option{:value => "AZ"}= "Arizona"
@@ -1266,8 +1132,8 @@
               %option{:value => "WV"}= "West Virginia"
               %option{:value => "WI"}= "Wisconsin"
               %option{:value => "WY"}= "Wyoming"
-          - elsif @current_user.state == "MI"
-            %select{:class => 'form-control', :value=>@current_user.state, :name=>:state}
+          - elsif :state == "MI"
+            %select{:class => 'form-control', :value=>@user.state, :name=>:state}
               %option{:value => "AL"}= "Alabama"
               %option{:value => "AK"}= "Alaska"
               %option{:value => "AZ"}= "Arizona"
@@ -1320,8 +1186,8 @@
               %option{:value => "WV"}= "West Virginia"
               %option{:value => "WI"}= "Wisconsin"
               %option{:value => "WY"}= "Wyoming"
-          - elsif @current_user.state == "MN"
-            %select{:class => 'form-control', :value=>@current_user.state, :name=>:state}
+          - elsif :state == "MN"
+            %select{:class => 'form-control', :value=>@user.state, :name=>:state}
               %option{:value => "AL"}= "Alabama"
               %option{:value => "AK"}= "Alaska"
               %option{:value => "AZ"}= "Arizona"
@@ -1374,8 +1240,8 @@
               %option{:value => "WV"}= "West Virginia"
               %option{:value => "WI"}= "Wisconsin"
               %option{:value => "WY"}= "Wyoming"
-          - elsif @current_user.state == "MS"
-            %select{:class => 'form-control', :value=>@current_user.state, :name=>:state}
+          - elsif :state == "MS"
+            %select{:class => 'form-control', :value=>@user.state, :name=>:state}
               %option{:value => "AL"}= "Alabama"
               %option{:value => "AK"}= "Alaska"
               %option{:value => "AZ"}= "Arizona"
@@ -1428,8 +1294,8 @@
               %option{:value => "WV"}= "West Virginia"
               %option{:value => "WI"}= "Wisconsin"
               %option{:value => "WY"}= "Wyoming"
-          - elsif @current_user.state == "MO"
-            %select{:class => 'form-control', :value=>@current_user.state, :name=>:state}
+          - elsif :state == "MO"
+            %select{:class => 'form-control', :value=>@user.state, :name=>:state}
               %option{:value => "AL"}= "Alabama"
               %option{:value => "AK"}= "Alaska"
               %option{:value => "AZ"}= "Arizona"
@@ -1482,8 +1348,8 @@
               %option{:value => "WV"}= "West Virginia"
               %option{:value => "WI"}= "Wisconsin"
               %option{:value => "WY"}= "Wyoming"
-          - elsif @current_user.state == "MT"
-            %select{:class => 'form-control', :value=>@current_user.state, :name=>:state}
+          - elsif :state == "MT"
+            %select{:class => 'form-control', :value=>@user.state, :name=>:state}
               %option{:value => "AL"}= "Alabama"
               %option{:value => "AK"}= "Alaska"
               %option{:value => "AZ"}= "Arizona"
@@ -1536,8 +1402,8 @@
               %option{:value => "WV"}= "West Virginia"
               %option{:value => "WI"}= "Wisconsin"
               %option{:value => "WY"}= "Wyoming"
-          - elsif @current_user.state == "NE"
-            %select{:class => 'form-control', :value=>@current_user.state, :name=>:state}
+          - elsif :state == "NE"
+            %select{:class => 'form-control', :value=>@user.state, :name=>:state}
               %option{:value => "AL"}= "Alabama"
               %option{:value => "AK"}= "Alaska"
               %option{:value => "AZ"}= "Arizona"
@@ -1590,8 +1456,8 @@
               %option{:value => "WV"}= "West Virginia"
               %option{:value => "WI"}= "Wisconsin"
               %option{:value => "WY"}= "Wyoming"
-          - elsif @current_user.state == "NV"
-            %select{:class => 'form-control', :value=>@current_user.state, :name=>:state}
+          - elsif :state == "NV"
+            %select{:class => 'form-control', :value=>@user.state, :name=>:state}
               %option{:value => "AL"}= "Alabama"
               %option{:value => "AK"}= "Alaska"
               %option{:value => "AZ"}= "Arizona"
@@ -1644,8 +1510,8 @@
               %option{:value => "WV"}= "West Virginia"
               %option{:value => "WI"}= "Wisconsin"
               %option{:value => "WY"}= "Wyoming"
-          - elsif @current_user.state == "NH"
-            %select{:class => 'form-control', :value=>@current_user.state, :name=>:state}
+          - elsif :state == "NH"
+            %select{:class => 'form-control', :value=>@user.state, :name=>:state}
               %option{:value => "AL"}= "Alabama"
               %option{:value => "AK"}= "Alaska"
               %option{:value => "AZ"}= "Arizona"
@@ -1698,8 +1564,8 @@
               %option{:value => "WV"}= "West Virginia"
               %option{:value => "WI"}= "Wisconsin"
               %option{:value => "WY"}= "Wyoming"
-          - elsif @current_user.state == "NJ"
-            %select{:class => 'form-control', :value=>@current_user.state, :name=>:state}
+          - elsif :state == "NJ"
+            %select{:class => 'form-control', :value=>@user.state, :name=>:state}
               %option{:value => "AL"}= "Alabama"
               %option{:value => "AK"}= "Alaska"
               %option{:value => "AZ"}= "Arizona"
@@ -1752,8 +1618,8 @@
               %option{:value => "WV"}= "West Virginia"
               %option{:value => "WI"}= "Wisconsin"
               %option{:value => "WY"}= "Wyoming"
-          - elsif @current_user.state == "NM"
-            %select{:class => 'form-control', :value=>@current_user.state, :name=>:state}
+          - elsif :state == "NM"
+            %select{:class => 'form-control', :value=>@user.state, :name=>:state}
               %option{:value => "AL"}= "Alabama"
               %option{:value => "AK"}= "Alaska"
               %option{:value => "AZ"}= "Arizona"
@@ -1806,8 +1672,8 @@
               %option{:value => "WV"}= "West Virginia"
               %option{:value => "WI"}= "Wisconsin"
               %option{:value => "WY"}= "Wyoming"
-          - elsif @current_user.state == "NY"
-            %select{:class => 'form-control', :value=>@current_user.state, :name=>:state}
+          - elsif :state == "NY"
+            %select{:class => 'form-control', :value=>@user.state, :name=>:state}
               %option{:value => "AL"}= "Alabama"
               %option{:value => "AK"}= "Alaska"
               %option{:value => "AZ"}= "Arizona"
@@ -1860,8 +1726,8 @@
               %option{:value => "WV"}= "West Virginia"
               %option{:value => "WI"}= "Wisconsin"
               %option{:value => "WY"}= "Wyoming"
-          - elsif @current_user.state == "NC"
-            %select{:class => 'form-control', :value=>@current_user.state, :name=>:state}
+          - elsif :state == "NC"
+            %select{:class => 'form-control', :value=>@user.state, :name=>:state}
               %option{:value => "AL"}= "Alabama"
               %option{:value => "AK"}= "Alaska"
               %option{:value => "AZ"}= "Arizona"
@@ -1914,8 +1780,8 @@
               %option{:value => "WV"}= "West Virginia"
               %option{:value => "WI"}= "Wisconsin"
               %option{:value => "WY"}= "Wyoming"
-          - elsif @current_user.state == "ND"
-            %select{:class => 'form-control', :value=>@current_user.state, :name=>:state}
+          - elsif :state == "ND"
+            %select{:class => 'form-control', :value=>@user.state, :name=>:state}
               %option{:value => "AL"}= "Alabama"
               %option{:value => "AK"}= "Alaska"
               %option{:value => "AZ"}= "Arizona"
@@ -1968,8 +1834,8 @@
               %option{:value => "WV"}= "West Virginia"
               %option{:value => "WI"}= "Wisconsin"
               %option{:value => "WY"}= "Wyoming"
-          - elsif @current_user.state == "OH"
-            %select{:class => 'form-control', :value=>@current_user.state, :name=>:state}
+          - elsif :state == "OH"
+            %select{:class => 'form-control', :value=>@user.state, :name=>:state}
               %option{:value => "AL"}= "Alabama"
               %option{:value => "AK"}= "Alaska"
               %option{:value => "AZ"}= "Arizona"
@@ -2022,8 +1888,8 @@
               %option{:value => "WV"}= "West Virginia"
               %option{:value => "WI"}= "Wisconsin"
               %option{:value => "WY"}= "Wyoming"
-          - elsif @current_user.state == "OK"
-            %select{:class => 'form-control', :value=>@current_user.state, :name=>:state}
+          - elsif :state == "OK"
+            %select{:class => 'form-control', :value=>@user.state, :name=>:state}
               %option{:value => "AL"}= "Alabama"
               %option{:value => "AK"}= "Alaska"
               %option{:value => "AZ"}= "Arizona"
@@ -2076,8 +1942,8 @@
               %option{:value => "WV"}= "West Virginia"
               %option{:value => "WI"}= "Wisconsin"
               %option{:value => "WY"}= "Wyoming"
-          - elsif @current_user.state == "OR"
-            %select{:class => 'form-control', :value=>@current_user.state, :name=>:state}
+          - elsif :state == "OR"
+            %select{:class => 'form-control', :value=>@user.state, :name=>:state}
               %option{:value => "AL"}= "Alabama"
               %option{:value => "AK"}= "Alaska"
               %option{:value => "AZ"}= "Arizona"
@@ -2130,8 +1996,8 @@
               %option{:value => "WV"}= "West Virginia"
               %option{:value => "WI"}= "Wisconsin"
               %option{:value => "WY"}= "Wyoming"
-          - elsif @current_user.state == "PA"
-            %select{:class => 'form-control', :value=>@current_user.state, :name=>:state}
+          - elsif :state == "PA"
+            %select{:class => 'form-control', :value=>@user.state, :name=>:state}
               %option{:value => "AL"}= "Alabama"
               %option{:value => "AK"}= "Alaska"
               %option{:value => "AZ"}= "Arizona"
@@ -2184,8 +2050,8 @@
               %option{:value => "WV"}= "West Virginia"
               %option{:value => "WI"}= "Wisconsin"
               %option{:value => "WY"}= "Wyoming"
-          - elsif @current_user.state == "PR"
-            %select{:class => 'form-control', :value=>@current_user.state, :name=>:state}
+          - elsif :state == "PR"
+            %select{:class => 'form-control', :value=>@user.state, :name=>:state}
               %option{:value => "AL"}= "Alabama"
               %option{:value => "AK"}= "Alaska"
               %option{:value => "AZ"}= "Arizona"
@@ -2238,8 +2104,8 @@
               %option{:value => "WV"}= "West Virginia"
               %option{:value => "WI"}= "Wisconsin"
               %option{:value => "WY"}= "Wyoming"
-          - elsif @current_user.state == "RI"
-            %select{:class => 'form-control', :value=>@current_user.state, :name=>:state}
+          - elsif :state == "RI"
+            %select{:class => 'form-control', :value=>@user.state, :name=>:state}
               %option{:value => "AL"}= "Alabama"
               %option{:value => "AK"}= "Alaska"
               %option{:value => "AZ"}= "Arizona"
@@ -2292,8 +2158,8 @@
               %option{:value => "WV"}= "West Virginia"
               %option{:value => "WI"}= "Wisconsin"
               %option{:value => "WY"}= "Wyoming"
-          - elsif @current_user.state == "SC"
-            %select{:class => 'form-control', :value=>@current_user.state, :name=>:state}
+          - elsif :state == "SC"
+            %select{:class => 'form-control', :value=>@user.state, :name=>:state}
               %option{:value => "AL"}= "Alabama"
               %option{:value => "AK"}= "Alaska"
               %option{:value => "AZ"}= "Arizona"
@@ -2346,8 +2212,8 @@
               %option{:value => "WV"}= "West Virginia"
               %option{:value => "WI"}= "Wisconsin"
               %option{:value => "WY"}= "Wyoming"
-          - elsif @current_user.state == "SD"
-            %select{:class => 'form-control', :value=>@current_user.state, :name=>:state}
+          - elsif :state == "SD"
+            %select{:class => 'form-control', :value=>@user.state, :name=>:state}
               %option{:value => "AL"}= "Alabama"
               %option{:value => "AK"}= "Alaska"
               %option{:value => "AZ"}= "Arizona"
@@ -2400,8 +2266,8 @@
               %option{:value => "WV"}= "West Virginia"
               %option{:value => "WI"}= "Wisconsin"
               %option{:value => "WY"}= "Wyoming"
-          - elsif @current_user.state == "TN"
-            %select{:class => 'form-control', :value=>@current_user.state, :name=>:state}
+          - elsif :state == "TN"
+            %select{:class => 'form-control', :value=>@user.state, :name=>:state}
               %option{:value => "AL"}= "Alabama"
               %option{:value => "AK"}= "Alaska"
               %option{:value => "AZ"}= "Arizona"
@@ -2454,8 +2320,8 @@
               %option{:value => "WV"}= "West Virginia"
               %option{:value => "WI"}= "Wisconsin"
               %option{:value => "WY"}= "Wyoming"
-          - elsif @current_user.state == "TX"
-            %select{:class => 'form-control', :value=>@current_user.state, :name=>:state}
+          - elsif :state == "TX"
+            %select{:class => 'form-control', :value=>@user.state, :name=>:state}
               %option{:value => "AL"}= "Alabama"
               %option{:value => "AK"}= "Alaska"
               %option{:value => "AZ"}= "Arizona"
@@ -2508,8 +2374,8 @@
               %option{:value => "WV"}= "West Virginia"
               %option{:value => "WI"}= "Wisconsin"
               %option{:value => "WY"}= "Wyoming"
-          - elsif @current_user.state == "UT"
-            %select{:class => 'form-control', :value=>@current_user.state, :name=>:state}
+          - elsif :state == "UT"
+            %select{:class => 'form-control', :value=>@user.state, :name=>:state}
               %option{:value => "AL"}= "Alabama"
               %option{:value => "AK"}= "Alaska"
               %option{:value => "AZ"}= "Arizona"
@@ -2562,8 +2428,8 @@
               %option{:value => "WV"}= "West Virginia"
               %option{:value => "WI"}= "Wisconsin"
               %option{:value => "WY"}= "Wyoming"
-          - elsif @current_user.state == "VT"
-            %select{:class => 'form-control', :value=>@current_user.state, :name=>:state}
+          - elsif :state == "VT"
+            %select{:class => 'form-control', :value=>@user.state, :name=>:state}
               %option{:value => "AL"}= "Alabama"
               %option{:value => "AK"}= "Alaska"
               %option{:value => "AZ"}= "Arizona"
@@ -2616,8 +2482,8 @@
               %option{:value => "WV"}= "West Virginia"
               %option{:value => "WI"}= "Wisconsin"
               %option{:value => "WY"}= "Wyoming"
-          - elsif @current_user.state == "VA"
-            %select{:class => 'form-control', :value=>@current_user.state, :name=>:state}
+          - elsif :state == "VA"
+            %select{:class => 'form-control', :value=>@user.state, :name=>:state}
               %option{:value => "AL"}= "Alabama"
               %option{:value => "AK"}= "Alaska"
               %option{:value => "AZ"}= "Arizona"
@@ -2670,8 +2536,8 @@
               %option{:value => "WV"}= "West Virginia"
               %option{:value => "WI"}= "Wisconsin"
               %option{:value => "WY"}= "Wyoming"
-          - elsif @current_user.state == "WA"
-            %select{:class => 'form-control', :value=>@current_user.state, :name=>:state}
+          - elsif :state == "WA"
+            %select{:class => 'form-control', :value=>@user.state, :name=>:state}
               %option{:value => "AL"}= "Alabama"
               %option{:value => "AK"}= "Alaska"
               %option{:value => "AZ"}= "Arizona"
@@ -2724,8 +2590,8 @@
               %option{:value => "WV"}= "West Virginia"
               %option{:value => "WI"}= "Wisconsin"
               %option{:value => "WY"}= "Wyoming"
-          - elsif @current_user.state == "WV"
-            %select{:class => 'form-control', :value=>@current_user.state, :name=>:state}
+          - elsif :state == "WV"
+            %select{:class => 'form-control', :value=>@user.state, :name=>:state}
               %option{:value => "AL"}= "Alabama"
               %option{:value => "AK"}= "Alaska"
               %option{:value => "AZ"}= "Arizona"
@@ -2778,8 +2644,8 @@
               %option{:value => "WV", :selected => ""}= "West Virginia"
               %option{:value => "WI"}= "Wisconsin"
               %option{:value => "WY"}= "Wyoming"
-          - elsif @current_user.state == "WI"
-            %select{:class => 'form-control', :value=>@current_user.state, :name=>:state}
+          - elsif :state == "WI"
+            %select{:class => 'form-control', :value=>@user.state, :name=>:state}
               %option{:value => "AL"}= "Alabama"
               %option{:value => "AK"}= "Alaska"
               %option{:value => "AZ"}= "Arizona"
@@ -2832,8 +2698,8 @@
               %option{:value => "WV"}= "West Virginia"
               %option{:value => "WI", :selected => ""}= "Wisconsin"
               %option{:value => "WY"}= "Wyoming"
-          - elsif @current_user.state == "WY"
-            %select{:class => 'form-control', :value=>@current_user.state, :name=>:state}
+          - elsif :state == "WY"
+            %select{:class => 'form-control', :value=>@user.state, :name=>:state}
               %option{:value => "AL"}= "Alabama"
               %option{:value => "AK"}= "Alaska"
               %option{:value => "AZ"}= "Arizona"
@@ -2886,19 +2752,3 @@
               %option{:value => "WV"}= "West Virginia"
               %option{:value => "WI"}= "Wisconsin"
               %option{:value => "WY", :selected => ""}= "Wyoming"
-          -else
-            Window.alert("buja")
-        .form-group
-          %label Zip Code:
-          %input{:class => 'form-control', :value=>@current_user.zipcode, :name=>:zipcode}
-        
-        = submit_tag("Save", :class =>'btn btn-success center-block')
-        
-    .col-md-4
-
-// .footer{:id => "footer", :style => "margin-bottom: 0"}
-//   .row{:style => "background-color:rgba(15,39,64,1.00);"}
-//     .col-md-3
-//     .col-md-6
-//       =image_tag "im3.png", :width=>"100%", :position=>"fixed", :bottom=>"0"
-//     .col-md-3
