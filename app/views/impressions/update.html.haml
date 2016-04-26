@@ -18,7 +18,7 @@
       %a{:href=>'logout'}
         %i{:class=>"fa fa-sign-out fa-fw"} 
         Logout
-
+          
 .container
   .row
     .col-md-3
@@ -32,45 +32,45 @@
 
       .panel.panel-info
         .panel-heading
-          Event ID
+          Impression ID
         .panel-body
-          =@event.id
+          =@impression.id
       
         .panel-heading
-          Event Title
+          Name
         .panel-body
-          =@event.etitle
+          =@impression.iname
       
         .panel-heading
-          Event Location
+          Unit
         .panel-body
-          =@event.elocation
+          ='in progress'
       
         .panel-heading
-          Event Description
+          War
         .panel-body
-          =@event.edescription
+          =@impression.iwar
       
         .panel-heading
-          Start Date
+          Side
         .panel-body
-          =@event.estart
+          =@impression.iside
       
         .panel-heading
-          End Date
+          Description
         .panel-body
-          =@event.eend
+          =@impression.idescription
       %div
         .col-md-9
         .col-md-3
-        %a{:href => "QuestionCreate?eid=#{@event.id}", :visited=>'color: #FFFFFF', :class =>'btn btn-primary btn-primary', :role=>'button'} Add question for it
+        %a{:href => "home", :visited=>'color: #FFFFFF', :class =>'btn btn-primary btn-primary', :role=>'button'} Back to Home
       %br
       %br
-    .col-md-
-//    
-// .footer{:id => "footer", :style => "margin-bottom: 0"}
-//   .row{:style => "background-color:rgba(15,39,64,1.00);"}
-//     .col-md-3
-//     .col-md-6
-//       =image_tag "im3.png", :width=>"100%", :position=>"fixed", :bottom=>"0"
-//     .col-md-3    
+    .col-md-3
+    
+.footer{:id => "footer", :style => "margin-bottom: 0"}
+  .row{:style => "background-color:rgba(15,39,64,1.00);"}
+    .col-md-3
+    .col-md-6
+      =image_tag "im3.png", :width=>"100%", :position=>"fixed", :bottom=>"0"
+    .col-md-3    

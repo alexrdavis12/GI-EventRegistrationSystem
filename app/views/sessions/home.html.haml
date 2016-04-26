@@ -47,10 +47,60 @@
         .col-md-2
             .col-md-10
                 .container
-                    .h1.text-center Profile
+                    .h1.text-center My Profile
                     .row
                         .col-md-2
                         .col-md-8
+                            .table-responsive
+                                %table.table.table-basic
+                                    %tbody
+                                        %tr
+                                            %td
+                                                %b Email:
+                                            %td
+                                                = @current_user.email
+                                        %tr
+                                            %td
+                                                %b First Name:
+                                            %td
+                                                = @current_user.firstname
+                                        %tr
+                                            %td
+                                                %b Last Name:
+                                            %td
+                                                = @current_user.lastname
+                                        %tr
+                                            %td
+                                                %b Phone Number:
+                                            %td
+                                                = @current_user.phonenumber
+                                        %tr
+                                            %td
+                                                %b Gender:
+                                            %td
+                                                = @current_user.gender
+                                        %tr
+                                            %td
+                                                %b Address:
+                                            %td
+                                                = @current_user.addressline1
+                                        %tr
+                                            %td
+                                                %b City:
+                                            %td
+                                                = @current_user.city
+                                        %tr
+                                            %td
+                                                %b State:
+                                            %td
+                                                = @current_user.state
+                                        %tr
+                                            %td
+                                                %b Zip Code:
+                                            %td
+                                                = @current_user.zipcode
+                            .col-md-4.text-center
+                            %a{:href => setting_path, :class =>'btn btn-success'} Edit Profile
     .row{:id => "events", :class => "tab-pane active"}
         .col-md-1
             .col-md-10
@@ -101,7 +151,7 @@
         .col-md-2
             .col-md-10
                 .container
-                    .h1.text-center My Vehicles
+                    .h1.text-center Vehicles
                     .row
                         .col-md-1
                         .col-md-8
@@ -154,20 +204,97 @@
                 .container
                     .h1.text-center Impressions
                     .row
-                        .col-md-2
+                        .col-md-1
                         .col-md-8
+                            -if flash[:notice] != nil
+                                .alert.alert-success.alert-dismissable
+                                    %button.close{:type=>"button", "data-dismiss"=>"alert"}
+                                        %span{"aria-hidden"=>true}×
+                                        %span.sr-only Close
+                                    %strong 
+                                        =flash[:notice]
+                                        =flash[:color]
+                            -if @impressions.length == 0
+                                .alert.alert-info.alert-dismissable
+                                    %button.close{:type=>"button", "data-dismiss"=>"alert"}
+                                        %span{"aria-hidden"=>true}×
+                                        %span.sr-only Close
+                                    %strong No registered impressions
+                            -else
+                                - cnt= 0
+                                - @impressions.each do |i|
+                                    - cnt+=1
+                                    .panel.panel-primary
+                                        .panel-heading
+                                            %h3.panel-title Impression #{cnt}
+                                        .panel-body
+                                            %label= i.iname 
+                                            %br
+                                            %label Unit  
+                                            = i.unitid
+                                            %br
+                                            %label War  
+                                            = i.iwar
+                                            %br
+                                            %label Side 
+                                            = i.iside
+                                            %br
+                                            %label Description
+                                            = i.idescription
+                                            %br
+                                            %a{:href => "impressionshow?iid=#{i.id}", :class =>'btn btn-primary btn-sm', :role=>'button'} Show
+                                            %a{:href => "impressionedit?iid=#{i.id}", :class =>'btn btn-primary btn-sm', :role=>'button'} Edit
+                                            %a{:href => "impressiondelete?iid=#{i.id}", :class =>'btn btn-primary btn-sm', :role=>'button'} Delete
+                                            %br
+                        %a.btn.btn-success{:id => 'add_impression_btn', :href => 'impressioncreate'}
+                            %i.fa.fa-plus.fa-lg
+                            Add Impression
     .row{:id => "vendorbooths", :class => "tab-pane"}
         .col-md-2
             .col-md-10
                 .container
                     .h1.text-center Vendor Booths
                     .row
-                        .col-md-2
+                        .col-md-1
                         .col-md-8
-
-.footer{:id => "footer", :style => "margin-bottom: 0"}
-    .row{:style => "background-color:rgba(15,39,64,1.00);"}
-        .col-md-3
-        .col-md-6
-            =image_tag "im3.png", :width=>"100%", :position=>"fixed", :bottom=>"0"
-        .col-md-3
+                            -if flash[:notice] != nil
+                                .alert.alert-success.alert-dismissable
+                                    %button.close{:type=>"button", "data-dismiss"=>"alert"}
+                                        %span{"aria-hidden"=>true}×
+                                        %span.sr-only Close
+                                    %strong 
+                                        =flash[:notice]
+                                        =flash[:color]
+                            -if @vendorbooths.length == 0
+                                .alert.alert-info.alert-dismissable
+                                    %button.close{:type=>"button", "data-dismiss"=>"alert"}
+                                        %span{"aria-hidden"=>true}×
+                                        %span.sr-only Close
+                                    %strong No registered Vendor Booths
+                            -else
+                                - cnt= 0
+                                - @vendorbooths.each do |vb|
+                                    - cnt+=1
+                                    .panel.panel-primary
+                                        .panel-heading
+                                            %h3.panel-title Vendor Booth #{cnt}
+                                        .panel-body
+                                            %label= vb.vbname 
+                                            %br
+                                            %label Description
+                                            = vb.vbdescription
+                                            %br
+                                            %a{:href => "vendorboothshow?vbid=#{vb.id}", :class =>'btn btn-primary btn-sm', :role=>'button'} Show
+                                            %a{:href => "vendorboothedit?vbid=#{vb.id}", :class =>'btn btn-primary btn-sm', :role=>'button'} Edit
+                                            %a{:href => "vendorboothdelete?vbid=#{vb.id}", :class =>'btn btn-primary btn-sm', :role=>'button'} Delete
+                                            %br
+                        %a.btn.btn-success{:id => 'add_vendorbooth_btn', :href => 'vendorboothcreate'}
+                            %i.fa.fa-plus.fa-lg
+                            Add Vendor Booth
+//
+// .footer{:id => "footer", :style => "margin-bottom: 0"}
+//     .row{:style => "background-color:rgba(15,39,64,1.00);"}
+//         .col-md-3
+//         .col-md-6
+//             =image_tag "im3.png", :width=>"100%", :position=>"fixed", :bottom=>"0"
+//         .col-md-3
