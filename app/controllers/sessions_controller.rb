@@ -60,12 +60,6 @@ class SessionsController < ApplicationController
         @user.firstname = params[:firstname]
         @user.lastname = params[:lastname]
         @user.phonenumber = params[:phonenumber]
-        if !(/^\d{3}-\d{3}-\d{4}$/.match(params[:phonenumber])  ||/^\d{3}\d{3}\d{4}$/.match(params[:phonenumber]))
-          @user.phonenumber = nil
-          @flash_notice = "Phone Number Error"
-          render 'create'
-          return
-        end
         @user.gender = params[:gender]
         @user.addressline1 = params[:addressline1]
         @user.city = params[:city]
@@ -74,11 +68,12 @@ class SessionsController < ApplicationController
         @user.zipcode=params[:zipcode]
         if ZIP_CODE.find(params[:zipcode]) == nil
           @user.zipcode = nil
-          @flash_notice = "Zip Code Error"
-          render 'create'
-          return
+          @flash_notice = "Invalid Zip Code"
+          #render 'create'
+          # return
         end
-        if @user.valid?
+        # @user.errors.clear
+        if @user.valid? && @flash_notice ==""
           if @user.save
             session[:user_id] = @user.id
             @flash_notice = "Sign Up Successfully!"
@@ -92,9 +87,8 @@ class SessionsController < ApplicationController
             return
           end
         else
-          
           @user.password = nil
-          @flash_notice += "Sign Up Error"
+          @flash_notice = "Sign Up Error: " +  @flash_notice
           render 'create'
           return
         end
@@ -117,9 +111,9 @@ class SessionsController < ApplicationController
       @current_user.zipcode = params[:zipcode]
       if ZIP_CODE.find(params[:zipcode]) == nil
         @current_user.zipcode = nil
-        @flash_notice = "Zip Code Error"
-        render 'setting'
-        return
+        @flash_notice = "Invalid Zipcode"
+        # render 'setting'
+        # return
       end
       if @current_user.valid?
         if @current_user.save
@@ -131,7 +125,7 @@ class SessionsController < ApplicationController
         end
       else
           @current_user.password = nil
-          @flash_notice += "Sign Up Error"
+          @flash_notice = "Sign Up Error: " + @flash_notice
           render 'setting'
           return
         end
