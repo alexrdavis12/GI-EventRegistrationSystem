@@ -25,7 +25,12 @@ class EducatorsController < ApplicationController
           @educator.edprincipleemail = params[:PrincipleEmail]
       end
       
-      if @educator.valid?
+      if ZIP_CODE.find(params[:Zip]) == nil
+          @educator.edzip = nil
+          @flash_notice = "Invalid Zip Code"
+      end
+      
+      if @educator.valid? && @flash_notice == ""
         if @educator.save
           session[:edid] = @educator.id
           flash[:notice] = "Educator Created Successfully!"
@@ -36,8 +41,8 @@ class EducatorsController < ApplicationController
           render 'create'
         end
       else
-      @flash_notice += "Create Error"
-      render 'create'
+        @flash_notice = "Create Error: " + @flash_notice
+        render 'create'
       end
     else
       @flash_notice += "params error"
@@ -84,8 +89,14 @@ class EducatorsController < ApplicationController
           @educator.edprinciplename = params[:PrincipleName]
           @educator.edprincipleemail = params[:PrincipleEmail]
        end
+       
+      if ZIP_CODE.find(params[:Zip]) == nil
+          @educator.edzip = nil
+          @flash_notice = "Invalid Zip Code"
+      end
       
-      if @educator.valid?
+      
+      if @educator.valid? && @flash_notice == ""
         if @educator.save
           session[:edid] = @educator.id
           flash[:notice] = "Educator Edited Successfully!"

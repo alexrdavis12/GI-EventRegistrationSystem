@@ -106,7 +106,7 @@ class SessionsController < ApplicationController
       @current_user.lastname = params[:lastname]
       @current_user.phonenumber = params[:phonenumber]
       # if !(/^\d{3}-\d{3}-\d{4}$/.match(params[:phonenumber])  ||/^\d{3}\d{3}\d{4}$/.match(params[:phonenumber]))
-      #     @current_user.phonenumber = nil
+      #     @current_user.sphonenumber = nil
       #     @flash_notice = "Phone Number Error : Please Enter it as XXX-XXX-XXXX"
       #     render 'setting'
       #     return
