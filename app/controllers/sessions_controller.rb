@@ -38,6 +38,7 @@ class SessionsController < ApplicationController
       end
       @impressions = Impression.where(uid: id).all
       @vendorbooths = Vendorbooth.where(uid: id).all
+      @educators = Educator.where(uid: id).all
     else 
       if @user.level ==0
        redirect_to '/adminhome'
@@ -104,6 +105,12 @@ class SessionsController < ApplicationController
       @current_user.firstname = params[:firstname]
       @current_user.lastname = params[:lastname]
       @current_user.phonenumber = params[:phonenumber]
+      # if !(/^\d{3}-\d{3}-\d{4}$/.match(params[:phonenumber])  ||/^\d{3}\d{3}\d{4}$/.match(params[:phonenumber]))
+      #     @current_user.sphonenumber = nil
+      #     @flash_notice = "Phone Number Error : Please Enter it as XXX-XXX-XXXX"
+      #     render 'setting'
+      #     return
+      # end
       @current_user.gender = params[:gender]
       @current_user.addressline1 = params[:addressline1]
       @current_user.city = params[:city]

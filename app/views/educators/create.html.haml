@@ -1,0 +1,52 @@
+= javascript_include_tag "create_educator"
+%nav.navbar.navbar-inverse{:role => "navigation"}
+  .navbar-header
+    %a.navbar-brand{:href => "home"} M.A.G.I
+  %ul.nav.navbar-nav.navbar-right
+    %li
+      %a{:href=>'home'}
+        %i{:class=>"fa fa-home fa-fw"} 
+        Home 
+    %li
+      %a{:href=>'allevent'}
+        %i{:class=>"fa fa-align-justify fa-fw"} 
+        Event
+    %li
+      %a{:href=>'profile'}
+        %i{:class=>"fa fa-user fa-fw"} 
+        Profile
+    %li
+      %a{:href=>'logout'}
+        %i{:class=>"fa fa-sign-out fa-fw"} 
+        Logout
+        
+.container
+  .row
+    .col-md-2
+    .col-md-8
+      -if flash[:notice] != nil
+        .alert.alert-success.alert-dismissable
+          %button.close{:type=>"button", "data-dismiss"=>"alert"}
+            %span{"aria-hidden"=>true}×
+            %span.sr-only Close
+          %strong 
+            =flash[:notice]
+            =flash[:color]
+.container
+  .row
+    .col-md-2
+    .col-md-8
+      .panel.panel-primary
+        .panel-heading
+          %h3.panel-title School
+        .panel-body
+          = form_tag(:action => 'create') do
+            %div#ed_form
+              %input{:type=>"hidden"}
+              .form-group
+                %label What type of school are you registering?
+                %br
+                %input{:type => 'radio', :value=>'Home School', :name=>"Type", :id => 'home_school', :required=>""}Home School
+                %br
+                %input{:type => 'radio', :value=>'Private School', :name=>"Type", :id => 'private_school', :required=>""}Private School
+            = submit_tag("Create", :class => 'btn btn-primary')
