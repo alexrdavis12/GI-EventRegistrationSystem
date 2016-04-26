@@ -36,9 +36,11 @@ class SessionsController < ApplicationController
       if (@registeredeid.length !=0)
         @registeredevents = Event.find(@registeredeid)
       end
+      @impressions = Impression.where(uid: id).all
+      @vendorbooths = Vendorbooth.where(uid: id).all
     else 
       if @user.level ==0
-       redirect_to '/admin'
+       redirect_to '/adminhome'
       end
     end
   end
@@ -128,7 +130,7 @@ class SessionsController < ApplicationController
       if @current_user.valid?
         if @current_user.save
           flash[:notice] = "Information Updated"
-          redirect_to '/profile'
+          redirect_to '/home'
           return
         else
           @flash_notice = "Edit Error"

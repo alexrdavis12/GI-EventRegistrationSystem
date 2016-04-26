@@ -21,6 +21,10 @@ And (/^choose "(.*?)"$/) do |btn|
     choose(btn)
 end
 
+And (/^I am on the Profile tab$/) do
+    find_by_id('profile').click
+end
+
 And (/^I am on the "(.*?)" tab$/) do |btncntnt|
     page.find("a", text:btncntnt).click
     expect(page).to have_content("Available Events")

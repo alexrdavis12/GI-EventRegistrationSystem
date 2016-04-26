@@ -18,7 +18,7 @@
       %a{:href=>'logout'}
         %i{:class=>"fa fa-sign-out fa-fw"} 
         Logout
-
+          
 .container
   .row
     .col-md-3
@@ -32,41 +32,26 @@
 
       .panel.panel-info
         .panel-heading
-          Event ID
+          Vendor Booth ID
         .panel-body
-          =@event.id
+          =@vendorbooth.id
       
         .panel-heading
-          Event Title
+          Vendor Booth Name
         .panel-body
-          =@event.etitle
+          =@vendorbooth.vbname
       
         .panel-heading
-          Event Location
+          Vendor Booth Description
         .panel-body
-          =@event.elocation
-      
-        .panel-heading
-          Event Description
-        .panel-body
-          =@event.edescription
-      
-        .panel-heading
-          Start Date
-        .panel-body
-          =@event.estart
-      
-        .panel-heading
-          End Date
-        .panel-body
-          =@event.eend
+          =@vendorbooth.vbdescription
       %div
         .col-md-9
         .col-md-3
-        %a{:href => "QuestionCreate?eid=#{@event.id}", :visited=>'color: #FFFFFF', :class =>'btn btn-primary btn-primary', :role=>'button'} Add question for it
+        %a{:href => "home", :visited=>'color: #FFFFFF', :class =>'btn btn-primary btn-primary', :role=>'button'} Back to Home
       %br
       %br
-    .col-md-
+    .col-md-3
 //    
 // .footer{:id => "footer", :style => "margin-bottom: 0"}
 //   .row{:style => "background-color:rgba(15,39,64,1.00);"}
