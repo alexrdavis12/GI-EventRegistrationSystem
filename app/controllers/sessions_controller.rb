@@ -38,6 +38,7 @@ class SessionsController < ApplicationController
       end
       @impressions = Impression.where(uid: id).all
       @vendorbooths = Vendorbooth.where(uid: id).all
+      @educators = Educator.where(uid: id).all
     else 
       if @user.level ==0
        redirect_to '/adminhome'
