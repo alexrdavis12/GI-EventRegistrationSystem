@@ -44,7 +44,7 @@
         .panel-heading
           Unit
         .panel-body
-          ='in progress'
+          =@impression.unitid
       
         .panel-heading
           War
@@ -55,6 +55,11 @@
           Side
         .panel-body
           =@impression.iside
+      
+        .panel-heading
+          Commander
+        .panel-body
+          =@impression.commander
       
         .panel-heading
           Description
