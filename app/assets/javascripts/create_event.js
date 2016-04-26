@@ -42,7 +42,7 @@ function add_options(qid) {
 											 	<i class='fa fa-trash-o fa-lg'></i>\
 											 	Delete Option\
 											 </a>\
-											 <a class='btn btn-success' href='javascript:add_subquestion(" + select_qid + "," + cnt + ")' style='margin-top: 15px'>\
+											 <a class='btn btn-success' href='javascript:add_subquestion(" + qid + "," + cnt + ")' style='margin-top: 15px'>\
 											 	<i class='fa fa-plus fa-lg'></i>\
 											 	Add Sub-question\
 											 </a>\
