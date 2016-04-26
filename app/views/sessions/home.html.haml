@@ -40,7 +40,10 @@
             %a{"data-toggle" => "tab", :href => "#vendorbooths", :role => "tab"}
                 %i.fa.fa-credit-card.fa-lg
                 %span Vendor Booths
-                
+        %li
+            %a{"data-toggle" => "tab", :href => "#educators", :role => "tab"}
+                %i.fa.fa-credit-card.fa-lg
+                %span Educators               
                 
 .container{:class => "tab-content"}
     .row{:id => "profile", :class => "tab-pane"}
@@ -133,16 +136,16 @@
                                         .panel-body
                                             %label= e.etitle 
                                             %br
-                                            %label Location
+                                            %label Location:
                                             = e.elocation
                                             %br
-                                            %label Start Date  
+                                            %label Start Date:
                                             = e.estart
                                             %br
-                                            %label End Date  
+                                            %label End Date:  
                                             = e.eend
                                             %br
-                                            %label Event Description 
+                                            %label Event Description: 
                                             = e.edescription
                         %a.btn.btn-success{:id => 'availableEvents', :href => 'allevent'}
                             %i.fa.fa-plus.fa-lg
@@ -179,21 +182,21 @@
                                         .panel-body
                                             %label= v.vname 
                                             %br
-                                            %label Vehicle Class 
+                                            %label Vehicle Class: 
                                             = v.vclass
                                             %br
-                                            %label Nation  
+                                            %label Nation:  
                                             = v.vnation
                                             %br
-                                            %label War  
+                                            %label War:  
                                             = v.vwar
                                             %br
-                                            %label Vehicle Description 
+                                            %label Vehicle Description: 
                                             = v.vdescription
                                             %br
                                             %a{:href => "vehicleshow?vid=#{v.id}", :class =>'btn btn-primary btn-sm', :role=>'button'} Show
                                             %a{:href => "vehicleedit?vid=#{v.id}", :class =>'btn btn-primary btn-sm', :role=>'button'} Edit
-                                            %a{:href => "vehicledelete?vid=#{v.id}", :class =>'btn btn-primary btn-sm', :role=>'button'} Delete
+                                            %a{:href => "vehicledelete?vid=#{v.id}", :class =>'btn btn-danger btn-sm', :role=>'button'} Delete
                                             %br
                         %a.btn.btn-success{:id => 'add_vehicle_btn', :href => 'vehiclecreate'}
                             %i.fa.fa-plus.fa-lg
@@ -230,16 +233,16 @@
                                         .panel-body
                                             %label= i.iname 
                                             %br
-                                            %label Unit  
+                                            %label Unit:  
                                             = i.unitid
                                             %br
-                                            %label War  
+                                            %label War: 
                                             = i.iwar
                                             %br
-                                            %label Side 
+                                            %label Side: 
                                             = i.iside
                                             %br
-                                            %label Description
+                                            %label Description:
                                             = i.idescription
                                             %br
                                             %a{:href => "impressionshow?iid=#{i.id}", :class =>'btn btn-primary btn-sm', :role=>'button'} Show
@@ -281,7 +284,10 @@
                                         .panel-body
                                             %label= vb.vbname 
                                             %br
-                                            %label Description
+                                            %label Number vendor spaces:
+                                            = vb.vbspaces
+                                            %br
+                                            %label Description:
                                             = vb.vbdescription
                                             %br
                                             %a{:href => "vendorboothshow?vbid=#{vb.id}", :class =>'btn btn-primary btn-sm', :role=>'button'} Show

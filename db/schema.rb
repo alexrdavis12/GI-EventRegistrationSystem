@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160423003820) do
+ActiveRecord::Schema.define(version: 20160424214709) do
 
   create_table "answers", force: :cascade do |t|
     t.integer  "eid"
@@ -123,6 +123,7 @@ ActiveRecord::Schema.define(version: 20160423003820) do
     t.string  "vbname"
     t.string  "vbdescription"
     t.integer "vbid"
+    t.integer "vbspaces"
   end
 
 end
