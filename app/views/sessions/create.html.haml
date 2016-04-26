@@ -32,13 +32,13 @@
       = form_tag(:action => 'create') do
         .form-group 
           %label Email:
-          %input{:class => 'form-control', :value=>@user.email, :name=>:email}
+          %input{:class => 'form-control', :value=>@user.email, :name=>:email, :required => ""}
         .form-group
           %label Password: 
-          %input{:class => 'form-control', :type => :password, :name=>:password, :id=>"pwd1"}
+          %input{:class => 'form-control', :type => :password, :name=>:password, :id=>"pwd1", :required => ""}
         .form-group
           %label Password Confirm: 
-          %input{:class => 'form-control', :type => :password, :name=>:pswdconfirm, :id=>"pwd2"}
+          %input{:class => 'form-control', :type => :password, :name=>:pswdconfirm, :id=>"pwd2", :required => ""}
           :javascript
             $(function(){
               $("#pwd2").blur(function(){
@@ -49,15 +49,16 @@
             });
         .form-group
           %label First Name:
-          %input{:class => 'form-control', :value=>@user.firstname, :name=>:firstname}
+          %input{:class => 'form-control', :value=>@user.firstname, :name=>:firstname, :required => ""}
         .form-group
           %label Last Name:
-          %input{:class => 'form-control', :value=>@user.lastname, :name=>:lastname}
+          %input{:class => 'form-control', :value=>@user.lastname, :name=>:lastname, :required => ""}
         .form-group
           %label Phone Number:
-          %input{:class => 'form-control', :value=>@user.phonenumber, :name=>:phonenumber}
+          %input{:class => 'form-control', :value=>@user.phonenumber, :name=>:phonenumber, :required => ""}
         .form-group
-          %label Gender
+          %label Gender:
+          %br
           %label.checkbox-inline
             %input{:type=>'radio', :value=>'male', :name=>:gender}
             Male
@@ -66,13 +67,65 @@
             Female
         .form-group
           %label Address:
-          %input{:class => 'form-control', :value=>@user.addressline1, :name=>:addressline1}
+          %input{:class => 'form-control', :value=>@user.addressline1, :name=>:addressline1, :required => ""}
         .form-group
           %label City:
-          %input{:class => 'form-control', :value=>@user.city, :name=>:city}
+          %input{:class => 'form-control', :value=>@user.city, :name=>:city, :required => ""}
         .form-group
           %label State:
-          %input{:class => 'form-control', :value=>@user.state, :name=>:state}
+          %select{:class => 'form-control', :value=>@user.state, :name=>:state}
+            %option{:value => "AL"}= "Alabama"
+            %option{:value => "AK"}= "Alaska"
+            %option{:value => "AZ"}= "Arizona"
+            %option{:value => "AR"}= "Arkansas"
+            %option{:value => "CA"}= "California"
+            %option{:value => "CO"}= "Colorado"
+            %option{:value => "CT"}= "Connecticut"
+            %option{:value => "DE"}= "Delaware"
+            %option{:value => "DC"}= "District of Columbia"
+            %option{:value => "FL"}= "Florida"
+            %option{:value => "GA"}= "Georgia"
+            %option{:value => "HI"}= "Hawaii"
+            %option{:value => "ID"}= "Idaho"
+            %option{:value => "IL"}= "Illinois"
+            %option{:value => "IN"}= "Indiana"
+            %option{:value => "IA"}= "Iowa"
+            %option{:value => "KS"}= "Kansas"
+            %option{:value => "KY"}= "Kentucky"
+            %option{:value => "LA"}= "Louisiana"
+            %option{:value => "ME"}= "Maine"
+            %option{:value => "MD"}= "Maryland"
+            %option{:value => "MA"}= "Massachusetts"
+            %option{:value => "MI"}= "Michigan"
+            %option{:value => "MN"}= "Minnesota"
+            %option{:value => "MS"}= "Mississippi"
+            %option{:value => "MO"}= "Missouri"
+            %option{:value => "MT"}= "Montana"
+            %option{:value => "NE"}= "Nebraska"
+            %option{:value => "NV"}= "Nevada"
+            %option{:value => "NH"}= "New Hampshire"
+            %option{:value => "NJ"}= "New Jersey"
+            %option{:value => "NM"}= "New Mexico"
+            %option{:value => "NY"}= "New York"
+            %option{:value => "NC"}= "North Carolina"
+            %option{:value => "ND"}= "North Dakota"
+            %option{:value => "OH"}= "Ohio"
+            %option{:value => "OK"}= "Oklahoma"
+            %option{:value => "OR"}= "Oregon"
+            %option{:value => "PA"}= "Pennsylvania"
+            %option{:value => "PR"}= "Puerto Rico"
+            %option{:value => "RI"}= "Rhode Island"
+            %option{:value => "SC"}= "South Carolina"
+            %option{:value => "SD"}= "South Dakota"
+            %option{:value => "TN"}= "Tennessee"
+            %option{:value => "TX", :selected => ""}= "Texas"
+            %option{:value => "UT"}= "Utah"
+            %option{:value => "VT"}= "Vermont"
+            %option{:value => "VA"}= "Virginia"
+            %option{:value => "WA"}= "Washington"
+            %option{:value => "WV"}= "West Virginia"
+            %option{:value => "WI"}= "Wisconsin"
+            %option{:value => "WY"}= "Wyoming"
         .form-group
           %label Zipcode:
           %input{:class => 'form-control', :value=>@user.zipcode, :name=>:zipcode}
