@@ -6,9 +6,16 @@ Given /the following users exist/ do |users|
   end
 end
 
+
 Given (/^Events Exits$/) do |events|
   events.hashes.each do |event|
     Event.create event
+  end
+end
+
+Given (/^Vehicles Exits$/) do |vehicles|
+  vehicles.hashes.each do |vehicle|
+    Vehicle.create vehicle
   end
 end
 

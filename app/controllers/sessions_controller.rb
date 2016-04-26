@@ -9,21 +9,21 @@ class SessionsController < ApplicationController
   def login_attempt
   	authorized_user = User.authenticate(params[:email], params[:login_password])
       if authorized_user&&authorized_user.level==1
-       session[:user_id] = authorized_user.id  
-       flash[:notice]="Welcome again, you logged in as #{authorized_user.email}"
-       redirect_to '/home'
-       return
+        session[:user_id] = authorized_user.id  
+        flash[:notice]="Welcome again, you logged in as #{authorized_user.email}"
+        redirect_to '/home'
+        return
       elsif authorized_user&&authorized_user.level==0
-       session[:user_id] = authorized_user.id  
-       flash[:notice]="Welcome home, Administrator #{authorized_user.email}"
-       redirect_to '/admin'
-       return
-    else
-    	flash[:notice]="Invalid Username or Password"
-    	flash[:color]="Invalid"
-    	redirect_to '/login'
-      return
-    end
+        session[:user_id] = authorized_user.id  
+        flash[:notice]="Welcome home, Administrator #{authorized_user.email}"
+        redirect_to '/adminhome'
+        return
+      else
+      	flash[:notice]="Invalid Username or Password"
+      	flash[:color]="Invalid"
+      	redirect_to '/login'
+        return
+      end
   end
  
   def home
@@ -60,12 +60,6 @@ class SessionsController < ApplicationController
         @user.firstname = params[:firstname]
         @user.lastname = params[:lastname]
         @user.phonenumber = params[:phonenumber]
-        if !(/^\d{3}-\d{3}-\d{4}$/.match(params[:phonenumber])  ||/^\d{3}\d{3}\d{4}$/.match(params[:phonenumber]))
-          @user.phonenumber = nil
-          @flash_notice = "Phone Number Error : Please Enter it as XXX-XXX-XXXX"
-          render 'create'
-          return
-        end
         @user.gender = params[:gender]
         @user.addressline1 = params[:addressline1]
         @user.city = params[:city]
@@ -74,11 +68,12 @@ class SessionsController < ApplicationController
         @user.zipcode=params[:zipcode]
         if ZIP_CODE.find(params[:zipcode]) == nil
           @user.zipcode = nil
-          @flash_notice = "Zip Code Error : Please Enter a Valid 5 digit Zip Code"
-          render 'create'
-          return
+          @flash_notice = "Invalid Zip Code"
+          #render 'create'
+          # return
         end
-        if @user.valid?
+        # @user.errors.clear
+        if @user.valid? && @flash_notice ==""
           if @user.save
             session[:user_id] = @user.id
             @flash_notice = "Sign Up Successfully!"
@@ -92,9 +87,8 @@ class SessionsController < ApplicationController
             return
           end
         else
-          
           @user.password = nil
-          @flash_notice += "Sign Up Error"
+          @flash_notice = "Sign Up Error: " +  @flash_notice
           render 'create'
           return
         end
@@ -110,22 +104,22 @@ class SessionsController < ApplicationController
       @current_user.firstname = params[:firstname]
       @current_user.lastname = params[:lastname]
       @current_user.phonenumber = params[:phonenumber]
-      if !(/^\d{3}-\d{3}-\d{4}$/.match(params[:phonenumber])  ||/^\d{3}\d{3}\d{4}$/.match(params[:phonenumber]))
-          @current_user.phonenumber = nil
-          @flash_notice = "Phone Number Error : Please Enter it as XXX-XXX-XXXX"
-          render 'setting'
-          return
-      end
+      # if !(/^\d{3}-\d{3}-\d{4}$/.match(params[:phonenumber])  ||/^\d{3}\d{3}\d{4}$/.match(params[:phonenumber]))
+      #     @current_user.phonenumber = nil
+      #     @flash_notice = "Phone Number Error : Please Enter it as XXX-XXX-XXXX"
+      #     render 'setting'
+      #     return
+      # end
       @current_user.gender = params[:gender]
       @current_user.addressline1 = params[:addressline1]
       @current_user.city = params[:city]
       @current_user.state = params[:state]
       @current_user.zipcode = params[:zipcode]
       if ZIP_CODE.find(params[:zipcode]) == nil
-          @current_user.zipcode = nil
-          @flash_notice = "Zip Code Error : Please Enter a Valid 5 digit Zip Code"
-          render 'setting'
-          return
+        @current_user.zipcode = nil
+        @flash_notice = "Invalid Zipcode"
+        # render 'setting'
+        # return
       end
       if @current_user.valid?
         if @current_user.save
@@ -137,7 +131,7 @@ class SessionsController < ApplicationController
         end
       else
           @current_user.password = nil
-          @flash_notice += "Sign Up Error"
+          @flash_notice = "Sign Up Error: " + @flash_notice
           render 'setting'
           return
         end
