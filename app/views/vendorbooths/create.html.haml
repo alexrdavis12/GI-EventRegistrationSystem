@@ -23,6 +23,16 @@
   .row
     .col-md-2
     .col-md-8
+      -if @flash_notice != ""
+        .alert.alert-danger
+          %button.close{:type=>"button", "data-dismiss"=>"alert"}
+            %span{"aria-hidden"=>true}×
+            %span.sr-only Close
+          %strong 
+            = @flash_notice
+  .row
+    .col-md-2
+    .col-md-8
       .panel.panel-primary
         .panel-heading
           %h3.panel-title Vendor Booth

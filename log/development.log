@@ -46783,3 +46783,1140 @@ Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0
 Processing by SessionsController#login as HTML
   Rendered sessions/login.html.haml within layouts/application (3.2ms)
 Completed 200 OK in 321ms (Views: 320.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login_attempt" for 165.91.4.172 at 2016-04-27 22:52:34 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MUM+tu760xljPkQ67u6Bt8u6Lp/v+3OBuif82Wr9HpKOaco1EnnUpsEcssCA38BC1E7T2CdHhU83vFBAho81Vg==", "email"=>"info@americangimuseum.org", "login_password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "info@americangimuseum.org"]]
+Redirected to https://csce431-project-mdebolt.c9users.io/login
+Completed 302 Found in 88ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/login" for 165.91.4.172 at 2016-04-27 22:52:35 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login as HTML
+  Rendered sessions/login.html.haml within layouts/application (15.0ms)
+Completed 200 OK in 593ms (Views: 591.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.172 at 2016-04-27 22:52:36 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/answers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.172 at 2016-04-27 22:52:36 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-datetimepicker.min.self-788e29abac8dcfbc60d7f7490dd02b623d42c2174b604ebff6e8faa66c5d876e.css?body=1" for 165.91.4.172 at 2016-04-27 22:52:36 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-603f330c29af013305325569c8c75d03d688963abd8cde4fffec17b5ce417bfb.css?body=1" for 165.91.4.172 at 2016-04-27 22:52:36 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for 165.91.4.172 at 2016-04-27 22:52:36 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-2fe4f8a61d73606fbcb036b41f380591906a4da65a9eb5ec0a210fe6980b2ca7.css?body=1" for 165.91.4.172 at 2016-04-27 22:52:36 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/data.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.172 at 2016-04-27 22:52:36 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.172 at 2016-04-27 22:52:36 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-0de50f0224d6e8cae3e2502cc1d9cfabdc0d76270f21057592cf35d51d65ebfb.css?body=1" for 165.91.4.172 at 2016-04-27 22:52:36 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/questions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.172 at 2016-04-27 22:52:36 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.172 at 2016-04-27 22:52:36 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 165.91.4.172 at 2016-04-27 22:52:36 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.172 at 2016-04-27 22:52:36 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e905c9a472f362ff6b8921dfc99b72b15dff9b087475377a15b0e046dce53b65.css?body=1" for 165.91.4.172 at 2016-04-27 22:52:36 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 165.91.4.172 at 2016-04-27 22:52:36 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 165.91.4.172 at 2016-04-27 22:52:36 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 165.91.4.172 at 2016-04-27 22:52:36 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 165.91.4.172 at 2016-04-27 22:52:36 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 165.91.4.172 at 2016-04-27 22:52:36 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 165.91.4.172 at 2016-04-27 22:52:36 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 165.91.4.172 at 2016-04-27 22:52:36 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 165.91.4.172 at 2016-04-27 22:52:36 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 165.91.4.172 at 2016-04-27 22:52:36 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 165.91.4.172 at 2016-04-27 22:52:37 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 165.91.4.172 at 2016-04-27 22:52:37 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 165.91.4.172 at 2016-04-27 22:52:37 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 165.91.4.172 at 2016-04-27 22:52:37 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 165.91.4.172 at 2016-04-27 22:52:37 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 165.91.4.172 at 2016-04-27 22:52:37 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 165.91.4.172 at 2016-04-27 22:52:37 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/im3-554298bfba1eab7ed16dfc520f300082d3924d01db3b2eeabad3907c8443852c.png" for 165.91.4.172 at 2016-04-27 22:52:37 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/login_attempt" for 165.91.4.172 at 2016-04-27 22:52:47 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1aqm3BljHZVBhRNvxu7Dk6cAkvSQAtwcNy12y/fK6ZJqgFJf5eAaKuOn5ZWo34JmuPRvs1i+KtK6ttpSG7jCVg==", "email"=>"info@americangimuseum.org", "login_password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "info@americangimuseum.org"]]
+Redirected to https://csce431-project-mdebolt.c9users.io/login
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 165.91.4.172 at 2016-04-27 22:52:48 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login as HTML
+  Rendered sessions/login.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 259ms (Views: 257.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login_attempt" for 165.91.4.172 at 2016-04-27 22:53:19 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lHVh5DpccCi7QW8+WNmwtHGZVh7bXQUQIwjahUhMpfYrX5Vnxt93lxljmcQ26PFBbm2rWRPh896uk3YcpD6OMg==", "email"=>"info@americangimuseum.org", "login_password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "info@americangimuseum.org"]]
+Redirected to https://csce431-project-mdebolt.c9users.io/login
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 165.91.4.172 at 2016-04-27 22:53:20 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login as HTML
+  Rendered sessions/login.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 215ms (Views: 213.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (16.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (9.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateUsers (20150925032423)
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "password" varchar, "lastname" varchar, "firstname" varchar, "gender" varchar, "type" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150925032423"]]
+  [1m[35m (12.6ms)[0m  commit transaction
+Migrating to Renameattribute (20150930014018)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (3.4ms)[0m  CREATE TEMPORARY TABLE "ausers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "password" varchar, "lastname" varchar, "firstname" varchar, "gender" varchar, "role" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "users"[0m
+  [1m[35m (0.3ms)[0m  DROP TABLE "users"
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "password" varchar, "lastname" varchar, "firstname" varchar, "gender" varchar, "role" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "ausers"
+  [1m[36m (0.6ms)[0m  [1mDROP TABLE "ausers"[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150930014018"]]
+  [1m[36m (8.7ms)[0m  [1mcommit transaction[0m
+Migrating to Salt (20150930050259)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "users" ADD "salt" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150930050259"]]
+  [1m[36m (9.6ms)[0m  [1mcommit transaction[0m
+Migrating to Encrypted (20150930050802)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mALTER TABLE "users" ADD "encrypted_password" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150930050802"]]
+  [1m[36m (10.6ms)[0m  [1mcommit transaction[0m
+Migrating to RemoveColumns (20151001013408)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TEMPORARY TABLE "ausers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "password" varchar, "lastname" varchar, "firstname" varchar, "gender" varchar, "role" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "salt" varchar, "encrypted_password" varchar) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "users"
+  [1m[36m (0.4ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "lastname" varchar, "firstname" varchar, "gender" varchar, "role" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "salt" varchar, "encrypted_password" varchar) 
+  [1m[36m (0.2ms)[0m  [1mSELECT * FROM "ausers"[0m
+  [1m[35m (0.1ms)[0m  DROP TABLE "ausers"
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151001013408"]]
+  [1m[35m (11.4ms)[0m  commit transaction
+Migrating to CreateEvents (20151014185625)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "eid" integer, "etitle" varchar, "elocation" varchar, "estart" date, "eend" date, "edescription" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151014185625"]]
+  [1m[35m (10.1ms)[0m  commit transaction
+Migrating to CreateQuestions (20151014190035)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "questions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "qid" integer, "eid" integer, "qtitle" text, "qtype" varchar, "qoption" varchar, "qparentid" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151014190035"]]
+  [1m[35m (12.0ms)[0m  commit transaction
+Migrating to CreateAnswers (20151014190145)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  CREATE TABLE "answers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "eid" integer, "uid" integer, "qid" integer, "answer" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151014190145"]]
+  [1m[35m (9.6ms)[0m  commit transaction
+Migrating to AddLevelToUsers (20151027022310)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "users" ADD "level" integer
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151027022310"]]
+  [1m[35m (8.5ms)[0m  commit transaction
+Migrating to RemoveroleFromusers (20151027030704)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TEMPORARY TABLE "ausers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "lastname" varchar, "firstname" varchar, "gender" varchar, "role" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "salt" varchar, "encrypted_password" varchar, "level" integer) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "users"[0m
+  [1m[35m (0.4ms)[0m  DROP TABLE "users"
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "lastname" varchar, "firstname" varchar, "gender" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "salt" varchar, "encrypted_password" varchar, "level" integer) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "ausers"
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "ausers"[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151027030704"]]
+  [1m[36m (10.0ms)[0m  [1mcommit transaction[0m
+Migrating to AddQtitleToAnswers (20151028045421)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.0ms)[0m  [1mALTER TABLE "answers" ADD "qtitle" varchar[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151028045421"]]
+  [1m[36m (10.6ms)[0m  [1mcommit transaction[0m
+Migrating to AddZipcodeToUsers (20151111030442)
+  [1m[35m (1.0ms)[0m  begin transaction
+  [1m[36m (1.9ms)[0m  [1mALTER TABLE "users" ADD "zipcode" varchar[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151111030442"]]
+  [1m[36m (10.7ms)[0m  [1mcommit transaction[0m
+Migrating to AddParentoptToQuestions (20151203020326)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mALTER TABLE "questions" ADD "parentopt" integer[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151203020326"]]
+  [1m[36m (11.6ms)[0m  [1mcommit transaction[0m
+Migrating to AddDatafieldToUsers (20160409173157)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mALTER TABLE "users" ADD "hasvehicle" integer[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "index_users_on_hasvehicle" ON "users" ("hasvehicle")
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "unit" varchar[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+
+  [1m[36m (0.3ms)[0m  [1mCREATE  INDEX "index_users_on_unit" ON "users" ("unit")[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "users" ADD "isco" integer
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_unit' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_unit' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+
+  [1m[36m (0.3ms)[0m  [1mCREATE  INDEX "index_users_on_isco" ON "users" ("isco")[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "vehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "class" varchar, "nation" varchar, "war" varchar, "description" varchar) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160409173157"]]
+  [1m[35m (10.2ms)[0m  commit transaction
+Migrating to IdVehicle (20160409182548)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "vehicles" ADD "vid" integer
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "vehicles" ADD "uid" integer[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160409182548"]]
+  [1m[36m (9.9ms)[0m  [1mcommit transaction[0m
+Migrating to RenameVehicleColumns (20160409194349)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TEMPORARY TABLE "avehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "vclass" varchar, "nation" varchar, "war" varchar, "description" varchar, "vid" integer, "uid" integer) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "vehicles"
+  [1m[36m (0.7ms)[0m  [1mDROP TABLE "vehicles"[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "vehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "vclass" varchar, "nation" varchar, "war" varchar, "description" varchar, "vid" integer, "uid" integer) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "avehicles"[0m
+  [1m[35m (0.2ms)[0m  DROP TABLE "avehicles"
+  [1m[36m (0.3ms)[0m  [1mCREATE TEMPORARY TABLE "avehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "vname" varchar, "vclass" varchar, "nation" varchar, "war" varchar, "description" varchar, "vid" integer, "uid" integer) [0m
+  [1m[35m (0.2ms)[0m  SELECT * FROM "vehicles"
+  [1m[36m (0.6ms)[0m  [1mDROP TABLE "vehicles"[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "vehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "vname" varchar, "vclass" varchar, "nation" varchar, "war" varchar, "description" varchar, "vid" integer, "uid" integer) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "avehicles"[0m
+  [1m[35m (0.2ms)[0m  DROP TABLE "avehicles"
+  [1m[36m (0.2ms)[0m  [1mCREATE TEMPORARY TABLE "avehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "vname" varchar, "vclass" varchar, "vnation" varchar, "war" varchar, "description" varchar, "vid" integer, "uid" integer) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "vehicles"
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "vehicles"[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "vehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "vname" varchar, "vclass" varchar, "vnation" varchar, "war" varchar, "description" varchar, "vid" integer, "uid" integer) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "avehicles"[0m
+  [1m[35m (0.1ms)[0m  DROP TABLE "avehicles"
+  [1m[36m (0.3ms)[0m  [1mCREATE TEMPORARY TABLE "avehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "vname" varchar, "vclass" varchar, "vnation" varchar, "vwar" varchar, "description" varchar, "vid" integer, "uid" integer) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "vehicles"
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "vehicles"[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "vehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "vname" varchar, "vclass" varchar, "vnation" varchar, "vwar" varchar, "description" varchar, "vid" integer, "uid" integer) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "avehicles"[0m
+  [1m[35m (0.2ms)[0m  DROP TABLE "avehicles"
+  [1m[36m (0.6ms)[0m  [1mCREATE TEMPORARY TABLE "avehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "vname" varchar, "vclass" varchar, "vnation" varchar, "vwar" varchar, "vdescription" varchar, "vid" integer, "uid" integer) [0m
+  [1m[35m (0.2ms)[0m  SELECT * FROM "vehicles"
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "vehicles"[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "vehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "vname" varchar, "vclass" varchar, "vnation" varchar, "vwar" varchar, "vdescription" varchar, "vid" integer, "uid" integer) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "avehicles"[0m
+  [1m[35m (0.3ms)[0m  DROP TABLE "avehicles"
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160409194349"]]
+  [1m[35m (12.5ms)[0m  commit transaction
+Migrating to AddForeignKeytoVehicles (20160411054413)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TEMPORARY TABLE "avehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "vname" varchar, "vclass" varchar, "vnation" varchar, "vwar" varchar, "vdescription" varchar, "vid" integer, "user_id" integer) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "vehicles"[0m
+  [1m[35m (0.5ms)[0m  DROP TABLE "vehicles"
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "vehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "vname" varchar, "vclass" varchar, "vnation" varchar, "vwar" varchar, "vdescription" varchar, "vid" integer, "user_id" integer) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "avehicles"
+  [1m[36m (0.1ms)[0m  [1mDROP TABLE "avehicles"[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "index_vehicles_on_user_id" ON "vehicles" ("user_id")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160411054413"]]
+  [1m[35m (10.8ms)[0m  commit transaction
+Migrating to AddVehiclesCountToUsers (20160411064421)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "users" ADD "vehicles_count" int
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160411064421"]]
+  [1m[35m (9.3ms)[0m  commit transaction
+Migrating to AddPhonenumberTake2 (20160418233517)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "users" ADD "phonenumber" varchar
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160418233517"]]
+  [1m[35m (10.5ms)[0m  commit transaction
+Migrating to AddAddress (20160419142111)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "users" ADD "addressline1" varchar
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "users" ADD "city" varchar[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "users" ADD "state" varchar
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160419142111"]]
+  [1m[35m (12.3ms)[0m  commit transaction
+Migrating to AddTablesForUnitaffiliation (20160419162536)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  CREATE TABLE "units" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "cid" integer, "unitid" integer, "uname" varchar, "uside" varchar, "utotalmembers" integer, "udescription" varchar) 
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "impressions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "uid" integer, "unitid" integer, "iname" varchar, "iside" varchar, "iwar" varchar, "idescription" varchar, "cid" integer) [0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "commander" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "uid" integer, "cid" integer) 
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "vendorbooths" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "uid" integer, "boothid" integer, "vbname" varchar, "vbdescription" varchar) [0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "educator" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "uid" integer, "edid" integer, "edname" varchar, "eddescription" varchar, "edtotalnumber" integer, "edorganization" varchar) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160419162536"]]
+  [1m[35m (13.5ms)[0m  commit transaction
+Migrating to AddImpressionId (20160422221817)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "impressions" ADD "iid" int
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE "commander" RENAME TO "commanders"[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "educator" RENAME TO "educators"
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160422221817"]]
+  [1m[35m (8.5ms)[0m  commit transaction
+Migrating to ChangeTypeUnitid (20160422233156)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TEMPORARY TABLE "aimpressions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "uid" integer, "unitid" integer, "iname" varchar, "iside" varchar, "iwar" varchar, "idescription" varchar, "cid" integer, "iid" integer) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "impressions"[0m
+  [1m[35m (0.4ms)[0m  DROP TABLE "impressions"
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "impressions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "uid" integer, "unitid" varchar, "iname" varchar, "iside" varchar, "iwar" varchar, "idescription" varchar, "cid" integer, "iid" integer) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "aimpressions"
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "aimpressions"[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160422233156"]]
+  [1m[36m (10.1ms)[0m  [1mcommit transaction[0m
+Migrating to AddVbidToVendorbooths (20160423003820)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "vendorbooths" ADD "vbid" integer[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160423003820"]]
+  [1m[36m (12.5ms)[0m  [1mcommit transaction[0m
+Migrating to AddSpacesToVendorbooths (20160424214709)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mALTER TABLE "vendorbooths" ADD "vbspaces" integer[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160424214709"]]
+  [1m[36m (9.3ms)[0m  [1mcommit transaction[0m
+Migrating to AddEducatorsTable (20160425192951)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mDROP TABLE "educators"[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "educators" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "uid" integer, "edid" integer, "edschooltype" varchar, "edpgaurdianname" varchar, "edpgaurdianphone" varchar, "edgaurdianemail" varchar, "edschoolname" varchar, "edaddress" varchar, "edzip" varchar, "edprimaryemail" varchar, "edprimaryname" varchar, "edprimaryrole" varchar, "edprimaryphone" varchar, "edprinciplename" varchar, "edprincipleemail" varchar) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160425192951"]]
+  [1m[35m (10.7ms)[0m  commit transaction
+Migrating to AddCommanderToImpressions (20160426214757)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "impressions" ADD "commander" varchar
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160426214757"]]
+  [1m[35m (9.8ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_isco' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_isco' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_unit' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_unit' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_vehicles_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_vehicles_on_user_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'info@americangimuseum.org' LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("email", "lastname", "firstname", "gender", "phonenumber", "addressline1", "city", "state", "zipcode", "salt", "encrypted_password", "level", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["email", "info@americangimuseum.org"], ["lastname", "Admin"], ["firstname", "Admin"], ["gender", ""], ["phonenumber", "9794466888"], ["addressline1", "19124 TX-6"], ["city", "College Station"], ["state", "TX"], ["zipcode", "77845"], ["salt", "$2a$10$J3mM3sHaECQoCk3EyYNjcu"], ["encrypted_password", "$2a$10$J3mM3sHaECQoCk3EyYNjcuewbzf7V4pl.vchIYHYEZX4.Q1odlyv2"], ["level", 0], ["created_at", "2016-04-27 22:55:05.961251"], ["updated_at", "2016-04-27 22:55:05.961251"]]
+  [1m[36m (11.9ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/login" for 165.91.4.172 at 2016-04-27 22:55:27 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#login as HTML
+  Rendered sessions/login.html.haml within layouts/application (33.2ms)
+Completed 200 OK in 498ms (Views: 454.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.172 at 2016-04-27 22:55:29 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-603f330c29af013305325569c8c75d03d688963abd8cde4fffec17b5ce417bfb.css?body=1" for 165.91.4.172 at 2016-04-27 22:55:29 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-2fe4f8a61d73606fbcb036b41f380591906a4da65a9eb5ec0a210fe6980b2ca7.css?body=1" for 165.91.4.172 at 2016-04-27 22:55:29 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/answers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.172 at 2016-04-27 22:55:29 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-datetimepicker.min.self-788e29abac8dcfbc60d7f7490dd02b623d42c2174b604ebff6e8faa66c5d876e.css?body=1" for 165.91.4.172 at 2016-04-27 22:55:29 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/questions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.172 at 2016-04-27 22:55:29 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/data.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.172 at 2016-04-27 22:55:29 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.172 at 2016-04-27 22:55:29 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for 165.91.4.172 at 2016-04-27 22:55:29 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-0de50f0224d6e8cae3e2502cc1d9cfabdc0d76270f21057592cf35d51d65ebfb.css?body=1" for 165.91.4.172 at 2016-04-27 22:55:29 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.172 at 2016-04-27 22:55:29 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.172 at 2016-04-27 22:55:29 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e905c9a472f362ff6b8921dfc99b72b15dff9b087475377a15b0e046dce53b65.css?body=1" for 165.91.4.172 at 2016-04-27 22:55:29 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 165.91.4.172 at 2016-04-27 22:55:29 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 165.91.4.172 at 2016-04-27 22:55:29 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 165.91.4.172 at 2016-04-27 22:55:29 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 165.91.4.172 at 2016-04-27 22:55:29 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 165.91.4.172 at 2016-04-27 22:55:29 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 165.91.4.172 at 2016-04-27 22:55:29 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 165.91.4.172 at 2016-04-27 22:55:29 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 165.91.4.172 at 2016-04-27 22:55:29 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 165.91.4.172 at 2016-04-27 22:55:30 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 165.91.4.172 at 2016-04-27 22:55:30 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 165.91.4.172 at 2016-04-27 22:55:30 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 165.91.4.172 at 2016-04-27 22:55:30 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 165.91.4.172 at 2016-04-27 22:55:30 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 165.91.4.172 at 2016-04-27 22:55:30 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 165.91.4.172 at 2016-04-27 22:55:30 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 165.91.4.172 at 2016-04-27 22:55:30 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 165.91.4.172 at 2016-04-27 22:55:30 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/im3-554298bfba1eab7ed16dfc520f300082d3924d01db3b2eeabad3907c8443852c.png" for 165.91.4.172 at 2016-04-27 22:55:30 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/login_attempt" for 165.91.4.172 at 2016-04-27 22:55:37 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HFJO/1m5d88Ufb6yPw69syBge5Ndr0KHTr28T6h4A1ajeLp8pTpwcLZfSEhRP/xGP5SG1JUTtEnDJhDWRAookg==", "email"=>"info@americangimuseum.org", "login_password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "info@americangimuseum.org"]]
+Redirected to https://csce431-project-mdebolt.c9users.io/adminhome
+Completed 302 Found in 160ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/adminhome" for 165.91.4.172 at 2016-04-27 22:55:37 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#adminhome as HTML
+  Rendered sessions/adminhome.html.haml within layouts/application (8.3ms)
+Completed 200 OK in 204ms (Views: 203.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/fontawesome-webfont-a7c7e4930090e038a280fd61d88f0dc03dad4aeaedbd8c9be3dd9aa4c3b6f8d1.woff" for 165.91.4.172 at 2016-04-27 22:55:38 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/adminhome" for 165.91.4.172 at 2016-04-27 23:19:59 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#adminhome as HTML
+  Rendered sessions/adminhome.html.haml within layouts/application (29.1ms)
+Completed 200 OK in 600ms (Views: 568.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/answers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.172 at 2016-04-27 23:20:01 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-603f330c29af013305325569c8c75d03d688963abd8cde4fffec17b5ce417bfb.css?body=1" for 165.91.4.172 at 2016-04-27 23:20:01 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.172 at 2016-04-27 23:20:01 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-datetimepicker.min.self-788e29abac8dcfbc60d7f7490dd02b623d42c2174b604ebff6e8faa66c5d876e.css?body=1" for 165.91.4.172 at 2016-04-27 23:20:01 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-2fe4f8a61d73606fbcb036b41f380591906a4da65a9eb5ec0a210fe6980b2ca7.css?body=1" for 165.91.4.172 at 2016-04-27 23:20:01 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/data.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.172 at 2016-04-27 23:20:01 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for 165.91.4.172 at 2016-04-27 23:20:01 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.172 at 2016-04-27 23:20:01 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/questions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.172 at 2016-04-27 23:20:01 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-0de50f0224d6e8cae3e2502cc1d9cfabdc0d76270f21057592cf35d51d65ebfb.css?body=1" for 165.91.4.172 at 2016-04-27 23:20:01 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.172 at 2016-04-27 23:20:01 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.172 at 2016-04-27 23:20:01 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e905c9a472f362ff6b8921dfc99b72b15dff9b087475377a15b0e046dce53b65.css?body=1" for 165.91.4.172 at 2016-04-27 23:20:02 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 165.91.4.172 at 2016-04-27 23:20:02 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 165.91.4.172 at 2016-04-27 23:20:02 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 165.91.4.172 at 2016-04-27 23:20:02 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 165.91.4.172 at 2016-04-27 23:20:02 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 165.91.4.172 at 2016-04-27 23:20:02 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 165.91.4.172 at 2016-04-27 23:20:02 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 165.91.4.172 at 2016-04-27 23:20:02 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 165.91.4.172 at 2016-04-27 23:20:02 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 165.91.4.172 at 2016-04-27 23:20:02 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 165.91.4.172 at 2016-04-27 23:20:02 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 165.91.4.172 at 2016-04-27 23:20:02 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 165.91.4.172 at 2016-04-27 23:20:02 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 165.91.4.172 at 2016-04-27 23:20:02 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 165.91.4.172 at 2016-04-27 23:20:02 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 165.91.4.172 at 2016-04-27 23:20:02 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 165.91.4.172 at 2016-04-27 23:20:03 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 165.91.4.172 at 2016-04-27 23:20:03 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/fontawesome-webfont-a7c7e4930090e038a280fd61d88f0dc03dad4aeaedbd8c9be3dd9aa4c3b6f8d1.woff" for 165.91.4.172 at 2016-04-27 23:20:03 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/im3-554298bfba1eab7ed16dfc520f300082d3924d01db3b2eeabad3907c8443852c.png" for 165.91.4.172 at 2016-04-27 23:20:03 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/logout" for 165.91.4.172 at 2016-04-27 23:20:11 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#logout as HTML
+Redirected to https://csce431-project-mdebolt.c9users.io/
+Completed 302 Found in 136ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 165.91.4.172 at 2016-04-27 23:20:11 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login as HTML
+  Rendered sessions/login.html.haml within layouts/application (8.3ms)
+Completed 200 OK in 216ms (Views: 214.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login_attempt" for 165.91.4.172 at 2016-04-27 23:20:18 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7o4ELAPCx4TnnJObldgEEPZkAswy6fGLcXL5sWG3AIhRpPCv/0HAO0W+ZWH76UXl6ZD/i/pVB0X86VUojcUrTA==", "email"=>"user@user.com", "login_password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1  [["email", "user@user.com"]]
+Redirected to https://csce431-project-mdebolt.c9users.io/login
+Completed 302 Found in 64ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/login" for 165.91.4.172 at 2016-04-27 23:20:19 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login as HTML
+  Rendered sessions/login.html.haml within layouts/application (9.3ms)
+Completed 200 OK in 338ms (Views: 337.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login_attempt" for 165.91.4.172 at 2016-04-27 23:20:27 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login_attempt as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DKxyp2XRbitqdlr5A3xNLe4T8BEqCcjqO/JaP6WQfPqzhoYkmVJplMhUrANtTQzY8ecNVuK1PiS2afamSeJXPg==", "email"=>"user@user.com", "login_password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT 1[0m  [["email", "user@user.com"]]
+Redirected to https://csce431-project-mdebolt.c9users.io/login
+Completed 302 Found in 10ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 165.91.4.172 at 2016-04-27 23:20:27 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login as HTML
+  Rendered sessions/login.html.haml within layouts/application (5.2ms)
+Completed 200 OK in 404ms (Views: 403.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/create" for 165.91.4.172 at 2016-04-27 23:20:28 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Rendered sessions/create.html.haml within layouts/application (60.4ms)
+Completed 200 OK in 515ms (Views: 483.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/create" for 165.91.4.172 at 2016-04-27 23:20:46 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NYwWA51WhTpIzJWZzZ9jghRI0cqZEpqUgL6xJC8aDwqKpuKAYdWCheruY2OjriJ3C7wsjVGubFoNJR29w2gkzg==", "email"=>"user@user.com", "password"=>"[FILTERED]", "pswdconfirm"=>"qwerty", "firstname"=>"gsd", "lastname"=>"agdh", "phonenumber"=>"aehrrerha", "gender"=>"female", "addressline1"=>"earhgearh", "city"=>"aeth", "state"=>"AL", "zipcode"=>"theath", "commit"=>"Create"}
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."email" = 'user@user.com' LIMIT 1
+  Rendered sessions/create.html.haml within layouts/application (114.5ms)
+Completed 200 OK in 982ms (Views: 742.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/create" for 165.91.4.172 at 2016-04-27 23:21:46 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WKIUw1+lLnTsiHdXvUTGIldLINl5TRUglfi1KbAaJkjniOBAoyYpy06qga3TdYfXSL/dnrHx4+4YYxmwXGgNjA==", "email"=>"user@user.com", "password"=>"[FILTERED]", "pswdconfirm"=>"qwerty", "firstname"=>"gsd", "lastname"=>"agdh", "phonenumber"=>"1234567896", "gender"=>"male", "addressline1"=>"4568 hogufw st", "city"=>"sgh", "state"=>"TX", "zipcode"=>"12345", "commit"=>"Create"}
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'user@user.com' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'user@user.com' LIMIT 1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("email", "firstname", "lastname", "phonenumber", "gender", "addressline1", "city", "state", "level", "zipcode", "salt", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["email", "user@user.com"], ["firstname", "gsd"], ["lastname", "agdh"], ["phonenumber", "1234567896"], ["gender", "male"], ["addressline1", "4568 hogufw st"], ["city", "sgh"], ["state", "TX"], ["level", 1], ["zipcode", "12345"], ["salt", "$2a$10$C0GesTtf6HiCWere/wPmyO"], ["encrypted_password", "$2a$10$C0GesTtf6HiCWere/wPmyOCcQolNfLzj1wZFOo59bPHLvNQymQl/u"], ["created_at", "2016-04-27 23:21:47.119475"], ["updated_at", "2016-04-27 23:21:47.119475"]]
+  [1m[36m (13.5ms)[0m  [1mcommit transaction[0m
+Redirected to https://csce431-project-mdebolt.c9users.io/home
+Completed 302 Found in 146ms (ActiveRecord: 14.8ms)
+
+
+Started GET "/home" for 165.91.4.172 at 2016-04-27 23:21:47 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  SELECT DISTINCT "answers"."eid" FROM "answers" WHERE "answers"."uid" = ?  [["uid", 2]]
+  [1m[36mVehicle Load (0.4ms)[0m  [1mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[35mImpression Load (0.2ms)[0m  SELECT "impressions".* FROM "impressions" WHERE "impressions"."uid" = ?  [["uid", 2]]
+  [1m[36mVendorbooth Load (0.2ms)[0m  [1mSELECT "vendorbooths".* FROM "vendorbooths" WHERE "vendorbooths"."uid" = ?[0m  [["uid", 2]]
+  [1m[35mEducator Load (0.2ms)[0m  SELECT "educators".* FROM "educators" WHERE "educators"."uid" = ?  [["uid", 2]]
+  Rendered sessions/home.html.haml within layouts/application (62.3ms)
+Completed 200 OK in 353ms (Views: 285.2ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/home" for 165.91.4.172 at 2016-04-27 23:23:39 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT DISTINCT "answers"."eid" FROM "answers" WHERE "answers"."uid" = ?[0m  [["uid", 2]]
+  [1m[35mVehicle Load (0.2ms)[0m  SELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?  [["user_id", 2]]
+  [1m[36mImpression Load (0.2ms)[0m  [1mSELECT "impressions".* FROM "impressions" WHERE "impressions"."uid" = ?[0m  [["uid", 2]]
+  [1m[35mVendorbooth Load (0.2ms)[0m  SELECT "vendorbooths".* FROM "vendorbooths" WHERE "vendorbooths"."uid" = ?  [["uid", 2]]
+  [1m[36mEducator Load (0.3ms)[0m  [1mSELECT "educators".* FROM "educators" WHERE "educators"."uid" = ?[0m  [["uid", 2]]
+  Rendered sessions/home.html.haml within layouts/application (69.0ms)
+Completed 200 OK in 297ms (Views: 288.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/answers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.172 at 2016-04-27 23:23:39 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-datetimepicker.min.self-788e29abac8dcfbc60d7f7490dd02b623d42c2174b604ebff6e8faa66c5d876e.css?body=1" for 165.91.4.172 at 2016-04-27 23:23:39 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.172 at 2016-04-27 23:23:39 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-603f330c29af013305325569c8c75d03d688963abd8cde4fffec17b5ce417bfb.css?body=1" for 165.91.4.172 at 2016-04-27 23:23:39 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/data.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.172 at 2016-04-27 23:23:39 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.172 at 2016-04-27 23:23:39 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for 165.91.4.172 at 2016-04-27 23:23:39 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-2fe4f8a61d73606fbcb036b41f380591906a4da65a9eb5ec0a210fe6980b2ca7.css?body=1" for 165.91.4.172 at 2016-04-27 23:23:39 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/questions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.172 at 2016-04-27 23:23:40 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-0de50f0224d6e8cae3e2502cc1d9cfabdc0d76270f21057592cf35d51d65ebfb.css?body=1" for 165.91.4.172 at 2016-04-27 23:23:40 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.172 at 2016-04-27 23:23:40 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.172 at 2016-04-27 23:23:40 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e905c9a472f362ff6b8921dfc99b72b15dff9b087475377a15b0e046dce53b65.css?body=1" for 165.91.4.172 at 2016-04-27 23:23:40 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 165.91.4.172 at 2016-04-27 23:23:40 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 165.91.4.172 at 2016-04-27 23:23:40 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 165.91.4.172 at 2016-04-27 23:23:40 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 165.91.4.172 at 2016-04-27 23:23:40 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 165.91.4.172 at 2016-04-27 23:23:40 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 165.91.4.172 at 2016-04-27 23:23:40 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 165.91.4.172 at 2016-04-27 23:23:40 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 165.91.4.172 at 2016-04-27 23:23:40 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 165.91.4.172 at 2016-04-27 23:23:40 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 165.91.4.172 at 2016-04-27 23:23:40 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 165.91.4.172 at 2016-04-27 23:23:40 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 165.91.4.172 at 2016-04-27 23:23:40 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 165.91.4.172 at 2016-04-27 23:23:40 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 165.91.4.172 at 2016-04-27 23:23:40 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 165.91.4.172 at 2016-04-27 23:23:40 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 165.91.4.172 at 2016-04-27 23:23:40 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 165.91.4.172 at 2016-04-27 23:23:40 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/im3-554298bfba1eab7ed16dfc520f300082d3924d01db3b2eeabad3907c8443852c.png" for 165.91.4.172 at 2016-04-27 23:23:40 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/educatorcreate" for 165.91.4.172 at 2016-04-27 23:23:50 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EducatorsController#create as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered educators/create.html.haml within layouts/application (38.2ms)
+Completed 200 OK in 256ms (Views: 238.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/create_educator.self-0406af9c93c56e3a6270db06e12c6cab212d5090d6ed025abbe0ddbf0febbaa0.js?body=1" for 165.91.4.172 at 2016-04-27 23:23:51 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/home" for 165.91.4.172 at 2016-04-27 23:24:00 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT DISTINCT "answers"."eid" FROM "answers" WHERE "answers"."uid" = ?[0m  [["uid", 2]]
+  [1m[35mVehicle Load (0.4ms)[0m  SELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?  [["user_id", 2]]
+  [1m[36mImpression Load (0.2ms)[0m  [1mSELECT "impressions".* FROM "impressions" WHERE "impressions"."uid" = ?[0m  [["uid", 2]]
+  [1m[35mVendorbooth Load (0.2ms)[0m  SELECT "vendorbooths".* FROM "vendorbooths" WHERE "vendorbooths"."uid" = ?  [["uid", 2]]
+  [1m[36mEducator Load (0.1ms)[0m  [1mSELECT "educators".* FROM "educators" WHERE "educators"."uid" = ?[0m  [["uid", 2]]
+  Rendered sessions/home.html.haml within layouts/application (65.0ms)
+Completed 200 OK in 292ms (Views: 285.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/vendorboothcreate" for 165.91.4.172 at 2016-04-27 23:24:02 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VendorboothsController#create as HTML
+  [1m[35mUser Load (5.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered vendorbooths/create.html.haml within layouts/application (37.3ms)
+Completed 200 OK in 436ms (Views: 276.3ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/home" for 165.91.4.172 at 2016-04-27 23:24:12 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT DISTINCT "answers"."eid" FROM "answers" WHERE "answers"."uid" = ?[0m  [["uid", 2]]
+  [1m[35mVehicle Load (0.2ms)[0m  SELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?  [["user_id", 2]]
+  [1m[36mImpression Load (0.2ms)[0m  [1mSELECT "impressions".* FROM "impressions" WHERE "impressions"."uid" = ?[0m  [["uid", 2]]
+  [1m[35mVendorbooth Load (0.2ms)[0m  SELECT "vendorbooths".* FROM "vendorbooths" WHERE "vendorbooths"."uid" = ?  [["uid", 2]]
+  [1m[36mEducator Load (0.2ms)[0m  [1mSELECT "educators".* FROM "educators" WHERE "educators"."uid" = ?[0m  [["uid", 2]]
+  Rendered sessions/home.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 195ms (Views: 179.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/vendorboothcreate" for 165.91.4.172 at 2016-04-27 23:24:17 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VendorboothsController#create as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered vendorbooths/create.html.haml within layouts/application (103.8ms)
+Completed 200 OK in 300ms (Views: 297.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/home" for 165.91.4.172 at 2016-04-27 23:24:23 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT DISTINCT "answers"."eid" FROM "answers" WHERE "answers"."uid" = ?[0m  [["uid", 2]]
+  [1m[35mVehicle Load (0.3ms)[0m  SELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?  [["user_id", 2]]
+  [1m[36mImpression Load (0.2ms)[0m  [1mSELECT "impressions".* FROM "impressions" WHERE "impressions"."uid" = ?[0m  [["uid", 2]]
+  [1m[35mVendorbooth Load (0.3ms)[0m  SELECT "vendorbooths".* FROM "vendorbooths" WHERE "vendorbooths"."uid" = ?  [["uid", 2]]
+  [1m[36mEducator Load (0.2ms)[0m  [1mSELECT "educators".* FROM "educators" WHERE "educators"."uid" = ?[0m  [["uid", 2]]
+  Rendered sessions/home.html.haml within layouts/application (4.4ms)
+Completed 200 OK in 254ms (Views: 248.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/impressioncreate" for 165.91.4.172 at 2016-04-27 23:24:26 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ImpressionsController#create as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered impressions/create.html.haml within layouts/application (12.6ms)
+Completed 200 OK in 208ms (Views: 199.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/home" for 165.91.4.172 at 2016-04-27 23:24:37 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT DISTINCT "answers"."eid" FROM "answers" WHERE "answers"."uid" = ?[0m  [["uid", 2]]
+  [1m[35mVehicle Load (0.3ms)[0m  SELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?  [["user_id", 2]]
+  [1m[36mImpression Load (0.2ms)[0m  [1mSELECT "impressions".* FROM "impressions" WHERE "impressions"."uid" = ?[0m  [["uid", 2]]
+  [1m[35mVendorbooth Load (0.2ms)[0m  SELECT "vendorbooths".* FROM "vendorbooths" WHERE "vendorbooths"."uid" = ?  [["uid", 2]]
+  [1m[36mEducator Load (0.2ms)[0m  [1mSELECT "educators".* FROM "educators" WHERE "educators"."uid" = ?[0m  [["uid", 2]]
+  Rendered sessions/home.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 280ms (Views: 274.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/vehiclecreate" for 165.91.4.172 at 2016-04-27 23:24:42 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VehiclesController#create as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered vehicles/create.html.haml within layouts/application (10.8ms)
+Completed 200 OK in 260ms (Views: 246.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/home" for 165.91.4.172 at 2016-04-27 23:25:18 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.3ms)[0m  [1mSELECT DISTINCT "answers"."eid" FROM "answers" WHERE "answers"."uid" = ?[0m  [["uid", 2]]
+  [1m[35mVehicle Load (0.3ms)[0m  SELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?  [["user_id", 2]]
+  [1m[36mImpression Load (0.2ms)[0m  [1mSELECT "impressions".* FROM "impressions" WHERE "impressions"."uid" = ?[0m  [["uid", 2]]
+  [1m[35mVendorbooth Load (0.2ms)[0m  SELECT "vendorbooths".* FROM "vendorbooths" WHERE "vendorbooths"."uid" = ?  [["uid", 2]]
+  [1m[36mEducator Load (0.2ms)[0m  [1mSELECT "educators".* FROM "educators" WHERE "educators"."uid" = ?[0m  [["uid", 2]]
+  Rendered sessions/home.html.haml within layouts/application (5.2ms)
+Completed 200 OK in 251ms (Views: 245.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/impressioncreate" for 165.91.4.172 at 2016-04-27 23:25:23 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ImpressionsController#create as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered impressions/create.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 212ms (Views: 207.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/home" for 165.91.4.172 at 2016-04-27 23:25:35 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.2ms)[0m  [1mSELECT DISTINCT "answers"."eid" FROM "answers" WHERE "answers"."uid" = ?[0m  [["uid", 2]]
+  [1m[35mVehicle Load (0.2ms)[0m  SELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?  [["user_id", 2]]
+  [1m[36mImpression Load (0.2ms)[0m  [1mSELECT "impressions".* FROM "impressions" WHERE "impressions"."uid" = ?[0m  [["uid", 2]]
+  [1m[35mVendorbooth Load (0.3ms)[0m  SELECT "vendorbooths".* FROM "vendorbooths" WHERE "vendorbooths"."uid" = ?  [["uid", 2]]
+  [1m[36mEducator Load (0.2ms)[0m  [1mSELECT "educators".* FROM "educators" WHERE "educators"."uid" = ?[0m  [["uid", 2]]
+  Rendered sessions/home.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 247ms (Views: 195.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/allevent" for 165.91.4.172 at 2016-04-27 23:25:59 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered events/allevent.html.haml within layouts/application (16.3ms)
+Completed 200 OK in 365ms (Views: 298.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/home" for 165.91.4.172 at 2016-04-27 23:26:00 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.3ms)[0m  SELECT DISTINCT "answers"."eid" FROM "answers" WHERE "answers"."uid" = ?  [["uid", 2]]
+  [1m[36mVehicle Load (0.3ms)[0m  [1mSELECT "vehicles".* FROM "vehicles" WHERE "vehicles"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[35mImpression Load (0.3ms)[0m  SELECT "impressions".* FROM "impressions" WHERE "impressions"."uid" = ?  [["uid", 2]]
+  [1m[36mVendorbooth Load (0.9ms)[0m  [1mSELECT "vendorbooths".* FROM "vendorbooths" WHERE "vendorbooths"."uid" = ?[0m  [["uid", 2]]
+  [1m[35mEducator Load (0.2ms)[0m  SELECT "educators".* FROM "educators" WHERE "educators"."uid" = ?  [["uid", 2]]
+  Rendered sessions/home.html.haml within layouts/application (11.2ms)
+Completed 200 OK in 510ms (Views: 369.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/allevent" for 165.91.4.172 at 2016-04-27 23:26:02 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"
+  Rendered events/allevent.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 357ms (Views: 354.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/profile" for 165.91.4.172 at 2016-04-27 23:26:05 +0000
+Cannot render console from 165.91.4.172! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#profile as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered sessions/profile.html.haml within layouts/application (18.1ms)
+Completed 200 OK in 239ms (Views: 236.2ms | ActiveRecord: 0.3ms)

@@ -44,9 +44,6 @@ class EducatorsController < ApplicationController
         @flash_notice = "Create Error: " + @flash_notice
         render 'create'
       end
-    else
-      @flash_notice += "params error"
-      render 'create'
     end
   end 
     

@@ -28,9 +28,6 @@ class ImpressionsController < ApplicationController
       @flash_notice += "Create Error"
       render 'create'
       end
-    else
-      @flash_notice += "params error"
-      render 'create'
     end
   end 
     
