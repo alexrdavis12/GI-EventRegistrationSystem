@@ -39,7 +39,27 @@
               %input{:class => 'form-control', :value=>'', :name=>"War"}
             .form-group
               %label Side
-              %input{:class => 'form-control', :value=>'', :name=>"Side"}
+              // %input{:class => 'form-control', :type => 'radio', :value=>'U.S.A.', :name=>"Side", :id => 'usa', :checked => @educator.edschooltype=='Home School', :required=>""}Home School
+              // %br
+              // %input{:class => 'form-control', :type => 'radio', :value=>'British', :name=>"Side", :id => 'british', :checked => @educator.edschooltype=='Private School', :required=>""}Private School
+              // %input{:class => 'form-control', :value=>'', :name=>"Side"}
+              %select{:class => 'form-control', :value=>'', :name=>"Side"}
+                %option{:value => "USA"}= "USA"
+                %option{:value => "British"}= "British"
+                %option{:value => "Soviet"}= "Soviet"
+                %option{:value => "German"}= "German"
+                %option{:value => "Italian"}= "Italian"
+                %option{:value => "Japanese"}= "Japanese"
+                %option{:value => "French"}= "French"
+                %option{:value => "Prussia"}= "Prussia"
+                %option{:value => "South Korea"}= "South Korea"
+                %option{:value => "North Korea"}= "North Korea"
+                %option{:value => "North Vietnam"}= "North Vietnam"
+                %option{:value => "South Vietnam"}= "South Vietnam"
+                %option{:value => "Other"}= "Other"
+            .form-group
+              %label Name of Commander
+              %input{:class => 'form-control', :value=>'', :name=>"Commander"}
             .form-group
               %label Description
               %textarea{:class => 'form-control', :rows => "8", :value=>'', :name=>"Description"}
