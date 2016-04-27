@@ -1,16 +1,7 @@
-= javascript_include_tag "create_event"
+= javascript_include_tag "edit_event"
 
 %nav.navbar.navbar-inverse{:role => "navigation"}
   .navbar-header
-<<<<<<< HEAD
-    %a.navbar-brand{:href => "#"} M.A.G.I
-  %ul.nav.navbar-nav.navbar-right
-    %li
-      %a{:href=>'allevent'}
-        %i{:class=>"fa fa-align-justify fa-fw"} 
-        Event
-
-=======
     %a.navbar-brand{:href => "home"} M.A.G.I
   %ul.nav.navbar-nav.navbar-right
     %li
@@ -21,24 +12,17 @@
       %a{:href=>'allevent'}
         %i{:class=>"fa fa-align-justify fa-fw"} 
         Event
->>>>>>> master
     %li
       %a{:href=>'profile'}
         %i{:class=>"fa fa-user fa-fw"} 
         Profile
-<<<<<<< HEAD
-        
-=======
->>>>>>> master
+
     %li
       %a{:href=>'logout'}
         %i{:class=>"fa fa-sign-out fa-fw"} 
         Logout
 
-<<<<<<< HEAD
-=======
 
->>>>>>> master
 .container
   .row
     .col-md-2
@@ -69,7 +53,7 @@
                   .form-group
                     %label Type
                     - if q.qtype == "1"
-                      %select{:class => 'form-control', :value=> q.qtype, :name => "Q#{q.id}[type]", :belong => "#{q.id}", :onload => "javascript:trigger_option(this, #{q.id}, 0)"}
+                      %select{:class => 'form-control', :value=> q.qtype, :name => "Q#{q.id}[type]", :belong => "#{q.id}", :info => q.qoption, :onload => "javascript:trigger_option(this, #{q.id}, 0)"}
                         %option{:value => 1}= "Text"
                         %option{:value => 2}= "Checkboxes"
                         %option{:value => 3}= "Radio Buttons"
@@ -78,7 +62,7 @@
                       //%input{:class => 'form-control', :value=> q.qoption :name => "Q#{q.id}[type]"}
                       //:javascript => trigger_option(this, q.id, 0)  
                     - elsif q.qtype == "2"
-                      %select{:class => 'form-control', :value=> q.qtype, :name => "Q#{q.id}[type]", :belong => "#{q.id}"}
+                      %select{:class => 'form-control', :value=> q.qtype, :name => "Q#{q.id}[type]", :belong => "#{q.id}", :info => q.qoption, :onload => "javascript:trigger_option(this, #{q.id}, 0)"}
                         %option{:value => 1}= "Text"
                         %option{:value => 2, :selected => ""}= "Checkboxes"
                         %option{:value => 3}= "Radio Buttons"
@@ -86,7 +70,7 @@
                         %option{:value => 5}= "Paragraph Text"
                       //%input{:class => 'form-control', :value=> q.qoption :name => "Q#{q.id}[type]"}
                     - elsif q.qtype == "3"
-                      %select{:class => 'form-control', :value=> q.qtype, :name => "Q#{q.id}[type]", :belong => "#{q.id}"}
+                      %select{:class => 'form-control', :value=> q.qtype, :name => "Q#{q.id}[type]", :belong => "#{q.id}", :info => q.qoption, :onload => "javascript:trigger_option(this, #{q.id}, 0)"}
                         %option{:value => 1}= "Text"
                         %option{:value => 2}= "Checkboxes"
                         %option{:value => 3, :selected => ""}= "Radio Buttons"
@@ -94,7 +78,7 @@
                         %option{:value => 5}= "Paragraph Text"
                       //%input{:class => 'form-control', :value=> q.qoption :name => "Q#{q.id}[type]"}  
                     - elsif q.qtype == "4"
-                      %select{:class => 'form-control', :value=> q.qtype, :name => "Q#{q.id}[type]", :belong => "#{q.id}"}
+                      %select{:class => 'form-control', :value=> q.qtype, :name => "Q#{q.id}[type]", :belong => "#{q.id}", :info => q.qoption, :onload => "javascript:trigger_option(this, #{q.id}, 0)"}
                         %option{:value => 1}= "Text"
                         %option{:value => 2}= "Checkboxes"
                         %option{:value => 3}= "Radio Buttons"
@@ -102,7 +86,7 @@
                         %option{:value => 5}= "Paragraph Text"
                       //%input{:class => 'form-control', :value=> q.qoption :name => "Q#{q.id}[type]"}  
                     - elsif q.qtype == "5"
-                      %select{:class => 'form-control', :value=> q.qtype, :name => "Q#{q.id}[type]", :belong => "#{q.id}"}
+                      %select{:class => 'form-control', :value=> q.qtype, :name => "Q#{q.id}[type]", :belong => "#{q.id}", :info => q.qoption, :onload => "javascript:trigger_option(this, #{q.id}, 0)"}
                         %option{:value => 1}= "Text"
                         %option{:value => 2}= "Checkboxes"
                         %option{:value => 3}= "Radio Buttons"
@@ -112,7 +96,8 @@
                     .form-group
                     %a.btn.btn-danger.pull-right{:href => "javascript:delete_question(#{q.id})"}
                       %i.fa.fa-trash-o.fa-lg
-                      Delete Question
+                      Delete Question     
+                
           %a.btn.btn-success{:id => 'create_q_btn'}
             %i.fa.fa-plus.fa-lg
             Add Question
@@ -120,9 +105,6 @@
           = submit_tag("Save", :class => 'btn btn-primary pull-right')
     .col-md-2
   .row
-<<<<<<< HEAD
-    %br
-=======
     %br
 //    
 // .footer{:id => "footer", :style => "margin-bottom: 0"}
@@ -131,4 +113,3 @@
 //     .col-md-6
 //       =image_tag "im3.png", :width=>"100%", :position=>"fixed", :bottom=>"0"
 //     .col-md-3    
->>>>>>> master

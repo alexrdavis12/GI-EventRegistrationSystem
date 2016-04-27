@@ -40,17 +40,32 @@
               %input{:class => 'form-control', :value=>@impression.iwar, :name=>"War"}
             .form-group
               %label Side
-              %input{:class => 'form-control', :value=>@impression.iside, :name=>"Side"}
+              %select{:class => 'form-control', :value=>@impression.iside, :name=>"Side"}
+                %option{:value => "USA", :selected => @impression.iside == "USA"}= "USA" 
+                %option{:value => "British", :selected => @impression.iside == "British"}= "British"
+                %option{:value => "Soviet", :selected => @impression.iside == "Soviet"}= "Soviet"
+                %option{:value => "German", :selected => @impression.iside == "German"}= "German"
+                %option{:value => "Italian", :selected => @impression.iside == "Italian"}= "Italian"
+                %option{:value => "Japanese", :selected => @impression.iside == "Japanese"}= "Japanese"
+                %option{:value => "French", :selected => @impression.iside == "French"}= "French"
+                %option{:value => "Prussia", :selected => @impression.iside == "Prussia"}= "Prussia"
+                %option{:value => "South Korea", :selected => @impression.iside == "South Korea"}= "South Korea"
+                %option{:value => "North Korea", :selected => @impression.iside == "North Korea"}= "North Korea"
+                %option{:value => "North Vietnam", :selected => @impression.iside == "North Vietnam"}= "North Vietnam"
+                %option{:value => "South Vietnam", :selected => @impression.iside == "South Vietnam"}= "South Vietnam"
+                %option{:value => "Other", :selected => @impression.iside == "Other"}= "Other"
+            .form-group
+              %label Name of Commander
+              %input{:class => 'form-control', :value=>@impression.commander, :name=>"Commander"}
             .form-group
               %label  Description
               %textarea{:class => 'form-control', :rows => "8", :value=>@impression.idescription, :name=>"Description"}
                 =@impression.idescription
       
             = submit_tag("Save", :class => 'btn btn-primary')
-            
-.footer{:id => "footer", :style => "margin-bottom: 0"}
-  .row{:style => "background-color:rgba(15,39,64,1.00);"}
-    .col-md-3
-    .col-md-6
-      =image_tag "im3.png", :width=>"100%", :position=>"fixed", :bottom=>"0"
-    .col-md-3            
+// .footer{:id => "footer", :style => "margin-bottom: 0"}
+//   .row{:style => "background-color:rgba(15,39,64,1.00);"}
+//     .col-md-3
+//     .col-md-6
+//       =image_tag "im3.png", :width=>"100%", :position=>"fixed", :bottom=>"0"
+//     .col-md-3            

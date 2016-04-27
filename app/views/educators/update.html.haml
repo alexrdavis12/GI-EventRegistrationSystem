@@ -1,0 +1,110 @@
+%nav.navbar.navbar-inverse{:role => "navigation"}
+  .navbar-header
+    %a.navbar-brand{:href => "home"} M.A.G.I
+  %ul.nav.navbar-nav.navbar-right
+    %li
+      %a{:href=>'home'}
+        %i{:class=>"fa fa-home fa-fw"} 
+        Home 
+    %li
+      %a{:href=>'allevent'}
+        %i{:class=>"fa fa-align-justify fa-fw"} 
+        Event
+    %li
+      %a{:href=>'profile'}
+        %i{:class=>"fa fa-user fa-fw"} 
+        Profile
+    %li
+      %a{:href=>'logout'}
+        %i{:class=>"fa fa-sign-out fa-fw"} 
+        Logout
+          
+.container
+  .row
+    .col-md-3
+    .col-md-6
+      - if flash[:notice]!=nil
+        .alert.alert-success
+          %button.close{:type=>"button", "data-dismiss"=>"alert"}
+            %span{"aria-hidden"=>true}×
+            %span.sr-only Close
+          =flash[:notice]
+      -if @educator.edschooltype == "privateschool"
+        .panel.panel-info
+          .panel-heading
+            Private School Name
+          .panel-body
+            =@educator.edschoolname
+          .panel-heading
+            Address
+          .panel-body
+            =@educator.edaddress
+          .panel-heading
+            Zip Code
+          .panel-body
+            =@educator.edzip
+          .panel-heading
+            Primary Contact
+          .panel-body
+            =@educator.edprimaryname
+          .panel-heading
+            Primary Contact's Role
+          .panel-body
+            =@educator.edprimaryrole
+          .panel-heading
+            Primary Contact's Phone Number
+          .panel-body
+            =@educator.edprimaryphone
+          .panel-heading
+            Primary Contact's Phone Email
+          .panel-body
+            =@educator.edprimaryemail
+          .panel-heading
+            Principal Name
+          .panel-body
+            =@educator.edprinciplename
+          .panel-heading
+            Principal Email
+          .panel-body
+            =@educator.edprincipleemail
+      -elsif @educator.edschooltype == "homeschool"
+        .panel.panel-info
+          .panel-heading
+            Parent/Guardian Name
+          .panel-body
+            =@educator.edpgaurdianname
+          .panel-heading
+            Address
+          .panel-body
+            =@educator.edaddress
+          .panel-heading
+            Zip Code
+          .panel-body
+            =@educator.edzip
+          .panel-heading
+            Parent/Guardian Email
+          .panel-body
+            =@educator.edgaurdianemail
+          .panel-heading
+            Parent/Guardian Phone
+          .panel-body
+            =@educator.edpgaurdianphone
+          .panel-heading
+            Primary Contact Name
+          .panel-body
+            =@educator.edprimaryname
+          .panel-heading
+            Primary Contact's Phone Email
+          .panel-body
+            =@educator.edprimaryemail
+          .panel-heading
+            Primary Contact's Phone Number
+          .panel-body
+            =@educator.edprimaryphone
+      %div
+        .col-md-9
+        .col-md-3
+        %a{:href => "home", :visited=>'color: #FFFFFF', :class =>'btn btn-primary btn-primary', :role=>'button'} Back to Home
+      %br
+      %br
+    .col-md-3

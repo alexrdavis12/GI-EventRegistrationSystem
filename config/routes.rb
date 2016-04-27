@@ -66,6 +66,15 @@ Rails.application.routes.draw do
   get 'vendorboothupdate' => 'vendorbooths#update'
   post 'vendorboothupdate' => 'vendorbooths#update'
   
+  get 'educatorcreate' =>'educators#create'
+  post 'educatorcreate' =>'educators#create'
+  get 'educatorshow' =>'educators#show'
+  get 'educatordelete' => 'educators#delete'
+  get 'educatoredit' => 'educators#edit'
+  post 'educatoredit' => 'educators#edit'
+  get 'educatorupdate' => 'educators#update'
+  post 'educatorupdate' => 'educators#update'
+  
   # post 'answershow' =>'answers#show'
   # get 'create' => 'answers#create'
   # post 'create' => 'answers#create'
