@@ -9,6 +9,7 @@ class ImpressionsController < ApplicationController
       @impression.iname = params[:Name]
       @impression.iside = params[:Side]
       @impression.iwar = params[:War]
+      @impression.commander = params[:Commander]
       @impression.idescription = params[:Description]
       @impression.unitid = params[:Unit]
       @impression.uid = session[:user_id]
@@ -58,7 +59,7 @@ class ImpressionsController < ApplicationController
       @impression.iside = params[:Side]
       @impression.iwar = params[:War]
       @impression.unitid = params[:Unit]
-
+      @impression.commander = params[:Commander]
       @impression.idescription = params[:Description]
       if @impression.valid?
         if @impression.save
