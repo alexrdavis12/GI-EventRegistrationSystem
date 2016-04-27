@@ -6,28 +6,28 @@ class EducatorsController < ApplicationController
     @flash_notice = ""
         
     if params[:commit] != nil && params[:commit] == 'Create'
-        @educator.edschooltype = params[:Type]
-        @educator.uid = session[:user_id]
-        @educator.edaddress = params[:Address]
-        @educator.edzip = params[:Zip]
-        @educator.edprimaryemail = params[:PrimaryEmail]
-        @educator.edprimaryname = params[:PrimaryName]
-        @educator.edprimaryphone = params[:PrimaryPhone]
+      @educator.edschooltype = params[:Type]
+      @educator.uid = session[:user_id]
+      @educator.edaddress = params[:Address]
+      @educator.edzip = params[:Zip]
+      @educator.edprimaryemail = params[:PrimaryEmail]
+      @educator.edprimaryname = params[:PrimaryName]
+      @educator.edprimaryphone = params[:PrimaryPhone]
           
       if(params[:Type] == 'Home School')
-          @educator.edpgaurdianname = params[:GuardianName]
-          @educator.edpgaurdianphone = params[:GuardianPhone]
-          @educator.edgaurdianemail = params[:GuardianEmail]
+        @educator.edpgaurdianname = params[:GuardianName]
+        @educator.edpgaurdianphone = params[:GuardianPhone]
+        @educator.edgaurdianemail = params[:GuardianEmail]
       else
-          @educator.edschoolname = params[:SchoolName]
-          @educator.edprimaryrole = params[:PrimaryRole]
-          @educator.edprinciplename = params[:PrincipleName]
-          @educator.edprincipleemail = params[:PrincipleEmail]
+        @educator.edschoolname = params[:SchoolName]
+        @educator.edprimaryrole = params[:PrimaryRole]
+        @educator.edprinciplename = params[:PrincipleName]
+        @educator.edprincipleemail = params[:PrincipleEmail]
       end
       
       if ZIP_CODE.find(params[:Zip]) == nil
-          @educator.edzip = nil
-          @flash_notice = "Invalid Zip Code"
+        @educator.edzip = nil
+        @flash_notice = "Invalid Zip Code"
       end
       
       if @educator.valid? && @flash_notice == ""
@@ -71,28 +71,28 @@ class EducatorsController < ApplicationController
     @educator = Educator.find(edid)
         
     if params[:commit] != nil && params[:commit] == 'Save'
-        @educator.edschooltype = params[:Type]
-        @educator.uid = session[:user_id]
-        @educator.edaddress = params[:Address]
-        @educator.edzip = params[:Zip]
-        @educator.edprimaryemail = params[:PrimaryEmail]
-        @educator.edprimaryname = params[:PrimaryName]
-        @educator.edprimaryphone = params[:PrimaryPhone]
+      @educator.edschooltype = params[:Type]
+      @educator.uid = session[:user_id]
+      @educator.edaddress = params[:Address]
+      @educator.edzip = params[:Zip]
+      @educator.edprimaryemail = params[:PrimaryEmail]
+      @educator.edprimaryname = params[:PrimaryName]
+      @educator.edprimaryphone = params[:PrimaryPhone]
           
-       if( @educator.edschooltype == 'Home School')
-          @educator.edpgaurdianname = params[:GuardianName]
-          @educator.edpgaurdianphone = params[:GuardianPhone]
-          @educator.edgaurdianemail = params[:GuardianEmail]
-       else
-          @educator.edschoolname = params[:SchoolName]
-          @educator.edprimaryrole = params[:PrimaryRole]
-          @educator.edprinciplename = params[:PrincipleName]
-          @educator.edprincipleemail = params[:PrincipleEmail]
-       end
+      if( @educator.edschooltype == 'Home School')
+        @educator.edpgaurdianname = params[:GuardianName]
+        @educator.edpgaurdianphone = params[:GuardianPhone]
+        @educator.edgaurdianemail = params[:GuardianEmail]
+      else
+        @educator.edschoolname = params[:SchoolName]
+        @educator.edprimaryrole = params[:PrimaryRole]
+        @educator.edprinciplename = params[:PrincipleName]
+        @educator.edprincipleemail = params[:PrincipleEmail]
+      end
        
       if ZIP_CODE.find(params[:Zip]) == nil
-          @educator.edzip = nil
-          @flash_notice = "Invalid Zip Code"
+        @educator.edzip = nil
+        @flash_notice = "Invalid Zip Code"
       end
       
       
