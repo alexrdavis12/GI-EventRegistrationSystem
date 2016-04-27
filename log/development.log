@@ -45846,3 +45846,491 @@ Processing by AnswersController#index as CSV
   Rendered text template (0.0ms)
 Sent data  (0.8ms)
 Completed 200 OK in 83ms (Views: 0.6ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 50.24.190.89 at 2016-04-27 04:51:28 +0000
+Cannot render console from 50.24.190.89! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.4) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.4) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:31:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (126.8ms)
+  [1m[36m (13.7ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (9.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateUsers (20150925032423)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "password" varchar, "lastname" varchar, "firstname" varchar, "gender" varchar, "type" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150925032423"]]
+  [1m[35m (12.1ms)[0m  commit transaction
+Migrating to Renameattribute (20150930014018)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (32.1ms)[0m  CREATE TEMPORARY TABLE "ausers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "password" varchar, "lastname" varchar, "firstname" varchar, "gender" varchar, "role" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "users"[0m
+  [1m[35m (0.3ms)[0m  DROP TABLE "users"
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "password" varchar, "lastname" varchar, "firstname" varchar, "gender" varchar, "role" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "ausers"
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "ausers"[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150930014018"]]
+  [1m[36m (12.4ms)[0m  [1mcommit transaction[0m
+Migrating to Salt (20150930050259)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "users" ADD "salt" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150930050259"]]
+  [1m[36m (9.1ms)[0m  [1mcommit transaction[0m
+Migrating to Encrypted (20150930050802)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "users" ADD "encrypted_password" varchar[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150930050802"]]
+  [1m[36m (8.3ms)[0m  [1mcommit transaction[0m
+Migrating to RemoveColumns (20151001013408)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TEMPORARY TABLE "ausers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "password" varchar, "lastname" varchar, "firstname" varchar, "gender" varchar, "role" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "salt" varchar, "encrypted_password" varchar) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "users"
+  [1m[36m (0.4ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "lastname" varchar, "firstname" varchar, "gender" varchar, "role" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "salt" varchar, "encrypted_password" varchar) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "ausers"[0m
+  [1m[35m (0.1ms)[0m  DROP TABLE "ausers"
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151001013408"]]
+  [1m[35m (8.7ms)[0m  commit transaction
+Migrating to CreateEvents (20151014185625)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "eid" integer, "etitle" varchar, "elocation" varchar, "estart" date, "eend" date, "edescription" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151014185625"]]
+  [1m[35m (8.6ms)[0m  commit transaction
+Migrating to CreateQuestions (20151014190035)
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "questions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "qid" integer, "eid" integer, "qtitle" text, "qtype" varchar, "qoption" varchar, "qparentid" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151014190035"]]
+  [1m[35m (9.1ms)[0m  commit transaction
+Migrating to CreateAnswers (20151014190145)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "answers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "eid" integer, "uid" integer, "qid" integer, "answer" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151014190145"]]
+  [1m[35m (9.1ms)[0m  commit transaction
+Migrating to AddLevelToUsers (20151027022310)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "users" ADD "level" integer
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151027022310"]]
+  [1m[35m (9.7ms)[0m  commit transaction
+Migrating to RemoveroleFromusers (20151027030704)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TEMPORARY TABLE "ausers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "lastname" varchar, "firstname" varchar, "gender" varchar, "role" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "salt" varchar, "encrypted_password" varchar, "level" integer) 
+  [1m[36m (0.3ms)[0m  [1mSELECT * FROM "users"[0m
+  [1m[35m (0.5ms)[0m  DROP TABLE "users"
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "lastname" varchar, "firstname" varchar, "gender" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "salt" varchar, "encrypted_password" varchar, "level" integer) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "ausers"
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "ausers"[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151027030704"]]
+  [1m[36m (7.6ms)[0m  [1mcommit transaction[0m
+Migrating to AddQtitleToAnswers (20151028045421)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "answers" ADD "qtitle" varchar[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151028045421"]]
+  [1m[36m (8.7ms)[0m  [1mcommit transaction[0m
+Migrating to AddZipcodeToUsers (20151111030442)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "users" ADD "zipcode" varchar[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151111030442"]]
+  [1m[36m (8.9ms)[0m  [1mcommit transaction[0m
+Migrating to AddParentoptToQuestions (20151203020326)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "questions" ADD "parentopt" integer[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151203020326"]]
+  [1m[36m (9.5ms)[0m  [1mcommit transaction[0m
+Migrating to AddDatafieldToUsers (20160409173157)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "users" ADD "hasvehicle" integer[0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "index_users_on_hasvehicle" ON "users" ("hasvehicle")
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "unit" varchar[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_users_on_unit" ON "users" ("unit")[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "users" ADD "isco" integer
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_unit' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_unit' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_users_on_isco" ON "users" ("isco")[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "vehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "class" varchar, "nation" varchar, "war" varchar, "description" varchar) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160409173157"]]
+  [1m[35m (7.7ms)[0m  commit transaction
+Migrating to IdVehicle (20160409182548)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "vehicles" ADD "vid" integer
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "vehicles" ADD "uid" integer[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160409182548"]]
+  [1m[36m (8.5ms)[0m  [1mcommit transaction[0m
+Migrating to RenameVehicleColumns (20160409194349)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE TEMPORARY TABLE "avehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "vclass" varchar, "nation" varchar, "war" varchar, "description" varchar, "vid" integer, "uid" integer) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "vehicles"
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "vehicles"[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "vehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "vclass" varchar, "nation" varchar, "war" varchar, "description" varchar, "vid" integer, "uid" integer) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "avehicles"[0m
+  [1m[35m (0.1ms)[0m  DROP TABLE "avehicles"
+  [1m[36m (0.2ms)[0m  [1mCREATE TEMPORARY TABLE "avehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "vname" varchar, "vclass" varchar, "nation" varchar, "war" varchar, "description" varchar, "vid" integer, "uid" integer) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "vehicles"
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "vehicles"[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "vehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "vname" varchar, "vclass" varchar, "nation" varchar, "war" varchar, "description" varchar, "vid" integer, "uid" integer) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "avehicles"[0m
+  [1m[35m (0.1ms)[0m  DROP TABLE "avehicles"
+  [1m[36m (0.2ms)[0m  [1mCREATE TEMPORARY TABLE "avehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "vname" varchar, "vclass" varchar, "vnation" varchar, "war" varchar, "description" varchar, "vid" integer, "uid" integer) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "vehicles"
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "vehicles"[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "vehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "vname" varchar, "vclass" varchar, "vnation" varchar, "war" varchar, "description" varchar, "vid" integer, "uid" integer) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "avehicles"[0m
+  [1m[35m (0.1ms)[0m  DROP TABLE "avehicles"
+  [1m[36m (0.2ms)[0m  [1mCREATE TEMPORARY TABLE "avehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "vname" varchar, "vclass" varchar, "vnation" varchar, "vwar" varchar, "description" varchar, "vid" integer, "uid" integer) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "vehicles"
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "vehicles"[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "vehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "vname" varchar, "vclass" varchar, "vnation" varchar, "vwar" varchar, "description" varchar, "vid" integer, "uid" integer) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "avehicles"[0m
+  [1m[35m (0.1ms)[0m  DROP TABLE "avehicles"
+  [1m[36m (0.2ms)[0m  [1mCREATE TEMPORARY TABLE "avehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "vname" varchar, "vclass" varchar, "vnation" varchar, "vwar" varchar, "vdescription" varchar, "vid" integer, "uid" integer) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "vehicles"
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "vehicles"[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "vehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "vname" varchar, "vclass" varchar, "vnation" varchar, "vwar" varchar, "vdescription" varchar, "vid" integer, "uid" integer) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "avehicles"[0m
+  [1m[35m (0.1ms)[0m  DROP TABLE "avehicles"
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160409194349"]]
+  [1m[35m (9.8ms)[0m  commit transaction
+Migrating to AddForeignKeytoVehicles (20160411054413)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TEMPORARY TABLE "avehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "vname" varchar, "vclass" varchar, "vnation" varchar, "vwar" varchar, "vdescription" varchar, "vid" integer, "user_id" integer) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "vehicles"[0m
+  [1m[35m (0.3ms)[0m  DROP TABLE "vehicles"
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "vehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "vname" varchar, "vclass" varchar, "vnation" varchar, "vwar" varchar, "vdescription" varchar, "vid" integer, "user_id" integer) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "avehicles"
+  [1m[36m (0.1ms)[0m  [1mDROP TABLE "avehicles"[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "index_vehicles_on_user_id" ON "vehicles" ("user_id")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160411054413"]]
+  [1m[35m (11.6ms)[0m  commit transaction
+Migrating to AddVehiclesCountToUsers (20160411064421)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "users" ADD "vehicles_count" int
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160411064421"]]
+  [1m[35m (9.0ms)[0m  commit transaction
+Migrating to AddPhonenumberTake2 (20160418233517)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "users" ADD "phonenumber" varchar
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160418233517"]]
+  [1m[35m (8.9ms)[0m  commit transaction
+Migrating to AddAddress (20160419142111)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "users" ADD "addressline1" varchar
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "city" varchar[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "users" ADD "state" varchar
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160419142111"]]
+  [1m[35m (9.0ms)[0m  commit transaction
+Migrating to AddTablesForUnitaffiliation (20160419162536)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "units" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "cid" integer, "unitid" integer, "uname" varchar, "uside" varchar, "utotalmembers" integer, "udescription" varchar) 
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "impressions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "uid" integer, "unitid" integer, "iname" varchar, "iside" varchar, "iwar" varchar, "idescription" varchar, "cid" integer) [0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "commander" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "uid" integer, "cid" integer) 
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "vendorbooths" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "uid" integer, "boothid" integer, "vbname" varchar, "vbdescription" varchar) [0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "educator" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "uid" integer, "edid" integer, "edname" varchar, "eddescription" varchar, "edtotalnumber" integer, "edorganization" varchar) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160419162536"]]
+  [1m[35m (9.3ms)[0m  commit transaction
+Migrating to AddImpressionId (20160422221817)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "impressions" ADD "iid" int
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "commander" RENAME TO "commanders"[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "educator" RENAME TO "educators"
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160422221817"]]
+  [1m[35m (8.6ms)[0m  commit transaction
+Migrating to ChangeTypeUnitid (20160422233156)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TEMPORARY TABLE "aimpressions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "uid" integer, "unitid" integer, "iname" varchar, "iside" varchar, "iwar" varchar, "idescription" varchar, "cid" integer, "iid" integer) 
+  [1m[36m (0.3ms)[0m  [1mSELECT * FROM "impressions"[0m
+  [1m[35m (0.5ms)[0m  DROP TABLE "impressions"
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "impressions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "uid" integer, "unitid" varchar, "iname" varchar, "iside" varchar, "iwar" varchar, "idescription" varchar, "cid" integer, "iid" integer) [0m
+  [1m[35m (0.2ms)[0m  SELECT * FROM "aimpressions"
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "aimpressions"[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160422233156"]]
+  [1m[36m (9.3ms)[0m  [1mcommit transaction[0m
+Migrating to AddVbidToVendorbooths (20160423003820)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "vendorbooths" ADD "vbid" integer[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160423003820"]]
+  [1m[36m (9.6ms)[0m  [1mcommit transaction[0m
+Migrating to AddSpacesToVendorbooths (20160424214709)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (1.2ms)[0m  [1mALTER TABLE "vendorbooths" ADD "vbspaces" integer[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160424214709"]]
+  [1m[36m (9.4ms)[0m  [1mcommit transaction[0m
+Migrating to AddEducatorsTable (20160425192951)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "educators"[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "educators" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "uid" integer, "edid" integer, "edschooltype" varchar, "edpgaurdianname" varchar, "edpgaurdianphone" varchar, "edgaurdianemail" varchar, "edschoolname" varchar, "edaddress" varchar, "edzip" varchar, "edprimaryemail" varchar, "edprimaryname" varchar, "edprimaryrole" varchar, "edprimaryphone" varchar, "edprinciplename" varchar, "edprincipleemail" varchar) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160425192951"]]
+  [1m[35m (9.5ms)[0m  commit transaction
+Migrating to AddCommanderToImpressions (20160426214757)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "impressions" ADD "commander" varchar
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160426214757"]]
+  [1m[35m (8.3ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_isco' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_isco' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_unit' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_unit' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_vehicles_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_vehicles_on_user_id' AND type='index'
+[0m
+
+
+Started GET "/" for 50.24.190.89 at 2016-04-27 04:53:11 +0000
+Cannot render console from 50.24.190.89! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#login as HTML
+Redirected to https://csce431-project-mdebolt.c9users.io/home
+Filter chain halted as :save_login_state rendered or redirected
+Completed 302 Found in 23ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 50.24.190.89 at 2016-04-27 04:53:12 +0000
+Cannot render console from 50.24.190.89! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 404 Not Found in 66ms (ActiveRecord: 1.4ms)
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1):
+  app/controllers/application_controller.rb:9:in `authenticate_user'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (98.8ms)
+
+
+Started GET "/home" for 50.24.190.89 at 2016-04-27 04:53:45 +0000
+Cannot render console from 50.24.190.89! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1):
+  app/controllers/application_controller.rb:9:in `authenticate_user'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (171.1ms)
+
+
+Started GET "/home" for 50.24.190.89 at 2016-04-27 04:53:47 +0000
+Cannot render console from 50.24.190.89! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.2ms)
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1):
+  app/controllers/application_controller.rb:9:in `authenticate_user'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (89.0ms)
+
+
+Started GET "/" for 50.24.190.89 at 2016-04-27 04:53:53 +0000
+Cannot render console from 50.24.190.89! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login as HTML
+Redirected to https://csce431-project-mdebolt.c9users.io/home
+Filter chain halted as :save_login_state rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 50.24.190.89 at 2016-04-27 04:53:53 +0000
+Cannot render console from 50.24.190.89! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 404 Not Found in 4ms (ActiveRecord: 0.3ms)
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1):
+  app/controllers/application_controller.rb:9:in `authenticate_user'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (119.5ms)
+
+
+Started GET "/" for 50.24.190.89 at 2016-04-27 04:54:09 +0000
+Cannot render console from 50.24.190.89! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login as HTML
+Redirected to https://csce431-project-mdebolt.c9users.io/home
+Filter chain halted as :save_login_state rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 50.24.190.89 at 2016-04-27 04:54:09 +0000
+Cannot render console from 50.24.190.89! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 404 Not Found in 9ms (ActiveRecord: 0.2ms)
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1):
+  app/controllers/application_controller.rb:9:in `authenticate_user'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (128.6ms)
+
+
+Started GET "/login" for 50.24.190.89 at 2016-04-27 04:54:15 +0000
+Cannot render console from 50.24.190.89! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#login as HTML
+Redirected to https://csce431-project-mdebolt.c9users.io/home
+Filter chain halted as :save_login_state rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 50.24.190.89 at 2016-04-27 04:54:15 +0000
+Cannot render console from 50.24.190.89! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1):
+  app/controllers/application_controller.rb:9:in `authenticate_user'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (116.0ms)
+
+
+Started GET "/home" for 50.24.190.89 at 2016-04-27 04:54:36 +0000
+Cannot render console from 50.24.190.89! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1):
+  app/controllers/application_controller.rb:9:in `authenticate_user'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (124.8ms)
+
+
+Started GET "/" for 50.24.190.89 at 2016-04-27 05:01:29 +0000
+Cannot render console from 50.24.190.89! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#login as HTML
+Redirected to https://csce431-project-mdebolt.c9users.io/home
+Filter chain halted as :save_login_state rendered or redirected
+Completed 302 Found in 22ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 50.24.190.89 at 2016-04-27 05:01:30 +0000
+Cannot render console from 50.24.190.89! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 404 Not Found in 56ms (ActiveRecord: 1.5ms)
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1):
+  app/controllers/application_controller.rb:9:in `authenticate_user'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (149.5ms)
