@@ -55400,3 +55400,240 @@ Cannot render console from 165.91.4.132! Allowed networks: 127.0.0.1, ::1, 127.0
 
 Started GET "/assets/im3-554298bfba1eab7ed16dfc520f300082d3924d01db3b2eeabad3907c8443852c.png" for 165.91.4.132 at 2016-05-03 00:14:34 +0000
 Cannot render console from 165.91.4.132! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/profile" for 165.91.4.132 at 2016-05-03 01:20:48 +0000
+Cannot render console from 165.91.4.132! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#profile as HTML
+  [1m[35mUser Load (7.8ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered sessions/profile.html.haml within layouts/application (21.0ms)
+Completed 200 OK in 1396ms (Views: 1234.3ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/assets/admin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.132 at 2016-05-03 01:20:51 +0000
+Cannot render console from 165.91.4.132! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/answers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.132 at 2016-05-03 01:20:51 +0000
+Cannot render console from 165.91.4.132! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter-bootstrap-static/fontawesome.self-2fe4f8a61d73606fbcb036b41f380591906a4da65a9eb5ec0a210fe6980b2ca7.css?body=1" for 165.91.4.132 at 2016-05-03 01:20:51 +0000
+Cannot render console from 165.91.4.132! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/data.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.132 at 2016-05-03 01:20:51 +0000
+Cannot render console from 165.91.4.132! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap_and_overrides.self-2cb3834583dfbaf0a39c7139750bf963e05d79cbe811126997e013400be5d8dc.css?body=1" for 165.91.4.132 at 2016-05-03 01:20:51 +0000
+Cannot render console from 165.91.4.132! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter-bootstrap-static/bootstrap.self-603f330c29af013305325569c8c75d03d688963abd8cde4fffec17b5ce417bfb.css?body=1" for 165.91.4.132 at 2016-05-03 01:20:51 +0000
+Cannot render console from 165.91.4.132! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-datetimepicker.min.self-788e29abac8dcfbc60d7f7490dd02b623d42c2174b604ebff6e8faa66c5d876e.css?body=1" for 165.91.4.132 at 2016-05-03 01:20:51 +0000
+Cannot render console from 165.91.4.132! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.132 at 2016-05-03 01:20:51 +0000
+Cannot render console from 165.91.4.132! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/questions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.132 at 2016-05-03 01:20:51 +0000
+Cannot render console from 165.91.4.132! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/scaffolds.self-0de50f0224d6e8cae3e2502cc1d9cfabdc0d76270f21057592cf35d51d65ebfb.css?body=1" for 165.91.4.132 at 2016-05-03 01:20:51 +0000
+Cannot render console from 165.91.4.132! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.132 at 2016-05-03 01:20:51 +0000
+Cannot render console from 165.91.4.132! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.4.132 at 2016-05-03 01:20:51 +0000
+Cannot render console from 165.91.4.132! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-c2697599ad62a99c955679acb0f15ed7466c7e2881f42ea66fc96a72766ac7d8.css?body=1" for 165.91.4.132 at 2016-05-03 01:20:51 +0000
+Cannot render console from 165.91.4.132! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 165.91.4.132 at 2016-05-03 01:20:51 +0000
+Cannot render console from 165.91.4.132! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 165.91.4.132 at 2016-05-03 01:20:52 +0000
+Cannot render console from 165.91.4.132! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/transition.self-09ff30b1e8a93d1f7728b9855f55d9c9d8d5734c8861e0d8139994e50944572a.js?body=1" for 165.91.4.132 at 2016-05-03 01:20:52 +0000
+Cannot render console from 165.91.4.132! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/alert.self-a29e91e8cd3ddaba9bbc466901d53ec2127e9256b9b941905d525a3a716bd1a5.js?body=1" for 165.91.4.132 at 2016-05-03 01:20:52 +0000
+Cannot render console from 165.91.4.132! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/modal.self-72f95ffa1071297725a9ac91989693d56d1abf23f441a47455073b0da2857a5b.js?body=1" for 165.91.4.132 at 2016-05-03 01:20:52 +0000
+Cannot render console from 165.91.4.132! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.self-9314126777c6be5443e37ea7f7967d7914d72b3e60449ba50edc967446373059.js?body=1" for 165.91.4.132 at 2016-05-03 01:20:52 +0000
+Cannot render console from 165.91.4.132! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.self-a155b9d4b2f978905f0326c0f6635e1134fe91c6bfbfcbad079fa24a9fef2b0e.js?body=1" for 165.91.4.132 at 2016-05-03 01:20:52 +0000
+Cannot render console from 165.91.4.132! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/tab.self-122235057fbd4c6c7da377d59dc58f47b44cb1088a2e38e6ee6ce9d8ac29a26a.js?body=1" for 165.91.4.132 at 2016-05-03 01:20:52 +0000
+Cannot render console from 165.91.4.132! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/popover.self-77d8e3a2499c1104ef146396a68b82469ee2bdb365199b874694698d10405e9a.js?body=1" for 165.91.4.132 at 2016-05-03 01:20:52 +0000
+Cannot render console from 165.91.4.132! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.self-11cf547be953f25f511cec668f6690473fd97b2f65502e4032f4030999a3f0c3.js?body=1" for 165.91.4.132 at 2016-05-03 01:20:52 +0000
+Cannot render console from 165.91.4.132! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/button.self-a6cb16785434acb365ae426aef9f1fce05ed553cae7a965e4471c3da71509175.js?body=1" for 165.91.4.132 at 2016-05-03 01:20:52 +0000
+Cannot render console from 165.91.4.132! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/collapse.self-7dc8bfbc2fbfabd2bad62c58ff8ffeaf8f20fb87c7ca6cd35f06d4dc19632587.js?body=1" for 165.91.4.132 at 2016-05-03 01:20:52 +0000
+Cannot render console from 165.91.4.132! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/carousel.self-57eb8422043cf0a85b7a9dc6843916eb0a3e35b419c7798a5eb254b918997631.js?body=1" for 165.91.4.132 at 2016-05-03 01:20:52 +0000
+Cannot render console from 165.91.4.132! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 165.91.4.132 at 2016-05-03 01:20:52 +0000
+Cannot render console from 165.91.4.132! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/twitter/bootstrap/affix.self-d2b642d8fbfc1d7041e2edefd66683ada567a980789dcd6f94fddda0b33408b5.js?body=1" for 165.91.4.132 at 2016-05-03 01:20:52 +0000
+Cannot render console from 165.91.4.132! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 165.91.4.132 at 2016-05-03 01:20:52 +0000
+Cannot render console from 165.91.4.132! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 165.91.4.132 at 2016-05-03 01:20:52 +0000
+Cannot render console from 165.91.4.132! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/MAGIbackground.png" for 165.91.4.132 at 2016-05-03 01:20:52 +0000
+Cannot render console from 165.91.4.132! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/home" for 165.91.4.132 at 2016-05-03 01:21:05 +0000
+Cannot render console from 165.91.4.132! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#home as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Redirected to https://csce431-project-mdebolt.c9users.io/adminhome
+Completed 302 Found in 79ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/adminhome" for 165.91.4.132 at 2016-05-03 01:21:05 +0000
+Cannot render console from 165.91.4.132! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SessionsController#adminhome as HTML
+  Rendered sessions/adminhome.html.haml within layouts/application (8.9ms)
+Completed 200 OK in 266ms (Views: 264.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/allevent" for 165.91.4.132 at 2016-05-03 01:21:07 +0000
+Cannot render console from 165.91.4.132! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#allevent as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Redirected to https://csce431-project-mdebolt.c9users.io/admin
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/admin" for 165.91.4.132 at 2016-05-03 01:21:07 +0000
+Cannot render console from 165.91.4.132! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (0.5ms)[0m  SELECT "events".* FROM "events"
+  Rendered admin/index.html.haml within layouts/application (84.5ms)
+Completed 200 OK in 461ms (Views: 449.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/EventCreate" for 165.91.4.132 at 2016-05-03 01:21:14 +0000
+Cannot render console from 165.91.4.132! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#create as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered events/create.html.haml within layouts/application (83.2ms)
+Completed 200 OK in 302ms (Views: 299.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/EventCreate" for 165.91.4.132 at 2016-05-03 01:21:16 +0000
+Cannot render console from 165.91.4.132! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ioDroY+fpZpFbJzZzbNGy/jKYj2+wgtsVv+tO5JeHv/jdC1Bw+Hztt++csZL/5o81Kx7S/hzJhcOgsK+LLrrSw==", "Title"=>"", "Location"=>"", "Description"=>"", "Start_Date"=>"", "End_Date"=>"", "commit"=>"Create"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "events" ("etitle", "elocation", "edescription", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["etitle", ""], ["elocation", ""], ["edescription", ""], ["created_at", "2016-05-03 01:21:16.243139"], ["updated_at", "2016-05-03 01:21:16.243139"]]
+  [1m[36m (157.5ms)[0m  [1mcommit transaction[0m
+Redirected to https://csce431-project-mdebolt.c9users.io/eventshow?eid=4
+Completed 302 Found in 173ms (ActiveRecord: 158.7ms)
+
+
+Started GET "/eventshow?eid=4" for 165.91.4.132 at 2016-05-03 01:21:16 +0000
+Cannot render console from 165.91.4.132! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#show as HTML
+  Parameters: {"eid"=>"4"}
+  [1m[35mEvent Load (0.4ms)[0m  SELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered events/show.html.haml within layouts/application (14.2ms)
+Completed 200 OK in 245ms (Views: 242.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/EventCreate" for 165.91.4.132 at 2016-05-03 01:21:19 +0000
+Cannot render console from 165.91.4.132! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by EventsController#create as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered events/create.html.haml within layouts/application (21.3ms)
+Completed 200 OK in 280ms (Views: 277.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin" for 165.91.4.132 at 2016-05-03 01:21:21 +0000
+Cannot render console from 165.91.4.132! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered admin/index.html.haml within layouts/application (8.5ms)
+Completed 200 OK in 312ms (Views: 308.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/eventdelete?eid=4" for 165.91.4.132 at 2016-05-03 01:21:25 +0000
+Cannot render console from 165.91.4.132! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#delete as HTML
+  Parameters: {"eid"=>"4"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "events" WHERE "events"."id" = ?[0m  [["id", 4]]
+  [1m[35m (23.4ms)[0m  commit transaction
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."eid" = ?[0m  [["eid", 4]]
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions" WHERE "questions"."eid" = ?  [["eid", 4]]
+Redirected to https://csce431-project-mdebolt.c9users.io/admin
+Completed 302 Found in 153ms (ActiveRecord: 25.5ms)
+
+
+Started GET "/admin" for 165.91.4.132 at 2016-05-03 01:21:25 +0000
+Cannot render console from 165.91.4.132! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"
+  Rendered admin/index.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 255ms (Views: 251.8ms | ActiveRecord: 0.7ms)
