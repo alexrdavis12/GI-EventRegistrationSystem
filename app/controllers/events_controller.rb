@@ -32,11 +32,14 @@ class EventsController < ApplicationController
                 eid=@event.id
                 if @event.evendorflag
                   @event.increment!(:evendorflag, 1)
-                elsif document.getElementById('Vehicle')
+                end
+                if @event.evehicleflag
                   @event.increment!(:evehicleflag, 1)
-                elsif document.getElementById('Reinactors')
+                end
+                if @event.eimpressionflag
                   @event.increment!(:eimpressionflag, 1)
-                elsif document.getElementById('Educators')
+                end
+                if @event.eeducatorflag
                   @event.increment!(:eeducatorflag, 1)
                 end
           			redirect_to "/eventshow?eid=#{eid}"
@@ -44,13 +47,11 @@ class EventsController < ApplicationController
           			@flash_notice += "DB Error"
           			render 'create'
           		end
-
             else
           		@flash_notice += "Create Error"
           		render 'Create'
           	end
     end
-  end
     
   def show
     eid=params[:eid]
@@ -87,11 +88,14 @@ class EventsController < ApplicationController
           eid=@event.id
           if @event.evendorflag
             @event.increment!(:evendorflag, 1)
-          elsif document.getElementById('Vehicle')
+          end
+          if @event.evehicleflag
             @event.increment!(:evehicleflag, 1)
-          elsif document.getElementById('Reinactors')
+          end
+          if @event.eimpressionflag
             @event.increment!(:eimpressionflag, 1)
-          elsif document.getElementById('Educators')
+          end
+          if @event.eeducatorflag
             @event.increment!(:eeducatorflag, 1)
           end
       		if @event.save
@@ -108,7 +112,8 @@ class EventsController < ApplicationController
       		redirect_to "/eventedit?eid=#{eid}"
       	end
     end
-  end
+  end 
+
   
   def allevent
     id = session[:user_id]
@@ -119,4 +124,5 @@ class EventsController < ApplicationController
       redirect_to '/admin'
     end
   end
-end
+end 
+end 
