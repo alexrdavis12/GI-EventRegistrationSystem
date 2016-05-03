@@ -19,7 +19,7 @@ a:link, a:visited {
 }
 /* make any scrollable page (question create, vehicle create) have login_bg (not login_bg3) */
 body {
-    background-image: url(login_bg.jpg);
+    background-image: url(MAGIbackground.png);
     background-size: cover;
     background-origin: border-box;
     background-repeat: no-repeat;
