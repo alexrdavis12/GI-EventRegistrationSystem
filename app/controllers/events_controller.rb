@@ -87,7 +87,7 @@ class EventsController < ApplicationController
     id = session[:user_id]
     @curlevel = User.find(id).level
     if(@curlevel != 0)
-    @event = Event.all
+      @event = Event.all
     else
       redirect_to '/admin'
     end
