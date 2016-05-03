@@ -19,8 +19,8 @@ a:link, a:visited {
 }
 /* make any scrollable page (question create, vehicle create) have login_bg (not login_bg3) */
 body {
-    background-image: url(login_bg.jpg);
-    background-size: cover;
+    background-image: url(new_login_bg.jpg);
+    background-size: auto;
     background-origin: border-box;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -34,7 +34,7 @@ footer {
     position: fixed;
     left: 0px;
     bottom: 0px;
-    z-index: -1;
+    z-index: 1;
     /*height: 100%;*/
     /*width: 100%;*/
 
