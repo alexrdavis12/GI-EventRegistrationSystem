@@ -1,4 +1,5 @@
 = javascript_include_tag "date"
+= javascript_include_tag "roles"
 %nav.navbar.navbar-inverse{:role => "navigation"}
   .navbar-header
     %a.navbar-brand{:href => "home"} M.A.G.I
@@ -42,23 +43,20 @@
               %br
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               %check_box_tag
-              %input{:type => "checkbox", :value => 'Vendor', :name => "Vendor", }
+              %input{:type => "checkbox", :value => '', :id=>"All",:name => "All"}
               %label All &nbsp; &nbsp;
               %check_box_tag
-              %input{:type => "checkbox", :value => 'Vendor', :name => "Vendor", }
+              %input{:class =>"checkbox1", :type => "checkbox", :value => 0,  :id=>"Vendor", :name => "Vendor", }
               %label Vendor &nbsp; &nbsp;
               %check_box_tag
-              %input{:type => "checkbox", :value => 'Vendor', :name => "Vehicle", }
+              %input{:class =>"checkbox1", :type => "checkbox", :value => 0,  :id=>"Vehicle", :name => "Vehicle", }
               %label Vehicle &nbsp; &nbsp;
               %check_box_tag
-              %input{:type => "checkbox", :value => 'Vendor', :name => "Reinactors", }
+              %input{:class =>"checkbox1", :type => "checkbox", :value => 0,  :id=>"Reinactors", :name => "Reinactors", }
               %label Reinactors &nbsp; &nbsp;
               %check_box_tag
-              %input{:type => "checkbox",:value => 'Vendor', :name => "Educators", }
+              %input{:class =>"checkbox1", :type => "checkbox",:value => 0, :id=>"Educators", :name => "Educators", }
               %label Educators&nbsp;&nbsp;&nbsp;
-              %check_box_tag
-              %input{:type => "checkbox", :value => 'Vendor', :name => "Vendor", }
-              %label Vendor &nbsp; &nbsp;
             
             .form-group
               %label Event Title
