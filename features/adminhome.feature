@@ -16,7 +16,7 @@ Scenario: Create Event
   When I click the Create Event button 
   Then I should see the event form
   
-Scenario: View Events 
+Scenario: View Events                 
   When I click the View Events button
   Then I should see events
   

@@ -92,6 +92,23 @@ class EventsController < ApplicationController
       redirect_to '/admin'
     end
   end
+  
+   # index file for roles
+  def index 
+    @all_roles = Roles.all_roles
+    @roles = @all_roles
     
+    if params.fetch("roles", false)
+      @roles = params[:roles].keys
+    end 
+    sess_roles = session.fetch("roles", @all_roles)
+    
+    if(@roles == @all_roles and ( sess_roles != @all_roles))
+      flash.keep
+      roles_params = Hash[*sess_roles.collect{|k| [k,'yes']}.flatten]
+      return redirect_to roles_path(nil,{:sort=> sess_sort, :roles => roles_params})
+    end
+  end 
+  
   
 end

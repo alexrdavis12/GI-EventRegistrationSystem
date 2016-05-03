@@ -4,7 +4,6 @@ Given(/^I Login as an administrator$/) do
   fill_in 'email', :with => 'info@americangimuseum.org'
   fill_in 'login_password', :with => 'MAGIadmin'
   find('input[name="commit"]').click
-  #find("div", text:"Log in").click
   expect(page).to have_content("Welcome home, Administrator")
 end
 
@@ -16,10 +15,6 @@ Then(/^I should see admin home page$/) do
     expect(page).to have_content("Create Event")
 
 end 
-    
-    
-    
-    
 
 When(/^I click the Create Event button$/) do
     visit('EventCreate?eid=1')

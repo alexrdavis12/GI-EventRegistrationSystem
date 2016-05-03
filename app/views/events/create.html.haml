@@ -35,11 +35,35 @@
         .panel-heading
           %h3.panel-title Event
         .panel-body
+
           = form_tag(:action => 'create') do
+            .form-group 
+              %label Roles:
+              %br
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              %check_box_tag
+              %input{:type => "checkbox", :value => 'Vendor', :name => "Vendor", }
+              %label All &nbsp; &nbsp;
+              %check_box_tag
+              %input{:type => "checkbox", :value => 'Vendor', :name => "Vendor", }
+              %label Vendor &nbsp; &nbsp;
+              %check_box_tag
+              %input{:type => "checkbox", :value => 'Vendor', :name => "Vehicle", }
+              %label Vehicle &nbsp; &nbsp;
+              %check_box_tag
+              %input{:type => "checkbox", :value => 'Vendor', :name => "Reinactors", }
+              %label Reinactors &nbsp; &nbsp;
+              %check_box_tag
+              %input{:type => "checkbox",:value => 'Vendor', :name => "Educators", }
+              %label Educators&nbsp;&nbsp;&nbsp;
+              %check_box_tag
+              %input{:type => "checkbox", :value => 'Vendor', :name => "Vendor", }
+              %label Vendor &nbsp; &nbsp;
+            
             .form-group
               %label Event Title
               %input{:class => 'form-control', :value=>'', :name=>"Title"}
-  
+              
             .form-group
               %label Event Location
               %input{:class => 'form-control', :value=>'', :name=>"Location"}
