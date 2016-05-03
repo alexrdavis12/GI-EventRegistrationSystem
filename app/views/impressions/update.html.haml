@@ -44,7 +44,7 @@
         .panel-heading
           Unit
         .panel-body
-          ='in progress'
+          =@impression.unitid
       
         .panel-heading
           War
@@ -57,20 +57,25 @@
           =@impression.iside
       
         .panel-heading
+          Commander
+        .panel-body
+          =@impression.commander
+      
+        .panel-heading
           Description
         .panel-body
           =@impression.idescription
       %div
         .col-md-9
         .col-md-3
-        %a{:href => "home", :visited=>'color: #FFFFFF', :class =>'btn btn-primary btn-primary', :role=>'button'} Back to Home
+        %a{:href => "homei", :visited=>'color: #FFFFFF', :class =>'btn btn-primary btn-primary', :role=>'button'} Back to Home
       %br
       %br
     .col-md-3
-    
-.footer{:id => "footer", :style => "margin-bottom: 0"}
-  .row{:style => "background-color:rgba(15,39,64,1.00);"}
-    .col-md-3
-    .col-md-6
-      =image_tag "im3.png", :width=>"100%", :position=>"fixed", :bottom=>"0"
-    .col-md-3    
+  .row
+    %br
+    %br
+    %br
+    %br
+    %br
+    %br 

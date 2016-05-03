@@ -32,17 +32,23 @@
             .form-group
               %label Vendor Booth Name
               %input{:class => 'form-control', :value=>@vendorbooth.vbname, :name=>"Name"}
-        
+            .form-group
+              .feilds
+                %label 20X20 Spaces Needed
+                %br
+                = number_field 'SpaceNeeded','action', value:@vendorbooth.vbspaces, min:0, max:100, step:1
             .form-group
               %label Vendor Booth Description
               %textarea{:class => 'form-control', :rows => "8", :value=>@vendorbooth.vbdescription, :name=>"Description"}
                 =@vendorbooth.vbdescription
       
             = submit_tag("Save", :class => 'btn btn-primary')
-//            
-// .footer{:id => "footer", :style => "margin-bottom: 0"}
-//   .row{:style => "background-color:rgba(15,39,64,1.00);"}
-//     .col-md-3
-//     .col-md-6
-//       =image_tag "im3.png", :width=>"100%", :position=>"fixed", :bottom=>"0"
-//     .col-md-3            
+
+
+.row
+  %br
+  %br
+  %br
+  %br
+  %br
+  %br              

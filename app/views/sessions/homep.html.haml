@@ -1,0 +1,406 @@
+%nav.navbar.navbar-inverse{:role => "navigation"}
+    .navbar-header
+        %a.navbar-brand{:href => "home"} M.A.G.I
+    %ul.nav.navbar-nav.navbar-right
+        %li
+            %a{:href=>'home'}
+                %i{:class=>"fa fa-home fa-fw"} 
+                Home
+        %li
+            %a{:href=>'allevent'}
+                %i{:class=>"fa fa-align-justify fa-fw"} 
+                Event
+        %li
+            %a{:href=>'profile'}
+                %i{:class=>"fa fa-user fa-fw"} 
+                Profile
+        %li
+            %a{:href=>'logout'}
+                %i{:class=>"fa fa-sign-out fa-fw"} 
+                Logout
+%nav.navbar.navbar-vertical-left
+    %ul.nav.navbar-nav{:role => "tablist"}
+        %br
+        %br
+        %br
+        %br
+        %br
+        %br
+        %br
+        %br
+        %br
+        %li
+            %a{"data-toggle" => "tab", :href => "#profile", :role => "tab"}
+                %i.fa.class.fa-user.fa-fw.fa-lg
+                %span Profile
+        %li{:class=> "active"}
+            %a{"data-toggle" => "tab", :href => "#events", :role => "tab"}
+                %i.fa.fa-list-alt.fa-fw.fa-lg
+                %span Registered Events
+        %li
+            %a{"data-toggle" => "tab", :href => "#vehicles", :role => "tab"}
+                %i.fa.fa-car.fa-fw.fa-lg
+                %span Vehicles
+        %li
+            %a{"data-toggle" => "tab", :href => "#impressions", :role => "tab"}
+                %i.fa.class.fa-flag.fa-fw.fa-lg
+                %span Impressions
+        %li
+            %a{"data-toggle" => "tab", :href => "#vendorbooths", :role => "tab"}
+                %i.fa.fa-credit-card.fa-lg
+                %span Vendor Booths
+        %li
+            %a{"data-toggle" => "tab", :href => "#educators", :role => "tab"}
+                %i.fa.fa-graduation-cap.fa-lg
+                %span Educators               
+                
+.container{:class => "tab-content"}
+    .row{:id => "profile", :class => "tab-pane active"}
+        .col-md-2
+            .col-md-10
+                .container
+                    .h1.text-center My Profile
+                    .row
+                        .col-md-2
+                        .col-md-8
+                            .table-responsive
+                                %table.table.table-basic
+                                    %tbody
+                                        %tr
+                                            %td
+                                                %b Email:
+                                            %td
+                                                = @current_user.email
+                                        %tr
+                                            %td
+                                                %b First Name:
+                                            %td
+                                                = @current_user.firstname
+                                        %tr
+                                            %td
+                                                %b Last Name:
+                                            %td
+                                                = @current_user.lastname
+                                        %tr
+                                            %td
+                                                %b Phone Number:
+                                            %td
+                                                = @current_user.phonenumber
+                                        %tr
+                                            %td
+                                                %b Gender:
+                                            %td
+                                                = @current_user.gender
+                                        %tr
+                                            %td
+                                                %b Address:
+                                            %td
+                                                = @current_user.addressline1
+                                        %tr
+                                            %td
+                                                %b City:
+                                            %td
+                                                = @current_user.city
+                                        %tr
+                                            %td
+                                                %b State:
+                                            %td
+                                                = @current_user.state
+                                        %tr
+                                            %td
+                                                %b Zip Code:
+                                            %td
+                                                = @current_user.zipcode
+                            .col-md-4.text-center
+                            %a{:href => setting_path, :class =>'btn btn-success'} Edit Profile
+    .row{:id => "events", :class => "tab-pane"}
+        .col-md-1
+            .col-md-10
+                .container
+                    .h1.text-center Registered Events
+                    .row
+                        .col-md-1
+                        .col-md-8
+                            -if flash[:notice] != nil
+                                .alert.alert-success.alert-dismissable
+                                    %button.close{:type=>"button", "data-dismiss"=>"alert"}
+                                        %span{"aria-hidden"=>true}×
+                                        %span.sr-only Close
+                                    %strong 
+                                        =flash[:notice]
+                                        =flash[:color]
+                            -if @registeredevents.length == 0
+                                .alert.alert-info.alert-dismissable
+                                    %button.close{:type=>"button", "data-dismiss"=>"alert"}
+                                        %span{"aria-hidden"=>true}×
+                                        %span.sr-only Close
+                                    %strong You are not currently registered for any events
+                            -else
+                                - cnt= 0
+                                - @registeredevents.each do |e|
+                                    - cnt+=1
+                                    .panel.panel-primary
+                                        .panel-heading
+                                            %h3.panel-title Event #{cnt}
+                                        .panel-body
+                                            %label= e.etitle 
+                                            %br
+                                            %label Location:
+                                            = e.elocation
+                                            %br
+                                            %label Start Date:
+                                            = e.estart
+                                            %br
+                                            %label End Date:  
+                                            = e.eend
+                                            %br
+                                            %label Event Description: 
+                                            = e.edescription
+                        %a.btn.btn-success{:id => 'availableEvents', :href => 'allevent'}
+                            %i.fa.fa-plus.fa-lg
+                            Available Events
+    .row{:id => "vehicles", :class => "tab-pane"}
+        .col-md-2
+            .col-md-10
+                .container
+                    .h1.text-center Vehicles
+                    .row
+                        .col-md-1
+                        .col-md-8
+                            -if flash[:notice] != nil
+                                .alert.alert-success.alert-dismissable
+                                    %button.close{:type=>"button", "data-dismiss"=>"alert"}
+                                        %span{"aria-hidden"=>true}×
+                                        %span.sr-only Close
+                                    %strong 
+                                        =flash[:notice]
+                                        =flash[:color]
+                            -if @vehicles.length == 0
+                                .alert.alert-info.alert-dismissable
+                                    %button.close{:type=>"button", "data-dismiss"=>"alert"}
+                                        %span{"aria-hidden"=>true}×
+                                        %span.sr-only Close
+                                    %strong No registered vehicles
+                            -else
+                                - cnt= 0
+                                - @vehicles.each do |v|
+                                    - cnt+=1
+                                    .panel.panel-primary
+                                        .panel-heading
+                                            %h3.panel-title Vehicle #{cnt}
+                                        .panel-body
+                                            %label= v.vname 
+                                            %br
+                                            %label Vehicle Class: 
+                                            = v.vclass
+                                            %br
+                                            %label Nation:  
+                                            = v.vnation
+                                            %br
+                                            %label War:  
+                                            = v.vwar
+                                            %br
+                                            %label Vehicle Description: 
+                                            = v.vdescription
+                                            %br
+                                            %a{:href => "vehicleshow?vid=#{v.id}", :class =>'btn btn-primary btn-sm', :role=>'button'} Show
+                                            %a{:href => "vehicleedit?vid=#{v.id}", :class =>'btn btn-primary btn-sm', :role=>'button'} Edit
+                                            %a{:href => "vehicledelete?vid=#{v.id}", :class =>'btn btn-danger btn-sm', :role=>'button'} Delete
+                                            %br
+                        %a.btn.btn-success{:id => 'add_vehicle_btn', :href => 'vehiclecreate'}
+                            %i.fa.fa-plus.fa-lg
+                            Add Vehicle
+    .row{:id => "impressions", :class => "tab-pane"}
+        .col-md-2
+            .col-md-10
+                .container
+                    .h1.text-center Impressions
+                    .row
+                        .col-md-1
+                        .col-md-8
+                            -if flash[:notice] != nil
+                                .alert.alert-success.alert-dismissable
+                                    %button.close{:type=>"button", "data-dismiss"=>"alert"}
+                                        %span{"aria-hidden"=>true}×
+                                        %span.sr-only Close
+                                    %strong 
+                                        =flash[:notice]
+                                        =flash[:color]
+                            -if @impressions.length == 0
+                                .alert.alert-info.alert-dismissable
+                                    %button.close{:type=>"button", "data-dismiss"=>"alert"}
+                                        %span{"aria-hidden"=>true}×
+                                        %span.sr-only Close
+                                    %strong No registered impressions
+                            -else
+                                - cnt= 0
+                                - @impressions.each do |i|
+                                    - cnt+=1
+                                    .panel.panel-primary
+                                        .panel-heading
+                                            %h3.panel-title Impression #{cnt}
+                                        .panel-body
+                                            %label= i.iname 
+                                            %br
+                                            %label Unit:  
+                                            = i.unitid
+                                            %br
+                                            %label War: 
+                                            = i.iwar
+                                            %br
+                                            %label Side: 
+                                            = i.iside
+                                            %br
+                                            %label Commander:
+                                            = i.commander
+                                            %br
+                                            %label Description:
+                                            = i.idescription
+                                            %br
+                                            %a{:href => "impressionshow?iid=#{i.id}", :class =>'btn btn-primary btn-sm', :role=>'button'} Show
+                                            %a{:href => "impressionedit?iid=#{i.id}", :class =>'btn btn-primary btn-sm', :role=>'button'} Edit
+                                            %a{:href => "impressiondelete?iid=#{i.id}", :class =>'btn btn-danger btn-sm', :role=>'button'} Delete
+                                            %br
+                        %a.btn.btn-success{:id => 'add_impression_btn', :href => 'impressioncreate'}
+                            %i.fa.fa-plus.fa-lg
+                            Add Impression
+    .row{:id => "vendorbooths", :class => "tab-pane"}
+        .col-md-2
+            .col-md-10
+                .container
+                    .h1.text-center Vendor Booths
+                    .row
+                        .col-md-1
+                        .col-md-8
+                            -if flash[:notice] != nil
+                                .alert.alert-success.alert-dismissable
+                                    %button.close{:type=>"button", "data-dismiss"=>"alert"}
+                                        %span{"aria-hidden"=>true}×
+                                        %span.sr-only Close
+                                    %strong 
+                                        =flash[:notice]
+                                        =flash[:color]
+                            -if @vendorbooths.length == 0
+                                .alert.alert-info.alert-dismissable
+                                    %button.close{:type=>"button", "data-dismiss"=>"alert"}
+                                        %span{"aria-hidden"=>true}×
+                                        %span.sr-only Close
+                                    %strong No registered Vendor Booths
+                            -else
+                                - cnt= 0
+                                - @vendorbooths.each do |vb|
+                                    - cnt+=1
+                                    .panel.panel-primary
+                                        .panel-heading
+                                            %h3.panel-title Vendor Booth #{cnt}
+                                        .panel-body
+                                            %label= vb.vbname 
+                                            %br
+                                            %label Number vendor spaces:
+                                            = vb.vbspaces
+                                            %br
+                                            %label Description:
+                                            = vb.vbdescription
+                                            %br
+                                            %a{:href => "vendorboothshow?vbid=#{vb.id}", :class =>'btn btn-primary btn-sm', :role=>'button'} Show
+                                            %a{:href => "vendorboothedit?vbid=#{vb.id}", :class =>'btn btn-primary btn-sm', :role=>'button'} Edit
+                                            %a{:href => "vendorboothdelete?vbid=#{vb.id}", :class =>'btn btn-danger btn-sm', :role=>'button'} Delete
+                                            %br
+                        %a.btn.btn-success{:id => 'add_vendorbooth_btn', :href => 'vendorboothcreate'}
+                            %i.fa.fa-plus.fa-lg
+                            Add Vendor Booth
+    .row{:id => "educators", :class => "tab-pane"}
+        .col-md-2
+            .col-md-10
+                .container
+                    .h1.text-center Registered Schools
+                    .row
+                        .col-md-1
+                        .col-md-8
+                            -if flash[:notice] != nil
+                                .alert.alert-success.alert-dismissable
+                                    %button.close{:type=>"button", "data-dismiss"=>"alert"}
+                                        %span{"aria-hidden"=>true}×
+                                        %span.sr-only Close
+                                    %strong 
+                                        =flash[:notice]
+                                        =flash[:color]
+                            -if @educators.length == 0
+                                .alert.alert-info.alert-dismissable
+                                    %button.close{:type=>"button", "data-dismiss"=>"alert"}
+                                        %span{"aria-hidden"=>true}×
+                                        %span.sr-only Close
+                                    %strong No registered Schools
+                            -else
+                                - cnt= 0
+                                - @educators.each do |ed|
+                                    - cnt+=1
+                                    .panel.panel-primary
+                                        .panel-heading
+                                            %h3.panel-title 
+                                            =ed.edschooltype
+                                        .panel-body
+                                            -if ed.edschooltype=="Home School"
+                                                %label Parent/Guardian Name:  
+                                                = ed.edpgaurdianname 
+                                                %br
+                                                %label Address: 
+                                                = ed.edaddress
+                                                %br
+                                                %label Zip Code:
+                                                = ed.edzip
+                                                %br
+                                                %label Phone:
+                                                = ed.edpgaurdianphone
+                                                %br
+                                                %label Email:
+                                                = ed.edgaurdianemail
+                                                %br
+                                                %label Primary Contact Name:
+                                                = ed.edprimaryname
+                                                %br
+                                                %label Primary Contact's Email:
+                                                = ed.edprimaryemail
+                                                %br 
+                                                %label Primary Contact's Phone:
+                                                = ed.edprimaryphone
+                                                %br
+                                            -elsif ed.edschooltype=="Private School"
+                                                %label School Name:  
+                                                = ed.edschoolname 
+                                                %br
+                                                %label Address: 
+                                                = ed.edaddress
+                                                %br
+                                                %label Zip Code:
+                                                = ed.edzip
+                                                %br
+                                                %label Primary Contact Name:
+                                                = ed.edprimaryname
+                                                %br
+                                                %label Primary Contact's Email:
+                                                = ed.edprimaryemail
+                                                %br 
+                                                %label Primary Contact's Phone:
+                                                = ed.edprimaryphone
+                                                %br
+                                                %label Principal's Name:
+                                                = ed.edprinciplename
+                                                %br 
+                                                %label Principal's Email:
+                                                = ed.edprincipleemail
+                                                %br
+                                            %a{:href => "educatorshow?edid=#{ed.id}", :class =>'btn btn-primary btn-sm', :role=>'button'} Show
+                                            %a{:href => "educatoredit?edid=#{ed.id}", :class =>'btn btn-primary btn-sm', :role=>'button'} Edit
+                                            %a{:href => "educatordelete?edid=#{ed.id}", :class =>'btn btn-danger btn-sm', :role=>'button'} Delete
+                                            %br
+                        %a.btn.btn-success{:id => 'add_school_btn', :href => 'educatorcreate'}
+                            %i.fa.fa-plus.fa-lg
+                            Add School
+.row
+    %br
+    %br
+    %br
+    %br
+    %br
+    %br 

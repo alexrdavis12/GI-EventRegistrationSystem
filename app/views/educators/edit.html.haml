@@ -1,0 +1,131 @@
+= javascript_include_tag "create_educator"
+%nav.navbar.navbar-inverse{:role => "navigation"}
+  .navbar-header
+    %a.navbar-brand{:href => "home"} M.A.G.I
+  %ul.nav.navbar-nav.navbar-right
+    %li
+      %a{:href=>'home'}
+        %i{:class=>"fa fa-home fa-fw"} 
+        Home 
+    %li
+      %a{:href=>'allevent'}
+        %i{:class=>"fa fa-align-justify fa-fw"} 
+        Event
+    %li
+      %a{:href=>'profile'}
+        %i{:class=>"fa fa-user fa-fw"} 
+        Profile
+    %li
+      %a{:href=>'logout'}
+        %i{:class=>"fa fa-sign-out fa-fw"} 
+        Logout
+        
+.container
+  .row
+    .col-md-2
+    .col-md-8
+      .panel.panel-primary
+        .panel-heading
+          %h3.panel-title School
+        .panel-body
+          = form_tag(:action => 'update', :edid => @educator.id) do
+            %div#ed_form
+              %input{:type=>"hidden"}
+              .form-group
+                %label What type of school are you registering?
+                %br
+                %input{:type => 'radio', :value=>'Home School', :name=>"Type", :id => 'home_school', :checked => @educator.edschooltype=='Home School', :required=>""}Home School
+                %br
+                %input{:type => 'radio', :value=>'Private School', :name=>"Type", :id => 'private_school', :checked => @educator.edschooltype=='Private School', :required=>""}Private School
+                -if @educator.edschooltype=="Home School"
+                  #home_school_form.form-group
+                    %label Parent / Guardian Name
+                    %br
+                    %input{:name => "GuardianName",:value => @educator.edpgaurdianname, :required => "", :type => "text"}
+                    %br
+                    %br
+                    %label Address
+                    %br
+                    %input{:name => "Address", :value => @educator.edaddress,:required => "", :type => "text"}
+                    %br
+                    %br
+                    %label Zip Code
+                    %br
+                    %input{:name => "Zip",:value => @educator.edzip, :required => "", :type => "text"}
+                    %br
+                    %br
+                    %label Email
+                    %br
+                    %input{:name => "GuardianEmail",:value => @educator.edgaurdianemail,  :required => "", :type => "text"}
+                    %br
+                    %br
+                    %label Phone
+                    %br
+                    %input{:name => "GuardianPhone", :value => @educator.edpgaurdianphone, :required => "", :type => "text"}
+                    %br
+                    %br
+                    %label Primary Contact Name
+                    %br
+                    %input{:name => "PrimaryName", :value => @educator.edprimaryname, :required => "", :type => "text"}
+                    %br
+                    %br
+                    %label Primary Contact's Email
+                    %br
+                    %input{:name => "PrimaryEmail",:value => @educator.edprimaryemail,  :required => "", :type => "text"}
+                    %br
+                    %br
+                    %label Primary Contact's Phone Number
+                    %br
+                    %input{:name => "PrimaryPhone", :value => @educator.edpgaurdianphone, :required => "", :type => "text"}
+                    %br
+                  %br
+                -elsif  @educator.edschooltype=="Private School"
+                  #private_school_form.form-group
+                    %label SchoolName
+                    %br
+                    %input{:name => "SchoolName",:value => @educator.edschoolname, :required => "", :type => "text"}
+                    %br
+                    %br
+                    %label School Address
+                    %br
+                    %input{:name => "Address", :value => @educator.edaddress,:required => "", :type => "text"}
+                    %br
+                    %br
+                    %label Zip Code
+                    %br
+                    %input{:name => "Zip",:value => @educator.edzip, :required => "", :type => "text"}
+                    %br
+                    %br
+                    %label Name of Primary Contact
+                    %br
+                    %input{:name => "PrimaryName", :value => @educator.edprimaryname, :required => "", :type => "text"}
+                    %br
+                    %br
+                    %label Primary Contact's Email
+                    %br
+                    %input{:name => "PrimaryEmail",:value => @educator.edprimaryemail,  :required => "", :type => "text"}
+                    %br
+                    %br
+                    %label Primary Contact's Phone Number
+                    %br
+                    %input{:name => "PrimaryPhone", :value => @educator.edpgaurdianphone, :required => "", :type => "text"}
+                    %br
+                    %br
+                    %label Principal's Name
+                    %br
+                    %input{:name => "PrincipleName",:value => @educator.edprinciplename,  :required => "", :type => "text"}
+                    %br
+                    %br
+                    %label Principal's Email
+                    %br
+                    %input{:name => "PrincipleEmail", :value => @educator.edprincipleemail, :required => "", :type => "text"}
+                    %br
+                  %br
+            = submit_tag("Save", :class => 'btn btn-primary')
+  .row
+    %br
+    %br
+    %br
+    %br
+    %br
+    %br          

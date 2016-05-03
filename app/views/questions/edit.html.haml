@@ -1,16 +1,7 @@
-= javascript_include_tag "create_event"
+= javascript_include_tag "edit_event"
 
 %nav.navbar.navbar-inverse{:role => "navigation"}
   .navbar-header
-<<<<<<< HEAD
-    %a.navbar-brand{:href => "#"} M.A.G.I
-  %ul.nav.navbar-nav.navbar-right
-    %li
-      %a{:href=>'allevent'}
-        %i{:class=>"fa fa-align-justify fa-fw"} 
-        Event
-
-=======
     %a.navbar-brand{:href => "home"} M.A.G.I
   %ul.nav.navbar-nav.navbar-right
     %li
@@ -21,24 +12,17 @@
       %a{:href=>'allevent'}
         %i{:class=>"fa fa-align-justify fa-fw"} 
         Event
->>>>>>> master
     %li
       %a{:href=>'profile'}
         %i{:class=>"fa fa-user fa-fw"} 
         Profile
-<<<<<<< HEAD
-        
-=======
->>>>>>> master
+
     %li
       %a{:href=>'logout'}
         %i{:class=>"fa fa-sign-out fa-fw"} 
         Logout
 
-<<<<<<< HEAD
-=======
 
->>>>>>> master
 .container
   .row
     .col-md-2
@@ -47,88 +31,86 @@
         .alert.alert-danger
           =@flash_notice
       -if @error_type != -1
-        %input{:type=>"hidden", :value => 1, :id => 'current_qid'}
+        - qcount = 0
+        - @questions.each do |q|
+          -if q.qparentid == nil
+            - qcount += 1
+        %input{:type=>"hidden", :value => qcount, :id => 'current_qid'}
         = form_tag({:action => 'update', :eid => @eid}) do
           %div#q_form
             %input{:type=>"hidden", :value=>@eid, :name=>:q_eid}
           %li{:id=>'q_list', :style=>"list-style-type:none"}
             - @questions.each do |q|
-              .panel.panel-info{:id => "Q#{q.id}"}
-                .panel-heading
-                  %h3.panel-title
-                    Question
-                    %a.btn.btn-sm.pull-right{ :href => "javascript:move_q_up(#{q.id})", :style => "color: #500000; background: none; outline: 0", :id => "Q#{q.id}_up"}
-                      %i.fa.fa-chevron-up.fa-lg
-                    %a.btn.btn-sm.pull-right{:id => "Q#{q.id}_down", :href => "javascript:move_q_down(#{q.id})", :style => "color: #500000; background: none; outline: 0"}
-                      %i.fa.fa-chevron-down.fa-lg
-                    //%input{:style => "float:right",:type => "button", :onclick => "", :id => 'down_btn', :value => '\\/'}
-                    //%input{:style => "float:right", :type => "button", :onclick => "", :id => 'up_btn', :value => '/\\'}
-                .panel-body{:style => 'background-color : #d9edf7'}
-                  .form-group
-                    %input{:class => 'form-control', :value=> q.qtitle, :name=>"Q#{q.id}[title]"}
-                  .form-group
-                    %label Type
-                    - if q.qtype == "1"
-                      %select{:class => 'form-control', :value=> q.qtype, :name => "Q#{q.id}[type]", :belong => "#{q.id}", :onload => "javascript:trigger_option(this, #{q.id}, 0)"}
-                        %option{:value => 1}= "Text"
-                        %option{:value => 2}= "Checkboxes"
-                        %option{:value => 3}= "Radio Buttons"
-                        %option{:value => 4}= "Dropdown"
-                        %option{:value => 5}= "Paragraph Text"
-                      //%input{:class => 'form-control', :value=> q.qoption :name => "Q#{q.id}[type]"}
-                      //:javascript => trigger_option(this, q.id, 0)  
-                    - elsif q.qtype == "2"
-                      %select{:class => 'form-control', :value=> q.qtype, :name => "Q#{q.id}[type]", :belong => "#{q.id}"}
-                        %option{:value => 1}= "Text"
-                        %option{:value => 2, :selected => ""}= "Checkboxes"
-                        %option{:value => 3}= "Radio Buttons"
-                        %option{:value => 4}= "Dropdown"
-                        %option{:value => 5}= "Paragraph Text"
-                      //%input{:class => 'form-control', :value=> q.qoption :name => "Q#{q.id}[type]"}
-                    - elsif q.qtype == "3"
-                      %select{:class => 'form-control', :value=> q.qtype, :name => "Q#{q.id}[type]", :belong => "#{q.id}"}
-                        %option{:value => 1}= "Text"
-                        %option{:value => 2}= "Checkboxes"
-                        %option{:value => 3, :selected => ""}= "Radio Buttons"
-                        %option{:value => 4}= "Dropdown"
-                        %option{:value => 5}= "Paragraph Text"
-                      //%input{:class => 'form-control', :value=> q.qoption :name => "Q#{q.id}[type]"}  
-                    - elsif q.qtype == "4"
-                      %select{:class => 'form-control', :value=> q.qtype, :name => "Q#{q.id}[type]", :belong => "#{q.id}"}
-                        %option{:value => 1}= "Text"
-                        %option{:value => 2}= "Checkboxes"
-                        %option{:value => 3}= "Radio Buttons"
-                        %option{:value => 4, :selected => ""}= "Dropdown"
-                        %option{:value => 5}= "Paragraph Text"
-                      //%input{:class => 'form-control', :value=> q.qoption :name => "Q#{q.id}[type]"}  
-                    - elsif q.qtype == "5"
-                      %select{:class => 'form-control', :value=> q.qtype, :name => "Q#{q.id}[type]", :belong => "#{q.id}"}
-                        %option{:value => 1}= "Text"
-                        %option{:value => 2}= "Checkboxes"
-                        %option{:value => 3}= "Radio Buttons"
-                        %option{:value => 4}= "Dropdown"
-                        %option{:value => 5, :selected => ""}= "Paragraph Text"
-                      //%input{:class => 'form-control', :value=> q.qoption :name => "Q#{q.id}[type]"}  
+              -if q.qparentid == nil
+                .panel.panel-info{:id => "Q#{q.qid}"}
+                  .panel-heading
+                    %h3.panel-title
+                      Question
+                      %a.btn.btn-sm.pull-right{ :href => "javascript:move_q_up(#{q.qid})", :style => "color: #500000; background: none; outline: 0", :id => "Q#{q.qid}_up"}
+                        %i.fa.fa-chevron-up.fa-lg
+                      %a.btn.btn-sm.pull-right{:id => "Q#{q.qid}_down", :href => "javascript:move_q_down(#{q.qid})", :style => "color: #500000; background: none; outline: 0"}
+                        %i.fa.fa-chevron-down.fa-lg
+                  .panel-body{:style => 'background-color : #d9edf7'}
                     .form-group
-                    %a.btn.btn-danger.pull-right{:href => "javascript:delete_question(#{q.id})"}
-                      %i.fa.fa-trash-o.fa-lg
-                      Delete Question
+                      %input{:class => 'form-control', :value=> q.qtitle, :name=>"Q#{q.qid}[title]"}
+                    .form-group
+                      %label Type
+                      - if q.qtype == "1"
+                        %select{:class => 'form-control', :value=> q.qtype, :name => "Q#{q.qid}[type]", :belong => "#{q.qid}", :info => q.qoption}
+                          %option{:value => 1}= "Text"
+                          %option{:value => 2}= "Checkboxes"
+                          %option{:value => 3}= "Radio Buttons"
+                          %option{:value => 4}= "Dropdown"
+                          %option{:value => 5}= "Paragraph Text"
+                      - elsif q.qtype == "2"
+                        %select{:class => 'form-control', :value=> q.qtype, :name => "Q#{q.qid}[type]", :belong => "#{q.qid}", :info => q.qoption}
+                          %option{:value => 1}= "Text"
+                          %option{:value => 2, :selected => ""}= "Checkboxes"
+                          %option{:value => 3}= "Radio Buttons"
+                          %option{:value => 4}= "Dropdown"
+                          %option{:value => 5}= "Paragraph Text"
+                      - elsif q.qtype == "3"
+                        %select{:class => 'form-control', :value=> q.qtype, :name => "Q#{q.qid}[type]", :belong => "#{q.qid}", :info => q.qoption}
+                          %option{:value => 1}= "Text"
+                          %option{:value => 2}= "Checkboxes"
+                          %option{:value => 3, :selected => ""}= "Radio Buttons"
+                          %option{:value => 4}= "Dropdown"
+                          %option{:value => 5}= "Paragraph Text"
+                      - elsif q.qtype == "4"
+                        %select{:class => 'form-control', :value=> q.qtype, :name => "Q#{q.qid}[type]", :belong => "#{q.qid}", :info => q.qoption}
+                          %option{:value => 1}= "Text"
+                          %option{:value => 2}= "Checkboxes"
+                          %option{:value => 3}= "Radio Buttons"
+                          %option{:value => 4, :selected => ""}= "Dropdown"
+                          %option{:value => 5}= "Paragraph Text"
+                      - elsif q.qtype == "5"
+                        %select{:class => 'form-control', :value=> q.qtype, :name => "Q#{q.qid}[type]", :belong => "#{q.qid}", :info => q.qoption}
+                          %option{:value => 1}= "Text"
+                          %option{:value => 2}= "Checkboxes"
+                          %option{:value => 3}= "Radio Buttons"
+                          %option{:value => 4}= "Dropdown"
+                          %option{:value => 5, :selected => ""}= "Paragraph Text"
+                      .form-group
+                      %a.btn.btn-danger.pull-right{:href => "javascript:delete_question(#{q.qid})"}
+                        %i.fa.fa-trash-o.fa-lg
+                        Delete Question     
+              -else 
+                //add subquestion 
+                // %script{:src="edit_event.js"}
+                // %script{:type=>"text/javascript"}
+                //   orig_add_subquestion(q.qparentid, q.qoption, "test input")
+                //if I cannot get this to work, I will create an event that the javascript will use to notice and create subquestions
+                %input{:id => 'trigger', :type => 'hidden', :class => 'trigger', :parentid => q.qparentid, :parentopt => q.parentopt, :info => q.qtype, :selectedopt => q.qtype, :title => q.qtitle, :optlist => q.qoption}
+          %input{:id => 'endtriggers', :type => 'hidden'}      
           %a.btn.btn-success{:id => 'create_q_btn'}
             %i.fa.fa-plus.fa-lg
             Add Question
-          //%input{:class => 'btn btn-primary', :type => "button", :onclick => "", :id => 'create_q_btn', :value => 'Add Question'} 
           = submit_tag("Save", :class => 'btn btn-primary pull-right')
     .col-md-2
   .row
-<<<<<<< HEAD
     %br
-=======
     %br
-//    
-// .footer{:id => "footer", :style => "margin-bottom: 0"}
-//   .row{:style => "background-color:rgba(15,39,64,1.00);"}
-//     .col-md-3
-//     .col-md-6
-//       =image_tag "im3.png", :width=>"100%", :position=>"fixed", :bottom=>"0"
-//     .col-md-3    
->>>>>>> master
+    %br
+    %br
+    %br
+    %br

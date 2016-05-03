@@ -10,8 +10,8 @@
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
 # It's strongly recommended that you check this file into your version control system.
-
 ActiveRecord::Schema.define(version: 20160503034459) do
+
 
   create_table "answers", force: :cascade do |t|
     t.integer  "eid"
@@ -31,10 +31,19 @@ ActiveRecord::Schema.define(version: 20160503034459) do
   create_table "educators", force: :cascade do |t|
     t.integer "uid"
     t.integer "edid"
-    t.string  "edname"
-    t.string  "eddescription"
-    t.integer "edtotalnumber"
-    t.string  "edorganization"
+    t.string  "edschooltype"
+    t.string  "edpgaurdianname"
+    t.string  "edpgaurdianphone"
+    t.string  "edgaurdianemail"
+    t.string  "edschoolname"
+    t.string  "edaddress"
+    t.string  "edzip"
+    t.string  "edprimaryemail"
+    t.string  "edprimaryname"
+    t.string  "edprimaryrole"
+    t.string  "edprimaryphone"
+    t.string  "edprinciplename"
+    t.string  "edprincipleemail"
   end
 
   create_table "events", force: :cascade do |t|
@@ -61,6 +70,7 @@ ActiveRecord::Schema.define(version: 20160503034459) do
     t.string  "idescription"
     t.integer "cid"
     t.integer "iid"
+    t.string  "commander"
   end
 
   create_table "questions", force: :cascade do |t|
@@ -127,6 +137,7 @@ ActiveRecord::Schema.define(version: 20160503034459) do
     t.string  "vbname"
     t.string  "vbdescription"
     t.integer "vbid"
+    t.integer "vbspaces"
   end
 
 end

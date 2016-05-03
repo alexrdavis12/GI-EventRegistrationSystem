@@ -4,6 +4,11 @@ Rails.application.routes.draw do
   get 'answer.csv' => 'answers#index', :as => :answers
   get 'login'  => 'sessions#login'
   get 'home'=>'sessions#home'
+  get 'homeed'=>'sessions#homeed'
+  get 'homei'=>'sessions#homei'
+  get 'homep'=>'sessions#homep'
+  get 'homev'=>'sessions#homev'
+  get 'homevb'=>'sessions#homevb'
   get 'adminhome'=> 'sessions#adminhome'
   get 'login_attempt'=>'sessions#login_attempt'
   post 'login_attempt'=>'sessions#login_attempt'
@@ -65,6 +70,15 @@ Rails.application.routes.draw do
   post 'vendorboothedit' => 'vendorbooths#edit'
   get 'vendorboothupdate' => 'vendorbooths#update'
   post 'vendorboothupdate' => 'vendorbooths#update'
+  
+  get 'educatorcreate' =>'educators#create'
+  post 'educatorcreate' =>'educators#create'
+  get 'educatorshow' =>'educators#show'
+  get 'educatordelete' => 'educators#delete'
+  get 'educatoredit' => 'educators#edit'
+  post 'educatoredit' => 'educators#edit'
+  get 'educatorupdate' => 'educators#update'
+  post 'educatorupdate' => 'educators#update'
   
   # post 'answershow' =>'answers#show'
   # get 'create' => 'answers#create'

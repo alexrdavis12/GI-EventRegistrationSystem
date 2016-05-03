@@ -20,16 +20,25 @@
                 Logout
 %nav.navbar.navbar-vertical-left
     %ul.nav.navbar-nav{:role => "tablist"}
+        %br
+        %br
+        %br
+        %br
+        %br
+        %br
+        %br
+        %br
+        %br
         %li
             %a{"data-toggle" => "tab", :href => "#profile", :role => "tab"}
                 %i.fa.class.fa-user.fa-fw.fa-lg
                 %span Profile
         %li{:class=> "active"}
-            %a{"data-toggle" => "tab", :href => "#events", :role => "tab", :style => "background: #FFE796"}
+            %a{"data-toggle" => "tab", :href => "#events", :role => "tab"}
                 %i.fa.fa-list-alt.fa-fw.fa-lg
                 %span Registered Events
         %li
-            %a{"data-toggle" => "tab", :href => "#vehicles", :role => "tab", :style => "background: #FFE796"}
+            %a{"data-toggle" => "tab", :href => "#vehicles", :role => "tab"}
                 %i.fa.fa-car.fa-fw.fa-lg
                 %span Vehicles
         %li
@@ -40,7 +49,10 @@
             %a{"data-toggle" => "tab", :href => "#vendorbooths", :role => "tab"}
                 %i.fa.fa-credit-card.fa-lg
                 %span Vendor Booths
-                
+        %li
+            %a{"data-toggle" => "tab", :href => "#educators", :role => "tab"}
+                %i.fa.fa-graduation-cap.fa-lg
+                %span Educators               
                 
 .container{:class => "tab-content"}
     .row{:id => "profile", :class => "tab-pane"}
@@ -133,16 +145,16 @@
                                         .panel-body
                                             %label= e.etitle 
                                             %br
-                                            %label Location
+                                            %label Location:
                                             = e.elocation
                                             %br
-                                            %label Start Date  
+                                            %label Start Date:
                                             = e.estart
                                             %br
-                                            %label End Date  
+                                            %label End Date:  
                                             = e.eend
                                             %br
-                                            %label Event Description 
+                                            %label Event Description: 
                                             = e.edescription
                         %a.btn.btn-success{:id => 'availableEvents', :href => 'allevent'}
                             %i.fa.fa-plus.fa-lg
@@ -179,21 +191,21 @@
                                         .panel-body
                                             %label= v.vname 
                                             %br
-                                            %label Vehicle Class 
+                                            %label Vehicle Class: 
                                             = v.vclass
                                             %br
-                                            %label Nation  
+                                            %label Nation:  
                                             = v.vnation
                                             %br
-                                            %label War  
+                                            %label War:  
                                             = v.vwar
                                             %br
-                                            %label Vehicle Description 
+                                            %label Vehicle Description: 
                                             = v.vdescription
                                             %br
                                             %a{:href => "vehicleshow?vid=#{v.id}", :class =>'btn btn-primary btn-sm', :role=>'button'} Show
                                             %a{:href => "vehicleedit?vid=#{v.id}", :class =>'btn btn-primary btn-sm', :role=>'button'} Edit
-                                            %a{:href => "vehicledelete?vid=#{v.id}", :class =>'btn btn-primary btn-sm', :role=>'button'} Delete
+                                            %a{:href => "vehicledelete?vid=#{v.id}", :class =>'btn btn-danger btn-sm', :role=>'button'} Delete
                                             %br
                         %a.btn.btn-success{:id => 'add_vehicle_btn', :href => 'vehiclecreate'}
                             %i.fa.fa-plus.fa-lg
@@ -230,21 +242,24 @@
                                         .panel-body
                                             %label= i.iname 
                                             %br
-                                            %label Unit  
+                                            %label Unit:  
                                             = i.unitid
                                             %br
-                                            %label War  
+                                            %label War: 
                                             = i.iwar
                                             %br
-                                            %label Side 
+                                            %label Side: 
                                             = i.iside
                                             %br
-                                            %label Description
+                                            %label Commander:
+                                            = i.commander
+                                            %br
+                                            %label Description:
                                             = i.idescription
                                             %br
                                             %a{:href => "impressionshow?iid=#{i.id}", :class =>'btn btn-primary btn-sm', :role=>'button'} Show
                                             %a{:href => "impressionedit?iid=#{i.id}", :class =>'btn btn-primary btn-sm', :role=>'button'} Edit
-                                            %a{:href => "impressiondelete?iid=#{i.id}", :class =>'btn btn-primary btn-sm', :role=>'button'} Delete
+                                            %a{:href => "impressiondelete?iid=#{i.id}", :class =>'btn btn-danger btn-sm', :role=>'button'} Delete
                                             %br
                         %a.btn.btn-success{:id => 'add_impression_btn', :href => 'impressioncreate'}
                             %i.fa.fa-plus.fa-lg
@@ -281,20 +296,113 @@
                                         .panel-body
                                             %label= vb.vbname 
                                             %br
-                                            %label Description
+                                            %label Number vendor spaces:
+                                            = vb.vbspaces
+                                            %br
+                                            %label Description:
                                             = vb.vbdescription
                                             %br
                                             %a{:href => "vendorboothshow?vbid=#{vb.id}", :class =>'btn btn-primary btn-sm', :role=>'button'} Show
                                             %a{:href => "vendorboothedit?vbid=#{vb.id}", :class =>'btn btn-primary btn-sm', :role=>'button'} Edit
-                                            %a{:href => "vendorboothdelete?vbid=#{vb.id}", :class =>'btn btn-primary btn-sm', :role=>'button'} Delete
+                                            %a{:href => "vendorboothdelete?vbid=#{vb.id}", :class =>'btn btn-danger btn-sm', :role=>'button'} Delete
                                             %br
                         %a.btn.btn-success{:id => 'add_vendorbooth_btn', :href => 'vendorboothcreate'}
                             %i.fa.fa-plus.fa-lg
                             Add Vendor Booth
-//
-// .footer{:id => "footer", :style => "margin-bottom: 0"}
-//     .row{:style => "background-color:rgba(15,39,64,1.00);"}
-//         .col-md-3
-//         .col-md-6
-//             =image_tag "im3.png", :width=>"100%", :position=>"fixed", :bottom=>"0"
-//         .col-md-3
+    .row{:id => "educators", :class => "tab-pane"}
+        .col-md-2
+            .col-md-10
+                .container
+                    .h1.text-center Registered Schools
+                    .row
+                        .col-md-1
+                        .col-md-8
+                            -if flash[:notice] != nil
+                                .alert.alert-success.alert-dismissable
+                                    %button.close{:type=>"button", "data-dismiss"=>"alert"}
+                                        %span{"aria-hidden"=>true}×
+                                        %span.sr-only Close
+                                    %strong 
+                                        =flash[:notice]
+                                        =flash[:color]
+                            -if @educators.length == 0
+                                .alert.alert-info.alert-dismissable
+                                    %button.close{:type=>"button", "data-dismiss"=>"alert"}
+                                        %span{"aria-hidden"=>true}×
+                                        %span.sr-only Close
+                                    %strong No registered Schools
+                            -else
+                                - cnt= 0
+                                - @educators.each do |ed|
+                                    - cnt+=1
+                                    .panel.panel-primary
+                                        .panel-heading
+                                            %h3.panel-title 
+                                            =ed.edschooltype
+                                        .panel-body
+                                            -if ed.edschooltype=="Home School"
+                                                %label Parent/Guardian Name:  
+                                                = ed.edpgaurdianname 
+                                                %br
+                                                %label Address: 
+                                                = ed.edaddress
+                                                %br
+                                                %label Zip Code:
+                                                = ed.edzip
+                                                %br
+                                                %label Phone:
+                                                = ed.edpgaurdianphone
+                                                %br
+                                                %label Email:
+                                                = ed.edgaurdianemail
+                                                %br
+                                                %label Primary Contact Name:
+                                                = ed.edprimaryname
+                                                %br
+                                                %label Primary Contact's Email:
+                                                = ed.edprimaryemail
+                                                %br 
+                                                %label Primary Contact's Phone:
+                                                = ed.edprimaryphone
+                                                %br
+                                            -elsif ed.edschooltype=="Private School"
+                                                %label School Name:  
+                                                = ed.edschoolname 
+                                                %br
+                                                %label Address: 
+                                                = ed.edaddress
+                                                %br
+                                                %label Zip Code:
+                                                = ed.edzip
+                                                %br
+                                                %label Primary Contact Name:
+                                                = ed.edprimaryname
+                                                %br
+                                                %label Primary Contact's Email:
+                                                = ed.edprimaryemail
+                                                %br 
+                                                %label Primary Contact's Phone:
+                                                = ed.edprimaryphone
+                                                %br
+                                                %label Principal's Name:
+                                                = ed.edprinciplename
+                                                %br 
+                                                %label Principal's Email:
+                                                = ed.edprincipleemail
+                                                %br
+                                            %a{:href => "educatorshow?edid=#{ed.id}", :class =>'btn btn-primary btn-sm', :role=>'button'} Show
+                                            %a{:href => "educatoredit?edid=#{ed.id}", :class =>'btn btn-primary btn-sm', :role=>'button'} Edit
+                                            %a{:href => "educatordelete?edid=#{ed.id}", :class =>'btn btn-danger btn-sm', :role=>'button'} Delete
+                                            %br
+                        %a.btn.btn-success{:id => 'add_school_btn', :href => 'educatorcreate'}
+                            %i.fa.fa-plus.fa-lg
+                            Add School
+
+
+.row
+    %br
+    %br
+    %br
+    %br
+    %br
+    %br 
