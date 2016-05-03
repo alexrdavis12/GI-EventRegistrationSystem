@@ -76,6 +76,8 @@
                 -else
                   %input{:class => 'form-control', :value=>'', :name=>"Q#{q.qid}[answer]"}
             = submit_tag("Submit", :class=> 'btn btn-primary', :onclick=> 'javascript:fix_form()')
+          %a.btn.btn-sm.pull-right{ :href => "javascript:fix_form()", :style => "color: #500000; background: none; outline: 0"}
+            %i.fa.fa-chevron-up.fa-lg
     .col-md-2
   .row
     %br

@@ -12,11 +12,14 @@ function checkselect() {
 		}
 		if ($("[hash=hash_" + select_qid + "_" + opt + "]") != undefined) {
 			$("[hash=hash_" + select_qid + "_" + opt + "]").hide(400);
-			$("[hash=hash_" + select_qid + "_" + opt + "]").attr("disabled", true);
+			$("[hash=hash_" + select_qid + "_" + opt + "]").prop("disabled", true);
+			$("[hash=hash_" + select_qid + "_" + opt + "]").children(":input").prop("disabled", true);
+			
 			if ($(this).is(":checked")) {
 				$("[hash=hash_" + select_qid + "_" + opt + "]").show(400);
 				$("[hash=hash_" + select_qid + "_" + opt + "]").attr("showed", select_qid);
-				$("[hash=hash_" + select_qid + "_" + opt + "]").attr("disabled", false);
+				$("[hash=hash_" + select_qid + "_" + opt + "]").prop("disabled", false);
+				$("[hash=hash_" + select_qid + "_" + opt + "]").children(":input").prop("disabled", false);
 			}
 		}
 
@@ -35,11 +38,12 @@ function hookselect() {
 		}
 		if ($("[hash=hash_" + select_qid + "_" + opt + "]") != undefined) {
 			$("[showed=" + select_qid + "]").hide(400);
-			$("[showed=" + select_qid + "]").attr("disabled", true);
+			$("[showed=" + select_qid + "]").prop("disabled", true);
+			$("[showed=" + select_qid + "]").children(":all").prop("disabled", true);
 			$("[hash=hash_" + select_qid + "_" + opt + "]").show(400);
 			$("[hash=hash_" + select_qid + "_" + opt + "]").attr("showed", select_qid);
-			$("[hash=hash_" + select_qid + "_" + opt + "]").attr("disabled", false);
-		
+			$("[hash=hash_" + select_qid + "_" + opt + "]").prop("disabled", false);
+			$("[hash=hash_" + select_qid + "_" + opt + "]").children(":input").prop("disabled", false);
 		}
 
 	});
@@ -57,10 +61,12 @@ function radioselect() {
 		}
 		if ($("[hash=hash_" + select_qid + "_" + opt + "]") != undefined) {
 			$("[showed=" + select_qid + "]").hide(400);
-			$("[showed=" + select_qid + "]").attr("disabled", true);
+			$("[showed=" + select_qid + "]").prop("disabled", true);
+			$("[showed=" + select_qid + "]").children(":input").prop("disabled", true);
 			$("[hash=hash_" + select_qid + "_" + opt + "]").show(400);
 			$("[hash=hash_" + select_qid + "_" + opt + "]").attr("showed", select_qid);
-			$("[hash=hash_" + select_qid + "_" + opt + "]").attr("disabled", false);
+			$("[hash=hash_" + select_qid + "_" + opt + "]").prop("disabled", false);
+			$("[hash=hash_" + select_qid + "_" + opt + "]").children(":input").prop("disabled", false);
 		}
 
 	});
@@ -74,20 +80,25 @@ $(document).ready(function(){
 
 function fix_form() {
 	alert("Entered the Twilight Zone")
-	// $(":checkbox:hidden").disabled=true;
-	// $("select:hidden").disabled=true;
-	// $(":radio:hidden").disabled=true;
+	
+	$("input:not(:visible)").children().prop("disabled", true);
+	
+	// alert($(":checkbox:hidden").val(' '));
+	// alert($("select:hidden").val(' '));
+	// alert($(":radio:hidden").val(' '));
 	
 	// if (!($(":checkbox").is(":visible"))) {
 	// 	alert($(":checkbox").val());
-	// 	$(":checkbox").val("")
+	// 	$(":checkbox").val(' ')
 	// }
 
 	// if (!($("select").is(":visible"))) {
-	// 	$("select").val("")
+	// 	alert($("select").val());
+	// 	$("select").val(' ')
 	// }
 	
 	// if (!($(":radio").is(":visible"))) {
-	// 	$(":radio").val("")
+	// 	alert($(":radio").val());
+	// 	$(":radio").val(' ')
 	// }
 }
