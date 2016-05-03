@@ -1,5 +1,16 @@
 class VendorboothsController < ApplicationController
   before_filter :authenticate_user, :only => [:create]
+
+  def isuser
+    	vbid = params[:vbid]
+      @vendorbooth = Vendorbooth.find(vbid)
+    	if(@vendorbooth.uid!=session[:user_id])
+	    	flash[:notice]="You are not authorized to view that page"
+	    	# flash[:color]="Invalid"
+	    	redirect_to '/login'
+    	end
+	end
+
   
   def create
     @vendorbooth=Vendorbooth.new
@@ -31,22 +42,26 @@ class VendorboothsController < ApplicationController
   end 
     
   def show
+    self.isuser
     vbid = params[:vbid]
     @vendorbooth = Vendorbooth.find(vbid)
   end
     
   def save
+    self.isuser
     vbid = params[:vbid]
     @vendorbooth = Vendorbooth.find(vbid)
   end 
     
   def edit
+    self.isuser
     vbid = params[:vbid]
     @vendorbooth = Vendorbooth.find(vbid)
     @flash_notice = ""
   end 
     
   def update
+    self.isuser
     vbid = params[:vbid]
     @vendorbooth = Vendorbooth.find(vbid)
         
@@ -72,11 +87,12 @@ class VendorboothsController < ApplicationController
   end 
     
   def delete
+    self.isuser
   	vbid = params[:vbid]
   	if(	Vendorbooth.find(vbid))
     	Vendorbooth.find(vbid).destroy
     end
-  	redirect_to '/home'
+  	redirect_to '/homevb'
   end
   
 end

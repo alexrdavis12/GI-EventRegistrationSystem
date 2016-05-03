@@ -1,6 +1,6 @@
 #!/bin/bash
 git add app* bin* config* db* features* lib* log* public* script* spec* tes* vendor*
-git commit --all -m "Test Iteration 3"
+git commit --all -m "test"
 git push
 git push heroku master
 heroku open

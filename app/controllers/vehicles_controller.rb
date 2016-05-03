@@ -1,5 +1,15 @@
 class VehiclesController < ApplicationController
-  before_filter :authenticate_user, :only => [:create]
+  before_filter :authenticate_user, :only => [:create, :show]
+  
+  def isuser
+    	vid = params[:vid]
+      @vehicle = Vehicle.find(vid)
+    	if(@vehicle.user_id!=session[:user_id])
+	    	flash[:notice]="You are not authorized to view that page"
+	    	# flash[:color]="Invalid"
+	    	redirect_to '/login'
+    	end
+	end
   
   def create
     @vehicle=Vehicle.new
@@ -33,22 +43,26 @@ class VehiclesController < ApplicationController
   end 
     
   def show
+    self.isuser
     vid = params[:vid]
     @vehicle = Vehicle.find(vid)
   end
     
   def save
+    self.isuser
     vid = params[:vid]
     @vehicle = Vehicle.find(vid)
   end 
     
   def edit
+    self.isuser
     vid = params[:vid]
     @vehicle = Vehicle.find(vid)
     @flash_notice = ""
   end 
     
   def update
+    self.isuser
     vid = params[:vid]
     @vehicle = Vehicle.find(vid)
         
@@ -76,9 +90,10 @@ class VehiclesController < ApplicationController
   end 
     
   def delete
+    self.isuser
   	vid = params[:vid]
   	Vehicle.find(vid).destroy
-  	redirect_to '/home'
+  	redirect_to '/homev'
   end
   
 end

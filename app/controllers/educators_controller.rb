@@ -1,5 +1,16 @@
 class EducatorsController < ApplicationController
   before_filter :authenticate_user, :only => [:create]
+
+  def isuser
+    	edid = params[:edid]
+      @educator = Educator.find(edid)
+    	if(@educator.uid!=session[:user_id])
+	    	flash[:notice]="You are not authorized to view that page"
+	    	# flash[:color]="Invalid"
+	    	redirect_to '/login'
+    	end
+	end
+
   
   def create
     @educator=Educator.new
@@ -51,22 +62,26 @@ class EducatorsController < ApplicationController
   end 
     
   def show
+    self.isuser
     edid = params[:edid]
     @educator = Educator.find(edid)
   end
     
   def save
+    self.isuser
     edid = params[:edid]
     @educator = Educator.find(edid)
   end 
     
   def edit
+    self.isuser
     edid = params[:edid]
     @educator = Educator.find(edid)
     @flash_notice = ""
   end 
     
   def update
+    self.isuser
     edid = params[:edid]
     @educator = Educator.find(edid)
         
@@ -114,9 +129,10 @@ class EducatorsController < ApplicationController
   end 
     
   def delete
+    self.isuser
   	edid = params[:edid]
   	Educator.find(edid).destroy
-  	redirect_to '/home'
+  	redirect_to '/homeed'
   end
   
 end
