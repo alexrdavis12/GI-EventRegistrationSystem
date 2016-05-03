@@ -34,7 +34,7 @@ footer {
     position: fixed;
     left: 0px;
     bottom: 0px;
-    z-index: -1;
+    z-index: 1;
     /*height: 100%;*/
     /*width: 100%;*/
 
