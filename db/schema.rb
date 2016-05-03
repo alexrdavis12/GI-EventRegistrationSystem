@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160426214757) do
+ActiveRecord::Schema.define(version: 20160502214624) do
 
   create_table "answers", force: :cascade do |t|
     t.integer  "eid"
@@ -109,6 +109,10 @@ ActiveRecord::Schema.define(version: 20160426214757) do
     t.string   "addressline1"
     t.string   "city"
     t.string   "state"
+    t.integer  "uvendorflag"
+    t.integer  "uvehicleflag"
+    t.integer  "uimpressionflag"
+    t.integer  "ueducatorflag"
   end
 
   add_index "users", ["hasvehicle"], name: "index_users_on_hasvehicle"

@@ -4,6 +4,8 @@ class VendorboothsController < ApplicationController
   def create
     @vendorbooth=Vendorbooth.new
     @flash_notice = ""
+    id = session[:user_id]
+    @user = User.find(id)
         
     if params[:commit] != nil && params[:commit] == 'Create'
       @vendorbooth.vbname = params[:Name]
@@ -15,6 +17,7 @@ class VendorboothsController < ApplicationController
           session[:vbid] = @vendorbooth.id
           flash[:notice] = "Vendor Booth Created Successfully!"
           vbid = @vendorbooth.id
+          @user.increment!(:uvendorflag, 1)
           redirect_to "/vendorboothshow?vbid=#{vbid}"
         else
           @flash_notice += "DB Error"
@@ -69,7 +72,11 @@ class VendorboothsController < ApplicationController
   end 
     
   def delete
+    id = session[:user_id]
+    @user = User.find(id)
+    
   	vbid = params[:vbid]
+  	@user.decrement!(:uvendorflag, 1)
   	if(	Vendorbooth.find(vbid))
     	Vendorbooth.find(vbid).destroy
     end
