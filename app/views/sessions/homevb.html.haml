@@ -113,7 +113,7 @@
                                                 = @current_user.zipcode
                             .col-md-4.text-center
                             %a{:href => setting_path, :class =>'btn btn-success'} Edit Profile
-    .row{:id => "events", :class => "tab-pane active"}
+    .row{:id => "events", :class => "tab-pane"}
         .col-md-1
             .col-md-10
                 .container
@@ -264,7 +264,7 @@
                         %a.btn.btn-success{:id => 'add_impression_btn', :href => 'impressioncreate'}
                             %i.fa.fa-plus.fa-lg
                             Add Impression
-    .row{:id => "vendorbooths", :class => "tab-pane"}
+    .row{:id => "vendorbooths", :class => "tab-pane active"}
         .col-md-2
             .col-md-10
                 .container
@@ -397,8 +397,6 @@
                         %a.btn.btn-success{:id => 'add_school_btn', :href => 'educatorcreate'}
                             %i.fa.fa-plus.fa-lg
                             Add School
-
-
 .row
     %br
     %br

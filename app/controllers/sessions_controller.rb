@@ -28,8 +28,8 @@ class SessionsController < ApplicationController
  
   def home
     id = session[:user_id]
-    @user = User.find(id)
-    if @user.level == 1
+    @current_user = User.find(id)
+    if @current_user.level == 1
       @vehicles=Vehicle.where(user_id: id).all
       @registeredevents =''
       @registeredeid = Answer.where(uid: id).all.uniq.pluck(:eid)
@@ -40,10 +40,30 @@ class SessionsController < ApplicationController
       @vendorbooths = Vendorbooth.where(uid: id).all
       @educators = Educator.where(uid: id).all
     else 
-      if @user.level ==0
+      if @current_user.level ==0
        redirect_to '/adminhome'
       end
     end
+  end
+
+  def homep
+    self.home
+  end
+
+  def homev
+    self.home
+  end
+
+  def homei
+    self.home
+  end
+
+  def homevb
+    self.home
+  end
+
+  def homeed
+    self.home
   end
 
 
@@ -125,7 +145,7 @@ class SessionsController < ApplicationController
       if @current_user.valid?
         if @current_user.save
           flash[:notice] = "Information Updated"
-          redirect_to '/home'
+          redirect_to '/homep'
           return
         else
           @flash_notice = "Edit Error"

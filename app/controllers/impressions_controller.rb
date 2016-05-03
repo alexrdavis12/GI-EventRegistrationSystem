@@ -1,5 +1,16 @@
 class ImpressionsController < ApplicationController
   before_filter :authenticate_user, :only => [:create]
+
+  def isuser
+    	iid = params[:iid]
+      @impression = Impression.find(iid)
+    	if(@impression.uid!=session[:user_id])
+	    	flash[:notice]="You are not authorized to view that page"
+	    	# flash[:color]="Invalid"
+	    	redirect_to '/login'
+    	end
+	end
+
   
   def create
     @impression=Impression.new
@@ -35,22 +46,26 @@ class ImpressionsController < ApplicationController
   end 
     
   def show
+    self.isuser
     iid = params[:iid]
     @impression = Impression.find(iid)
   end
     
   def save
+    self.isuser
     iid = params[:iid]
     @impression = Impression.find(iid)
   end 
     
   def edit
+    self.isuser
     iid = params[:iid]
     @impression = Impression.find(iid)
     @flash_notice = ""
   end 
     
   def update
+    self.isuser
     iid = params[:iid]
     @impression = Impression.find(iid)
         
@@ -79,13 +94,14 @@ class ImpressionsController < ApplicationController
   end 
     
   def delete
+
     id = session[:user_id]
     @user = User.find(id)
-    
+    self.isuser
   	iid = params[:iid]
   	@user.decrement!(:uimpressionflag, 1)
   	Impression.find(iid).destroy
-  	redirect_to '/home'
+  	redirect_to '/homei'
   end
   
 end

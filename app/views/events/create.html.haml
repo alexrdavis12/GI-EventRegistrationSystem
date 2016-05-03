@@ -1,4 +1,5 @@
 = javascript_include_tag "date"
+= javascript_include_tag "roles"
 %nav.navbar.navbar-inverse{:role => "navigation"}
   .navbar-header
     %a.navbar-brand{:href => "home"} M.A.G.I
@@ -35,11 +36,32 @@
         .panel-heading
           %h3.panel-title Event
         .panel-body
+
           = form_tag(:action => 'create') do
+            .form-group 
+              %label Roles:
+              %br
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              %check_box_tag
+              %input{:type => "checkbox", :value => '', :id=>"All",:name => "All"}
+              %label All &nbsp; &nbsp;
+              %check_box_tag
+              %input{:class =>"checkbox1", :type => "checkbox", :value => 0,  :id=>"Vendor", :name => "Vendor", }
+              %label Vendor &nbsp; &nbsp;
+              %check_box_tag
+              %input{:class =>"checkbox1", :type => "checkbox", :value => 0, :id=>"Vehicle", :name => "Vehicle", }
+              %label Vehicle &nbsp; &nbsp;
+              %check_box_tag
+              %input{:class =>"checkbox1", :type => "checkbox", :value => 0, :id=>"Reinactors", :name => "Reinactors", }
+              %label Reinactors &nbsp; &nbsp;
+              %check_box_tag
+              %input{:class =>"checkbox1", :type => "checkbox",:value => 0,:id=>"Educators", :name => "Educators", }
+              %label Educators&nbsp;&nbsp;&nbsp;
+            
             .form-group
               %label Event Title
               %input{:class => 'form-control', :value=>'', :name=>"Title"}
-  
+              
             .form-group
               %label Event Location
               %input{:class => 'form-control', :value=>'', :name=>"Location"}
@@ -59,10 +81,10 @@
             = submit_tag("Create", :class => 'btn btn-primary')
   .row
     %p{:id => "demo"}
-//    
-// .footer{:id => "footer", :style => "margin-bottom: 0"}
-//   .row{:style => "background-color:rgba(15,39,64,1.00);"}
-//     .col-md-3
-//     .col-md-6
-//       =image_tag "im3.png", :width=>"100%", :position=>"fixed", :bottom=>"0"
-//     .col-md-3
+  .row
+    %br
+    %br
+    %br
+    %br
+    %br
+    %br
