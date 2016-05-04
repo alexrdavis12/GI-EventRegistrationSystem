@@ -2866,3 +2866,293 @@ Cannot render console from 165.91.4.130! Allowed networks: 127.0.0.1, ::1, 127.0
             FROM sqlite_temp_master
             WHERE name='index_vehicles_on_user_id' AND type='index'
 
+  [1m[36m (16.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (9.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateUsers (20150925032423)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "password" varchar, "lastname" varchar, "firstname" varchar, "gender" varchar, "type" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20150925032423"]]
+  [1m[35m (18.1ms)[0m  commit transaction
+Migrating to Renameattribute (20150930014018)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.7ms)[0m  CREATE TEMPORARY TABLE "ausers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "password" varchar, "lastname" varchar, "firstname" varchar, "gender" varchar, "role" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "users"[0m
+  [1m[35m (0.2ms)[0m  DROP TABLE "users"
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "password" varchar, "lastname" varchar, "firstname" varchar, "gender" varchar, "role" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "ausers"
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "ausers"[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150930014018"]]
+  [1m[36m (10.4ms)[0m  [1mcommit transaction[0m
+Migrating to Salt (20150930050259)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "users" ADD "salt" varchar[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150930050259"]]
+  [1m[36m (9.7ms)[0m  [1mcommit transaction[0m
+Migrating to Encrypted (20150930050802)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "users" ADD "encrypted_password" varchar[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150930050802"]]
+  [1m[36m (10.2ms)[0m  [1mcommit transaction[0m
+Migrating to RemoveColumns (20151001013408)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE TEMPORARY TABLE "ausers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "password" varchar, "lastname" varchar, "firstname" varchar, "gender" varchar, "role" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "salt" varchar, "encrypted_password" varchar) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "users"
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "lastname" varchar, "firstname" varchar, "gender" varchar, "role" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "salt" varchar, "encrypted_password" varchar) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "ausers"[0m
+  [1m[35m (0.1ms)[0m  DROP TABLE "ausers"
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151001013408"]]
+  [1m[35m (9.4ms)[0m  commit transaction
+Migrating to CreateEvents (20151014185625)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "events" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "eid" integer, "etitle" varchar, "elocation" varchar, "estart" date, "eend" date, "edescription" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151014185625"]]
+  [1m[35m (9.7ms)[0m  commit transaction
+Migrating to CreateQuestions (20151014190035)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "questions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "qid" integer, "eid" integer, "qtitle" text, "qtype" varchar, "qoption" varchar, "qparentid" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151014190035"]]
+  [1m[35m (11.3ms)[0m  commit transaction
+Migrating to CreateAnswers (20151014190145)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "answers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "eid" integer, "uid" integer, "qid" integer, "answer" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151014190145"]]
+  [1m[35m (10.3ms)[0m  commit transaction
+Migrating to AddLevelToUsers (20151027022310)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "users" ADD "level" integer
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151027022310"]]
+  [1m[35m (11.0ms)[0m  commit transaction
+Migrating to RemoveroleFromusers (20151027030704)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TEMPORARY TABLE "ausers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "lastname" varchar, "firstname" varchar, "gender" varchar, "role" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "salt" varchar, "encrypted_password" varchar, "level" integer) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "users"[0m
+  [1m[35m (0.4ms)[0m  DROP TABLE "users"
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "lastname" varchar, "firstname" varchar, "gender" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "salt" varchar, "encrypted_password" varchar, "level" integer) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "ausers"
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "ausers"[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151027030704"]]
+  [1m[36m (13.8ms)[0m  [1mcommit transaction[0m
+Migrating to AddQtitleToAnswers (20151028045421)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "answers" ADD "qtitle" varchar[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151028045421"]]
+  [1m[36m (10.8ms)[0m  [1mcommit transaction[0m
+Migrating to AddZipcodeToUsers (20151111030442)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "users" ADD "zipcode" varchar[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151111030442"]]
+  [1m[36m (10.8ms)[0m  [1mcommit transaction[0m
+Migrating to AddParentoptToQuestions (20151203020326)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "questions" ADD "parentopt" integer[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151203020326"]]
+  [1m[36m (8.2ms)[0m  [1mcommit transaction[0m
+Migrating to AddDatafieldToUsers (20160409173157)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "users" ADD "hasvehicle" integer[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "index_users_on_hasvehicle" ON "users" ("hasvehicle")
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "unit" varchar[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_users_on_unit" ON "users" ("unit")[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "isco" integer
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_unit' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_unit' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_users_on_isco" ON "users" ("isco")[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "vehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "class" varchar, "nation" varchar, "war" varchar, "description" varchar) 
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160409173157"]]
+  [1m[35m (11.4ms)[0m  commit transaction
+Migrating to IdVehicle (20160409182548)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "vehicles" ADD "vid" integer
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "vehicles" ADD "uid" integer[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160409182548"]]
+  [1m[36m (11.1ms)[0m  [1mcommit transaction[0m
+Migrating to RenameVehicleColumns (20160409194349)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TEMPORARY TABLE "avehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "vclass" varchar, "nation" varchar, "war" varchar, "description" varchar, "vid" integer, "uid" integer) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "vehicles"
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "vehicles"[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "vehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "vclass" varchar, "nation" varchar, "war" varchar, "description" varchar, "vid" integer, "uid" integer) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "avehicles"[0m
+  [1m[35m (0.2ms)[0m  DROP TABLE "avehicles"
+  [1m[36m (0.2ms)[0m  [1mCREATE TEMPORARY TABLE "avehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "vname" varchar, "vclass" varchar, "nation" varchar, "war" varchar, "description" varchar, "vid" integer, "uid" integer) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "vehicles"
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "vehicles"[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "vehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "vname" varchar, "vclass" varchar, "nation" varchar, "war" varchar, "description" varchar, "vid" integer, "uid" integer) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "avehicles"[0m
+  [1m[35m (0.2ms)[0m  DROP TABLE "avehicles"
+  [1m[36m (0.2ms)[0m  [1mCREATE TEMPORARY TABLE "avehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "vname" varchar, "vclass" varchar, "vnation" varchar, "war" varchar, "description" varchar, "vid" integer, "uid" integer) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "vehicles"
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "vehicles"[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "vehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "vname" varchar, "vclass" varchar, "vnation" varchar, "war" varchar, "description" varchar, "vid" integer, "uid" integer) 
+  [1m[36m (0.2ms)[0m  [1mSELECT * FROM "avehicles"[0m
+  [1m[35m (0.3ms)[0m  DROP TABLE "avehicles"
+  [1m[36m (0.2ms)[0m  [1mCREATE TEMPORARY TABLE "avehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "vname" varchar, "vclass" varchar, "vnation" varchar, "vwar" varchar, "description" varchar, "vid" integer, "uid" integer) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "vehicles"
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "vehicles"[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "vehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "vname" varchar, "vclass" varchar, "vnation" varchar, "vwar" varchar, "description" varchar, "vid" integer, "uid" integer) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "avehicles"[0m
+  [1m[35m (0.1ms)[0m  DROP TABLE "avehicles"
+  [1m[36m (0.2ms)[0m  [1mCREATE TEMPORARY TABLE "avehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "vname" varchar, "vclass" varchar, "vnation" varchar, "vwar" varchar, "vdescription" varchar, "vid" integer, "uid" integer) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "vehicles"
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "vehicles"[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "vehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "vname" varchar, "vclass" varchar, "vnation" varchar, "vwar" varchar, "vdescription" varchar, "vid" integer, "uid" integer) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "avehicles"[0m
+  [1m[35m (0.2ms)[0m  DROP TABLE "avehicles"
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160409194349"]]
+  [1m[35m (12.1ms)[0m  commit transaction
+Migrating to AddForeignKeytoVehicles (20160411054413)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TEMPORARY TABLE "avehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "vname" varchar, "vclass" varchar, "vnation" varchar, "vwar" varchar, "vdescription" varchar, "vid" integer, "user_id" integer) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "vehicles"[0m
+  [1m[35m (0.3ms)[0m  DROP TABLE "vehicles"
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "vehicles" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "vname" varchar, "vclass" varchar, "vnation" varchar, "vwar" varchar, "vdescription" varchar, "vid" integer, "user_id" integer) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "avehicles"
+  [1m[36m (0.1ms)[0m  [1mDROP TABLE "avehicles"[0m
+  [1m[35m (0.2ms)[0m  CREATE  INDEX "index_vehicles_on_user_id" ON "vehicles" ("user_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160411054413"]]
+  [1m[35m (10.4ms)[0m  commit transaction
+Migrating to AddVehiclesCountToUsers (20160411064421)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "users" ADD "vehicles_count" int
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160411064421"]]
+  [1m[35m (12.2ms)[0m  commit transaction
+Migrating to AddPhonenumberTake2 (20160418233517)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "users" ADD "phonenumber" varchar
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160418233517"]]
+  [1m[35m (9.7ms)[0m  commit transaction
+Migrating to AddAddress (20160419142111)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "users" ADD "addressline1" varchar
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "city" varchar[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "state" varchar
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160419142111"]]
+  [1m[35m (10.3ms)[0m  commit transaction
+Migrating to AddTablesForUnitaffiliation (20160419162536)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "units" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "cid" integer, "unitid" integer, "uname" varchar, "uside" varchar, "utotalmembers" integer, "udescription" varchar) 
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "impressions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "uid" integer, "unitid" integer, "iname" varchar, "iside" varchar, "iwar" varchar, "idescription" varchar, "cid" integer) [0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "commander" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "uid" integer, "cid" integer) 
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "vendorbooths" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "uid" integer, "boothid" integer, "vbname" varchar, "vbdescription" varchar) [0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "educator" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "uid" integer, "edid" integer, "edname" varchar, "eddescription" varchar, "edtotalnumber" integer, "edorganization" varchar) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160419162536"]]
+  [1m[35m (10.9ms)[0m  commit transaction
+Migrating to AddImpressionId (20160422221817)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "impressions" ADD "iid" int
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "commander" RENAME TO "commanders"[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "educator" RENAME TO "educators"
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160422221817"]]
+  [1m[35m (10.1ms)[0m  commit transaction
+Migrating to ChangeTypeUnitid (20160422233156)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TEMPORARY TABLE "aimpressions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "uid" integer, "unitid" integer, "iname" varchar, "iside" varchar, "iwar" varchar, "idescription" varchar, "cid" integer, "iid" integer) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "impressions"[0m
+  [1m[35m (0.3ms)[0m  DROP TABLE "impressions"
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "impressions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "uid" integer, "unitid" varchar, "iname" varchar, "iside" varchar, "iwar" varchar, "idescription" varchar, "cid" integer, "iid" integer) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "aimpressions"
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "aimpressions"[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160422233156"]]
+  [1m[36m (10.1ms)[0m  [1mcommit transaction[0m
+Migrating to AddVbidToVendorbooths (20160423003820)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "vendorbooths" ADD "vbid" integer[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160423003820"]]
+  [1m[36m (12.1ms)[0m  [1mcommit transaction[0m
+Migrating to AddSpacesToVendorbooths (20160424214709)
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "vendorbooths" ADD "vbspaces" integer[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160424214709"]]
+  [1m[36m (10.1ms)[0m  [1mcommit transaction[0m
+Migrating to AddEducatorsTable (20160425192951)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mDROP TABLE "educators"[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "educators" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "uid" integer, "edid" integer, "edschooltype" varchar, "edpgaurdianname" varchar, "edpgaurdianphone" varchar, "edgaurdianemail" varchar, "edschoolname" varchar, "edaddress" varchar, "edzip" varchar, "edprimaryemail" varchar, "edprimaryname" varchar, "edprimaryrole" varchar, "edprimaryphone" varchar, "edprinciplename" varchar, "edprincipleemail" varchar) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160425192951"]]
+  [1m[35m (10.0ms)[0m  commit transaction
+Migrating to AddCommanderToImpressions (20160426214757)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "impressions" ADD "commander" varchar
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160426214757"]]
+  [1m[35m (9.8ms)[0m  commit transaction
+Migrating to Roles (20160503034459)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "events" ADD "evendorflag" integer
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "events" ADD "evehicleflag" integer[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "events" ADD "eimpressionflag" integer
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "events" ADD "eeducatorflag" integer[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160503034459"]]
+  [1m[36m (7.3ms)[0m  [1mcommit transaction[0m
+Migrating to AddInventory (20160503090957)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "inventories" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "uid" integer, "eid" integer, "inventvid" varchar, "inventedid" varchar, "inventviid" varchar, "inventvbid" varchar) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160503090957"]]
+  [1m[36m (12.2ms)[0m  [1mcommit transaction[0m
+Migrating to AddAvailabiltyToEvents (20160504041638)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "events" ADD "eavailabilityflag" integer[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160504041638"]]
+  [1m[36m (13.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_isco' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_isco' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_unit' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_unit' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_hasvehicle' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_vehicles_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_vehicles_on_user_id' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'info@americangimuseum.org' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("email", "lastname", "firstname", "gender", "phonenumber", "addressline1", "city", "state", "zipcode", "salt", "encrypted_password", "level", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["email", "info@americangimuseum.org"], ["lastname", "Admin"], ["firstname", "Admin"], ["gender", ""], ["phonenumber", "9794466888"], ["addressline1", "19124 TX-6"], ["city", "College Station"], ["state", "TX"], ["zipcode", "77845"], ["salt", "$2a$10$C0jLntM3kN6RPLsc4ObNRe"], ["encrypted_password", "$2a$10$C0jLntM3kN6RPLsc4ObNRe8ybf2HnTS.1jxZWcmZ.Dwu0OOFXzqIK"], ["level", 0], ["created_at", "2016-05-04 11:46:16.118101"], ["updated_at", "2016-05-04 11:46:16.118101"]]
+  [1m[36m (12.2ms)[0m  [1mcommit transaction[0m

@@ -50,6 +50,12 @@
             .panel-heading
               %h3.panel-title Event: #{e.etitle}
             .panel-body
+              %label Open for registration:    
+              -if e.eavailabilityflag == 1
+                ="   Yes"
+              -else
+                ="   No"
+              %br
               %label Roles: &nbsp;&nbsp;&nbsp;
               -if e.eimpressionflag?
                 Reenactors&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
