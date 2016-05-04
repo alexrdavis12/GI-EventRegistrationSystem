@@ -31,7 +31,7 @@
           = form_tag(:action => 'update', :vbid => @vendorbooth.id) do
             .form-group
               %label Vendor Booth Name
-              %input{:class => 'form-control', :value=>@vendorbooth.vbname, :name=>"Name"}
+              %input{:class => 'form-control', :value=>@vendorbooth.vbname, :name=>"Name", :required=>""}
             .form-group
               %label Vendor Booth Description
               %textarea{:class => 'form-control', :rows => "8", :value=>@vendorbooth.vbdescription, :name=>"Description"}
