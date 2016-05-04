@@ -121,14 +121,14 @@ class EventsController < ApplicationController
     
     if(@user.uvendorflag > 0)
       @vendorevents = Event.where(evendorflag => 1).all
-    
-    elsif(@user.uvehicleflag > 0)
+    end
+    if(@user.uvehicleflag > 0)
       @vehicleevents = Event.where(evehicleflag => 1).all
-    
-    elsif(@user.uimpressionflag > 0)
+    end
+    if(@user.uimpressionflag > 0)
       @impressionevents = Event.where(eimpressionflag => 1).all
-      
-    elsif(@user.ueducatorflag > 0)
+    end
+    if(@user.ueducatorflag > 0)
       @educatorevents = Event.where(eeducatorflag => 1).all
     end
     
