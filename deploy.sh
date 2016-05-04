@@ -1,6 +1,6 @@
 #!/bin/bash
 git add app* bin* config* db* features* lib* log* public* script* spec* tes* vendor*
-git commit --all -m "Updating user-side answers"
+git commit --all -m "Presentation"
 git push
-git push heroku Steevy:master
+git push heroku master
 heroku open

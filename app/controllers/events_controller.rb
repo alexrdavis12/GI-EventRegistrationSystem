@@ -11,7 +11,7 @@ class EventsController < ApplicationController
 	end
 
   def create
-    self.isadmin
+     self.isadmin
   	@event = Event.new
   	@flash_notice = ""
   
@@ -54,7 +54,6 @@ class EventsController < ApplicationController
       	end
     end
   end
-  
     
   def show
     eid=params[:eid]
@@ -115,17 +114,40 @@ class EventsController < ApplicationController
       		@flash_notice += "Save Error"
       		redirect_to "/eventedit?eid=#{eid}"
       	end
-
       end
     end 
     
   def allevent
     id = session[:user_id]
+    @user = User.find(id)
+    
     @curlevel = User.find(id).level
     if(@curlevel != 0)
-      @event = Event.all
+      id = session[:user_id]
+      @user = User.find(id)
+      
+      @events = Event.all
+      
+      if (@user.uvendorflag != 0)
+        @events=Event.where(evendorflag: 1).all
+      end
+      if(@user.uvehicleflag != 0)
+        @events=@events+Event.where(evehicleflag: 1).all
+      end
+      if(@user.uimpressionflag != 0)
+        @events=@events+Event.where(eimpressionflag: 1).all
+      end
+      if(@user.ueducatorflag != 0)
+        @events=@events+Event.where(eeducatorflag: 1).all
+      end
+      
+      @events = @events - Event.where(eavailabilityflag: 0).all
+      
+      @events = @events.uniq
+
     else
       redirect_to '/admin'
     end
   end
-end
+end 
+

@@ -15,6 +15,8 @@ class ImpressionsController < ApplicationController
   def create
     @impression=Impression.new
     @flash_notice = ""
+    id = session[:user_id]
+    @user = User.find(id)
         
     if params[:commit] != nil && params[:commit] == 'Create'
       @impression.iname = params[:Name]
@@ -30,6 +32,7 @@ class ImpressionsController < ApplicationController
           session[:iid] = @impression.id
           flash[:notice] = "Impression Created Successfully!"
           iid = @impression.id
+          @user.increment!(:uimpressionflag, 1)
           redirect_to "/impressionshow?iid=#{iid}"
         else
           @flash_notice += "DB Error"
@@ -91,8 +94,12 @@ class ImpressionsController < ApplicationController
   end 
     
   def delete
+
+    id = session[:user_id]
+    @user = User.find(id)
     self.isuser
   	iid = params[:iid]
+  	@user.decrement!(:uimpressionflag, 1)
   	Impression.find(iid).destroy
   	redirect_to '/homei'
   end

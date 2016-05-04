@@ -123,6 +123,10 @@ ActiveRecord::Schema.define(version: 20160504041638) do
     t.string   "addressline1"
     t.string   "city"
     t.string   "state"
+    t.integer  "uvendorflag"
+    t.integer  "uvehicleflag"
+    t.integer  "uimpressionflag"
+    t.integer  "ueducatorflag"
   end
 
   add_index "users", ["hasvehicle"], name: "index_users_on_hasvehicle"
