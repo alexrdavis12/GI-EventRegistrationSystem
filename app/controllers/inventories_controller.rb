@@ -16,6 +16,7 @@ class InventoriesController < ApplicationController
   			return
 		  end
       
+      #@flash_notice = ""
       
       #this event is for impressionists
       if @event.eimpressionflag == 1

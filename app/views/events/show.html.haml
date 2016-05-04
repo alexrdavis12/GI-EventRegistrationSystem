@@ -33,6 +33,13 @@
       
       .panel.panel-info
         .panel-heading
+          Open for registration?
+        .panel-body
+          -if @event.eavailabilityflag == 1
+            ="Yes"
+          -else
+            ="No"
+        .panel-heading
           Roles
         .panel-body
           -if @event.eimpressionflag?
@@ -78,7 +85,7 @@
         %a{:href => "QuestionCreate?eid=#{@event.id}", :visited=>'color: #FFFFFF', :class =>'btn btn-primary btn-primary', :role=>'button'} Add question for it
       %br
       %br
-    .col-md-
+    .col-md-5
   .row
     %br
     %br

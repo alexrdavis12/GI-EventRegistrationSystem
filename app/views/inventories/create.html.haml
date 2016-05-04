@@ -23,7 +23,7 @@
   .row
     .col-md-2
     .col-md-8
-      -if @flash_notice != ""
+      -if @flash_notice != "" && @flash_notice != nil
         .alert.alert-danger
           %button.close{:type=>"button", "data-dismiss"=>"alert"}
             %span{"aria-hidden"=>true}×
@@ -33,9 +33,11 @@
   .row
     .col-md-2
     .col-md-8
-      .panel.panel-primary
-        .panel-heading
-          %h3.panel-title Select Items for this event
+      .panel.panel-primary{:style => 'background: none; outline:0'}
+        .panel-heading{:style => 'color: #500000;background: none;'}
+          %h3.panel-title 
+            %strong
+              Select Items for this event
         .panel-body
           = form_tag(:action => 'create',:eid => @eid) do
             -if @userimpressions != nil
