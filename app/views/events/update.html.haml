@@ -32,6 +32,17 @@
 
       .panel.panel-info
         .panel-heading
+          Roles
+        .panel-body
+          -if @event.eimpressionflag?
+            Reenactors&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+          -if @event.evehicleflag?
+            Vehicles &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+          -if @event.evendorflag?
+            Vendors &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+          -if @event.eeducatorflag?
+            Educators&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        .panel-heading
           Event ID
         .panel-body
           =@event.id
