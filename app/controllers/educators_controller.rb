@@ -15,6 +15,8 @@ class EducatorsController < ApplicationController
   def create
     @educator=Educator.new
     @flash_notice = ""
+    id = session[:user_id]
+    @user = User.find(id)
         
     if params[:commit] != nil && params[:commit] == 'Create'
       @educator.edschooltype = params[:Type]
@@ -46,6 +48,7 @@ class EducatorsController < ApplicationController
           session[:edid] = @educator.id
           flash[:notice] = "Educator Created Successfully!"
           edid = @educator.id
+          @user.increment!(:ueducatorflag, 1)
           redirect_to "/educatorshow?edid=#{edid}"
         else
           @flash_notice += "DB Error"
@@ -126,8 +129,15 @@ class EducatorsController < ApplicationController
   end 
     
   def delete
+
+    id = session[:user_id]
+    @user = User.find(id)
+    
+
     self.isuser
+
   	edid = params[:edid]
+  	@user.decrement!(:ueducatorflag, 1)
   	Educator.find(edid).destroy
   	redirect_to '/homeed'
   end

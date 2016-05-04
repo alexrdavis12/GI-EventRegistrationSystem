@@ -14,6 +14,8 @@ class VehiclesController < ApplicationController
   def create
     @vehicle=Vehicle.new
     @flash_notice = ""
+    id = session[:user_id]
+    @user = User.find(id)
         
     if params[:commit] != nil && params[:commit] == 'Create'
       @vehicle.vname = params[:Name]
@@ -27,6 +29,7 @@ class VehiclesController < ApplicationController
           session[:vid] = @vehicle.id
           flash[:notice] = "Vehicle Created Successfully!"
           vid = @vehicle.id
+          @user.increment!(:uvehicleflag, 1)
           redirect_to "/vehicleshow?vid=#{vid}"
         else
           @flash_notice += "DB Error"
@@ -87,8 +90,15 @@ class VehiclesController < ApplicationController
   end 
     
   def delete
+
+    id = session[:user_id]
+    @user = User.find(id)
+    
+
     self.isuser
+
   	vid = params[:vid]
+  	@user.decrement!(:uvehicleflag, 1)
   	Vehicle.find(vid).destroy
   	redirect_to '/homev'
   end
