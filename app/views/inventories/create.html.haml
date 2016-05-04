@@ -33,23 +33,23 @@
   .row
     .col-md-2
     .col-md-8
-      .panel.panel-primary{:style => 'background: none; outline:0'}
-        .panel-heading{:style => 'color: #500000;background: none;'}
+      .panel.panel-primary{:style => 'background-color : #d9edf7'}
+        .panel-heading{:style => 'background-color : #d9edf7, color: #500000'}
           %h3.panel-title 
             %strong
               Select Items for this event
         .panel-body
           = form_tag(:action => 'create',:eid => @eid) do
             -if @userimpressions != nil
-              .panel.panel-primary
-                .panel-heading
-                  %h4.panel-title Choose impressions from your profile
-                .panel-body
+              .panel.panel-danger{:style => 'background-color : #f2dede'}
+                .panel-heading{:style => 'background-color : #f2dede'}
+                  %h4.panel-title Choose Impressions from your profile
+                .panel-body{:style => 'background-color : #f2dede'}
                   -if @userimpressions.length != 0
                     - cnt= 0
                     - @userimpressions.each do |i|
                       - cnt+=1
-                      .panel.panel-primary
+                      .panel.panel-default
                         .panel-heading
                           %h3.panel-title 
                             Impression #{cnt}
@@ -72,10 +72,13 @@
                           %label Description:
                           = i.idescription
             -if @uservehicles != nil
-              .panel.panel-primary
+              %br
+              %br
+              .panel.panel-danger{:style => 'background-color : #f2dede'}
                 .panel-heading
-                  %h4.panel-title
-                  Choose vehicles from your profile
+                  %h4.panel-title 
+                    %strong 
+                      Choose from your existing vehicles
                 .panel-body
                   -if @uservehicles.length != 0
                     - cnt= 0
