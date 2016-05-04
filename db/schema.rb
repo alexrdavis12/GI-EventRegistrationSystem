@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160503034459) do
+ActiveRecord::Schema.define(version: 20160503090957) do
 
   create_table "answers", force: :cascade do |t|
     t.integer  "eid"
@@ -71,6 +71,15 @@ ActiveRecord::Schema.define(version: 20160503034459) do
     t.integer "cid"
     t.integer "iid"
     t.string  "commander"
+  end
+
+  create_table "inventories", force: :cascade do |t|
+    t.integer "uid"
+    t.integer "eid"
+    t.string  "inventvid"
+    t.string  "inventedid"
+    t.string  "inventviid"
+    t.string  "inventvbid"
   end
 
   create_table "questions", force: :cascade do |t|
