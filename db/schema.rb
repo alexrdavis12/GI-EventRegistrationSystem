@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160426214757) do
+ActiveRecord::Schema.define(version: 20160504041638) do
 
   create_table "answers", force: :cascade do |t|
     t.integer  "eid"
@@ -53,8 +53,13 @@ ActiveRecord::Schema.define(version: 20160426214757) do
     t.date     "estart"
     t.date     "eend"
     t.text     "edescription"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.integer  "evendorflag"
+    t.integer  "evehicleflag"
+    t.integer  "eimpressionflag"
+    t.integer  "eeducatorflag"
+    t.integer  "eavailabilityflag"
   end
 
   create_table "impressions", force: :cascade do |t|
@@ -67,6 +72,15 @@ ActiveRecord::Schema.define(version: 20160426214757) do
     t.integer "cid"
     t.integer "iid"
     t.string  "commander"
+  end
+
+  create_table "inventories", force: :cascade do |t|
+    t.integer "uid"
+    t.integer "eid"
+    t.string  "inventvid"
+    t.string  "inventedid"
+    t.string  "inventviid"
+    t.string  "inventvbid"
   end
 
   create_table "questions", force: :cascade do |t|

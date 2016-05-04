@@ -31,12 +31,7 @@
           = form_tag(:action => 'update', :vbid => @vendorbooth.id) do
             .form-group
               %label Vendor Booth Name
-              %input{:class => 'form-control', :value=>@vendorbooth.vbname, :name=>"Name"}
-            .form-group
-              .feilds
-                %label 20X20 Spaces Needed
-                %br
-                = number_field 'SpaceNeeded','action', value:@vendorbooth.vbspaces, min:0, max:100, step:1
+              %input{:class => 'form-control', :value=>@vendorbooth.vbname, :name=>"Name", :required=>""}
             .form-group
               %label Vendor Booth Description
               %textarea{:class => 'form-control', :rows => "8", :value=>@vendorbooth.vbdescription, :name=>"Description"}

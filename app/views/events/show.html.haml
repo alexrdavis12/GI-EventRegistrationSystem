@@ -30,12 +30,22 @@
             %span.sr-only Close
           =flash[:notice]
 
+      
       .panel.panel-info
+        .panel-heading
+          Open for registration?
+        .panel-body
+          -if @event.eavailabilityflag == 1
+            ="Yes"
+          -else
+            ="No"
+        .panel-heading
+          Vendors   Vehicle   Reinactors       Educators
         .panel-heading
           Event ID
         .panel-body
           =@event.id
-      
+  
         .panel-heading
           Event Title
         .panel-body
@@ -66,7 +76,7 @@
         %a{:href => "QuestionCreate?eid=#{@event.id}", :visited=>'color: #FFFFFF', :class =>'btn btn-primary btn-primary', :role=>'button'} Add question for it
       %br
       %br
-    .col-md-
+    .col-md-5
   .row
     %br
     %br

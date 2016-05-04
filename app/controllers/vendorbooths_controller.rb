@@ -19,7 +19,6 @@ class VendorboothsController < ApplicationController
     if params[:commit] != nil && params[:commit] == 'Create'
       @vendorbooth.vbname = params[:Name]
       @vendorbooth.vbdescription = params[:Description]
-      @vendorbooth.vbspaces = params[:spaces]
       @vendorbooth.uid = session[:user_id]
       if @vendorbooth.valid?
         if @vendorbooth.save
@@ -65,7 +64,6 @@ class VendorboothsController < ApplicationController
     if params[:commit] != nil && params[:commit] == 'Save'
       @vendorbooth.vbname = params[:Name]
       @vendorbooth.vbdescription = params[:Description]
-      @vendorbooth.vbspaces = params[:spaces]
       if @vendorbooth.valid?
         if @vendorbooth.save
           session[:vbid] = @vendorbooth.id

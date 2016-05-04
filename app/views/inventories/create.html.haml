@@ -1,0 +1,197 @@
+%nav.navbar.navbar-inverse{:role => "navigation"}
+  .navbar-header
+    %a.navbar-brand{:href => "home"} M.A.G.I
+  %ul.nav.navbar-nav.navbar-right
+    %li
+      %a{:href=>'home'}
+        %i{:class=>"fa fa-home fa-fw"} 
+        Home 
+    %li
+      %a{:href=>'allevent'}
+        %i{:class=>"fa fa-align-justify fa-fw"} 
+        Event
+    %li
+      %a{:href=>'profile'}
+        %i{:class=>"fa fa-user fa-fw"} 
+        Profile
+    %li
+      %a{:href=>'logout'}
+        %i{:class=>"fa fa-sign-out fa-fw"} 
+        Logout
+        
+.container
+  .row
+    .col-md-2
+    .col-md-8
+      -if @flash_notice != "" && @flash_notice != nil
+        .alert.alert-danger
+          %button.close{:type=>"button", "data-dismiss"=>"alert"}
+            %span{"aria-hidden"=>true}×
+            %span.sr-only Close
+          %strong 
+            = @flash_notice
+  .row
+    .col-md-2
+    .col-md-8
+      .panel.panel-primary{:style => 'background: none; outline:0'}
+        .panel-heading{:style => 'color: #500000;background: none;'}
+          %h3.panel-title 
+            %strong
+              Select Items for this event
+        .panel-body
+          = form_tag(:action => 'create',:eid => @eid) do
+            -if @userimpressions != nil
+              .panel.panel-primary
+                .panel-heading
+                  %h4.panel-title Choose impressions from your profile
+                .panel-body
+                  -if @userimpressions.length != 0
+                    - cnt= 0
+                    - @userimpressions.each do |i|
+                      - cnt+=1
+                      .panel.panel-primary
+                        .panel-heading
+                          %h3.panel-title 
+                            Impression #{cnt}
+                            %input.pull-right{:type => "checkbox", :value => i.id, :name => "impression#{cnt}"}
+                        .panel-body
+                          %label= i.iname 
+                          %br
+                          %label Unit:  
+                          = i.unitid
+                          %br
+                          %label War: 
+                          = i.iwar
+                          %br
+                          %label Side: 
+                          = i.iside
+                          %br
+                          %label Commander:
+                          = i.commander
+                          %br
+                          %label Description:
+                          = i.idescription
+            -if @uservehicles != nil
+              .panel.panel-primary
+                .panel-heading
+                  %h4.panel-title
+                  Choose vehicles from your profile
+                .panel-body
+                  -if @uservehicles.length != 0
+                    - cnt= 0
+                    - @uservehicles.each do |v|
+                      - cnt+=1
+                      .panel.panel-primary
+                        .panel-heading
+                          %h3.panel-title
+                            Vehicle #{cnt}
+                            %input.pull-right{:type => "checkbox", :value => v.id, :name => "vehicle#{cnt}"}
+                        .panel-body
+                          %label= v.vname 
+                          %br
+                          %label Vehicle Class: 
+                          = v.vclass
+                          %br
+                          %label Nation:  
+                          = v.vnation
+                          %br
+                          %label War:  
+                          = v.vwar
+                          %br
+                          %label Vehicle Description: 
+                          = v.vdescription
+            -if @uservendorbooths != nil
+              .panel.panel-primary
+                .panel-heading
+                  %h4.panel-title Choose vendor booths from your profile
+                .panel-body
+                -if @uservendorbooths.length != 0
+                  - cnt= 0
+                  - @uservendorbooths.each do |vb|
+                    - cnt+=1
+                    .panel.panel-primary
+                      .panel-heading
+                        %h3.panel-title
+                          Vendor Booth #{cnt}
+                          %input.pull-right{:type => "checkbox", :value =>vb.id, :name => "vendorbooth#{cnt}"}
+                      .panel-body
+                        %label= vb.vbname 
+                        %br
+                        %label Number vendor spaces:
+                        = vb.vbspaces
+                        %br
+                        %label Description:
+                        = vb.vbdescription
+            -if @usereducators != nil
+              .panel.panel-primary
+                .panel-heading
+                  %h4.panel-title Choose school groups from your profile
+                .panel-body
+                  -if @usereducators.length != 0
+                    - cnt= 0
+                    - @usereducators.each do |ed|
+                      - cnt+=1
+                      .panel.panel-primary
+                        .panel-heading
+                          %h3.panel-title 
+                            =ed.edschooltype
+                            %input.pull-right{:type => "checkbox", :value => ed.id, :name => "educators#{cnt}"}
+                        .panel-body
+                          -if ed.edschooltype=="Home School"
+                            %label Parent/Guardian Name:  
+                            = ed.edpgaurdianname 
+                            %br
+                            %label Address: 
+                            = ed.edaddress
+                            %br
+                            %label Zip Code:
+                            = ed.edzip
+                            %br
+                            %label Phone:
+                            = ed.edpgaurdianphone
+                            %br
+                            %label Email:
+                            = ed.edgaurdianemail
+                            %br
+                            %label Primary Contact Name:
+                            = ed.edprimaryname
+                            %br
+                            %label Primary Contact's Email:
+                            = ed.edprimaryemail
+                            %br 
+                            %label Primary Contact's Phone:
+                            = ed.edprimaryphone
+                            %br
+                          -elsif ed.edschooltype=="Private School"
+                            %label School Name:  
+                            = ed.edschoolname 
+                            %br
+                            %label Address: 
+                            = ed.edaddress
+                            %br
+                            %label Zip Code:
+                            = ed.edzip
+                            %br
+                            %label Primary Contact Name:
+                            = ed.edprimaryname
+                            %br
+                            %label Primary Contact's Email:
+                            = ed.edprimaryemail
+                            %br 
+                            %label Primary Contact's Phone:
+                            = ed.edprimaryphone
+                            %br
+                            %label Principal's Name:
+                            = ed.edprinciplename
+                            %br 
+                            %label Principal's Email:
+                            = ed.edprincipleemail
+                            %br
+            = submit_tag("Create", :class => 'btn btn-primary',  )
+  .row
+    %br
+    %br
+    %br
+    %br
+    %br
+    %br           

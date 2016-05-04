@@ -32,6 +32,13 @@
 
       .panel.panel-info
         .panel-heading
+          Open for registration?
+        .panel-body
+          -if @event.eavailabilityflag == 1
+            ="Yes"
+          -else
+            ="No"
+        .panel-heading
           Event ID
         .panel-body
           =@event.id
