@@ -48,9 +48,17 @@
           - cnt+=1
           .panel.panel-primary
             .panel-heading
-              %h3.panel-title Event #{cnt}
+              %h3.panel-title Event: #{e.etitle}
             .panel-body
-              %label= e.etitle 
+              %label Roles: &nbsp;&nbsp;&nbsp;
+              -if e.eimpressionflag?
+                Reenactors&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+              -if e.evehicleflag?
+                Vehicles &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+              -if e.evendorflag?
+                Vendors &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+              -if e.eeducatorflag?
+                Educators&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               %br
               %label Location 
               = e.elocation

@@ -39,6 +39,24 @@
           -else
             ="No"
         .panel-heading
+          Roles
+        .panel-body
+          -if @event.eimpressionflag?
+            Reenactors&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      
+          -if @event.evehicleflag?
+            Vehicles &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+          -if @event.evendorflag?
+            Vendors &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+          -if @event.eeducatorflag?
+            Educators&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        .panel-heading
+          Open for registration?
+        .panel-body
+          -if @event.eavailabilityflag == 1
+            ="Yes"
+          -else
+            ="No"
+        .panel-heading
           Event ID
         .panel-body
           =@event.id
