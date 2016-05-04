@@ -81,6 +81,30 @@ class Answer < ActiveRecord::Base
 
 	      end
 	      
+	      #setup vehicle section
+	      csv << [""]
+	      csv << [""]
+	      csv << [""]
+	      csv << "Vehicles Being Brought"
+	      vehicletitles = ["User Last Name","User First Name","Vehicle Name","Vehicle Class","Vehicle Nation","Vehicle War","Vehicle Description"]
+	      csv << vehicletitles
+	      
+	      csv << [""]
+	      csv << [""]
+	      csv << [""]
+	      csv << "Impressions in Attendance"
+	      impressiontitles = ["User Last Name","User First Name","Impression Name","Unit","War","Side","Name of Commanding Officer","Impression Description"]
+	      csv << impressiontitles 
+	      
+	      csv << [""]
+	      csv << [""]
+	      csv << [""]
+	      csv << "Impressions in Attendance"
+	      vendortitles = ["User Last Name","User First Name","Booth Name","Booth Description"]
+	      csv << vendortitles
+	      
+	      
+	      
 	      
 	    #   column_title = ["Record ID", "Event ID", "Email", "Question ID", "Answer", "Created at", "Updated at", "Question Title"]
 	    #   csv << column_title

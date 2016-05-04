@@ -3,6 +3,7 @@
 function checkselect() {
 	$(":checkbox").change(function(evt){
 		evt.stopImmediatePropagation();
+		removeDisable();
 		select_qid = $(this).attr('qid');
 		opt = $(this).val();
 		if (opt != 1) {
@@ -27,6 +28,7 @@ function checkselect() {
 function hookselect() {
 	$("select").change(function(evt){
 		evt.stopImmediatePropagation();
+		removeDisable();
 		select_qid = $(this).attr('qid');
 		opt = $(this).val();
 		if (opt != 1) {
@@ -49,6 +51,7 @@ function hookselect() {
 function radioselect() {
 	$(":radio").change(function(evt){
 		evt.stopImmediatePropagation();
+		removeDisable();
 		select_qid = $(this).attr('qid');
 		opt = $(this).val();
 		if (opt != 1) {
@@ -75,13 +78,18 @@ $(document).ready(function(){
 });
 
 function setupRequired() {
-	alert("setup func");
-	
 	$(".form-control").attr("required", true);
-	$(".other-input").attr("required", true);
+	$(":radio").attr("required", true);
 	
 	$(".form-control:hidden").removeAttr("required");
-	$(".other-input:hidden").removeAttr("required");
+	$(":radio:hidden").removeAttr("required");
+}
+
+function removeDisable() {
+	$(":checkbox").removeAttr("disabled");
+	$(":selected").removeAttr("disabled");
+	$(":radio").removeAttr("disabled");
+	$(".form-control").removeAttr("disabled");
 }
 
 function fix_form() {
