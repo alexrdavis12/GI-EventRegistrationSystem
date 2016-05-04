@@ -38,6 +38,14 @@
         .panel-body
           = form_tag(:action => 'update', :eid => @event.id) do
             .form-group
+              %label Open for registration?     
+              %label.checkbox-inline
+                %input{:type=>'radio', :value=> 1, :name=> :Availability, :checked=>@event.eavailabilityflag==1, :id=>"Availability"}
+                Yes 
+              %label.checkbox-inline
+                %input{:type=>'radio', :value=> 0, :name=> :Availability, :checked=>@event.eavailabilityflag==0, :id=>"Availability"}
+                No
+              %br
               %label Roles:
               %br
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

@@ -25,6 +25,7 @@ class EventsController < ApplicationController
        	@event.estart = params[:Start_Date]
       	@event.eend = params[:End_Date]
       	@event.edescription = params[:Description]
+      	@event.eavailabilityflag = params[:Availability]
       	if @event.valid?
       		if @event.save
       			session[:eid] = @event.id
@@ -86,6 +87,7 @@ class EventsController < ApplicationController
        	@event.estart = params[:Start_Date]
       	@event.eend = params[:End_Date]
       	@event.edescription = params[:Description]
+      	@event.eavailabilityflag = params[:Availability]
       	if @event.valid?
           eid=@event.id
           if @event.evendorflag
