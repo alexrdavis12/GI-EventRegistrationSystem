@@ -120,7 +120,15 @@ class Answer < ActiveRecord::Base
 	      csv << ["User Last Name","User First Name","Vehicle Name","Vehicle Class","Vehicle Nation","Vehicle War","Vehicle Description"]
 	      
 	      #ITERATE THROUGH VEHICLES BEING BROUGHT AND LIST INFORMATION
-	      
+	      vehicleattrlist[] = nil
+	      vehicles.each do |vehicle|
+	      	lastname = User.where(:uid => vehicle.user_id).select(:lastname).take[lastname]
+	      	firstname = User.where(:uid => vehicle.user_id).select(:firstname).take[firstname]
+	      	vehicleattrlist << [lastname, firstname, vehicle.vname, vehicle.vclass, vehicle.vnation, vehicle.vwar, vehicle.vdescription]
+	      end
+	      vehicleattrlist.each do |v|
+	      	csv << v
+	      end
 	      
 	      csv << [""]
 	      csv << [""]
@@ -131,6 +139,13 @@ class Answer < ActiveRecord::Base
 	      csv << ["User Last Name","User First Name","Impression Name","Unit","War","Side","Name of Commanding Officer","Impression Description"]
 	      
 	      #ITERATE THROUGH IMPRESSIONS PARTICIPATING IN EVENT AND LIST INFORMATION
+	      impressionattrlist[] = nil
+	      impressions.each do |impression|
+	      	impressionattrlist << [User.where(:uid => impression.user_id).select(:lastname).take[lastname], User.where(:uid => impression.user_id).select(:firstname).take[firstname], impression.iname, Unit.where(:unitid => impression.unitid).select(:uname).take[uname], impression.iwar, impression.iside, impression.commander, impression.idescription]
+	      end
+	      impressionattrlist.each do |i|
+	      	csv << i
+	      end
 	      
 	      csv << [""]
 	      csv << [""]
@@ -141,6 +156,13 @@ class Answer < ActiveRecord::Base
 	      csv << ["User Last Name","User First Name","Booth Name","Booth Description"]
 	      
 	      #ITERATE THROUGH VENDOR BOOTHS PARTICIPATING IN EVENT AND LIST INFORMATION
+	      vendorattrlist[] = nil
+	      vendors.each do |vendor|
+	      	vendorattrlist << [User.where(:uid => vendor.user_id).select(:lastname).take[lastname], User.where(:uid => vendor.user_id).select(:firstname).take[firstname], vendor.vbname, vendor.vbdescription]
+	      end
+	      vendorattrlist.each do |vb|
+	      	csv << vb
+	      end
 	      
 	      csv << [""]
 	      csv << [""]
@@ -155,6 +177,24 @@ class Answer < ActiveRecord::Base
 	      csv << ["", "Name of Parent/Guardian Chaperoning", "Address", "Zipcode", "Email", "Phone", "Primary Contact's Name", "Primary Contact's Email", "Primary Contact's Phone #"]
 	      
 	      #ITERATE THROUGH HOME SCHOOL EDUCATORS IN ATTENDANCE AND LIST INFORMATION
+	      homeschools[] = nil
+	      homeschoolattrlist[] = nil
+	      privateschools[] = nil
+	      privateschoolattrlist[] = nil
+	      educators.each do |ed|
+	      	if ed.edschooltype == "Home School"
+	      		homeschools << ed
+	      	elsif ed.edschooltype == "Private School"
+	      		privateschools << ed
+	      	end
+	      end
+	      
+	      homeschools.each do |home|
+	      	homeschoolattrlist << ["", home.edpgaurdianname, home.edaddress, home.edzip, home.edgaurdianemail, home.edpgaurdianphone, home.edprimaryname, home.edprimaryemail, home.edprimaryphone]
+	      end
+	      homeschoolattrlist.each do |h|
+	      	csv << h
+	      end
 	      
 	      csv << [""]
 	      csv << [""]
@@ -166,7 +206,12 @@ class Answer < ActiveRecord::Base
 	      csv << ["", "School Name", "School Address", "School Zipcode", "Primary Contact's Name", "Role of Primary Contact", "Primary Contact's Email", "Primary Contact's Phone #", "Name of School Principal", "School Principle's Email"]
 	      
 	      #ITERATE THROUGH PRIVATE SCHOOL EDUCATORS IN ATTENDANCE AND LIST INFORMATION
-	      
+	      privateschools.each do |priv|
+	      	privateschoolattrlist << ["", priv.edschoolname, priv.edaddress, priv.edzip, priv.edprimaryname, priv.edprimaryrole, priv.edprimaryemail, priv.edprimaryphone, priv.edprinciplename, priv.edprincipleemail]
+	      end
+	      privateschoolattrlist.each do |pr|
+	      	csv << pr
+	      end
 	      
 	    #   column_title = ["Record ID", "Event ID", "Email", "Question ID", "Answer", "Created at", "Updated at", "Question Title"]
 	    #   csv << column_title
