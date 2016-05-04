@@ -52,7 +52,7 @@
                         %i.fa.fa-chevron-down.fa-lg
                   .panel-body{:style => 'background-color : #d9edf7'}
                     .form-group
-                      %input{:class => 'form-control', :value=> q.qtitle, :name=>"Q#{q.qid}[title]"}
+                      %input{:class => 'form-control', :value=> q.qtitle, :name=>"Q#{q.qid}[title]", :required => ""}
                     .form-group
                       %label Type
                       - if q.qtype == "1"

@@ -40,11 +40,11 @@
           = form_tag(:action => 'create') do
             .form-group
               %label Vehicle Name
-              %input{:class => 'form-control', :value=>'', :name=>"Name"}
+              %input{:class => 'form-control', :value=>'', :name=>"Name", :required=>""}
         
             .form-group
               %label Vehicle Class
-              %select{:class => 'form-control', :value=>'', :name=>"Class"}
+              %select{:class => 'form-control', :value=>'', :name=>"Class", :required=>""}
                 %option{:value => 'Wheeled'}= "Wheeled"
                 %option{:value => 'Tracked'}= "Tracked" 
                 %option{:value => 'Other'}="Other"
@@ -54,19 +54,30 @@
               .col-md-1
               .col-md-4
                 %label Nation
-                %input{:class => 'form-control', :value=>'', :name=>"Nation"}
+                %select{:class => 'form-control', :value=>'', :name=>"Nation", :required=>""}
+                  %option{:value => "USA"}= "USA"
+                  %option{:value => "British"}= "British"
+                  %option{:value => "Soviet"}= "Soviet"
+                  %option{:value => "German"}= "German"
+                  %option{:value => "Italian"}= "Italian"
+                  %option{:value => "Japanese"}= "Japanese"
+                  %option{:value => "French"}= "French"
+                  %option{:value => "Prussia"}= "Prussia"
+                  %option{:value => "South Korea"}= "South Korea"
+                  %option{:value => "North Korea"}= "North Korea"
+                  %option{:value => "North Vietnam"}= "North Vietnam"
+                  %option{:value => "South Vietnam"}= "South Vietnam"
+                  %option{:value => "Other"}= "Other (Specify in Description)"
               .col-md-1
               .col-md-4
                 %label War
-                %input{:class => 'form-control', :value=>'', :name=>"War"}
+                %input{:class => 'form-control', :value=>'', :name=>"War", :required=>""}
         
             .form-group
               %label Vehicle Description
               %textarea{:class => 'form-control', :rows => "8", :value=>'', :name=>"Description"}
       
             = submit_tag("Create", :class => 'btn btn-primary')
-
-
   .row
     %br
     %br

@@ -39,6 +39,14 @@
 
           = form_tag(:action => 'create') do
             .form-group 
+              %label Open for registration?     
+              %label.checkbox-inline
+                %input{:type=>'radio', :value=> 1, :name=> :Availability, :checked=>"checked", :id=>"Availability"}
+                Yes 
+              %label.checkbox-inline
+                %input{:type=>'radio', :value=> 0, :name=> :Availability, :id=>"Availability"}
+                No
+              %br
               %label Roles:
               %br
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

@@ -80,6 +80,12 @@ Rails.application.routes.draw do
   get 'educatorupdate' => 'educators#update'
   post 'educatorupdate' => 'educators#update'
   
+  
+  get 'inventory' => 'inventories#usersstuff'
+  post 'inventory' => 'inventories#usersstuff'
+   get 'inventorycreate' => 'inventories#create'
+  post 'inventorycreate' => 'inventories#create'
+  
   # post 'answershow' =>'answers#show'
   # get 'create' => 'answers#create'
   # post 'create' => 'answers#create'

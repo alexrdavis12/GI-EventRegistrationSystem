@@ -41,20 +41,20 @@
           = form_tag(:action => 'create') do
             .form-group
               %label Impression Name
-              %input{:class => 'form-control', :value=>'', :name=>"Name"}
+              %input{:class => 'form-control', :value=>'', :name=>"Name", :required =>""}
             .form-group
               %label Unit
-              %input{:class => 'form-control', :value=>'', :name=>"Unit"}
+              %input{:class => 'form-control', :value=>'', :name=>"Unit",:required =>""}
             .form-group
               %label War
-              %input{:class => 'form-control', :value=>'', :name=>"War"}
+              %input{:class => 'form-control', :value=>'', :name=>"War",:required =>""}
             .form-group
               %label Side
               // %input{:class => 'form-control', :type => 'radio', :value=>'U.S.A.', :name=>"Side", :id => 'usa', :checked => @educator.edschooltype=='Home School', :required=>""}Home School
               // %br
               // %input{:class => 'form-control', :type => 'radio', :value=>'British', :name=>"Side", :id => 'british', :checked => @educator.edschooltype=='Private School', :required=>""}Private School
               // %input{:class => 'form-control', :value=>'', :name=>"Side"}
-              %select{:class => 'form-control', :value=>'', :name=>"Side"}
+              %select{:class => 'form-control', :value=>'', :name=>"Side",:required =>""}
                 %option{:value => "USA"}= "USA"
                 %option{:value => "British"}= "British"
                 %option{:value => "Soviet"}= "Soviet"
@@ -70,11 +70,11 @@
                 %option{:value => "Other"}= "Other"
             .form-group
               %label Name of Commander
-              %input{:class => 'form-control', :value=>'', :name=>"Commander"}
+              %input{:class => 'form-control', :value=>'', :name=>"Commander",:required =>""}
             .form-group
               %label Description
               %textarea{:class => 'form-control', :rows => "8", :value=>'', :name=>"Description"}
-      
+              
             = submit_tag("Create", :class => 'btn btn-primary')
   .row
     %br
