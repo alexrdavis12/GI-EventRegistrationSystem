@@ -30,7 +30,7 @@
             %span.sr-only Close
           %strong 
             =flash[:notice]
-      -if @event.length == 0
+      -if @events.length == 0 ||  @event == nil
         .alert.alert-info
           %button.close{:type=>"button", "data-dismiss"=>"alert"}
             %span{"aria-hidden"=>true}×
@@ -38,11 +38,11 @@
           %strong No available events
       -else
         - cnt= 0
-        - @event.each do |e|
+        - @events.each do |e|
           - cnt+=1
           .panel.panel-primary
             .panel-heading
-              %h3.panel-title 
+              %h3.panel-title argh
                 =e.etitle
             .panel-body
               %label Location 

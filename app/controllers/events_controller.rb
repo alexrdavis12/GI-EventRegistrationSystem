@@ -52,6 +52,7 @@ class EventsController < ApplicationController
           		render 'Create'
           	end
     end
+  end
     
   def show
     eid=params[:eid]
@@ -119,21 +120,24 @@ class EventsController < ApplicationController
     id = session[:user_id]
     @user = User.find(id)
     
-    if(@user.uvendorflag > 0)
-      @vendorevents = Event.where(evendorflag => 1).all
-    end
-    if(@user.uvehicleflag > 0)
-      @vehicleevents = Event.where(evehicleflag => 1).all
-    end
-    if(@user.uimpressionflag > 0)
-      @impressionevents = Event.where(eimpressionflag => 1).all
-    end
-    if(@user.ueducatorflag > 0)
-      @educatorevents = Event.where(eeducatorflag => 1).all
-    end
-    
     @curlevel = User.find(id).level
     if(@curlevel != 0)
+      id = session[:user_id]
+      @user = User.find(id)
+    
+      if (@user.uvendorflag != 0)
+        @vendorevents = Event.where(evendorflag = 1).all
+      end
+      if(@user.uvehicleflag != 0)
+        @vehicleevents = Event.where(evehicleflag = 1).all
+      end
+      if(@user.uimpressionflag != 0)
+        @impressionevents = Event.where(eimpressionflag = 1).all
+      end
+      if(@user.ueducatorflag != 0)
+        @educatorevents = Event.where(eeducatorflag = 1).all
+      end
+      
       @event = @vendorevents
       @event << @vehicleevents
       @event << @impressionevents
@@ -142,5 +146,4 @@ class EventsController < ApplicationController
       redirect_to '/admin'
     end
   end
-end 
 end 
