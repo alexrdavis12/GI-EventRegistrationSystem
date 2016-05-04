@@ -81,29 +81,61 @@ class Answer < ActiveRecord::Base
 
 	      end
 	      
-	      #setup vehicle section
+	      #setup registered and selected 'roles' section
 	      csv << [""]
 	      csv << [""]
 	      csv << [""]
-	      csv << "Vehicles Being Brought"
-	      vehicletitles = ["User Last Name","User First Name","Vehicle Name","Vehicle Class","Vehicle Nation","Vehicle War","Vehicle Description"]
-	      csv << vehicletitles
+	      csv << [""]
+	      
+	      csv << ["Vehicles Being Brought"]
+	      csv << ["User Last Name","User First Name","Vehicle Name","Vehicle Class","Vehicle Nation","Vehicle War","Vehicle Description"]
+	      
+	      #ITERATE THROUGH VEHICLES BEING BROUGHT AND LIST INFORMATION
 	      
 	      csv << [""]
 	      csv << [""]
 	      csv << [""]
-	      csv << "Impressions in Attendance"
-	      impressiontitles = ["User Last Name","User First Name","Impression Name","Unit","War","Side","Name of Commanding Officer","Impression Description"]
-	      csv << impressiontitles 
+	      csv << [""]
+	      
+	      csv << ["Impressions Participating in Event"]
+	      csv << ["User Last Name","User First Name","Impression Name","Unit","War","Side","Name of Commanding Officer","Impression Description"]
+	      
+	      #ITERATE THROUGH IMPRESSIONS PARTICIPATING IN EVENT AND LIST INFORMATION
 	      
 	      csv << [""]
 	      csv << [""]
 	      csv << [""]
-	      csv << "Impressions in Attendance"
-	      vendortitles = ["User Last Name","User First Name","Booth Name","Booth Description"]
-	      csv << vendortitles
+	      csv << [""]
 	      
+	      csv << ["Vendor Booths Participating in Event"]
+	      csv << ["User Last Name","User First Name","Booth Name","Booth Description"]
 	      
+	      #ITERATE THROUGH VENDOR BOOTHS PARTICIPATING IN EVENT AND LIST INFORMATION
+	      
+	      csv << [""]
+	      csv << [""]
+	      csv << [""]
+	      csv << [""]
+	      
+	      csv << ["Educators in Attendance"]
+	      csv << ["Home Schools"]
+	      firstname = "Change this value"
+	      lastname = "Change this value"
+	      csv << ["", "Registered by " + firstname + " " + lastname]
+	      csv << ["", "Name of Parent/Guardian Chaperoning", "Address", "Zipcode", "Email", "Phone", "Primary Contact's Name", "Primary Contact's Email", "Primary Contact's Phone #"]
+	      
+	      #ITERATE THROUGH HOME SCHOOL EDUCATORS IN ATTENDANCE AND LIST INFORMATION
+	      
+	      csv << [""]
+	      csv << [""]
+	      
+	      csv << ["Private Schools"]
+	      firstname = "Change this value"
+	      lastname = "Change this value"
+	      csv << ["", "Registered by " + firstname + " " + lastname]
+	      csv << ["", "School Name", "School Address", "School Zipcode", "Primary Contact's Name", "Role of Primary Contact", "Primary Contact's Email", "Primary Contact's Phone #", "Name of School Principal", "School Principle's Email"]
+	      
+	      #ITERATE THROUGH PRIVATE SCHOOL EDUCATORS IN ATTENDANCE AND LIST INFORMATION
 	      
 	      
 	    #   column_title = ["Record ID", "Event ID", "Email", "Question ID", "Answer", "Created at", "Updated at", "Question Title"]
