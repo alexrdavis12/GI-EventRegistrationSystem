@@ -40,7 +40,7 @@
           = form_tag(:action => 'create') do
             .form-group
               %label Vendor Booth Name
-              %input{:class => 'form-control', :value=>'', :name=>"Name"}
+              %input{:class => 'form-control', :value=>'', :name=>"Name", :required=>""}
             .form-group
               %label Vendor Booth Description
               %textarea{:class => 'form-control', :rows => "8", :value=>'', :name=>"Description"}
