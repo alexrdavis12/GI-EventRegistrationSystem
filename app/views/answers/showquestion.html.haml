@@ -51,7 +51,7 @@
                     %label.checkbox-inline
                       - optcnt += 1
                       //_checkboxes[answer#{optcnt}]
-                      %input{:class => 'other-input', :type => 'checkbox', :qid =>q.qid, :value => optcnt, :name=>"Q#{q.qid}[answer][]"}
+                      %input{:class => 'other-input', :type => 'checkbox', :qid =>q.qid, :value => optcnt, :name=>"Q#{q.qid}[answer]"}
                       = opt
                 -elsif q.qtype == "3"
                   %br

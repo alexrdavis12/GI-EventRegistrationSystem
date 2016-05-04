@@ -37,8 +37,7 @@ class Answer < ActiveRecord::Base
 	      	idlist << uid.uid
 	      end
 	      
-	      #JUST NEED TO FIX CHECKBOX INPUTS!!! CURRENTLY DISPLAYING MOST RECENTLY CLICKED CHECKBOX (EVEN IF THAT CLICK IS TO UNCHECK) EVEN THOUGH PARAMS IS PASSING CORRECT INFO
-	      #(OR IS IT LAST ONE IN LIST OF POSSIBLE CHECKBOX CHOICES?)
+	      #JUST NEED TO FIX CHECKBOX INPUTS!!! CURRENTLY DISPLAYING LAST ONE IN LIST OF POSSIBLE CHECKBOX CHOICES
 		
 	      # output records order by user ID
 	      idlist.each do |uid|
@@ -55,10 +54,16 @@ class Answer < ActiveRecord::Base
 	      	qindex = 0
 	      	answer.each do |ans|
 	      		#check if a field was skipped (compare ans.answer and qoptionlist)
-	      		while ans.qtitle != localQlist[qindex].qtitle
-	      			answerlist << "N/A"
-	      			qindex += 1
-	      		end
+	      		if localQlist[qindex] != "" && localQlist[qindex] != nil && ans != nil
+		      		while ans.qtitle != localQlist[qindex].qtitle
+		      			answerlist << "N/A"
+		      			qindex += 1
+		      			if localQlist[qindex] == nil
+		      				qindex -= 1
+		      				break
+		      			end
+		      		end
+		      	end
 	      		
 	      		if qoptionlist[qindex] != "" && qoptionlist != nil
 	      			qoptlist = 	qoptionlist[qindex].split("|")

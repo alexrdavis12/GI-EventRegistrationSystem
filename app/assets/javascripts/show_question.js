@@ -3,6 +3,7 @@
 function checkselect() {
 	$(":checkbox").change(function(evt){
 		evt.stopImmediatePropagation();
+		removeDisable();
 		select_qid = $(this).attr('qid');
 		opt = $(this).val();
 		if (opt != 1) {
@@ -19,6 +20,7 @@ function checkselect() {
 				//$("[hash=hash_" + select_qid + "_" + opt + "]").removeAttribute("disabled");
 			}
 		}
+		setupRequired();
 
 	});
 }
@@ -26,6 +28,7 @@ function checkselect() {
 function hookselect() {
 	$("select").change(function(evt){
 		evt.stopImmediatePropagation();
+		removeDisable();
 		select_qid = $(this).attr('qid');
 		opt = $(this).val();
 		if (opt != 1) {
@@ -41,13 +44,14 @@ function hookselect() {
 			//$("[hash=hash_" + select_qid + "_" + opt + "]").removeAttribute("disabled");
 		
 		}
-
+		setupRequired();
 	});
 }
 
 function radioselect() {
 	$(":radio").change(function(evt){
 		evt.stopImmediatePropagation();
+		removeDisable();
 		select_qid = $(this).attr('qid');
 		opt = $(this).val();
 		if (opt != 1) {
@@ -63,7 +67,7 @@ function radioselect() {
 			//$("[hash=hash_" + select_qid + "_" + opt + "]").removeAttribute("disabled");
 		
 		}
-
+		setupRequired();
 	});
 }
 
@@ -73,38 +77,37 @@ $(document).ready(function(){
 	radioselect();
 });
 
+function setupRequired() {
+	$(".form-control").attr("required", true);
+	$(":radio").attr("required", true);
+	
+	$(".form-control:hidden").removeAttr("required");
+	$(":radio:hidden").removeAttr("required");
+}
+
+function removeDisable() {
+	$(":checkbox").removeAttr("disabled");
+	$(":selected").removeAttr("disabled");
+	$(":radio").removeAttr("disabled");
+	$(".form-control").removeAttr("disabled");
+}
+
 function fix_form() {
-	//alert("Entered the Twilight Zone")
 	
-	//checkboxes are only returning last clicked as value (should return all that are checked)
+	// alert("checking required fields");
+	// $(".form-control").attr("required", true);
+	// $(".other-input").attr("required", true);
+	// $(".form-control:hidden").removeAttr("required");
+	// $(".other-input:hidden").removeAttr("required");
 	
-	// $("body").find(":checkbox:hidden").prop("checked", false);
-	// $("body").find(":radio:hidden").prop("checked", false);
-	// $("body").find(":selected:hidden").prop("selected", false);
-	// $("body").find(".form-control:hidden").val(' ');
+	// $('[required="required"]:visible').each(function() {
+	// 	if($(this).is(":not(:checked)") || $(this).is(":empty"))
+	// 		alert("empty");
+	// 		return false;
+	// })
 	
-	//TRYING 1 AND 5 WORKED CORRECTLY ( , 2, 3, 4, )
-	//TRYING 3 RESULTED IN ( 1, 2, 3, 4, )
-	//TRYING 2 RESULTED IN ( 1, 2, 3, , )
-	//TRYING 2, 1, AND 5 WITH ONLY 5 SELECTED RESULTED IN ( , 2, 3, , )
-	// alert("here");
+	alert("disabling hidden inputs");
 	
-	// $(":checkbox:hidden").prop("name", "garbage");
-	// $(":radio:hidden").prop("name", "garbage");
-	// $("select:hidden").prop("name", "garbage");
-	// $(".form-control:hidden").prop("name", "garbage");
-	
-	// return true;
-	
-	
-	//$(":checkbox:hidden").attr("exist", "false");
-	//$(":radio:hidden").attr("exist", "false");
-	//$("select:hidden").attr("exist", "false");
-	//$(".form-control:hidden").attr("exist", "false");
-	
-	//$("body").find(":input:hidden").val(" ");
-	//$(":input:hidden").prop("disabled", "disabled");
-	alert("checkpoint");
 	$(":checkbox:hidden").attr("disabled",true);
 	$(":selected:hidden").attr("disabled",true);
 	$(":radio:hidden").attr("disabled",true);
@@ -112,16 +115,4 @@ function fix_form() {
 	$(".show-me").removeAttr("disabled");
 	return true;
 	
-	// if (!($(":checkbox").is(":visible"))) {
-	// 	alert($(":checkbox").val());
-	// 	$(":checkbox").val("")
-	// }
-
-	// if (!($("select").is(":visible"))) {
-	// 	$("select").val("")
-	// }
-	
-	// if (!($(":radio").is(":visible"))) {
-	// 	$(":radio").val("")
-	// }
 }
