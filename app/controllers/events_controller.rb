@@ -129,19 +129,19 @@ class EventsController < ApplicationController
       @events = Event.all
       
       if (@user.uvendorflag != 0)
-        @events=Event.where(evendorflag: 1).all
+        @events=Event.where(evendorflag: 1, eavailabilityflag: 0).all
       end
       if(@user.uvehicleflag != 0)
-        @events=@events+Event.where(evehicleflag: 1).all
+        @events=@events+Event.where(evehicleflag: 1, eavailabilityflag: 0).all
       end
       if(@user.uimpressionflag != 0)
-        @events=@events+Event.where(eimpressionflag: 1).all
+        @events=@events+Event.where(eimpressionflag: 1, eavailabilityflag: 0).all
       end
       if(@user.ueducatorflag != 0)
-        @events=@events+Event.where(eeducatorflag: 1).all
+        @events=@events+Event.where(eeducatorflag: 1, eavailabilityflag: 0).all
       end
       
-      @events = @events - Event.where(eavailabilityflag: 0).all
+      # @events = @events - Event.where(eavailabilityflag: 0).all
       
       @events = @events.uniq
 
