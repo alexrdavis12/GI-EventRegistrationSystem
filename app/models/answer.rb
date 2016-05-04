@@ -50,6 +50,35 @@ class Answer < ActiveRecord::Base
 	      	user_state = User.where(:id => uid).select(:state).take[:state]
 	      	user_zip = User.where(:id => uid).select(:zipcode).take[:zipcode]
 	      	answer = Answer.where(:uid => uid)
+	      	
+	      	eid = @eid
+	      	inventvid = User.where(:uid => uid).where(:eid => eid).select(:inventvid).take[:inventvid]
+	      	inventedid = User.where(:uid => uid).where(:eid => eid).select(:inventedid).take[:inventedid]
+	      	inventviid = User.where(:uid => uid).where(:eid => eid).select(:inventviid).take[:inventviid]
+	      	inventvbid = User.where(:uid => uid).where(:eid => eid).select(:inventvbid).take[:inventvbid]
+	      	
+	      	
+	      	vehicles[] = nil
+	      	educators[] = nil
+	      	impressions[] = nil
+	      	vendors[] = nil
+	      	vids = (inventvid.from(1).to(-1)).split("_")
+	      	vids.each do |vid|
+	      		vehicles << Vehicle.where(:uid => uid).where(:vid => inventvid)	
+	      	end
+	      	edids = (inventedid.from(1).to(-1)).split("_")
+	      	edids.each do |edid|
+	      		educators << Educator.where(:uid => uid).where(:edid => inventedid)	
+	      	end
+	      	viids = (inventviid.from(1).to(-1)).split("_")
+	      	viids.each do |viid|
+	      		impressions << Impression.where(:uid => uid).where(:viid => inventviid)	
+	      	end
+	      	vbids = (inventvbid.from(1).to(-1)).split("_")
+	      	vbids.each do |vid|
+	      		vendors << Vendor.where(:uid => uid).where(:vbid => inventvbid)	
+	      	end
+	      	
 	      	answerlist = ["#{user_last_name}", "#{user_first_name}", "#{user_email}", "#{user_phone_number}", "#{user_address}", "#{user_city}", "#{user_state}", "#{user_zip}"]
 	      	qindex = 0
 	      	answer.each do |ans|
@@ -91,6 +120,7 @@ class Answer < ActiveRecord::Base
 	      csv << ["User Last Name","User First Name","Vehicle Name","Vehicle Class","Vehicle Nation","Vehicle War","Vehicle Description"]
 	      
 	      #ITERATE THROUGH VEHICLES BEING BROUGHT AND LIST INFORMATION
+	      
 	      
 	      csv << [""]
 	      csv << [""]
