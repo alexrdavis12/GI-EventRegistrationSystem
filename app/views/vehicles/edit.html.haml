@@ -31,11 +31,11 @@
           = form_tag(:action => 'update', :vid => @vehicle.id) do
             .form-group
               %label Vehicle Name
-              %input{:class => 'form-control', :value=>@vehicle.vname, :name=>"Name"}
+              %input{:class => 'form-control', :value=>@vehicle.vname, :name=>"Name", :required=>""}
         
             .form-group
               %label Vehicle Class
-              %input{:class => 'form-control', :value=>@vehicle.vclass, :name=>"Class"}
+              %input{:class => 'form-control', :value=>@vehicle.vclass, :name=>"Class", :required=>""}
                     
             
             %label Vehicle Impression
@@ -43,11 +43,11 @@
               .col-md-1
               .col-md-4
                 %label Nation
-                %input{:class => 'form-control', :value=>@vehicle.vnation, :name=>"Nation"}
+                %input{:class => 'form-control', :value=>@vehicle.vnation, :name=>"Nation", :required=>""}
               .col-md-1
               .col-md-4
                 %label War
-                %input{:class => 'form-control', :value=>@vehicle.vwar, :name=>"War"}
+                %input{:class => 'form-control', :value=>@vehicle.vwar, :name=>"War", :required=>""}
         
             .form-group
               %label Vehicle Description

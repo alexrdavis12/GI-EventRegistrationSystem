@@ -81,7 +81,7 @@ class EducatorsController < ApplicationController
     self.isuser
     edid = params[:edid]
     @educator = Educator.find(edid)
-        
+     @flash_notice =""   
     if params[:commit] != nil && params[:commit] == 'Save'
       @educator.edschooltype = params[:Type]
       @educator.uid = session[:user_id]

@@ -40,11 +40,11 @@
           = form_tag(:action => 'create') do
             .form-group
               %label Vehicle Name
-              %input{:class => 'form-control', :value=>'', :name=>"Name"}
+              %input{:class => 'form-control', :value=>'', :name=>"Name", :required=>""}
         
             .form-group
               %label Vehicle Class
-              %select{:class => 'form-control', :value=>'', :name=>"Class"}
+              %select{:class => 'form-control', :value=>'', :name=>"Class", :required=>""}
                 %option{:value => 'Wheeled'}= "Wheeled"
                 %option{:value => 'Tracked'}= "Tracked" 
                 %option{:value => 'Other'}="Other"
@@ -54,11 +54,11 @@
               .col-md-1
               .col-md-4
                 %label Nation
-                %input{:class => 'form-control', :value=>'', :name=>"Nation"}
+                %input{:class => 'form-control', :value=>'', :name=>"Nation", :required=>""}
               .col-md-1
               .col-md-4
                 %label War
-                %input{:class => 'form-control', :value=>'', :name=>"War"}
+                %input{:class => 'form-control', :value=>'', :name=>"War", :required=>""}
         
             .form-group
               %label Vehicle Description

@@ -31,16 +31,16 @@
           = form_tag(:action => 'update', :iid => @impression.id) do
             .form-group
               %label Name
-              %input{:class => 'form-control', :value=>@impression.iname, :name=>"Name"}
+              %input{:class => 'form-control', :value=>@impression.iname, :name=>"Name",:required =>""}
             .form-group
               %label Unit
-              %input{:class => 'form-control', :value=>@impression.unitid, :name=>"Unit"} 
+              %input{:class => 'form-control', :value=>@impression.unitid, :name=>"Unit",:required =>""} 
             .form-group
               %label War
-              %input{:class => 'form-control', :value=>@impression.iwar, :name=>"War"}
+              %input{:class => 'form-control', :value=>@impression.iwar, :name=>"War",:required =>""}
             .form-group
               %label Side
-              %select{:class => 'form-control', :value=>@impression.iside, :name=>"Side"}
+              %select{:class => 'form-control', :value=>@impression.iside, :name=>"Side",:required =>""}
                 %option{:value => "USA", :selected => @impression.iside == "USA"}= "USA" 
                 %option{:value => "British", :selected => @impression.iside == "British"}= "British"
                 %option{:value => "Soviet", :selected => @impression.iside == "Soviet"}= "Soviet"
@@ -56,7 +56,7 @@
                 %option{:value => "Other", :selected => @impression.iside == "Other"}= "Other"
             .form-group
               %label Name of Commander
-              %input{:class => 'form-control', :value=>@impression.commander, :name=>"Commander"}
+              %input{:class => 'form-control', :value=>@impression.commander, :name=>"Commander",:required =>""}
             .form-group
               %label  Description
               %textarea{:class => 'form-control', :rows => "8", :value=>@impression.idescription, :name=>"Description"}
