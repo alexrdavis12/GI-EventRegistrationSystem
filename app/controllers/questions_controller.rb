@@ -43,7 +43,6 @@ class QuestionsController < ApplicationController
 					@question.qid = qid
 					@question.eid = params[:q_eid]
 					@question.parentopt = parent_optid
-
 					if (@question.eid == nil)
 	      	  			@flash_notice = "Illegal Arguments"
 	      	  				redirect_to "/QuestionCreate?eid=#{params[:q_eid]}"

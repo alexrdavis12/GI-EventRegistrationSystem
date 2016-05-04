@@ -94,9 +94,12 @@ class AdminController < ApplicationController
 	def delete
 		self.isadmin
 		eid = params[:eid]
-		Event.find(eid).destroy
-		Answer.where(eid: eid).destroy_all
-		Question.where(eid: eid).destroy_all
+		if Event.exists? id: eid
+			Event.find(eid).destroy
+			Answer.where(eid: eid).destroy_all
+			Question.where(eid: eid).destroy_all
+			Inventorie.where(eid: eid).destroy_all
+		end
 		redirect_to '/admin'
 	end
 
