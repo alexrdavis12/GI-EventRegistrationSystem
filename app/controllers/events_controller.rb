@@ -11,7 +11,7 @@ class EventsController < ApplicationController
 	end
 
   def create
-    # self.isadmin
+     self.isadmin
   	@event = Event.new
   	@flash_notice = ""
   
