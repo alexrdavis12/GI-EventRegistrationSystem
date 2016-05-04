@@ -41,8 +41,6 @@
                 -hidden = 'display:none'
               -else
                 -hidden = ''
-                
-                
               .form-group{:style => "#{hidden}", :hash => "hash_#{q.qparentid}_#{q.parentopt}",:parentid => q.qparentid, :parentopt => q.parentopt}
                 %label
                   = q.qtitle
@@ -52,7 +50,8 @@
                   - optionlist.each do |opt|
                     %label.checkbox-inline
                       - optcnt += 1
-                      %input{:type => 'checkbox', :qid =>q.qid, :value => optcnt, :name=>"Q#{q.qid}_checkboxes[answer#{optcnt}]"} 
+                      //_checkboxes[answer#{optcnt}]
+                      %input{:class => 'other-input', :type => 'checkbox', :qid =>q.qid, :value => optcnt, :name=>"Q#{q.qid}[answer][]"}
                       = opt
                 -elsif q.qtype == "3"
                   %br
@@ -61,7 +60,8 @@
                   - optionlist.each do |opt|
                     %label.checkbox-inline
                       - optcnt += 1
-                      %input{:type => 'radio', :qid =>q.qid, :value=>optcnt, :name=>"Q#{q.qid}[answer]"}
+                      //[answer]
+                      %input{:class => 'other-input', :type => 'radio', :qid =>q.qid, :value=>optcnt, :name=>"Q#{q.qid}[answer]"}
                       = opt
                 -elsif q.qtype == "4"
                   - optionlist = q.qoption.split('|')
@@ -70,12 +70,13 @@
                     %option{:disabled =>"", :selected =>"" } -- select an option --
                     - optionlist.each do |opt|
                       - optcnt += 1
-                      %option{:value => optcnt}= "#{opt}"
+                      %option{:class => 'show-me', :value => optcnt}= "#{opt}"
                 -elsif q.qtype == "5"
-                  %textarea{:class => 'form-control', :value=>'', :name=>"Q#{q.qid}[answer]"}
+                  %textarea{:class => 'form-control', :value=>'', :name=> "Q#{q.qid}[answer]"}
                 -else
-                  %input{:class => 'form-control', :value=>'', :name=>"Q#{q.qid}[answer]"}
-            = submit_tag("Submit", :class=> 'btn btn-primary', :onclick=> 'javascript:fix_form()')
+                  %input{:class => 'form-control', :value=>'', :name=> "Q#{q.qid}[answer]"}
+            = submit_tag("Submit", :onclick=> 'javascript:fix_form()', :class=> 'btn btn-primary')
+            /*:onsubmit=> 'return javascript:fix_form()',*/
           %a.btn.btn-sm.pull-right{ :href => "javascript:fix_form()", :style => "color: #500000; background: none; outline: 0"}
             %i.fa.fa-chevron-up.fa-lg
     .col-md-2

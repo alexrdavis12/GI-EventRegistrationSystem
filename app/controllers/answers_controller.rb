@@ -35,19 +35,37 @@ class AnswersController < ApplicationController
 			
 		if params[:commit] != nil && params[:commit] == 'Submit'
 			params.each do |key, value|
-				if ("#{key}".index('S') != nil)
-					prefix_str = "#{key}".delete "S"
-					split_prefrix_str = prefix_str.split('_')
-					parent_id = split_prefrix_str[0].to_i 
-					parent_optid = split_prefrix_str[1].to_i
-					subqcnt = split_prefrix_str[2].to_i * 1000
-					qid = parent_id * 1000000 + parent_optid + subqcnt
+				puts params.inspect
+				if ("#{key}".index('S') != nil)			#dont think we need to distinguish subquestions
+					prefix_str = "#{key}".delete "Q"  #these are subquestions
+					
 					@answer = Answer.new
 					@answer.uid = session[:user_id]
 					@answer.qid = qid
 					@answer.qtitle = Question.where(eid: params[:q_eid], qid:qid).select(:qtitle).take[:qtitle]
+					# checked_options = nil
+					# options = Question.where(eid: params[:q_eid], qid:qid).select(:qoption).take[:qoption]
+					# type = Question.where(eid: params[:q_eid], qid:qid).select(:qtype).take[:qtype]
+					# optionlist = options.split('|')
+					# first = true
+					# if (optionlist != nil) 
+					# 	optionlist.each do |op|
+					# 		if (params["#{op}"].is(:checked))
+					# 			if (first)
+					# 				checked_options.concat("" + op)
+					# 				first = false
+					# 			else
+					# 				checked_options.concat("|" + op)
+					# 			end
+					# 		end
+					# 	end
+					# end
 					@answer.eid = params[:q_eid]
+					# if (type == "2")
+					# 	@answer.answer = checked_options
+					# else
 					@answer.answer = value[:answer]
+					# end
 					if @answer.valid?
 						if @answer.save          			
 						else
@@ -65,8 +83,31 @@ class AnswersController < ApplicationController
 					@answer.uid = session[:user_id]
 					@answer.qid = qid
 					@answer.qtitle = Question.where(eid: params[:q_eid], qid:qid).select(:qtitle).take[:qtitle]
+					
+					# checked_options = nil
+					# options = Question.where(eid: params[:q_eid], qid:qid).select(:qoption).take[:qoption]
+					# type = Question.where(eid: params[:q_eid], qid:qid).select(:qtype).take[:qtype]
+					# optionlist = options.split('|')
+					# first = true
+					# if (optionlist != nil) 
+					# 	optionlist.each do |op|
+					# 		if (params["#{op}"].is(:checked))
+					# 			if (first)
+					# 				checked_options += op
+					# 				first = false
+					# 			else
+					# 				checked_options += ("|" + op)
+					# 			end
+					# 		end
+					# 	end
+					# end
 					@answer.eid = params[:q_eid]
+					# if (type =="2")
+					# 	@answer.answer = checked_options
+					# else
 					@answer.answer = value[:answer]
+					# end
+					
 					if @answer.valid?
 						if @answer.save          			
 						else
