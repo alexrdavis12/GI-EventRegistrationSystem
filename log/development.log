@@ -3156,3 +3156,15 @@ Migrating to AddAvailabiltyToEvents (20160504041638)
   [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'info@americangimuseum.org' LIMIT 1[0m
   [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("email", "lastname", "firstname", "gender", "phonenumber", "addressline1", "city", "state", "zipcode", "salt", "encrypted_password", "level", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["email", "info@americangimuseum.org"], ["lastname", "Admin"], ["firstname", "Admin"], ["gender", ""], ["phonenumber", "9794466888"], ["addressline1", "19124 TX-6"], ["city", "College Station"], ["state", "TX"], ["zipcode", "77845"], ["salt", "$2a$10$C0jLntM3kN6RPLsc4ObNRe"], ["encrypted_password", "$2a$10$C0jLntM3kN6RPLsc4ObNRe8ybf2HnTS.1jxZWcmZ.Dwu0OOFXzqIK"], ["level", 0], ["created_at", "2016-05-04 11:46:16.118101"], ["updated_at", "2016-05-04 11:46:16.118101"]]
   [1m[36m (12.2ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 165.91.13.143 at 2016-05-04 20:32:35 +0000
+Cannot render console from 165.91.13.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#login as HTML
+  Rendered sessions/login.html.haml within layouts/application (17.8ms)
+Completed 200 OK in 613ms (Views: 593.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-3eb7721701bf8491beeedeea9705a205a887c7d3f6e53e07d16cc4e0e7c7389a.css?body=1" for 165.91.13.143 at 2016-05-04 20:32:36 +0000
+Cannot render console from 165.91.13.143! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
