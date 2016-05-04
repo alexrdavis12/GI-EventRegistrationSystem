@@ -54,10 +54,6 @@ class EventsController < ApplicationController
       	end
     end
   end
-<<<<<<< HEAD
-=======
-  
->>>>>>> master
     
   def show
     eid=params[:eid]
@@ -118,7 +114,6 @@ class EventsController < ApplicationController
       		@flash_notice += "Save Error"
       		redirect_to "/eventedit?eid=#{eid}"
       	end
-
       end
     end 
     
@@ -128,36 +123,31 @@ class EventsController < ApplicationController
     
     @curlevel = User.find(id).level
     if(@curlevel != 0)
-<<<<<<< HEAD
       id = session[:user_id]
       @user = User.find(id)
-    
+      
+      @events = Event.all
+      
       if (@user.uvendorflag != 0)
-        @vendorevents = Event.where(evendorflag = 1).all
+        @events=Event.where(evendorflag: 1).all
       end
       if(@user.uvehicleflag != 0)
-        @vehicleevents = Event.where(evehicleflag = 1).all
+        @events=@events+Event.where(evehicleflag: 1).all
       end
       if(@user.uimpressionflag != 0)
-        @impressionevents = Event.where(eimpressionflag = 1).all
+        @events=@events+Event.where(eimpressionflag: 1).all
       end
       if(@user.ueducatorflag != 0)
-        @educatorevents = Event.where(eeducatorflag = 1).all
+        @events=@events+Event.where(eeducatorflag: 1).all
       end
       
-      @event = @vendorevents
-      @event << @vehicleevents
-      @event << @impressionevents
-      @event << @educatorevents
-=======
-      @event = Event.all
->>>>>>> master
+      @events = @events - Event.where(eavailabilityflag: 0).all
+      
+      @events = @events.uniq
+
     else
       redirect_to '/admin'
     end
   end
-<<<<<<< HEAD
 end 
-=======
-end
->>>>>>> master
+

@@ -30,35 +30,38 @@
             %span.sr-only Close
           %strong 
             =flash[:notice]
-      -if @events.length == 0 ||  @event == nil
-        .alert.alert-info
-          %button.close{:type=>"button", "data-dismiss"=>"alert"}
-            %span{"aria-hidden"=>true}×
-            %span.sr-only Close
-          %strong No available events
+      -if @events != nil
+        -if @events.length == 0
+          .alert.alert-info
+            %button.close{:type=>"button", "data-dismiss"=>"alert"}
+              %span{"aria-hidden"=>true}×
+              %span.sr-only Close
+            %strong No available events
+        -else
+          - cnt= 0
+          - @events.each do |e|
+            - cnt+=1
+            .panel.panel-primary
+              .panel-heading
+                %h3.panel-title
+                  =e.etitle
+              .panel-body
+                %label Location 
+                = e.elocation
+                %br
+                %label Start Time  
+                = e.estart
+                %br
+                %label End Time  
+                = e.eend
+                %br
+                %label Event Description 
+                = e.edescription
+                %br
+                %a{:href => "inventory?eid=#{e.id}", :class =>'btn btn-primary btn-sm', :role=>'button'} Choose
+                %br
       -else
-        - cnt= 0
-        - @events.each do |e|
-          - cnt+=1
-          .panel.panel-primary
-            .panel-heading
-              %h3.panel-title argh
-                =e.etitle
-            .panel-body
-              %label Location 
-              = e.elocation
-              %br
-              %label Start Time  
-              = e.estart
-              %br
-              %label End Time  
-              = e.eend
-              %br
-              %label Event Description 
-              = e.edescription
-              %br
-              %a{:href => "inventory?eid=#{e.id}", :class =>'btn btn-primary btn-sm', :role=>'button'} Choose
-              %br
+        %h3 Afdafddfgfakldfakljfgkjlk
       %div
         .col-md-9
         .col-md-3
