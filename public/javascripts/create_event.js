@@ -22,7 +22,7 @@ function add_optionsforsub(qid, option_id, subqcnt) {
 	$("#Q" + qid + "_" + option_id + "_" + subqcnt + "_optcnt").val(++cnt);
 	$("#Q" + qid + "_" + option_id + "_" + subqcnt + "_sub_options_list").append("<div class='form-group' id='Q" + qid+ "_" + option_id + "_" + subqcnt + "_" + cnt + "' style='margin-bottom: 15px'>\
 												     <div class='col-xs-11' style='margin-bottom: 5px'>\
-													 	<input class='form-control' name='S" + qid + "_" + option_id + "_" + subqcnt + "[opt" + cnt + "]' value=''>\
+													 	<input class='form-control' name='S" + qid + "_" + option_id + "_" + subqcnt + "[opt" + cnt + "]' value=''  required>\
 													 </div>\
 													 <div class='col-xs-1' style='margin-bottom: 5px'>\
 														 <a class='btn btn-danger pull-right' id='Q" + qid + "_SO"+cnt+"' href='javascript:delete_optionforsub("+ qid + "," + option_id + ","+ subqcnt + "," + cnt + ")'>\
@@ -37,7 +37,7 @@ function add_options(qid) {
 	cnt = $("#Q" + qid + "_optcnt").val();
 	$("#Q" + qid + "_optcnt").val(++cnt);
 	$("#Q" + qid + "_options_list").append("<div class='form-group' id='Q" + qid+ "_" + cnt + "' >\
-											 <input class='form-control'  name='Q" + qid + "[opt" + cnt + "]' value=''>\
+											 <input class='form-control'  name='Q" + qid + "[opt" + cnt + "]' value='' required>\
 											 <a class='btn btn-danger pull-right' id='Q" + qid + "_O"+cnt+"' href='javascript:delete_option("+ qid + "," + cnt + ")' value='vis' style='margin-top: 15px'>\
 											 	<i class='fa fa-trash-o fa-lg'></i>\
 											 	Delete Option\
@@ -87,7 +87,7 @@ function add_subquestion(select_qid, option_id) {
     	 				</h3>\
     	 			</div>\
     	 			<div class='panel-body' style='background-color:#f2dede'>\
-    	 				<div class='form-group'><input class='form-control' name='S" + select_qid + "_" + option_id + "_" + cnt + "[title]' value=''>\
+    	 				<div class='form-group'><input class='form-control' name='S" + select_qid + "_" + option_id + "_" + cnt + "[title]' value='' required>\
     	 				</div>\
     	 				"+ q_type_str +"\
     	 			</div>\
@@ -114,7 +114,7 @@ function add_subquestion(select_qid, option_id) {
 	    				</div>\
     					<div class='panel-body'  style='background-color:#f2dede'>\
     						<div class='form-group'>\
-    							<input class='form-control' name='S" + select_qid + "_" + option_id + "_" + cnt + "[title]' value=''>\
+    							<input class='form-control' name='S" + select_qid + "_" + option_id + "_" + cnt + "[title]' value='' required>\
     						</div>" + q_type_str + "\
     					</div>\
     				</div>\
@@ -138,7 +138,7 @@ function trigger_option_subquestion(dom_obj, select_qid, option_id, subqcnt) {
 					   				<input id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_optcnt' type='hidden' value='1'>\
 					   				<div class='form-group' id='Q" + select_qid + "_" + option_id + "_" + subqcnt + "_1'>\
 						   				<div class='col-xs-11' style='margin-bottom: 5px'>\
-						   					<input class='form-control' name='S" + select_qid + "_" + option_id + "_" + subqcnt + "[opt1]' value=''>\
+						   					<input class='form-control' name='S" + select_qid + "_" + option_id + "_" + subqcnt + "[opt1]' value='' required>\
 						   				</div>\
 						   				<div class='col-xs-1' style='margin-bottom: 5px'>\
 						   					<a class='btn btn-danger pull-right' href='javascript:delete_optionforsub("+ select_qid + ", " + option_id + "," + subqcnt + ", 1)'>\
@@ -165,7 +165,7 @@ function trigger_option(dom_obj, select_qid, displaysub) {
 							 	<li id='Q" + select_qid + "_options_list'>\
 									 <input id='Q" + select_qid + "_optcnt' type='hidden' value='3'>\
 									 <div class='form-group' id='Q" + select_qid + "_1' >\
-			   							<input class='form-control'  name='Q" + select_qid + "[opt1]' value='' style='margin-bottom: 15px'>\
+			   							<input class='form-control'  name='Q" + select_qid + "[opt1]' value='' style='margin-bottom: 15px' required>\
 		   							 	<a class='btn btn-success'id='Q" + select_qid + "_O1' href='javascript:add_subquestion(" + select_qid + ", 1)'>\
    							 				<i class='fa fa-plus fa-lg'></i>\
    							 				Add Sub-question\
@@ -292,7 +292,7 @@ $(document).ready(function(){
 									</h3>\
 								</div>\
 								<div class='panel-body' style='background-color:#d9edf7'>\
-									<div class='form-group'><input class='form-control' name='Q" + current_qid + "[title]' value=''></div>\
+									<div class='form-group'><input class='form-control' name='Q" + current_qid + "[title]' value='' required></div>\
 									" + q_type_str+ "\
 								</div>\
 							</div>");
