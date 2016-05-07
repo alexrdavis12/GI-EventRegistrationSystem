@@ -90,6 +90,15 @@ class VendorboothsController < ApplicationController
     self.isuser
 
   	vbid = params[:vbid]
+  	
+  	inventories = Inventorie.where(:uid => id).all
+    inventories.each do |inventory|
+      newvbid = inventory.inventvbid
+      newvbid.gsub("_#{vbid}","")
+      inventory.inventvbid = newvbid
+      inventory.save
+    end
+  	
   	@user.decrement!(:uvendorflag, 1)
   	if(	Vendorbooth.find(vbid))
     	Vendorbooth.find(vbid).destroy

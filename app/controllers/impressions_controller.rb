@@ -30,6 +30,7 @@ class ImpressionsController < ApplicationController
       if @impression.valid?
         if @impression.save
           session[:iid] = @impression.id
+          @impression.iid = @impression.id
           flash[:notice] = "Impression Created Successfully!"
           iid = @impression.id
           @user.increment!(:uimpressionflag, 1)
@@ -99,6 +100,15 @@ class ImpressionsController < ApplicationController
     @user = User.find(id)
     self.isuser
   	iid = params[:iid]
+  	
+  	inventories = Inventorie.where(:uid => id).all
+    inventories.each do |inventory|
+      newviid = inventory.inventviid
+      newviid.gsub("_#{iid}","")
+      inventory.inventviid = newviid
+      inventory.save
+    end
+  	
   	@user.decrement!(:uimpressionflag, 1)
   	Impression.find(iid).destroy
   	redirect_to '/homei'

@@ -2,14 +2,14 @@ class VehiclesController < ApplicationController
   before_filter :authenticate_user, :only => [:create, :show]
   
   def isuser
-    	vid = params[:vid]
-      @vehicle = Vehicle.find(vid)
-    	if(@vehicle.user_id!=session[:user_id])
-	    	flash[:notice]="You are not authorized to view that page"
-	    	# flash[:color]="Invalid"
-	    	redirect_to '/login'
-    	end
-	end
+    vid = params[:vid]
+    @vehicle = Vehicle.find(vid)
+    if(@vehicle.user_id!=session[:user_id])
+    	flash[:notice]="You are not authorized to view that page"
+    	# flash[:color]="Invalid"
+    	redirect_to '/login'
+    end
+  end
   
   def create
     @vehicle=Vehicle.new
@@ -28,6 +28,7 @@ class VehiclesController < ApplicationController
         if @vehicle.save
           session[:vid] = @vehicle.id
           flash[:notice] = "Vehicle Created Successfully!"
+          @vehicle.vid = @vehicle.id
           vid = @vehicle.id
           @user.increment!(:uvehicleflag, 1)
           redirect_to "/vehicleshow?vid=#{vid}"
@@ -93,11 +94,19 @@ class VehiclesController < ApplicationController
 
     id = session[:user_id]
     @user = User.find(id)
+    vid = params[:vid]
     
+    inventories = Inventorie.where(:uid => id).all
+    inventories.each do |inventory|
+      newvid = inventory.inventvid
+      newvid.gsub("_#{vid}","")
+      inventory.inventvid = newvid
+      inventory.save
+    end
 
     self.isuser
 
-  	vid = params[:vid]
+  	
   	@user.decrement!(:uvehicleflag, 1)
   	Vehicle.find(vid).destroy
   	redirect_to '/homev'
