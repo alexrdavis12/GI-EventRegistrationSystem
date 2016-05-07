@@ -106,7 +106,7 @@ function fix_form() {
 	// 		return false;
 	// })
 	
-	alert("disabling hidden inputs");
+	//alert("disabling hidden inputs");
 	
 	$(":checkbox:hidden").attr("disabled",true);
 	$(":selected:hidden").attr("disabled",true);

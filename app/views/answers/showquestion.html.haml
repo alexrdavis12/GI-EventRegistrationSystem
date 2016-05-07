@@ -51,7 +51,7 @@
                     %label.checkbox-inline
                       - optcnt += 1
                       //_checkboxes[answer#{optcnt}]
-                      %input{:class => 'other-input', :type => 'checkbox', :qid =>q.qid, :value => optcnt, :name=>"Q#{q.qid}[answer]"}
+                      %input{:class => 'other-input', :type => 'checkbox', :qid =>q.qid, :value => optcnt, :name=>"Q#{q.qid}[answer][]"}
                       = opt
                 -elsif q.qtype == "3"
                   %br
@@ -77,8 +77,8 @@
                   %input{:class => 'form-control', :value=>'', :name=> "Q#{q.qid}[answer]"}
             = submit_tag("Submit", :onclick=> 'javascript:fix_form()', :class=> 'btn btn-primary')
             /*:onsubmit=> 'return javascript:fix_form()',*/
-          %a.btn.btn-sm.pull-right{ :href => "javascript:fix_form()", :style => "color: #500000; background: none; outline: 0"}
-            %i.fa.fa-chevron-up.fa-lg
+          // %a.btn.btn-sm.pull-right{ :href => "javascript:fix_form()", :style => "color: #500000; background: none; outline: 0"}
+          //   %i.fa.fa-chevron-up.fa-lg
     .col-md-2
   .row
     %br

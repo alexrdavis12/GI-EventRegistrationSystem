@@ -142,7 +142,7 @@ class EventsController < ApplicationController
       end
       
       
-      @events = @events.uniq
+      # @events = @events.uniq
 
     else
       redirect_to '/admin'

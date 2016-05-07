@@ -46,6 +46,7 @@ class EducatorsController < ApplicationController
       if @educator.valid? && @flash_notice == ""
         if @educator.save
           session[:edid] = @educator.id
+          @educator.edid = @educator.id
           flash[:notice] = "Educator Created Successfully!"
           edid = @educator.id
           @user.increment!(:ueducatorflag, 1)
@@ -137,7 +138,16 @@ class EducatorsController < ApplicationController
     self.isuser
 
   	edid = params[:edid]
-  	@user.decrement(:ueducatorflag, 1)
+  	
+  	inventories = Inventorie.where(:uid => id).all
+    inventories.each do |inventory|
+      newedid = inventory.inventedid
+      newedid.gsub("_#{edid}","")
+      inventory.inventedid = newedid
+      inventory.save
+    end
+  	
+  	@user.decrement!(:ueducatorflag, 1)
   	Educator.find(edid).destroy
   	redirect_to '/homeed'
   end
