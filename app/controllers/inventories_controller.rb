@@ -86,8 +86,8 @@ class InventoriesController < ApplicationController
       @inventory.inventviid = iids
       
       if(vids == "" && edids == "" && iids == "" && vbids == "")
-  			flash[:notice] = "You have already registered for this event!"
-  			redirect_to '/inventory?eid=#{eid}'
+  			@flash_notice = "You must save your information before registering for this event!"
+  			self.usersstuff
   			return
 		  end
       
