@@ -1,6 +1,6 @@
 #!/bin/bash
 git add app* bin* config* db* features* lib* log* public* script* spec* tes* vendor*
-git commit --all -m "Testing functionality"
+git commit --all -m "Presentation"
 git push
-git push heroku Steevy:master
+git push heroku master
 heroku open

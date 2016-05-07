@@ -33,28 +33,30 @@
   .row
     .col-md-2
     .col-md-8
-      .panel.panel-primary{:style => 'background: none; outline:0'}
-        .panel-heading{:style => 'color: #500000;background: none;'}
+      .panel.panel-primary{:style => 'background-color : #d9edf7'}
+        .panel-heading{:style => 'background-color : #d9edf7, color: #500000'}
           %h3.panel-title 
             %strong
-              Select Items for this event
+              Select the items you want to bring to this event
         .panel-body
           = form_tag(:action => 'create',:eid => @eid) do
             -if @userimpressions != nil
-              .panel.panel-primary
+              .panel.panel-info
                 .panel-heading
-                  %h4.panel-title Choose impressions from your profile
+                  %h4.panel-title 
+                    %strong 
+                      Choose from your existing Impressions
                 .panel-body
                   -if @userimpressions.length != 0
                     - cnt= 0
                     - @userimpressions.each do |i|
                       - cnt+=1
-                      .panel.panel-primary
+                      .panel.panel-success
                         .panel-heading
                           %h3.panel-title 
                             Impression #{cnt}
                             %input.pull-right{:type => "checkbox", :value => i.id, :name => "impression#{cnt}"}
-                        .panel-body
+                        .panel-body{:class => "bg-success"}
                           %label= i.iname 
                           %br
                           %label Unit:  
@@ -71,22 +73,37 @@
                           %br
                           %label Description:
                           = i.idescription
+                  -else
+                    .panel.panel-danger{:style => 'background-color : #f2dede'}
+                      .panel-heading
+                        %h4.panel-title 
+                          %strong 
+                            You do not seem to have any saved Impressions!
+                      .panel-body
+                        %h4.panel-title If you wish to take an Impression to this event, please click below to add new Impression. Come back at anytime to continue registering for this event.
+                        %br
+                        %a{:href => "impressioncreate", :class =>'btn btn-success btn-sm', :role=>'button'} Add Impression
+                        %br
+            
             -if @uservehicles != nil
-              .panel.panel-primary
+              %br
+              %br
+              .panel.panel-info
                 .panel-heading
-                  %h4.panel-title
-                  Choose vehicles from your profile
+                  %h4.panel-title 
+                    %strong 
+                      Choose from your existing Vehicles
                 .panel-body
                   -if @uservehicles.length != 0
                     - cnt= 0
                     - @uservehicles.each do |v|
                       - cnt+=1
-                      .panel.panel-primary
+                      .panel.panel-success
                         .panel-heading
                           %h3.panel-title
                             Vehicle #{cnt}
                             %input.pull-right{:type => "checkbox", :value => v.id, :name => "vehicle#{cnt}"}
-                        .panel-body
+                        .panel-body{:class => "bg-success"}
                           %label= v.vname 
                           %br
                           %label Vehicle Class: 
@@ -100,43 +117,75 @@
                           %br
                           %label Vehicle Description: 
                           = v.vdescription
-            -if @uservendorbooths != nil
-              .panel.panel-primary
-                .panel-heading
-                  %h4.panel-title Choose vendor booths from your profile
-                .panel-body
-                -if @uservendorbooths.length != 0
-                  - cnt= 0
-                  - @uservendorbooths.each do |vb|
-                    - cnt+=1
-                    .panel.panel-primary
+                  -else
+                    .panel.panel-danger{:style => 'background-color : #f2dede'}
                       .panel-heading
-                        %h3.panel-title
-                          Vendor Booth #{cnt}
-                          %input.pull-right{:type => "checkbox", :value =>vb.id, :name => "vendorbooth#{cnt}"}
+                        %h4.panel-title 
+                          %strong 
+                            You do not seem to have any saved Vehicles!
                       .panel-body
-                        %label= vb.vbname 
+                        %h4.panel-title If you wish to take a Vehicle to this event, please click below to add new Vehicle. Come back at anytime to continue registering for this event.
                         %br
-                        %label Number vendor spaces:
-                        = vb.vbspaces
+                        %a{:href => "vehiclecreate", :class =>'btn btn-success btn-sm', :role=>'button'} Add Vehicle
                         %br
-                        %label Description:
-                        = vb.vbdescription
-            -if @usereducators != nil
-              .panel.panel-primary
+            
+            -if @uservendorbooths != nil
+              %br
+              %br
+              .panel.panel-info
                 .panel-heading
-                  %h4.panel-title Choose school groups from your profile
+                  %h4.panel-title 
+                    %strong 
+                      Choose from your existing Vendor Booths
+                .panel-body
+                  -if @uservendorbooths.length != 0
+                    - cnt= 0
+                    - @uservendorbooths.each do |vb|
+                      - cnt+=1
+                      .panel.panel-success
+                        .panel-heading
+                          %h3.panel-title
+                            Vendor Booth #{cnt}
+                            %input.pull-right{:type => "checkbox", :value =>vb.id, :name => "vendorbooth#{cnt}"}
+                        .panel-body{:class => "bg-success"}
+                          %label= vb.vbname 
+                          %br
+                          %label Number vendor spaces:
+                          = vb.vbspaces
+                          %br
+                          %label Description:
+                          = vb.vbdescription
+                  -else
+                    .panel.panel-danger{:style => 'background-color : #f2dede'}
+                      .panel-heading
+                        %h4.panel-title 
+                          %strong 
+                            You do not seem to have any saved Vendor Booths!
+                      .panel-body
+                        %h4.panel-title If you wish to take a Vendor Booth to this event, please click below to add new Vendor Booth. Come back at anytime to continue registering for this event.
+                        %br
+                        %a{:href => "vendorboothcreate", :class =>'btn btn-success btn-sm', :role=>'button'} Add Vendor Booth
+                        %br
+            
+            -if @usereducators != nil
+              %br
+              %br
+              .panel.panel-info
+                .panel-heading
+                  %h4.panel-title 
+                    %strong 
+                      Choose from your existing School Groups
                 .panel-body
                   -if @usereducators.length != 0
                     - cnt= 0
                     - @usereducators.each do |ed|
                       - cnt+=1
-                      .panel.panel-primary
+                      .panel.panel-success
                         .panel-heading
                           %h3.panel-title 
                             =ed.edschooltype
                             %input.pull-right{:type => "checkbox", :value => ed.id, :name => "educators#{cnt}"}
-                        .panel-body
+                        .panel-body{:class => "bg-success"}
                           -if ed.edschooltype=="Home School"
                             %label Parent/Guardian Name:  
                             = ed.edpgaurdianname 
@@ -187,6 +236,18 @@
                             %label Principal's Email:
                             = ed.edprincipleemail
                             %br
+                  -else
+                    .panel.panel-danger{:style => 'background-color : #f2dede'}
+                      .panel-heading
+                        %h4.panel-title 
+                          %strong 
+                            You do not seem to have any saved School Groups!
+                      .panel-body
+                        %h4.panel-title If you wish to take a School Group to this event, please click below to add new School Group. Come back at anytime to continue registering for this event.
+                        %br
+                        %a{:href => "educatorcreate", :class =>'btn btn-success btn-sm', :role=>'button'} Add School Group
+                        %br
+            
             = submit_tag("Create", :class => 'btn btn-primary',  )
   .row
     %br
