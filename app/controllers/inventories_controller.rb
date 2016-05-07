@@ -54,7 +54,7 @@ class InventoriesController < ApplicationController
     if params[:commit] != nil && params[:commit] == 'Create'
       @inventory.eid = params[:eid]
       @inventory.uid = session[:user_id]
-      
+      eid = @inventory.eid
       #insert the checks for whether or not the items are selected and add them to the inventory object
       vids = ""
       edids =""
@@ -84,6 +84,12 @@ class InventoriesController < ApplicationController
       @inventory.inventedid = edids
       @inventory.inventvbid = vbids
       @inventory.inventviid = iids
+      
+      if(vids == "" && edids == "" && iids == "" && vbids == "")
+  			flash[:notice] = "You have already registered for this event!"
+  			redirect_to '/inventory?eid=#{eid}'
+  			return
+		  end
       
       if @inventory.valid?
         if @inventory.save

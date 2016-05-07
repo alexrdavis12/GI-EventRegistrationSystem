@@ -99,7 +99,7 @@ class ImpressionsController < ApplicationController
     @user = User.find(id)
     self.isuser
   	iid = params[:iid]
-  	@user.decrement!(:uimpressionflag, 1)
+  	@user.decrement(:uimpressionflag, 1)
   	Impression.find(iid).destroy
   	redirect_to '/homei'
   end

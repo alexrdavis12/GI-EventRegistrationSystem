@@ -90,7 +90,7 @@ class VendorboothsController < ApplicationController
     self.isuser
 
   	vbid = params[:vbid]
-  	@user.decrement!(:uvendorflag, 1)
+  	@user.decrement(:uvendorflag, 1)
   	if(	Vendorbooth.find(vbid))
     	Vendorbooth.find(vbid).destroy
     end

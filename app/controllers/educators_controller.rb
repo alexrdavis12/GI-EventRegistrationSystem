@@ -137,7 +137,7 @@ class EducatorsController < ApplicationController
     self.isuser
 
   	edid = params[:edid]
-  	@user.decrement!(:ueducatorflag, 1)
+  	@user.decrement(:ueducatorflag, 1)
   	Educator.find(edid).destroy
   	redirect_to '/homeed'
   end
